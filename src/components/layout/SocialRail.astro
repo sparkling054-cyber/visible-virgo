@@ -1,0 +1,80 @@
+---
+const socials = [
+  {
+    name: "YouTube",
+    href: "https://www.youtube.com/@MikuNiki5471",
+    icon: "/images/youtube.png",
+  },
+  {
+    name: "X",
+    href: "https://x.com/MikuNiki5471",
+    icon: "/images/x.png",
+  },
+  {
+    name: "Planet Minecraft",
+    href: "https://www.planetminecraft.com/member/mikuniki5471/",
+    icon: "/images/planetminecraft.png",
+  },
+  {
+    name: "TikTok",
+    href: "https://www.tiktok.com/@MikuNiki5471",
+    icon: "/images/tiktok.png",
+  },
+];
+---
+
+<aside
+  class="fixed right-4 top-1/2 z-40 -translate-y-1/2 sm:right-5 md:right-6 lg:right-8"
+>
+
+  <div class="flex flex-col items-center">
+
+    <!-- 上ライン -->
+
+    <span
+      class="mb-6 h-20 w-px bg-white/35"
+    ></span>
+
+    {
+      socials.map((social) => (
+
+        <>
+          <a
+            href={social.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={social.name}
+            class="group py-3"
+          >
+
+            <img
+              src={social.icon}
+              alt={social.name}
+              class="h-5 w-5 transition duration-300
+                     opacity-80
+                     group-hover:scale-110
+                     group-hover:opacity-100
+                     md:h-6 md:w-6
+                     lg:h-7 lg:w-7"
+            />
+
+          </a>
+
+          <span
+            class="h-8 w-px bg-white/25"
+          ></span>
+
+        </>
+
+      ))
+    }
+
+    <!-- 下ライン -->
+
+    <span
+      class="mt-2 h-20 w-px bg-white/35"
+    ></span>
+
+  </div>
+
+</aside>

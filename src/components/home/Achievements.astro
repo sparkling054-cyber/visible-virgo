@@ -1,0 +1,94 @@
+---
+import Container from "../common/Container.astro";
+import Section from "../common/Section.astro";
+import SectionTitle from "../common/SectionTitle.astro";
+import ScrollReveal from "../common/ScrollReveal.astro";
+
+
+const achievements = [
+  {
+    title: "歴史建築・城郭作品制作",
+    text: "城郭や御殿建築を題材に、資料考証をもとにした作品制作を行っています。"
+  },
+  {
+    title: "デジタル建築・再現制作",
+    text: "Minecraftなどのデジタル空間を活用し、歴史建築の再現や表現を行っています。"
+  },
+  {
+    title: "歴史・文化発信活動",
+    text: "写真、動画、SNSなどを通じて、日本文化や歴史の魅力を発信しています。"
+  },
+  {
+    title: "コラボレーション活動",
+    text: "個人、企業、クリエイター、地域・文化関連団体との協力を受け付けています。"
+  }
+];
+
+---
+
+<ScrollReveal>
+
+<Section>
+
+  <Container>
+
+
+    <SectionTitle
+      en="ACHIEVEMENTS"
+      title="実績"
+      description="これまでの制作活動・発信活動について"
+    />
+
+
+
+    <div
+      class="mt-16 grid gap-8 md:grid-cols-2"
+    >
+
+
+      {
+        achievements.map((item, index) => (
+
+          <div
+            class="rounded-3xl bg-white p-8 shadow-lg transition hover:-translate-y-1"
+            style={`transition-delay:${index * 150}ms`}
+          >
+
+
+            <p
+              class="text-sm tracking-widest text-rose-400"
+            >
+              0{index + 1}
+            </p>
+
+
+
+            <h3
+              class="mt-4 text-2xl font-bold text-slate-900"
+            >
+              {item.title}
+            </h3>
+
+
+
+            <p
+              class="mt-4 leading-relaxed text-slate-600"
+            >
+              {item.text}
+            </p>
+
+
+          </div>
+
+        ))
+      }
+
+
+    </div>
+
+
+  </Container>
+
+</Section>
+
+</ScrollReveal>

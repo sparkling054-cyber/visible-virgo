@@ -1,0 +1,209 @@
+---
+import '../styles/global.css';
+
+import Header from "../components/layout/Header.astro";
+import SocialRail from "../components/layout/SocialRail.astro";
+
+interface Props {
+
+  title?: string;
+
+  description?: string;
+
+}
+
+const {
+
+  title = "錦乃｜日本文化・歴史・城郭クリエイター",
+
+  description = "錦乃は、日本の伝統文化・歴史・城郭・建築を中心に、写真、動画、デジタル作品を通じて日本文化の魅力を発信するクリエイターです。"
+
+} = Astro.props;
+
+const siteUrl = "https://www.nishikino.jp";
+
+const ogImage = `${siteUrl}/images/ogp.jpg`;
+
+---
+
+<!doctype html>
+
+<html lang="ja">
+
+<head>
+
+<meta charset="utf-8" />
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1"
+/>
+
+<!-- Google Fonts -->
+
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com"
+/>
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+/>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap"
+rel="stylesheet"
+/>
+
+<title>
+{title}
+</title>
+
+<meta
+name="description"
+content={description}
+/>
+
+<meta
+name="author"
+content="錦乃"
+/>
+
+<link
+rel="canonical"
+href={Astro.url.href}
+/>
+
+<!-- OGP -->
+
+<meta
+property="og:title"
+content={title}
+/>
+
+<meta
+property="og:description"
+content={description}
+/>
+
+<meta
+property="og:type"
+content="website"
+/>
+
+<meta
+property="og:url"
+content={Astro.url.href}
+/>
+
+<meta
+property="og:site_name"
+content="錦乃"
+/>
+
+<meta
+property="og:locale"
+content="ja_JP"
+/>
+
+<meta
+property="og:image"
+content={ogImage}
+/>
+
+<!-- X(Twitter) -->
+
+<meta
+name="twitter:card"
+content="summary_large_image"
+/>
+
+<meta
+name="twitter:title"
+content={title}
+/>
+
+<meta
+name="twitter:description"
+content={description}
+/>
+
+<meta
+name="twitter:image"
+content={ogImage}
+/>
+
+<!-- favicon -->
+
+<link
+  rel="icon"
+  type="image/svg+xml"
+  href="/favicon.svg"
+/>
+
+<link
+  rel="icon"
+  href="/favicon.ico"
+/>
+
+<meta
+  name="generator"
+  content={Astro.generator}
+/>
+
+</head>
+
+<body>
+
+  <Header />
+
+  <SocialRail />
+
+  <slot />
+
+  <!-- X(Twitter) Embed -->
+  <script
+    async
+    src="https://platform.twitter.com/widgets.js"
+    charset="utf-8"
+  ></script>
+
+  <script is:inline>
+    function loadTwitter() {
+      if (window.twttr?.widgets) {
+        window.twttr.widgets.load();
+      }
+    }
+
+    window.addEventListener("load", loadTwitter);
+    document.addEventListener("astro:page-load", loadTwitter);
+  </script>
+
+</body>
+
+<style>
+
+html,
+body{
+
+margin:0;
+
+width:100%;
+
+height:100%;
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+overflow-x:hidden;
+
+}
+
+</style>
+
+</html>

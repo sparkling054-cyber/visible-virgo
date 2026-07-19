@@ -1,0 +1,187 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Architecture｜建築作品｜錦乃"
+  description="城郭・御殿・町並みなど、日本建築を題材に制作した作品をご紹介します。"
+>
+
+<section class="relative min-h-screen overflow-hidden">
+
+  <!-- Background -->
+  <img
+    src="/images/works-architecture-bg.png"
+    alt="Architecture Background"
+    class="absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+    draggable="false"
+  />
+
+  <!-- Glass -->
+  <div class="absolute inset-0 bg-white/42 backdrop-blur-[7px]"></div>
+
+  <!-- Gold -->
+  <div
+    class="pointer-events-none absolute inset-0 opacity-[0.08]"
+    style="background-image:url('/images/gold-pattern.webp');background-size:cover;background-position:center;"
+  ></div>
+
+  <div class="relative z-10 mx-auto max-w-7xl px-6 pt-40 pb-24">
+
+    <!-- Title -->
+
+    <div class="max-w-3xl">
+
+      <p class="font-en text-xs uppercase tracking-[0.45em] text-amber-700">
+        Architecture Works
+      </p>
+
+      <h1 class="font-jp mt-5 text-5xl leading-tight text-[#3b2415] md:text-7xl">
+        城郭と御殿を、<br />
+        歩く。
+      </h1>
+
+      <p class="font-ui mt-8 max-w-xl leading-9 text-stone-700">
+        建築は一つの建物ではなく、
+        その場所に流れる空気や景色まで含めて一つの作品だと思っています。
+        城郭、御殿、町並みを歩いている感覚を大切に制作しています。
+      </p>
+
+    </div>
+
+    <!-- Main -->
+
+    <div class="mt-24 grid gap-14 lg:grid-cols-[1.3fr_0.7fr]">
+
+      <!-- Left -->
+
+      <div>
+
+        <div class="overflow-hidden rounded-[34px] border border-white/60 bg-white/45 shadow-2xl backdrop-blur-xl">
+
+          <img
+            src="/images/architecture-main.png"
+            alt="Architecture"
+            class="h-full w-full object-cover transition duration-700 hover:scale-105"
+          />
+
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+
+          <div class="rounded-[28px] bg-white/50 p-7 backdrop-blur-xl">
+
+            <p class="font-en text-xs uppercase tracking-[0.35em] text-amber-700">
+              STYLE
+            </p>
+
+            <h3 class="font-jp mt-3 text-2xl text-[#3b2415]">
+              城郭
+            </h3>
+
+            <p class="font-ui mt-4 text-sm leading-7 text-stone-700">
+              天守・櫓・門・石垣まで、
+              一つの景色として制作しています。
+            </p>
+
+          </div>
+
+          <div class="rounded-[28px] bg-white/50 p-7 backdrop-blur-xl">
+
+            <p class="font-en text-xs uppercase tracking-[0.35em] text-amber-700">
+              STYLE
+            </p>
+
+            <h3 class="font-jp mt-3 text-2xl text-[#3b2415]">
+              御殿
+            </h3>
+
+            <p class="font-ui mt-4 text-sm leading-7 text-stone-700">
+              書院造や大広間など、
+              空間そのものを再現しています。
+            </p>
+
+          </div>
+
+          <div class="rounded-[28px] bg-white/50 p-7 backdrop-blur-xl">
+
+            <p class="font-en text-xs uppercase tracking-[0.35em] text-amber-700">
+              STYLE
+            </p>
+
+            <h3 class="font-jp mt-3 text-2xl text-[#3b2415]">
+              城下町
+            </h3>
+
+            <p class="font-ui mt-4 text-sm leading-7 text-stone-700">
+              建物だけではなく、
+              人が歩く景色まで表現しています。
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Right -->
+
+      <aside class="space-y-8">
+
+        <div class="rounded-[30px] bg-white/55 p-9 backdrop-blur-xl">
+
+          <p class="font-en text-xs uppercase tracking-[0.4em] text-amber-700">
+            INFORMATION
+          </p>
+
+          <h2 class="font-jp mt-4 text-3xl text-[#3b2415]">
+            制作について
+          </h2>
+
+          <p class="font-ui mt-6 leading-8 text-stone-700">
+            資料や現地調査をもとに、
+            建築だけではなく景観や空気感まで含めた作品制作を行っています。
+            「ここを歩いてみたい」と思える世界を目指しています。
+          </p>
+
+        </div>
+
+        <div class="rounded-[30px] bg-white/55 p-9 backdrop-blur-xl">
+
+          <p class="font-en text-xs uppercase tracking-[0.4em] text-amber-700">
+            CONTENTS
+          </p>
+
+          <ul class="font-ui mt-6 space-y-4 text-stone-700">
+
+            <li>・江戸城</li>
+            <li>・二条城</li>
+            <li>・姫路城</li>
+            <li>・松本城</li>
+            <li>・熊本城</li>
+            <li>・武家屋敷</li>
+            <li>・御殿建築</li>
+            <li>・町並み再現</li>
+
+          </ul>
+
+        </div>
+
+        <a
+          href="/contact/"
+          class="font-jp flex h-48 w-48 items-center justify-center rounded-full bg-[#3a2618]/90 text-center text-xl leading-9 text-white transition duration-500 hover:-translate-y-2 hover:scale-105"
+        >
+          制作・監修<br />
+          コラボの<br />
+          ご相談はこちら
+        </a>
+
+      </aside>
+
+    </div>
+
+  </div>
+
+</section>
+
+</Layout>

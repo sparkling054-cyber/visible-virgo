@@ -1,0 +1,418 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/common/Container.astro";
+
+const works = [
+  {
+    title: "江戸城",
+    category: "城郭",
+    image: "/images/edocastle.jpg",
+    link: "/works/edocastle/"
+  },
+  {
+    title: "江戸城 門",
+    category: "城郭、門",
+    image: "/images/edogate.jpg",
+    link: "#"
+  },
+  {
+    title: "江戸城 櫓",
+    category: "城郭、櫓",
+    image: "/images/edoyagura.jpg",
+    link: "#"
+  },
+  {
+    title: "江戸城 本丸御殿",
+    category: "城郭",
+    image: "/images/honmarugoten.jpg",
+    link: "#"
+  },
+  {
+    title: "江戸城天守",
+    category: "城郭",
+    image: "/images/edotenshu.jpg",
+    link: "/works/edotenshu/"
+  },
+  {
+    title: "初代 錦乃江戸城",
+    category: "城郭",
+    image: "/images/nishikino-edo-1.jpg",
+    link: "#"
+  },
+  {
+    title: "二代目 錦乃江戸城",
+    category: "城郭",
+    image: "/images/nishikino-edo-2.jpg",
+    link: "#"
+  },
+  {
+    title: "名古屋城天守",
+    category: "城郭",
+    image: "/images/nagoya.jpg",
+    link: "/works/nagoya/"
+  },
+  {
+    title: "三代目大阪城天守",
+    category: "城郭",
+    image: "/images/osaka3.jpg",
+    link: "/works/osaka3/"
+  },
+  {
+    title: "福山城天守",
+    category: "城郭",
+    image: "/images/fukuyama.jpg",
+    link: "#"
+  },
+  {
+    title: "熊本城天守",
+    category: "城郭",
+    image: "/images/kumamoto.jpg",
+    link: "#"
+  },
+  {
+    title: "○○門",
+    category: "門",
+    image: "/images/gate.jpg",
+    link: "#"
+  },
+  {
+    title: "武家屋敷 ○○",
+    category: "武家大名屋敷",
+    image: "/images/buke.jpg",
+    link: "#"
+  },
+  {
+    title: "大名屋敷 ○○",
+    category: "武家大名屋敷",
+    image: "/images/daimyo.jpg",
+    link: "#"
+  },
+  {
+    title: "○○庭園",
+    category: "和風小物・周辺",
+    image: "/images/garden.jpg",
+    link: "#"
+  },
+  {
+    title: "○○井戸",
+    category: "和風小物・周辺",
+    image: "/images/well.jpg",
+    link: "#"
+  },
+  {
+    title: "和風木橋",
+    category: "和風小物・周辺",
+    image: "/images/bridge.jpg",
+    link: "#"
+  },
+  {
+    title: "川越 蔵造りの町並み",
+    category: "和風の町並み",
+    image: "/images/kawagoe.jpg",
+    link: "#"
+  },
+  {
+    title: "商店・民家 ○○",
+    category: "和風一般",
+    image: "/images/minka.jpg",
+    link: "#"
+  },
+  {
+    title: "壮厳な神社",
+    category: "神社",
+    image: "/images/shrine.jpg",
+    link: "#"
+  },
+  {
+    title: "王都ファンタジー住宅",
+    category: "ファンタジー",
+    image: "/images/fantasy-house.jpg",
+    link: "#"
+  },
+  {
+    title: "初音ミク",
+    category: "キャラクター",
+    image: "/images/miku.jpg",
+    link: "#"
+  },
+  {
+    title: "図面・建築考証",
+    category: "資料",
+    image: "/images/research.jpg",
+    link: "/works/research/"
+  }
+];
+---
+
+<Layout
+  title="作品紹介｜WORKS｜錦乃"
+  description="城郭を中心に、町並みや神社、武家屋敷、創作作品、図面・建築考証など錦乃の制作作品を紹介しています。"
+>
+
+<section class="relative min-h-screen overflow-hidden bg-[#140f0d]">
+
+  <img
+    src="/images/works-bg.png"
+    alt="作品紹介背景"
+    class="absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+    draggable="false"
+  />
+
+  <div class="absolute inset-0 bg-black/15"></div>
+
+  <div class="relative z-10 py-32">
+
+    <Container>
+
+      <div class="mx-auto max-w-5xl">
+
+        <p class="works-reveal mb-4 tracking-[0.45em] text-sm text-white/80">
+          WORKS
+        </p>
+
+        <h1
+          class="works-reveal text-6xl leading-tight text-white"
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          作品紹介
+        </h1>
+
+      </div>
+
+      <div class="works-grid mt-24">
+
+        {
+          works.map((work, index) => (
+
+            <a
+              href={work.link}
+              class="works-reveal works-card group"
+              style={`transition-delay:${index * 60}ms;`}
+            >
+
+              <div class="works-image-wrap">
+
+                <img
+                  src={work.image}
+                  alt={work.title}
+                  loading="lazy"
+                  class="works-image"
+                />
+
+              </div>
+
+              <div class="px-7 pb-7">
+
+                <p
+                  class="text-[13px] tracking-[0.28em] text-neutral-500"
+                >
+                  {work.category}
+                </p>
+
+                <h2
+                  class="mt-2 text-3xl leading-snug text-neutral-900"
+                  style="font-family:'Cormorant Garamond',serif;"
+                >
+                  {work.title}
+                </h2>
+
+              </div>
+
+            </a>
+
+          ))
+        }
+
+      </div>
+
+    </Container>
+
+  </div>
+
+</section>
+
+<style>
+
+.works-grid{
+
+column-count:4;
+column-gap:2rem;
+
+}
+
+@media(max-width:1600px){
+
+.works-grid{
+
+column-count:3;
+
+}
+
+}
+
+@media(max-width:1000px){
+
+.works-grid{
+
+column-count:2;
+
+}
+
+}
+
+@media(max-width:640px){
+
+.works-grid{
+
+column-count:1;
+
+}
+
+}
+
+.works-card{
+
+display:inline-block;
+width:100%;
+margin:0 0 2rem;
+
+background:rgba(255,255,255,.72);
+
+backdrop-filter:blur(14px);
+
+border:1px solid rgba(255,255,255,.7);
+
+border-radius:2rem;
+
+overflow:hidden;
+
+transition:.45s;
+
+break-inside:avoid;
+
+}
+
+.works-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+}
+
+.works-image-wrap{
+
+padding:1.25rem;
+
+}
+
+.works-image{
+
+width:100%;
+
+height:auto;
+
+display:block;
+
+border-radius:1.5rem;
+
+transition:
+transform .8s cubic-bezier(.22,1,.36,1);
+
+}
+
+.works-card:hover .works-image{
+
+transform:scale(1.06);
+
+}
+
+.works-reveal{
+
+opacity:0;
+
+transform:
+translateY(70px)
+scale(.96);
+
+transition:
+opacity .9s cubic-bezier(.22,1,.36,1),
+transform .9s cubic-bezier(.22,1,.36,1);
+
+will-change:
+transform,
+opacity;
+
+}
+
+.works-show{
+
+animation:
+worksBounce .9s cubic-bezier(.22,1,.36,1) forwards;
+
+}
+
+@keyframes worksBounce{
+
+0%{
+
+opacity:0;
+
+transform:
+translateY(70px)
+scale(.96);
+
+}
+
+65%{
+
+opacity:1;
+
+transform:
+translateY(-10px)
+scale(1.02);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:
+translateY(0)
+scale(1);
+
+}
+
+}
+
+</style>
+
+<script>
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(!entry.isIntersecting) return;
+
+entry.target.classList.add("works-show");
+
+observer.unobserve(entry.target);
+
+});
+
+},{
+threshold:0.18,
+rootMargin:"0px 0px -10% 0px"
+});
+
+document.querySelectorAll(".works-reveal").forEach((el)=>{
+
+observer.observe(el);
+
+});
+
+</script>
+
+</Layout>

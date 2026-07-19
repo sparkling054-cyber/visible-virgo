@@ -1,0 +1,33 @@
+---
+interface Props {
+  en: string;
+  title: string;
+  description?: string;
+}
+
+const {
+  en,
+  title,
+  description,
+} = Astro.props;
+---
+
+<div class="text-center">
+
+  <p class="text-sm tracking-[0.4em] text-rose-400 uppercase">
+    {en}
+  </p>
+
+  <h2 class="mt-4 text-4xl md:text-5xl font-bold text-slate-900">
+    {title}
+  </h2>
+
+  {
+    description && (
+      <p class="mt-6 text-base md:text-lg text-slate-600">
+        {description}
+      </p>
+    )
+  }
+
+</div>

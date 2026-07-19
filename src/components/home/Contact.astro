@@ -1,0 +1,94 @@
+---
+import Container from "../common/Container.astro";
+import Section from "../common/Section.astro";
+import SectionTitle from "../common/SectionTitle.astro";
+import ScrollReveal from "../common/ScrollReveal.astro";
+
+const services = [
+  {
+    title: "歴史・文化コンテンツ制作",
+    text: "城郭・御殿・町並みなど歴史資料をもとにした建築制作や、文化を活かしたデジタルコンテンツの制作を行っています。"
+  },
+  {
+    title: "映像・写真・SNSコンテンツ",
+    text: "YouTubeやSNS向けの映像・写真・世界観づくりなど、作品の魅力をより伝える表現を制作します。"
+  },
+  {
+    title: "クリエイター・配信者コラボ",
+    text: "Minecraft建築、企画制作、創作設定、配信イベントなど、活動内容に合わせた共同制作に対応しています。"
+  },
+  {
+    title: "企業・自治体・文化プロジェクト",
+    text: "観光・地域振興・歴史文化・展示企画・教育分野など、日本文化を活かした様々なプロジェクトへ参加しています。"
+  }
+];
+---
+
+<ScrollReveal>
+
+<Section>
+
+<Container>
+
+<SectionTitle
+  en="COLLABORATION"
+  title="ご依頼・コラボレーション"
+  description="個人から企業・自治体・文化機関まで、様々な制作や企画に立ち合いいたします。参加しています。"
+/>
+
+<div class="mt-16 grid gap-8 md:grid-cols-2">
+
+  {
+    services.map((service) => (
+
+      <article
+        class="group overflow-hidden rounded-[2rem]
+        border border-white/60
+        bg-gradient-to-br
+        from-white/90
+        via-rose-50/70
+        to-sky-50/70
+        p-8
+        backdrop-blur-md
+        shadow-lg
+        transition-all duration-500
+        hover:-translate-y-2
+        hover:shadow-2xl"
+      >
+
+        <p
+          class="text-xs tracking-[0.35em] text-neutral-500 uppercase"
+        >
+          Collaboration
+        </p>
+
+        <h3
+          class="mt-4 text-3xl text-neutral-900"
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          {service.title}
+        </h3>
+
+        <div
+          class="mt-6 h-px w-16 bg-gradient-to-r from-rose-300 via-amber-300 to-sky-300"
+        ></div>
+
+        <p
+          class="mt-6 leading-8 text-neutral-700"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          {service.text}
+        </p>
+
+      </article>
+
+    ))
+  }
+
+</div>
+
+</Container>
+
+</Section>
+
+</ScrollReveal>

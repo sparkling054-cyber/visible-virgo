@@ -1,0 +1,136 @@
+---
+const menuItems = [
+  { name: "HOME", href: "/" },
+  { name: "ABOUT", href: "/about/" },
+  { name: "WORKS", href: "/works/" },
+  { name: "PROFILE", href: "/profile/" },
+  { name: "ACHIEVEMENTS", href: "/achievements/" },
+  { name: "CONTACT", href: "/contact/" },
+];
+---
+
+<header
+  id="site-header"
+  class="fixed inset-x-0 top-0 z-[100] transition-all duration-500"
+>
+
+  <div
+    class="mx-auto flex max-w-[1800px] items-center justify-between px-6 py-7 lg:px-10 lg:py-8"
+  >
+
+    <!-- Logo -->
+
+    <a
+      href="/"
+      class="flex shrink-0 items-center"
+    >
+
+      <img
+        src="/images/logo.webp"
+        alt="錦乃"
+        draggable="false"
+        class="h-14 w-auto transition duration-500 hover:scale-105 lg:h-16"
+      />
+
+    </a>
+
+    <!-- Navigation -->
+
+    <nav
+      id="header-nav"
+      class="ml-auto flex items-center gap-5 lg:gap-8 xl:gap-12 transition-all duration-700 ease-in-out"
+    >
+
+      {
+        menuItems.map((item) => (
+
+          <a
+            href={item.href}
+            class="header-link font-['Cormorant_Garamond'] text-[11px] lg:text-[13px] xl:text-[17px] font-medium tracking-[0.12em] lg:tracking-[0.16em] xl:tracking-[0.18em] text-white transition duration-300 hover:text-[#f8dfc1]"
+          >
+            {item.name}
+          </a>
+
+        ))
+      }
+
+    </nav>
+
+    <!-- Menu -->
+
+    <button
+      id="menu-toggle"
+      type="button"
+      aria-label="Toggle Navigation"
+      class="ml-4 flex h-12 w-12 items-center justify-center"
+    >
+
+      <div class="flex flex-col gap-2">
+
+        <span class="block h-px w-7 bg-white"></span>
+        <span class="block h-px w-7 bg-white"></span>
+        <span class="block h-px w-7 bg-white"></span>
+
+      </div>
+
+    </button>
+
+  </div>
+
+</header>
+
+<script is:inline>
+
+function initHeader() {
+
+  const header = document.getElementById("site-header");
+  const nav = document.getElementById("header-nav");
+  const toggle = document.getElementById("menu-toggle");
+
+  if (!header || !nav || !toggle) return;
+
+  if (toggle.dataset.ready) return;
+  toggle.dataset.ready = "true";
+
+  toggle.addEventListener("click", () => {
+
+    nav.classList.toggle("opacity-0");
+    nav.classList.toggle("pointer-events-none");
+
+  });
+
+  const scrollHandler = () => {
+
+    if (window.scrollY > 40) {
+
+      header.classList.add(
+        "bg-[#201710]/35",
+        "backdrop-blur-xl",
+        "shadow-lg"
+      );
+
+    } else {
+
+      header.classList.remove(
+        "bg-[#201710]/35",
+        "backdrop-blur-xl",
+        "shadow-lg"
+      );
+
+    }
+
+  };
+
+  scrollHandler();
+
+  window.addEventListener("scroll", scrollHandler, {
+    passive: true
+  });
+
+}
+
+initHeader();
+
+document.addEventListener("astro:page-load", initHeader);
+
+</script>

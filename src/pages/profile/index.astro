@@ -1,0 +1,315 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="プロフィール｜錦乃"
+  description="錦乃のプロフィール。好きなものや人物像、活動スタイルなどをご紹介します。"
+>
+
+<section class="relative min-h-screen overflow-hidden">
+
+ <!-- Background -->
+<img
+  id="profileBg1"
+  src="/images/profile-bg.png"
+  alt="プロフィール背景"
+  class="profile-bg profile-bg-front absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+  draggable="false"
+/>
+
+<img
+  id="profileBg2"
+  src="/images/profile-bg-message.png"
+  alt=""
+  class="profile-bg profile-bg-back absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+  draggable="false"
+/>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/35"></div>
+
+  <!-- Content -->
+  <div
+    class="relative z-10 mx-auto flex min-h-screen max-w-[1700px] items-center justify-between px-10 py-24 lg:px-20"
+  >
+
+    <!-- Left -->
+    <div class="profile-content w-[28%]">
+
+      <p
+        class="text-sm tracking-[0.55em] text-white"
+        style="font-family:'Inter',sans-serif;"
+      >
+        PROFILE
+      </p>
+
+      <h1
+        class="mt-6 text-7xl font-light text-white"
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        錦乃
+      </h1>
+
+      <p
+        class="mt-8 leading-9 text-white/90"
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        日本の伝統文化や建物を好み、
+        <br />
+        新しい表現を生み出す動画クリエイター。
+        <br /><br />
+
+        普段から名所を巡ったり、
+        風景や映像を撮影したりしながら、
+        自身の「好き」を作品として形にしています。
+      </p>
+
+    </div>
+
+    <!-- Center -->
+    <div class="w-[18%]"></div>
+
+    <!-- Right -->
+    <div class="profile-content delay w-[34%] space-y-6">
+
+      <!-- INTRODUCTION -->
+      <div
+        class="profile-card rounded-[34px] border border-white/20 bg-white/5 p-8 backdrop-blur-md"
+      >
+
+        <p class="text-xs tracking-[0.45em] text-white/60">
+          INTRODUCTION
+        </p>
+
+        <div
+          class="mt-5 space-y-4 leading-8 text-white"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+
+          <p>
+            「錦織」のような彩り豊かさを表す<strong>「錦」</strong>、
+            古風で上品な響きを持つ<strong>「乃」</strong>。
+            <br />
+            二つを組み合わせ、
+            「豊かで美しくあれ」という想いを込めて名付けました。
+          </p>
+
+          <div class="border-t border-white/15 pt-4 text-white/90">
+            <p>年齢：23歳</p>
+            <p>誕生日：2003年5月4日</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- MESSAGE -->
+      <div
+        class="profile-card rounded-[34px] border border-white/20 bg-white/5 p-8 backdrop-blur-md"
+      >
+
+        <p class="text-xs tracking-[0.45em] text-white/60">
+          MESSAGE
+        </p>
+
+        <div
+          class="mt-5 leading-8 text-white"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+
+          <p>
+            よくおいでになられました。大広間へようこそ。<br>うちは錦乃と申します。
+          </p>
+
+          <p class="mt-4">
+            世界的に有名なサンドボックスゲーム『Minecraft』で
+            日本の伝統建築を制作していたことをきっかけに、
+            多くの方に活動を知っていただきました。
+          </p>
+
+          <details id="messageDetails" class="mt-6 group">
+
+            <summary
+  id="messageSummary"
+  class="cursor-pointer select-none text-rose-200 transition hover:text-white"
+>
+  続きを読む
+</summary>
+
+            <div class="mt-6 space-y-6 text-white/90">
+
+              <p>
+                幼い頃から都会や人の活気が大好きで、
+                そこから派生して日本の伝統や和風建築に興味が広がりました。
+              </p>
+
+              <p>
+                「現在の東京は昔どんな姿だったのだろう。」
+                そんな疑問から江戸時代へ興味を持ち、
+                中学生の頃、歴史の教科書で見た江戸城天守に
+                一目惚れしたことが今の活動の原点です。
+              </p>
+
+              <p>
+                その後、実際に名所や城郭、
+                徳川家ゆかりの地を巡りながら、
+                写真や映像、デジタル作品として
+                自分なりの形で発信するようになりました。
+              </p>
+
+              <p>
+                江戸期からの言葉で「好きこそ物の上手なれ」
+                という文言がありまして、
+                まさしくその通りだと感じている次第でございます。
+              </p>
+
+              <p>
+                和風以外ではSteamゲーム、
+                写真撮影映像制作、
+                アニメ鑑賞、
+                和風・現代にこだわらない旅行や観光が大好きです。
+                美味しいコーヒーの淹れ方やファッションや美容にも興味があったり。
+              </p>
+
+              <p>
+                好きなゲームはMinecraft以外だと
+                UNDERTALE・deltaruneがお気に入り。
+                YouTuberさんや声優さんにもよくハマります。
+                （クローバーがキャラに付いている教育的な緑のYouTuberさん、
+                学校に住まわれていて定期的に爆発（物理）されているYouTuberさん、
+                演じられている役がよく異世界召喚され活躍している男性声優さんが推しです。）
+              </p>
+
+              <p>
+                一度興味を持つととことん調べ、
+                実際に体験し、
+                自分なりの形で残していく。
+                その過程そのものを楽しんでいます。
+              </p>
+
+            </div>
+
+          </details>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+.profile-bg{
+animation:profileFloat 12s ease-in-out infinite;
+transition:opacity .7s ease;
+}
+
+.profile-bg-front{
+opacity:1;
+}
+
+.profile-bg-back{
+opacity:0;
+}
+
+@keyframes profileFloat{
+0%{
+transform:scale(1.05) translateY(0px);
+}
+50%{
+transform:scale(1.08) translateY(-15px);
+}
+100%{
+transform:scale(1.05) translateY(0px);
+}
+}
+
+.profile-content{
+opacity:0;
+transform:translateY(80px) scale(.96);
+animation:profileAppear 1.2s cubic-bezier(.18,.89,.32,1.28) forwards;
+}
+
+.profile-content.delay{
+animation-delay:.25s;
+}
+
+@keyframes profileAppear{
+0%{
+opacity:0;
+transform:translateY(80px) scale(.96);
+}
+70%{
+opacity:1;
+transform:translateY(-12px) scale(1.02);
+}
+100%{
+opacity:1;
+transform:translateY(0) scale(1);
+}
+}
+
+.profile-card{
+transition:transform .6s ease, background .6s ease;
+animation:cardFloat 8s ease-in-out infinite;
+}
+
+.profile-card:nth-child(2){
+animation-delay:1s;
+}
+
+@keyframes cardFloat{
+0%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-8px);
+}
+100%{
+transform:translateY(0);
+}
+}
+
+details summary{
+list-style:none;
+}
+
+details summary::-webkit-details-marker{
+display:none;
+}
+
+</style>
+
+<script is:inline>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const details = document.getElementById("messageDetails");
+const summary = document.getElementById("messageSummary");
+const bg1 = document.getElementById("profileBg1");
+const bg2 = document.getElementById("profileBg2");
+
+  if (!details || !summary || !bg1 || !bg2) return;
+
+  details.addEventListener("toggle", () => {
+
+    if (details.open) {
+  bg1.style.opacity = "0";
+  bg2.style.opacity = "1";
+  summary.textContent = "折りたたむ";
+} else {
+  bg1.style.opacity = "1";
+  bg2.style.opacity = "0";
+  summary.textContent = "続きを読む";
+}
+
+  });
+
+});
+</script>
+
+</Layout>

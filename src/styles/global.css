@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+
+/* =========================
+   Base
+========================= */
+
+
+:root{
+
+  --font-jp:"Shippori Mincho", serif;
+
+  --font-en:"Cormorant Garamond", serif;
+
+  --font-ui:"Inter", sans-serif;
+
+}
+
+
+
+html,
+body{
+
+  margin:0;
+
+  width:100%;
+
+  min-height:100%;
+
+}
+
+
+
+body{
+
+  font-family:var(--font-ui);
+
+  background:#f8f6f2;
+
+  color:#222;
+
+  overflow-x:hidden;
+
+}
+
+
+
+
+/* =========================
+   Fonts
+========================= */
+
+
+.font-jp{
+
+  font-family:var(--font-jp);
+
+}
+
+
+
+.font-en{
+
+  font-family:var(--font-en);
+
+}
+
+
+
+.font-ui{
+
+  font-family:var(--font-ui);
+
+}
+
+
+
+
+/* =========================
+   Scroll Animation
+========================= */
+
+
+.fade-in {
+
+  opacity:0;
+
+  transform:translateY(40px);
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+
+}
+
+
+
+.fade-in.show {
+
+  opacity:1;
+
+  transform:translateY(0);
+
+}
+
+
+.vertical-link{
+
+writing-mode:vertical-rl;
+
+text-orientation:mixed;
+
+color:white;
+
+font-size:.75rem;
+
+letter-spacing:.35em;
+
+opacity:.75;
+
+transition:.35s;
+
+}
+
+.vertical-link:hover{
+
+opacity:1;
+
+transform:translateY(-4px);
+
+color:#ffe6b7;
+
+}

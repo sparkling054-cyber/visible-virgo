@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+// Home components
+import Hero from "../components/home/Hero.astro";
+import Achievements from "../components/home/Achievements.astro";
+import Contact from "../components/home/Contact.astro";
+
+// Layout components
+import Footer from "../components/layout/Footer.astro";
+---
+
+<Layout
+  title="錦乃｜日本文化・歴史・城郭クリエイター"
+  description="日本の伝統、歴史、城郭建築を主なテーマに創作を投稿をする動画クリエイター錦乃の公式サイト。歴史建築再現、写真、動画、デジタル作品を紹介しています。"
+>
+
+  <Hero />
+
+  <Achievements />
+
+  <Contact />
+
+  <Footer />
+
+</Layout>

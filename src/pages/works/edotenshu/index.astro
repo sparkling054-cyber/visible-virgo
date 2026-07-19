@@ -1,0 +1,98 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Container from "../../../components/common/Container.astro";
+import SectionTitle from "../../../components/common/SectionTitle.astro";
+
+const works = [
+  {
+    title: "慶長度 江戸城天守",
+    image: "/images/edo-tenshu-keicho.jpg",
+    link: "#"
+  },
+  {
+    title: "元和度 江戸城天守",
+    image: "/images/edo-tenshu-genna.jpg",
+    link: "#"
+  },
+  {
+    title: "寛永度 江戸城天守",
+    image: "/images/edo-tenshu-kanei.jpg",
+    link: "#"
+  },
+  {
+    title: "四代目 江戸城天守",
+    image: "/images/edo-tenshu-4th.jpg",
+    link: "#"
+  }
+];
+---
+
+<Layout
+  title="江戸城天守｜作品紹介｜錦乃"
+  description="江戸城天守に関する作品一覧です。"
+>
+
+<section class="relative min-h-screen overflow-hidden bg-[#140f0d]">
+
+  <img
+    src="/images/works-bg.png"
+    alt="江戸城天守背景"
+    class="absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+    draggable="false"
+  />
+
+  <div class="absolute inset-0 bg-black/20"></div>
+
+  <div class="relative z-10 py-32">
+
+    <Container>
+
+      <SectionTitle
+        en="EDO CASTLE TOWER"
+        title="江戸城天守"
+        description=""
+      />
+
+      <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+
+        {
+          works.map((work) => (
+
+            <a
+              href={work.link}
+              class="group overflow-hidden rounded-3xl bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-xl"
+            >
+
+              <div class="aspect-video overflow-hidden">
+
+                <img
+                  src={work.image}
+                  alt={work.title}
+                  loading="lazy"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                />
+
+              </div>
+
+              <div class="p-6">
+
+                <h2 class="text-2xl font-bold text-slate-900">
+                  {work.title}
+                </h2>
+
+              </div>
+
+            </a>
+
+          ))
+        }
+
+      </div>
+
+    </Container>
+
+  </div>
+
+</section>
+
+</Layout>

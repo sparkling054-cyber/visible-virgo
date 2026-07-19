@@ -1,0 +1,81 @@
+src/components/home/Hero.astro
+<section
+  class="relative flex min-h-screen items-center justify-center overflow-hidden bg-slate-900"
+>
+
+  <!-- Background -->
+  <div
+    class="absolute inset-0 bg-cover bg-center animate-zoom"
+    style="background-image: url('/images/hero.jpg');"
+  ></div>
+
+
+  <!-- Overlay -->
+  <div
+    class="absolute inset-0 bg-black/40"
+  ></div>
+
+
+  <!-- Content -->
+  <div
+    class="relative z-10 mx-auto max-w-4xl px-6 text-center text-white"
+  >
+
+
+    <!-- English Title -->
+
+    <p
+      class="mb-6 text-sm tracking-[0.5em] opacity-90 animate-fade-up"
+      style="animation-delay:0.1s"
+    >
+      JAPANESE CULTURE & HISTORY
+    </p>
+
+
+
+    <!-- Main Title -->
+
+    <h1
+      class="animate-fade-up text-5xl font-bold leading-tight md:text-7xl"
+      style="animation-delay:0.2s"
+    >
+      日本の伝統を<br />
+      未来へ
+    </h1>
+
+
+
+    <!-- Description -->
+
+    <p
+      class="animate-fade-up mx-auto mt-8 max-w-2xl text-lg text-white/90 md:text-xl"
+      style="animation-delay:0.4s"
+    >
+      歴史、城郭、建築、創作を通じて<br />
+      日本文化の魅力を発信するクリエイター。
+    </p>
+
+
+
+    <!-- Button -->
+
+    <div
+      class="mt-10 animate-fade-up"
+      style="animation-delay:0.6s"
+    >
+
+      <a
+        href="/works/"
+        class="inline-flex rounded-full bg-rose-400 px-10 py-4 font-medium transition hover:-translate-y-1 hover:bg-rose-500 hover:shadow-xl"
+      >
+        作品を見る
+      </a>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>

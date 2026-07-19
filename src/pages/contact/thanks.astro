@@ -1,0 +1,116 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="お問い合わせありがとうございます｜錦乃"
+  description="お問い合わせを受け付けました。"
+>
+
+<section class="relative min-h-screen overflow-hidden bg-[#140f0d]">
+
+  <img
+    src="/images/contact-form-bg.png"
+    alt=""
+    class="absolute inset-0 h-full w-full object-cover"
+    draggable="false"
+  />
+
+  <div class="absolute inset-0 bg-black/45"></div>
+
+  <div class="relative z-10 flex min-h-screen items-center justify-center px-8">
+
+    <div class="thanks-show max-w-3xl rounded-[2.8rem] border border-white/20 bg-white/10 p-14 text-center text-white backdrop-blur-xl">
+
+      <p class="tracking-[0.45em] text-sm">
+        THANK YOU
+      </p>
+
+      <h1
+        class="mt-6 text-5xl leading-tight"
+        style="font-family:'Cormorant Garamond',serif;"
+      >
+        お問い合わせありがとうございます。
+      </h1>
+
+      <p
+        class="mt-10 leading-9 text-white/90"
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        内容を確認のうえ、順次ご返信いたします。<br>
+        数日経っても返信が届かない場合は、<br>
+        迷惑メールフォルダもあわせてご確認ください。
+      </p>
+
+      <div class="mt-14 flex flex-wrap justify-center gap-5">
+
+        <a
+          href="/"
+          class="rounded-full border border-white px-10 py-4 transition duration-300 hover:bg-white hover:text-black"
+        >
+          TOPへ戻る
+        </a>
+
+        <a
+          href="/contact/"
+          class="rounded-full border border-white/40 px-10 py-4 transition duration-300 hover:border-white hover:bg-white/10"
+        >
+          CONTACTへ戻る
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+.thanks-show{
+
+opacity:0;
+
+animation:
+thanksFade 1s cubic-bezier(.22,1,.36,1) forwards;
+
+}
+
+@keyframes thanksFade{
+
+0%{
+
+opacity:0;
+
+transform:
+translateY(60px)
+scale(.96);
+
+}
+
+70%{
+
+opacity:1;
+
+transform:
+translateY(-8px)
+scale(1.02);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:
+translateY(0)
+scale(1);
+
+}
+
+}
+
+</style>
+
+</Layout>
