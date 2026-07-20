@@ -3,51 +3,22 @@
   class="relative min-h-screen overflow-hidden bg-[#140f0d]"
 >
 
-  <!-- Hero Image -->
-  <img
-    src="/images/78adb63e-2db7-4749-bef0-f032743afcde3.png"
-    alt="Hero"
-    class="hero-image absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
-    draggable="false"
-  />
+  <picture class="absolute inset-0">
 
-  <!-- Overlay -->
+    <source
+      media="(max-width:768px)"
+      srcset="/images/hero-mobile.png"
+    />
+
+    <img
+      src="/images/78adb63e-2db7-4749-bef0-f032743afcde3.png"
+      alt="Hero"
+      class="h-full w-full object-cover select-none pointer-events-none"
+      draggable="false"
+    />
+
+  </picture>
+
   <div class="absolute inset-0 bg-black/10"></div>
 
 </section>
-
-<style>
-
-.hero-image{
-  object-fit:cover;
-  object-position:center center;
-}
-
-/* タブレット */
-@media (max-width:1024px){
-
-.hero-image{
-  object-position:60% center;
-}
-
-}
-
-/* スマホ */
-@media (max-width:768px){
-
-.hero-image{
-  object-position:70% center;
-}
-
-}
-
-/* 小さいスマホ */
-@media (max-width:480px){
-
-.hero-image{
-  object-position:75% center;
-}
-
-}
-
-</style>
