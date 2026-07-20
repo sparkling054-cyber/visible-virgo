@@ -126,8 +126,6 @@ class:list={[
 "sm:tracking-[0.16em]",
 "xl:tracking-[0.18em]",
 
-index === 4 && "col-start-2",
-index === 5 && "col-start-3"
 ]}
 >
 
@@ -261,10 +259,39 @@ translateX(40px);
 
 width:100%;
 
-grid-template-columns:repeat(4,minmax(0,1fr));
+/* 8列グリッドに変更 */
+display:grid;
+grid-template-columns:repeat(8,minmax(0,1fr));
 
-gap:8px 6px;
+row-gap:8px;
+column-gap:6px;
 
+}
+
+/* 上段4つ */
+.header-link:nth-child(1){
+grid-column:1 / span 2;
+}
+
+.header-link:nth-child(2){
+grid-column:3 / span 2;
+}
+
+.header-link:nth-child(3){
+grid-column:5 / span 2;
+}
+
+.header-link:nth-child(4){
+grid-column:7 / span 2;
+}
+
+/* 下段2つは広め */
+.header-link:nth-child(5){
+grid-column:2 / span 3;
+}
+
+.header-link:nth-child(6){
+grid-column:5 / span 3;
 }
 
 .header-link{
@@ -274,6 +301,8 @@ white-space:nowrap;
 font-size:10px;
 
 letter-spacing:.02em;
+
+text-align:center;
 
 }
 
