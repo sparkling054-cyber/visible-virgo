@@ -31,61 +31,84 @@ import Layout from "../../layouts/Layout.astro";
 
   <!-- Content -->
   <div
-    class="relative z-10 mx-auto flex min-h-screen max-w-[1700px] items-center justify-between px-10 py-24 lg:px-20"
-  >
+  class="relative z-10 mx-auto flex min-h-screen max-w-[1700px]
+         flex-col items-center justify-between
+         px-5 py-28
+         lg:flex-row lg:px-20 lg:py-24"
+>
 
-    <!-- Left -->
-    <div class="profile-content w-[28%]">
 
-      <p
-        class="text-sm tracking-[0.55em] text-white"
-        style="font-family:'Inter',sans-serif;"
-      >
-        PROFILE
-      </p>
+<!-- Left -->
+<div
+  class="profile-content w-full
+         lg:w-[30%]"
+>
 
-      <h1
-        class="mt-6 text-7xl font-light text-white"
-        style="font-family:'Shippori Mincho',serif;"
-      >
-        錦乃
-      </h1>
+<p
+  class="text-xs tracking-[0.35em] text-white sm:text-sm sm:tracking-[0.55em]"
+  style="font-family:'Inter',sans-serif;"
+>
+PROFILE
+</p>
 
-      <p
-        class="mt-8 leading-9 text-white/90"
-        style="font-family:'Shippori Mincho',serif;"
-      >
-        日本の伝統文化や建物を好み、
-        <br />
-        新しい表現を生み出す動画クリエイター。
-        <br /><br />
 
-        普段から名所を巡ったり、
-        風景や映像を撮影したりしながら、
-        自身の「好き」を作品として形にしています。
-      </p>
+<h1
+  class="mt-4 text-5xl font-light text-white sm:text-6xl lg:mt-6 lg:text-7xl"
+  style="font-family:'Shippori Mincho',serif;"
+>
+錦乃
+</h1>
 
-    </div>
 
-    <!-- Center -->
-    <div class="w-[18%]"></div>
+<p
+  class="mt-6 text-sm leading-7 text-white/90 sm:text-base sm:leading-10 lg:mt-8"
+  style="font-family:'Shippori Mincho',serif;"
+>
+　　にしきの　
+<br />
+日本の伝統文化や建物を好み、
+<br />
+新しい表現を生み出す動画クリエイター。
+<br /><br />
 
-    <!-- Right -->
-    <div class="profile-content delay w-[34%] space-y-6">
+普段から名所を巡ったり、
+風景や映像を撮影したりしながら、
+自身の「好き」を作品として形にしています。
+</p>
 
-      <!-- INTRODUCTION -->
-      <div
-        class="profile-card rounded-[34px] border border-white/20 bg-white/5 p-8 backdrop-blur-md"
-      >
+</div>
 
-        <p class="text-xs tracking-[0.45em] text-white/60">
-          INTRODUCTION
-        </p>
 
-        <div
-          class="mt-5 space-y-4 leading-8 text-white"
-          style="font-family:'Shippori Mincho',serif;"
-        >
+
+<!-- Center -->
+<div class="hidden lg:block lg:w-[18%]"></div>
+
+
+
+
+<!-- Right -->
+<div
+  class="profile-content delay mt-10 w-full space-y-5
+         lg:mt-0 lg:w-[34%] lg:space-y-6"
+>
+
+
+<div
+class="profile-card rounded-[24px] border border-white/20
+       bg-white/5 p-5 backdrop-blur-md
+       sm:rounded-[34px] sm:p-8"
+>
+
+
+<p class="text-[10px] tracking-[0.35em] text-white/60 sm:text-xs sm:tracking-[0.45em]">
+INTRODUCTION
+</p>
+
+
+<div
+class="mt-4 space-y-3 text-sm leading-7 text-white sm:mt-5 sm:space-y-4 sm:text-base sm:leading-8"
+style="font-family:'Shippori Mincho',serif;"
+>
 
           <p>
             「錦織」のような彩り豊かさを表す<strong>「錦」</strong>、
@@ -106,8 +129,11 @@ import Layout from "../../layouts/Layout.astro";
 
       <!-- MESSAGE -->
       <div
-        class="profile-card rounded-[34px] border border-white/20 bg-white/5 p-8 backdrop-blur-md"
-      >
+class="profile-card rounded-[24px] border border-white/20
+       bg-white/5 p-5 backdrop-blur-md
+       sm:rounded-[34px] sm:p-8"
+>
+
 
         <p class="text-xs tracking-[0.45em] text-white/60">
           MESSAGE
@@ -124,7 +150,7 @@ import Layout from "../../layouts/Layout.astro";
 
           <p class="mt-4">
             世界的に有名なサンドボックスゲーム『Minecraft』で
-            日本の伝統建築を制作していたことをきっかけに、
+            日本の伝統的な名所を制作していたことをきっかけに、
             多くの方に活動を知っていただきました。
           </p>
 
