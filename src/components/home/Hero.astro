@@ -1,16 +1,30 @@
 <section
   id="hero"
-  class="relative overflow-hidden bg-[#140f0d]
-         h-[56.25vw] min-h-[400px]
-         sm:min-h-screen"
+  class="relative min-h-screen overflow-hidden bg-[#140f0d]"
 >
 
   <!-- Hero Image -->
+  <picture>
+    <!-- Smartphone -->
+    <source
+      media="(max-width: 639px)"
+      srcset="/images/home-mobile.png"
+    />
+
+    <!-- PC / Tablet -->
+    <img
+      src="/images/78adb63e-2db7-4749-bef0-f032743afcde3.png"
+      alt="Hero"
+      class="absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+      draggable="false"
+    />
+  </picture>
+
+  <!-- Mobile Image -->
   <img
-    src="/images/78adb63e-2db7-4749-bef0-f032743afcde3.png"
-    alt="Hero"
-    class="absolute inset-0 h-full w-full select-none pointer-events-none
-           object-contain sm:object-cover"
+    src="/images/home-mobile.png"
+    alt="Hero Mobile"
+    class="absolute inset-0 hidden h-full w-full object-cover select-none pointer-events-none sm:hidden"
     draggable="false"
   />
 
