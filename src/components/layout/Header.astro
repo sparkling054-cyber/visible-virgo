@@ -75,10 +75,12 @@ ml-auto
 mr-2
 
 grid
-grid-cols-3
-
-gap-x-3
+grid-cols-4
+gap-x-2
 gap-y-2
+
+justify-items-center
+items-center
 
 opacity-100
 
@@ -96,7 +98,6 @@ xl:gap-12
 "
 >
 
-
 {
 menuItems.map((item)=>(
 
@@ -106,33 +107,36 @@ href={item.href}
 class="
 header-link
 
+w-full
 text-center
 
 font-['Cormorant_Garamond']
 
-text-[13px]
+text-[11px]
 
 font-medium
 
-tracking-[0.08em]
+tracking-[0.04em]
+
+leading-none
 
 text-white
 
 transition
-
 duration-300
 
 hover:text-[#f8dfc1]
 
 
+sm:w-auto
+
 sm:text-[11px]
+
+sm:tracking-[0.16em]
 
 lg:text-[13px]
 
 xl:text-[17px]
-
-
-sm:tracking-[0.16em]
 
 xl:tracking-[0.18em]
 "
@@ -145,12 +149,7 @@ xl:tracking-[0.18em]
 ))
 }
 
-
 </nav>
-
-
-
-
 
 <!-- Menu -->
 
@@ -253,7 +252,6 @@ transform .7s ease;
 
 }
 
-
 .header-hidden{
 
 opacity:0;
@@ -262,6 +260,33 @@ pointer-events:none;
 
 transform:
 translateX(40px);
+
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:639px){
+
+#header-nav{
+
+width:100%;
+
+grid-template-columns:repeat(4,minmax(0,1fr));
+
+gap:8px 6px;
+
+}
+
+.header-link{
+
+white-space:nowrap;
+
+font-size:10px;
+
+letter-spacing:.02em;
+
+}
 
 }
 
