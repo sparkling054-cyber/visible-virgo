@@ -26,6 +26,14 @@ import Layout from "../../layouts/Layout.astro";
   draggable="false"
 />
 
+<img
+  id="profileBgMobile"
+  src="/images/profile-m.png"
+  alt=""
+  class="profile-bg profile-bg-back absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+  draggable="false"
+/>
+
   <!-- Overlay -->
   <div class="absolute inset-0 bg-black/35"></div>
 
@@ -309,6 +317,10 @@ details summary::-webkit-details-marker{
 display:none;
 }
 
+#profileBgMobile{
+opacity:0;
+}
+
 </style>
 
 <script is:inline>
@@ -318,19 +330,34 @@ document.addEventListener("DOMContentLoaded", () => {
 const summary = document.getElementById("messageSummary");
 const bg1 = document.getElementById("profileBg1");
 const bg2 = document.getElementById("profileBg2");
+const bgMobile = document.getElementById("profileBgMobile");
 
-  if (!details || !summary || !bg1 || !bg2) return;
+  if (!details || !summary || !bg1 || !bg2 || !bgMobile) return;
 
   details.addEventListener("toggle", () => {
 
     if (details.open) {
+
   bg1.style.opacity = "0";
-  bg2.style.opacity = "1";
+
+  if (window.innerWidth < 768) {
+    bg2.style.opacity = "0";
+    bgMobile.style.opacity = "1";
+  } else {
+    bg2.style.opacity = "1";
+    bgMobile.style.opacity = "0";
+  }
+
   summary.textContent = "折りたたむ";
+
 } else {
+
   bg1.style.opacity = "1";
   bg2.style.opacity = "0";
+  bgMobile.style.opacity = "0";
+
   summary.textContent = "続きを読む";
+
 }
 
   });

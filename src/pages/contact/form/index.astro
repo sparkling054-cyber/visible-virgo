@@ -1,80 +1,647 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
+import Layout from "../../layouts/Layout.astro";
 
 const categories = [
-  "個人・クリエイター",
-  "企業・法人",
-  "自治体・文化機関",
-  "メディア・イベント",
-  "研究・資料協力",
-  "その他"
-];
-
-const purposes = [
-  "YouTube・動画制作",
-  "SNS・コンテンツ制作",
-  "クリエイターコラボレーション",
-  "Minecraft・デジタル制作",
-  "歴史・城郭・文化関連",
-  "監修・資料提供",
-  "メディア出演・取材",
-  "企業・都市・専門機関・自治体プロジェクト",
-  "その他"
+  {
+    title: "個人",
+    subtitle: "Creator",
+    text:
+      "YouTube・SNS・Minecraft・配信活動・創作活動など、個人クリエイター様との制作やコラボレーション。"
+  },
+  {
+    title: "企業",
+    subtitle: "Business",
+    text:
+      "広告、映像、プロモーション、コンテンツ制作、展示企画など幅広く対応しています。"
+  },
+  {
+    title: "自治体・文化機関",
+    subtitle: "Public",
+    text:
+      "観光、文化財、歴史イベント、地域活性化、日本文化発信などのご相談。"
+  },
+  {
+    title: "監修・資料提供",
+    subtitle: "Research",
+    text:
+      "歴史建築、城郭、町並み、世界観設定などの監修・考証・資料提供。"
+  }
 ];
 ---
 
 <Layout
-  title="お問い合わせ｜錦乃"
-  description="錦乃への制作依頼、コラボレーション、歴史文化関連のご相談を受け付けています。"
+  title="CONTACT｜錦乃"
+  description="個人・企業・自治体・研究機関・イベントなど幅広いご相談を受け付けています。"
 >
+
 
 <section
-  class="relative h-[650px] overflow-hidden"
+  class="
+    relative overflow-hidden
+    h-[420px]
+    sm:h-[820px]
+  "
 >
 
-<img
-  src="/images/contact-form-bg.png"
-  alt="お問い合わせ背景"
-  class="form-image absolute inset-0 h-full w-full object-cover select-none"
-  draggable="false"
-/>
+  <!-- PC / Mobile Hero Image -->
+  <picture>
 
-<div
-  class="absolute inset-0 bg-black/20"
-></div>
+    <source
+      media="(max-width: 639px)"
+      srcset="/images/contact-m.png"
+    />
 
-<div
-  class="relative z-10 flex h-full items-center justify-center px-8 text-center text-white"
+    <img
+      src="/images/contact-bg.png"
+      alt="茶室の背景"
+      class="
+        contact-image
+        absolute inset-0
+        h-full w-full
+        object-cover
+        select-none
+        pointer-events-none
+      "
+      draggable="false"
+    />
+
+  </picture>
+
+
+  <div class="absolute inset-0 bg-black/10"></div>
+
+
+  <div
+    class="
+      absolute
+      bottom-8 right-6
+      sm:bottom-16 sm:right-12
+      z-20
+      flex flex-col items-center
+    "
+  >
+
+    <div
+      class="
+        h-12 w-px bg-white/70
+        sm:h-20
+      "
+    ></div>
+
+
+    <span
+      class="
+        mt-3
+        text-[10px]
+        tracking-[0.35em]
+        text-white
+        sm:mt-4
+        sm:text-xs
+        sm:tracking-[0.45em]
+      "
+    >
+      SCROLL
+    </span>
+
+
+  </div>
+
+
+</section>
+
+
+
+<section
+  class="
+    bg-[#faf8f3]
+    py-16
+    sm:py-32
+  "
 >
 
+
 <div
-  class="form-reveal"
+  class="
+    mx-auto
+    max-w-7xl
+    px-5
+    sm:px-8
+  "
 >
+
+
+<div class="max-w-5xl">
+
 
 <p
-  class="tracking-[0.45em] text-sm"
+  class="
+    contact-reveal
+    mb-3
+    text-[11px]
+    tracking-[0.35em]
+    text-neutral-500
+
+    sm:mb-4
+    sm:text-sm
+    sm:tracking-[0.45em]
+  "
 >
-CONTACT FORM
+CONTACT
 </p>
 
+
+
 <h1
-  class="mt-6 text-6xl"
+  class="
+    contact-reveal
+    text-4xl
+    leading-tight
+    text-neutral-900
+
+    sm:text-6xl
+  "
   style="font-family:'Cormorant Garamond',serif;"
 >
-ご相談・お問い合わせ
+茶室へようこそ。
 </h1>
 
+
+
 <p
-  class="mt-8 leading-9"
+  class="
+    contact-reveal
+    mt-6
+    text-sm
+    leading-8
+    text-neutral-700
+
+    sm:mt-10
+    sm:text-lg
+    sm:leading-10
+  "
   style="font-family:'Shippori Mincho',serif;"
 >
+
 「こんなことお願いできますか？」<br><br>
 
 そんな一言からでも大丈夫です。<br>
 
-内容がまだ決まっていなくても、<br>
-まずはお気軽にお話を聞かせてください。
+個人のクリエイター様から企業・番組・自治体・都市まで、<br>
+
+一緒に面白いものを作れる出会いを<br>
+
+楽しみにしています。
+
 </p>
+
+
+</div>
+
+
+<div
+  class="
+    contact-reveal
+    mt-16
+    mb-10
+
+    sm:mt-28
+    sm:mb-16
+  "
+>
+
+
+<p
+  class="
+    tracking-[0.3em]
+    text-[11px]
+    text-neutral-500
+
+    sm:text-sm
+    sm:tracking-[0.35em]
+  "
+>
+COLLABORATION
+</p>
+
+
+
+<h2
+  class="
+    mt-2
+    text-3xl
+    text-neutral-900
+
+    sm:mt-3
+    sm:text-5xl
+  "
+  style="font-family:'Cormorant Garamond',serif;"
+>
+ご相談いただける内容
+</h2>
+
+
+
+<p
+  class="
+    mt-5
+    max-w-3xl
+    text-sm
+    leading-7
+    text-neutral-700
+
+    sm:mt-8
+    sm:leading-9
+  "
+>
+制作内容が決まっていなくても問題ありません。
+
+「こんなことができたら面白そう」
+
+という段階から一緒に考えます。
+</p>
+
+
+</div>
+
+
+
+<div
+  class="
+    grid
+    gap-4
+
+    sm:gap-8
+    md:grid-cols-2
+  "
+>
+
+
+{
+categories.map((item,index)=>(
+
+<article
+
+class="
+contact-reveal
+
+rounded-[1.5rem]
+
+border
+border-white/70
+
+bg-white/70
+
+p-5
+
+backdrop-blur-md
+
+transition
+duration-500
+
+hover:-translate-y-2
+
+hover:shadow-2xl
+
+
+sm:rounded-[2rem]
+
+sm:p-10
+"
+
+style={`transition-delay:${index * 120}ms;`}
+
+>
+
+
+<p
+
+class="
+tracking-[0.3em]
+
+text-[10px]
+
+text-rose-400
+
+
+sm:text-xs
+
+sm:tracking-[0.35em]
+"
+
+>
+{item.subtitle}
+</p>
+
+
+
+<h3
+
+class="
+mt-3
+
+text-2xl
+
+text-neutral-900
+
+
+sm:mt-4
+
+sm:text-3xl
+"
+
+style="font-family:'Cormorant Garamond',serif;"
+
+>
+{item.title}
+</h3>
+
+
+
+<p
+
+class="
+mt-4
+
+text-sm
+
+leading-7
+
+text-neutral-700
+
+
+sm:mt-6
+
+sm:leading-8
+"
+
+>
+{item.text}
+</p>
+
+
+</article>
+
+
+))
+
+}
+
+
+</div>
+
+
+
+</div>
+
+</section>
+
+
+
+<section
+class="
+bg-white
+
+py-16
+
+sm:py-28
+"
+>
+
+
+<div
+class="
+mx-auto
+
+max-w-6xl
+
+px-5
+
+sm:px-8
+"
+>
+
+
+<div
+class="
+contact-reveal
+
+text-center
+"
+>
+
+
+<p
+class="
+tracking-[0.3em]
+
+text-[11px]
+
+text-neutral-500
+
+
+sm:text-sm
+
+sm:tracking-[0.35em]
+"
+>
+INVITATION
+</p>
+
+
+
+<h2
+
+class="
+mt-3
+
+text-3xl
+
+text-neutral-900
+
+
+sm:mt-4
+
+sm:text-5xl
+"
+
+style="font-family:'Cormorant Garamond',serif;"
+
+>
+こんなお話を歓迎しています。
+</h2>
+
+
+
+<p
+
+class="
+mx-auto
+
+mt-5
+
+max-w-3xl
+
+text-sm
+
+leading-7
+
+text-neutral-700
+
+
+sm:mt-8
+
+sm:leading-9
+"
+
+>
+小さなアイデアから大きな企画まで。
+
+「一緒に作ってみたい。」
+
+そんな気持ちを大切にしています。
+</p>
+
+
+</div>
+
+
+<div
+
+class="
+mt-10
+
+grid
+
+gap-4
+
+
+sm:mt-20
+
+sm:gap-6
+
+
+md:grid-cols-2
+
+lg:grid-cols-3
+"
+
+>
+
+
+<div
+class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-5 sm:rounded-[2rem] sm:p-8"
+style="transition-delay:0ms;"
+>
+
+<h3 class="text-xl sm:text-2xl">
+🎥 YouTube・配信
+</h3>
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:leading-8">
+動画企画、配信企画、世界観制作、
+Minecraft建築など。
+</p>
+
+</div>
+
+
+
+<div
+class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-5 sm:rounded-[2rem] sm:p-8"
+style="transition-delay:120ms;"
+>
+
+<h3 class="text-xl sm:text-2xl">
+🤝 コラボレーション
+</h3>
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:leading-8">
+クリエイター同士の共同制作、
+イベント企画、
+SNSでの発信など。
+</p>
+
+</div>
+
+
+
+<div
+class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-5 sm:rounded-[2rem] sm:p-8"
+style="transition-delay:240ms;"
+>
+
+<h3 class="text-xl sm:text-2xl">
+🏯 地域・文化
+</h3>
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:leading-8">
+自治体、
+博物館、
+観光、
+歴史文化発信への協力。
+</p>
+
+</div>
+
+
+
+<div
+class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-5 sm:rounded-[2rem] sm:p-8"
+style="transition-delay:360ms;"
+>
+
+<h3 class="text-xl sm:text-2xl">
+📺 メディア
+</h3>
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:leading-8">
+テレビ、
+Webメディア、
+雑誌、
+映像制作への出演・制作協力。
+</p>
+
+</div>
+
+
+
+<div
+class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-5 sm:rounded-[2rem] sm:p-8"
+style="transition-delay:480ms;"
+>
+
+<h3 class="text-xl sm:text-2xl">
+📚 監修・資料提供
+</h3>
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:leading-8">
+城郭、
+御殿、
+歴史建築、
+世界観設定など。
+</p>
+
+</div>
+
+
+
+<div
+class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-5 sm:rounded-[2rem] sm:p-8"
+style="transition-delay:600ms;"
+>
+
+<h3 class="text-xl sm:text-2xl">
+✨ その他
+</h3>
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:leading-8">
+「こんなこと出来ますか？」
+という段階からお気軽にご相談ください。
+</p>
+
+</div>
+
+
 
 </div>
 
@@ -82,506 +649,361 @@ CONTACT FORM
 
 </section>
 
-<section
-class="bg-[#faf8f3] py-32"
->
 
-<div
-class="mx-auto max-w-5xl px-8"
->
 
-<div
-class="form-reveal mb-20 text-center"
->
 
-<p
-class="tracking-[0.35em] text-sm text-neutral-500"
->
+<section class="bg-[#f7f5ef] py-16 sm:py-32">
+
+
+<div class="mx-auto max-w-5xl px-5 text-center sm:px-8">
+
+
+<div class="contact-reveal">
+
+
+<p class="tracking-[0.3em] text-[11px] text-neutral-500 sm:text-sm">
 MESSAGE
 </p>
 
+
+
 <h2
-class="mt-5 text-5xl text-neutral-900"
+class="
+mt-3
+text-3xl
+text-neutral-900
+
+sm:mt-4
+sm:text-5xl
+"
 style="font-family:'Cormorant Garamond',serif;"
 >
-まずはお気軽に。
+一緒に、
+面白い景色を作りませんか。
 </h2>
 
+
+
 <p
-class="mx-auto mt-8 max-w-3xl leading-9 text-neutral-700"
+class="
+mx-auto
+mt-6
+max-w-3xl
+text-sm
+leading-8
+text-neutral-700
+
+sm:mt-10
+sm:leading-9
+"
 style="font-family:'Shippori Mincho',serif;"
 >
 
-制作依頼、企画相談、コラボレーションなど、<br>
-内容が決まっていない段階でも歓迎しています。
+歴史でも、
+
+ゲームでも、
+
+写真でも、
+
+映像でも。
+
 
 <br><br>
 
-「こんなことができたら面白そう」<br><br>
 
-そんな想像から、一緒に形にしていければ嬉しいです。
+「こんな景色が見てみたい。」
+
+
+<br><br>
+
+
+そんな想像から始まる出会いを
+
+楽しみにしています。
 
 </p>
 
-</div>
 
-<form
-action="/api/contact"
-method="POST"
-class="form-reveal rounded-[2.5rem] border border-white bg-white/80 p-10 shadow-xl backdrop-blur-md md:p-14"
->
-
-<div
-class="hidden"
-aria-hidden="true"
->
-
-<label>
-Leave this field empty
-</label>
-
-<input
-type="text"
-name="website"
-/>
-
-</div>
-
-<div
-class="grid gap-8"
->
-
-<div>
-
-<label
-for="category"
-class="block text-sm tracking-widest text-neutral-600"
->
-ご相談者様について
-</label>
-
-<select
-id="category"
-name="category"
-required
-class="mt-4 w-full rounded-2xl border border-neutral-200 bg-white px-5 py-4 text-neutral-800 outline-none transition focus:border-neutral-800"
->
-
-<option value="">
-選択してください
-</option>
-
-{
-categories.map((category)=>(
-<option value={category}>
-{category}
-</option>
-))
-}
-
-</select>
-
-</div>
-
-<div>
-
-<label
-for="name"
-class="block text-sm tracking-widest text-neutral-600"
->
-お名前
-</label>
-
-<input
-id="name"
-name="name"
-type="text"
-required
-maxlength="50"
-placeholder="お名前または活動名をご入力ください"
-class="mt-4 w-full rounded-2xl border border-neutral-200 bg-white px-5 py-4 text-neutral-800 outline-none transition focus:border-neutral-800"
-/>
-
-</div>
-
-<div>
-
-<label
-for="sns"
-class="block text-sm tracking-widest text-neutral-600"
->
-SNS・Webサイト（任意）
-</label>
-
-<input
-id="sns"
-name="sns"
-type="url"
-placeholder="YouTube・X・WebサイトなどのURL"
-class="mt-4 w-full rounded-2xl border border-neutral-200 bg-white px-5 py-4 text-neutral-800 outline-none transition focus:border-neutral-800"
-/>
-
-</div>
-
-<div>
-
-<label
-for="email"
-class="block text-sm tracking-widest text-neutral-600"
->
-メールアドレス
-</label>
-
-<input
-id="email"
-name="email"
-type="email"
-required
-placeholder="example@example.com"
-class="mt-4 w-full rounded-2xl border border-neutral-200 bg-white px-5 py-4 text-neutral-800 outline-none transition focus:border-neutral-800"
-/>
-
-</div>
-
-<div>
-
-<label
-for="organization"
-class="block text-sm tracking-widest text-neutral-600"
->
-法人・団体名（任意）
-</label>
-
-<input
-id="organization"
-name="organization"
-type="text"
-maxlength="100"
-placeholder="企業名・団体名などをご入力ください"
-class="mt-4 w-full rounded-2xl border border-neutral-200 bg-white px-5 py-4 text-neutral-800 outline-none transition focus:border-neutral-800"
-/>
-
-</div>
-
-<!-- Purpose -->
-
-<div>
-
-<label
-for="purpose"
-class="block text-sm tracking-widest text-neutral-600"
->
-ご相談内容
-</label>
-
-<select
-id="purpose"
-name="purpose"
-required
-class="mt-4 w-full rounded-2xl border border-neutral-200 bg-white px-5 py-4 text-neutral-800 outline-none transition focus:border-neutral-800"
->
-
-<option value="">
-選択してください
-</option>
-
-{
-purposes.map((purpose)=>(
-<option value={purpose}>
-{purpose}
-</option>
-))
-}
-
-</select>
-
-</div>
-
-<!-- その他入力（初期は非表示） -->
-
-<div
-id="other-purpose-area"
-class="hidden"
->
-
-<label
-for="otherPurpose"
-class="block text-sm tracking-widest text-neutral-600"
->
-ご相談内容（自由入力）
-</label>
-
-<input
-id="otherPurpose"
-name="otherPurpose"
-type="text"
-maxlength="200"
-placeholder="ご相談内容をご自由にご入力ください"
-class="mt-4 w-full rounded-2xl border border-neutral-200 bg-white px-5 py-4 text-neutral-800 outline-none transition focus:border-neutral-800"
-/>
-
-</div>
-
-<!-- Message -->
-
-<div>
-
-<label
-for="message"
-class="block text-sm tracking-widest text-neutral-600"
->
-お問い合わせ内容
-</label>
-
-<textarea
-id="message"
-name="message"
-required
-maxlength="2000"
-rows="8"
-placeholder="ご相談内容や実現したいことなど、分かる範囲でご記入ください。
-
-内容がまだ決まっていない段階でも大丈夫です。"
-class="mt-4 w-full rounded-2xl border border-neutral-200 bg-white px-5 py-4 leading-8 text-neutral-800 outline-none transition focus:border-neutral-800"
-></textarea>
-
-<p
-class="mt-3 text-xs text-neutral-500"
->
-最大2000文字まで入力できます。
-</p>
-
-</div>
-
-<!-- Submit -->
-
-<div
-class="pt-8 text-center"
->
-
-<button
-type="submit"
-class="inline-flex h-40 w-40 items-center justify-center rounded-full border border-neutral-900 bg-white text-lg transition duration-500 hover:-translate-y-2 hover:shadow-2xl"
->
-
-送信する
-
-</button>
-
-</div>
-
-</div>
-
-</form>
-
-</div>
-
-</section>
-
-<section
-class="bg-white py-24"
->
-
-<div
-class="mx-auto max-w-5xl px-8 text-center"
->
-
-<div
-class="form-reveal"
->
-
-</div>
 
 <a
-href="/contact/"
-class="form-reveal mt-16 inline-flex rounded-full border border-neutral-800 px-10 py-4 transition hover:bg-neutral-900 hover:text-white"
+href="/contact/form/"
+class="
+contact-reveal
+
+mt-10
+
+inline-flex
+
+h-32
+
+w-32
+
+items-center
+
+justify-center
+
+rounded-full
+
+border
+
+border-neutral-900
+
+bg-white
+
+text-center
+
+text-sm
+
+transition
+
+duration-500
+
+hover:-translate-y-2
+
+hover:shadow-2xl
+
+
+sm:mt-14
+
+sm:h-44
+
+sm:w-44
+
+sm:text-lg
+"
+style="transition-delay:250ms;"
 >
-CONTACTページへ戻る
+お話を<br>
+聞かせてください。
 </a>
+
+
 
 </div>
 
+
+</div>
+
+
 </section>
+
+
+
+
+<section class="bg-white py-14 sm:py-24">
+
+
+<div class="mx-auto max-w-5xl px-5 sm:px-8">
+
+
+<div class="contact-reveal text-center">
+
+
+<p class="tracking-[0.3em] text-[11px] text-neutral-500 sm:text-sm">
+FAQ
+</p>
+
+
+<h2
+class="
+mt-3
+text-3xl
+
+sm:mt-4
+sm:text-5xl
+"
+style="font-family:'Cormorant Garamond',serif;"
+>
+よくあるご相談
+</h2>
+
+
+</div>
+
+
+
+<div class="mt-10 space-y-4 sm:mt-16 sm:space-y-8">
+
+
+
+<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-5 sm:rounded-[2rem] sm:p-8">
+
+<h3 class="text-lg font-semibold sm:text-xl">
+企画がまだ固まっていません。
+</h3>
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:leading-8">
+問題ありません。
+アイデア段階から一緒に考えることも歓迎しています。
+</p>
+
+</div>
+
+
+
+<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-5 sm:rounded-[2rem] sm:p-8">
+
+<h3 class="text-lg font-semibold sm:text-xl">
+個人でも相談できますか？
+</h3>
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:leading-8">
+もちろんです。
+個人・クリエイター・配信活動者の方からのご相談も歓迎しています。
+</p>
+
+</div>
+
+
+
+<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-5 sm:rounded-[2rem] sm:p-8">
+
+<h3 class="text-lg font-semibold sm:text-xl">
+相談だけでも大丈夫ですか？
+</h3>
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:leading-8">
+はい。
+「こんなことができたら面白そう」という段階でもお気軽にご連絡ください。
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
 
 <style>
 
-.form-image{
-
-animation:
-formFloat 12s ease-in-out infinite;
-
+.contact-image{
+animation:contactFloat 10s ease-in-out infinite;
 transform-origin:center;
-
 }
 
-@keyframes formFloat{
+
+
+@keyframes contactFloat{
 
 0%{
-
-transform:
-scale(1.03)
-translateY(0);
-
+transform:translateY(0) scale(1.02);
 }
 
 50%{
-
-transform:
-scale(1.06)
-translateY(-18px);
-
+transform:translateY(-16px) scale(1.04);
 }
 
 100%{
-
-transform:
-scale(1.03)
-translateY(0);
-
+transform:translateY(0) scale(1.02);
 }
 
 }
 
-.form-reveal{
+
+
+/* Scroll Reveal */
+
+.contact-reveal{
 
 opacity:0;
 
 transform:
-translateY(60px)
+translateY(50px)
 scale(.97);
 
 transition:
 opacity .9s cubic-bezier(.22,1,.36,1),
 transform .9s cubic-bezier(.22,1,.36,1);
 
+will-change:
+transform,
+opacity;
+
 }
 
-.form-show{
+
+
+.contact-show{
 
 animation:
-formBounce .9s cubic-bezier(.22,1,.36,1)
-forwards;
+contactBounce .9s cubic-bezier(.22,1,.36,1) forwards;
 
 }
 
-@keyframes formBounce{
+
+
+@keyframes contactBounce{
 
 0%{
-
 opacity:0;
-
 transform:
-translateY(60px)
+translateY(50px)
 scale(.97);
-
 }
 
-70%{
 
+65%{
 opacity:1;
-
 transform:
 translateY(-8px)
-scale(1.02);
-
+scale(1.01);
 }
 
+
 100%{
-
 opacity:1;
-
 transform:
 translateY(0)
 scale(1);
-
 }
-
-}
-
-.hidden{
-
-display:none;
 
 }
 
 </style>
 
+
+
 <script>
 
-const observer =
-new IntersectionObserver(
-(entries)=>{
+const observer = new IntersectionObserver((entries)=>{
 
 entries.forEach((entry)=>{
 
-if(!entry.isIntersecting)
-return;
+if(!entry.isIntersecting) return;
 
-entry.target.classList.add(
-"form-show"
-);
+const el = entry.target;
 
-observer.unobserve(
-entry.target
-);
+el.classList.add("contact-show");
+
+observer.unobserve(el);
 
 });
 
-},
-{
+},{
+threshold:0.18,
+rootMargin:"0px 0px -10% 0px"
+});
 
-threshold:0.18
 
-}
-);
 
 document
-.querySelectorAll(".form-reveal")
-.forEach((element)=>{
+.querySelectorAll(".contact-reveal")
+.forEach((el)=>{
 
-observer.observe(element);
+observer.observe(el);
 
 });
 
-const purposeSelect =
-document.getElementById("purpose");
-
-const otherArea =
-document.getElementById("other-purpose-area");
-
-const otherInput =
-document.getElementById("otherPurpose");
-
-function toggleOtherPurpose(){
-
-if(
-purposeSelect.value ===
-"その他（自由に相談を書く）"
-){
-
-otherArea.classList.remove("hidden");
-
-otherInput.required = true;
-
-}else{
-
-otherArea.classList.add("hidden");
-
-otherInput.required = false;
-
-otherInput.value = "";
-
-}
-
-}
-
-toggleOtherPurpose();
-
-purposeSelect.addEventListener(
-"change",
-toggleOtherPurpose
-);
-
 </script>
+
+
 
 </Layout>
