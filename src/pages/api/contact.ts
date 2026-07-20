@@ -3,7 +3,7 @@ import { Resend } from "resend";
 
 export const prerender = false;
 
-const resend = new Resend(import.meta.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 
 export const POST: APIRoute = async ({ request, redirect }) => {
