@@ -237,6 +237,26 @@ ${new Date().toLocaleString("ja-JP")}
 --------------------
 
 
+【お名前】
+
+${name}
+
+
+【メールアドレス】
+
+${email}
+
+
+【SNS・Webサイト】
+
+${sns || "なし"}
+
+
+【法人・団体名】
+
+${organization || "なし"}
+
+
 【ご相談内容】
 
 ${finalPurpose}
@@ -245,7 +265,6 @@ ${finalPurpose}
 【お問い合わせ内容】
 
 ${message}
-
 
 --------------------
 

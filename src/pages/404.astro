@@ -1,0 +1,28 @@
+---
+---
+
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>404</title>
+
+<script is:inline>
+const pages = [
+"/404-1/",
+"/404-2/",
+"/404-3/",
+"/404-4/"
+];
+
+location.replace(
+pages[Math.floor(Math.random()*pages.length)]
+);
+</script>
+
+</head>
+
+<body></body>
+
+</html>

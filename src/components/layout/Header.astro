@@ -15,7 +15,10 @@ const menuItems = [
 >
 
   <div
-    class="mx-auto flex max-w-[1800px] items-center justify-between px-6 py-7 lg:px-10 lg:py-8"
+    class="mx-auto flex max-w-[1800px] items-center justify-between 
+           px-3 py-4
+           sm:px-4 sm:py-5
+           lg:px-10 lg:py-8"
   >
 
     <!-- Logo -->
@@ -26,19 +29,33 @@ const menuItems = [
     >
 
       <img
-  src="/images/logo.webp"
-  alt="錦乃"
-  draggable="false"
-  class="h-10 w-auto md:h-12 lg:h-16 transition duration-500 hover:scale-105"
-/>
+        src="/images/logo.webp"
+        alt="錦乃"
+        draggable="false"
+        class="
+          h-8 w-auto
+          sm:h-10
+          lg:h-16
+          transition duration-500 hover:scale-105
+        "
+      />
 
     </a>
+
 
     <!-- Navigation -->
 
     <nav
       id="header-nav"
-      class="ml-auto flex items-center gap-5 lg:gap-8 xl:gap-12 transition-all duration-700 ease-in-out"
+      class="
+        ml-auto
+        flex items-center
+        gap-2
+        sm:gap-3
+        lg:gap-8
+        xl:gap-12
+        transition-all duration-700 ease-in-out
+      "
     >
 
       {
@@ -46,7 +63,23 @@ const menuItems = [
 
           <a
             href={item.href}
-            class="header-link font-['Cormorant_Garamond'] text-lg md:text-[13px] xl:text-[17px] font-medium tracking-[0.18em] text-white transition duration-300 hover:text-[#f8dfc1]"
+            class="
+              header-link
+              font-['Cormorant_Garamond']
+              text-[7px]
+              sm:text-[9px]
+              lg:text-[13px]
+              xl:text-[17px]
+              font-medium
+              tracking-[0.08em]
+              sm:tracking-[0.1em]
+              lg:tracking-[0.16em]
+              xl:tracking-[0.18em]
+              text-white
+              transition duration-300
+              hover:text-[#f8dfc1]
+              whitespace-nowrap
+            "
           >
             {item.name}
           </a>
@@ -56,20 +89,29 @@ const menuItems = [
 
     </nav>
 
+
     <!-- Menu -->
 
     <button
-  id="menu-toggle"
-  type="button"
-  aria-label="Toggle Navigation"
-  class="ml-4 flex h-11 w-11 items-center justify-center md:h-12 md:w-12 lg:hidden"
->
+      id="menu-toggle"
+      type="button"
+      aria-label="Toggle Navigation"
+      class="
+        ml-2
+        sm:ml-4
+        flex
+        h-8 w-8
+        sm:h-10 sm:w-10
+        lg:h-12 lg:w-12
+        items-center justify-center
+      "
+    >
 
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-1.5 sm:gap-2">
 
-        <span class="block h-px w-7 bg-white"></span>
-        <span class="block h-px w-7 bg-white"></span>
-        <span class="block h-px w-7 bg-white"></span>
+        <span class="block h-px w-5 sm:w-6 lg:w-7 bg-white"></span>
+        <span class="block h-px w-5 sm:w-6 lg:w-7 bg-white"></span>
+        <span class="block h-px w-5 sm:w-6 lg:w-7 bg-white"></span>
 
       </div>
 
@@ -78,6 +120,7 @@ const menuItems = [
   </div>
 
 </header>
+
 
 <script is:inline>
 
@@ -92,12 +135,14 @@ function initHeader() {
   if (toggle.dataset.ready) return;
   toggle.dataset.ready = "true";
 
+
   toggle.addEventListener("click", () => {
 
     nav.classList.toggle("opacity-0");
     nav.classList.toggle("pointer-events-none");
 
   });
+
 
   const scrollHandler = () => {
 
@@ -121,6 +166,7 @@ function initHeader() {
 
   };
 
+
   scrollHandler();
 
   window.addEventListener("scroll", scrollHandler, {
@@ -128,6 +174,7 @@ function initHeader() {
   });
 
 }
+
 
 initHeader();
 
