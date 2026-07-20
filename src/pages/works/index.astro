@@ -74,135 +74,96 @@ const works = [
 
 <Layout
   title="作品紹介｜WORKS｜錦乃"
-  description="城郭を中心に、町並みや神社、創作作品など錦乃の制作作品を紹介しています。"
+  description="城郭を中心に、町並みや神社、武家屋敷、創作作品、図面・建築考証など錦乃の制作作品を紹介しています。"
 >
 
-<!-- Hero -->
-
-<section class="relative h-[820px] overflow-hidden">
+<section class="relative min-h-screen overflow-hidden bg-[#140f0d]">
 
   <img
     src="/images/works-bg.png"
-    alt="作品紹介"
-    class="works-hero-image absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+    alt="作品紹介背景"
+    class="absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
     draggable="false"
   />
 
   <div class="absolute inset-0 bg-black/15"></div>
 
-  <div
-    class="absolute bottom-16 right-12 z-20 flex flex-col items-center"
-  >
+  <div class="relative z-10 py-32">
 
-    <div class="h-20 w-px bg-white/70"></div>
+    <Container>
 
-    <span class="mt-4 text-xs tracking-[0.45em] text-white">
-      SCROLL
-    </span>
+      <div class="mx-auto max-w-5xl">
+
+        <p class="works-reveal mb-4 tracking-[0.45em] text-sm text-white/80">
+          WORKS
+        </p>
+
+        <h1
+          class="works-reveal text-6xl leading-tight text-white"
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          作品紹介
+        </h1>
+
+      </div>
+
+      <div class="works-grid mt-24">
+
+        {
+          works.map((work, index) => (
+
+            <a
+              href={work.link}
+              class="works-reveal works-card group"
+              style={`transition-delay:${index * 60}ms;`}
+            >
+
+              <div class="works-image-wrap">
+
+                <img
+                  src={work.image}
+                  alt={work.title}
+                  loading="lazy"
+                  class="works-image"
+                />
+
+              </div>
+
+              <div class="px-7 pb-7">
+
+                <p
+                  class="text-[13px] tracking-[0.28em] text-neutral-500"
+                >
+                  {work.category}
+                </p>
+
+                <h2
+                  class="mt-2 text-3xl leading-snug text-neutral-900"
+                  style="font-family:'Cormorant Garamond',serif;"
+                >
+                  {work.title}
+                </h2>
+
+              </div>
+
+            </a>
+
+          ))
+        }
+
+      </div>
+
+    </Container>
 
   </div>
 
 </section>
 
-<!-- Main -->
-
-<section class="bg-[#faf8f3] py-32">
-
-  <Container>
-
-<div class="max-w-7xl">
-
-  <p class="works-reveal delay-1 mb-4 tracking-[0.45em] text-sm text-neutral-500">
-    WORKS
-  </p>
-
-  <h1
-    class="works-reveal delay-2 text-6xl leading-tight text-neutral-900"
-    style="font-family:'Cormorant Garamond',serif;"
-  >
-    作品紹介
-  </h1>
-
-</div>
-
-    <div class="works-grid mt-24">
-
-      {
-        works.map((work, index) => (
-
-          <a
-            href={work.link}
-            class="works-reveal works-card group"
-            style={`transition-delay:${index * 60}ms;`}
-          >
-
-            <div class="works-image-wrap">
-
-              <img
-                src={work.image}
-                alt={work.title}
-                loading="lazy"
-                class="works-image"
-              />
-
-            </div>
-
-            <div class="px-7 pb-7">
-
-              <p class="text-[13px] tracking-[0.28em] text-neutral-500">
-                {work.category}
-              </p>
-
-              <h2
-                class="mt-2 text-3xl leading-snug text-neutral-900"
-                style="font-family:'Cormorant Garamond',serif;"
-              >
-                {work.title}
-              </h2>
-
-            </div>
-
-          </a>
-
-        ))
-      }
-
-    </div>
-
-  </Container>
-
-</section>
-
 <style>
-
-.works-hero-image{
-
-animation:worksFloat 10s ease-in-out infinite;
-
-transform-origin:center;
-
-}
-
-@keyframes worksFloat{
-
-0%{
-transform:translateY(0) scale(1.02);
-}
-
-50%{
-transform:translateY(-14px) scale(1.03);
-}
-
-100%{
-transform:translateY(0) scale(1.02);
-}
-
-}
 
 .works-grid{
 
 column-count:4;
-
 column-gap:2rem;
 
 }
@@ -227,108 +188,42 @@ column-count:2;
 
 }
 
-/* ------------------------------
-   Smartphone
------------------------------- */
-
 @media(max-width:640px){
 
 .works-grid{
 
-column-count:1;
-column-gap:0;
-margin-top:2.5rem;
-
-}
-
-.works-card{
-
-margin-bottom:1rem;
-border-radius:1.25rem;
-
-}
-
-.works-image-wrap{
-
-padding:.75rem;
-
-}
-
-.works-image{
-
-border-radius:.9rem;
-
-}
-
-.works-card .px-7{
-
-padding-left:1rem;
-padding-right:1rem;
-padding-bottom:1rem;
-
-}
-
-.works-card p{
-
-font-size:.65rem;
-letter-spacing:.18em;
-
-}
-
-.works-card h2{
-
-margin-top:.35rem;
-font-size:1.15rem;
-line-height:1.45;
-
-}
-
-h1.works-reveal{
-
-font-size:2.2rem;
-
-}
-
-p.works-reveal{
-
-margin-top:1.25rem;
-font-size:.95rem;
-line-height:2;
-
-}
-
-section.bg-\[\#faf8f3\]{
-
-padding-top:4rem;
-padding-bottom:4rem;
+column-count:2;
+column-gap:.8rem;
 
 }
 
 }
+
+
 
 .works-card{
 
 display:inline-block;
-
 width:100%;
-
 margin:0 0 2rem;
 
-background:rgba(255,255,255,.82);
+background:rgba(255,255,255,.72);
 
 backdrop-filter:blur(14px);
 
-border:1px solid rgba(255,255,255,.75);
+border:1px solid rgba(255,255,255,.7);
 
 border-radius:2rem;
 
 overflow:hidden;
 
-break-inside:avoid;
-
 transition:.45s;
 
+break-inside:avoid;
+
 }
+
+
 
 .works-card:hover{
 
@@ -338,11 +233,15 @@ box-shadow:0 25px 60px rgba(0,0,0,.18);
 
 }
 
+
+
 .works-image-wrap{
 
-padding:1.35rem;
+padding:1.25rem;
 
 }
+
+
 
 .works-image{
 
@@ -359,11 +258,77 @@ transform .8s cubic-bezier(.22,1,.36,1);
 
 }
 
+
+
 .works-card:hover .works-image{
 
 transform:scale(1.06);
 
 }
+
+
+
+/* ---------------- */
+/* Mobile */
+/* ---------------- */
+
+@media(max-width:640px){
+
+.works-card{
+
+margin:0 0 .8rem;
+
+border-radius:1rem;
+
+}
+
+.works-image-wrap{
+
+padding:.55rem;
+
+}
+
+.works-image{
+
+border-radius:.8rem;
+
+}
+
+.works-card .px-7{
+
+padding-left:.7rem;
+
+padding-right:.7rem;
+
+padding-bottom:.8rem;
+
+}
+
+.works-card p{
+
+font-size:9px;
+
+letter-spacing:.18em;
+
+}
+
+.works-card h2{
+
+font-size:1rem;
+
+line-height:1.3;
+
+margin-top:.25rem;
+
+}
+
+}
+
+
+
+/* ---------------- */
+/* Reveal */
+/* ---------------- */
 
 .works-reveal{
 
@@ -383,6 +348,8 @@ opacity;
 
 }
 
+
+
 .works-show{
 
 animation:
@@ -390,17 +357,7 @@ worksBounce .9s cubic-bezier(.22,1,.36,1) forwards;
 
 }
 
-.delay-1{
-transition-delay:0ms;
-}
 
-.delay-2{
-transition-delay:140ms;
-}
-
-.delay-3{
-transition-delay:280ms;
-}
 
 @keyframes worksBounce{
 
@@ -440,23 +397,21 @@ scale(1);
 
 <script>
 
-const observer=new IntersectionObserver((entries)=>{
+const observer = new IntersectionObserver((entries)=>{
 
 entries.forEach((entry)=>{
 
-if(entry.isIntersecting){
+if(!entry.isIntersecting) return;
 
 entry.target.classList.add("works-show");
 
 observer.unobserve(entry.target);
 
-}
-
 });
 
 },{
-threshold:.18,
-rootMargin:"0px 0px -8% 0px"
+threshold:0.18,
+rootMargin:"0px 0px -10% 0px"
 });
 
 document.querySelectorAll(".works-reveal").forEach((el)=>{
