@@ -34,22 +34,89 @@ const categories = [
   description="個人・企業・自治体・研究機関・イベントなど幅広いご相談を受け付けています。"
 >
 
-<section class="relative h-[820px] overflow-hidden">
 
+<!-- =========================
+     CONTACT HERO
+========================= -->
+
+<section
+  class="
+    relative overflow-hidden
+    h-[820px]
+    sm:h-[820px]
+    max-sm:h-[65vh]
+  "
+>
+
+  <!-- PC / Tablet -->
   <img
     src="/images/contact-bg.png"
     alt="茶室の背景"
-    class="contact-image absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+    class="
+      contact-image
+      absolute inset-0
+      hidden sm:block
+      h-full w-full
+      object-cover
+      select-none
+      pointer-events-none
+    "
     draggable="false"
   />
 
+
+  <!-- Mobile -->
+  <img
+    src="/images/contact-m.png"
+    alt="茶室の背景"
+    class="
+      contact-image
+      absolute inset-0
+      block sm:hidden
+      h-full w-full
+      object-cover
+      select-none
+      pointer-events-none
+    "
+    draggable="false"
+  />
+
+
   <div class="absolute inset-0 bg-black/10"></div>
 
-  <div class="absolute bottom-16 right-12 z-20 flex flex-col items-center">
 
-    <div class="h-20 w-px bg-white/70"></div>
+  <!-- Scroll -->
+  <div
+    class="
+      absolute
+      bottom-16 right-12
+      z-20
+      flex flex-col items-center
 
-    <span class="mt-4 text-xs tracking-[0.45em] text-white">
+      max-sm:
+      bottom-8
+      right-6
+    "
+  >
+
+    <div
+      class="
+        h-20 w-px bg-white/70
+
+        max-sm:h-12
+      "
+    ></div>
+
+    <span
+      class="
+        mt-4
+        text-xs
+        tracking-[0.45em]
+        text-white
+
+        max-sm:text-[10px]
+      "
+    >
       SCROLL
     </span>
 
@@ -57,357 +124,894 @@ const categories = [
 
 </section>
 
-<section class="bg-[#faf8f3] py-32">
 
-  <div class="mx-auto max-w-7xl px-8">
 
-    <div class="max-w-5xl">
+<!-- =========================
+     INTRO
+========================= -->
 
-      <p
-        class="contact-reveal mb-4 tracking-[0.45em] text-sm text-neutral-500"
-      >
-        CONTACT
-      </p>
+<section
+  class="
+    bg-[#faf8f3]
+    py-32
 
-      <h1
-        class="contact-reveal text-6xl leading-tight text-neutral-900"
-        style="font-family:'Cormorant Garamond',serif;"
-      >
-        茶室へようこそ。
-      </h1>
-
-      <p
-        class="contact-reveal mt-10 text-lg leading-10 text-neutral-700"
-        style="font-family:'Shippori Mincho',serif;"
-      >
-        「こんなことお願いできますか？」<br><br>
-
-        そんな一言からでも大丈夫です。<br>
-
-        個人のクリエイター様から企業・番組・自治体・都市まで、<br>
-        一緒に面白いものを作れる出会いを<br>
-        楽しみにしています。
-      </p>
-
-    </div>
-
-    <div class="contact-reveal mt-28 mb-16">
-
-      <p
-        class="tracking-[0.35em] text-sm text-neutral-500"
-      >
-        COLLABORATION
-      </p>
-
-      <h2
-        class="mt-3 text-5xl text-neutral-900"
-        style="font-family:'Cormorant Garamond',serif;"
-      >
-        ご相談いただける内容
-      </h2>
-
-      <p
-        class="mt-8 max-w-3xl leading-9 text-neutral-700"
-      >
-        制作内容が決まっていなくても問題ありません。
-        「こんなことができたら面白そう」
-        という段階から一緒に考えます。
-      </p>
-
-    </div>
-
-    <div class="grid gap-8 md:grid-cols-2">
-
-      {
-        categories.map((item, index) => (
-
-          <article
-            class="contact-reveal rounded-[2rem] border border-white/70 bg-white/70 p-10 backdrop-blur-md transition duration-500 hover:-translate-y-2 hover:shadow-2xl"
-            style={`transition-delay:${index * 120}ms;`}
-          >
-
-            <p
-              class="tracking-[0.35em] text-xs text-rose-400"
-            >
-              {item.subtitle}
-            </p>
-
-            <h3
-              class="mt-4 text-3xl text-neutral-900"
-              style="font-family:'Cormorant Garamond',serif;"
-            >
-              {item.title}
-            </h3>
-
-            <p
-              class="mt-6 leading-8 text-neutral-700"
-            >
-              {item.text}
-            </p>
-
-          </article>
-
-        ))
-      }
-
-    </div>
-
-  </div>
-
-</section>
-
-<section class="bg-white py-28">
-
-  <div class="mx-auto max-w-6xl px-8">
-
-    <div class="contact-reveal text-center">
-
-      <p
-        class="tracking-[0.35em] text-sm text-neutral-500"
-      >
-        INVITATION
-      </p>
-
-      <h2
-        class="mt-4 text-5xl text-neutral-900"
-        style="font-family:'Cormorant Garamond',serif;"
-      >
-        こんなお話を歓迎しています。
-      </h2>
-
-      <p
-        class="mx-auto mt-8 max-w-3xl leading-9 text-neutral-700"
-      >
-        小さなアイデアから大きな企画まで。
-        「一緒に作ってみたい。」
-        そんな気持ちを大切にしています。
-      </p>
-
-    </div>
-
-    <div class="mt-20 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-
-      <div class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8" style="transition-delay:0ms;">
-        <h3 class="text-2xl">🎥 YouTube・配信</h3>
-        <p class="mt-4 leading-8 text-neutral-700">
-          動画企画、配信企画、世界観制作、
-          Minecraft建築など。
-        </p>
-      </div>
-
-      <div class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8" style="transition-delay:120ms;">
-        <h3 class="text-2xl">🤝 コラボレーション</h3>
-        <p class="mt-4 leading-8 text-neutral-700">
-          クリエイター同士の共同制作、
-          イベント企画、
-          SNSでの発信など。
-        </p>
-      </div>
-
-      <div class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8" style="transition-delay:240ms;">
-        <h3 class="text-2xl">🏯 地域・文化</h3>
-        <p class="mt-4 leading-8 text-neutral-700">
-          自治体、
-          博物館、
-          観光、
-          歴史文化発信への協力。
-        </p>
-      </div>
-
-            <div
-        class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8"
-        style="transition-delay:360ms;"
-      >
-        <h3 class="text-2xl">📺 メディア</h3>
-        <p class="mt-4 leading-8 text-neutral-700">
-          テレビ、
-          Webメディア、
-          雑誌、
-          映像制作への出演・制作協力。
-        </p>
-      </div>
-
-      <div
-        class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8"
-        style="transition-delay:480ms;"
-      >
-        <h3 class="text-2xl">📚 監修・資料提供</h3>
-        <p class="mt-4 leading-8 text-neutral-700">
-          城郭、
-          御殿、
-          歴史建築、
-          世界観設定など。
-        </p>
-      </div>
-
-      <div
-        class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8"
-        style="transition-delay:600ms;"
-      >
-        <h3 class="text-2xl">✨ その他</h3>
-        <p class="mt-4 leading-8 text-neutral-700">
-          「こんなこと出来ますか？」
-          という段階からお気軽にご相談ください。
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section class="bg-[#f7f5ef] py-32">
-
-  <div class="mx-auto max-w-5xl px-8 text-center">
-
-    <div class="contact-reveal">
-
-      <p
-        class="tracking-[0.35em] text-sm text-neutral-500"
-      >
-        MESSAGE
-      </p>
-
-      <h2
-        class="mt-4 text-5xl text-neutral-900"
-        style="font-family:'Cormorant Garamond',serif;"
-      >
-        一緒に、
-        面白い景色を作りませんか。
-      </h2>
-
-      <p
-        class="mx-auto mt-10 max-w-3xl leading-9 text-neutral-700"
-        style="font-family:'Shippori Mincho',serif;"
-      >
-        歴史でも、
-        ゲームでも、
-        写真でも、
-        映像でも。
-
-        <br><br>
-
-        「こんな景色が見てみたい。」
-
-        <br><br>
-
-        そんな想像から始まる出会いを
-        楽しみにしています。
-      </p>
-
-    </div>
-
-    <a
-  href="/contact/form/"
-  class="contact-reveal mt-14 inline-flex h-44 w-44 items-center justify-center rounded-full border border-neutral-900 bg-white text-center text-lg transition duration-500 hover:-translate-y-2 hover:shadow-2xl"
-  style="transition-delay:250ms;"
+    max-sm:py-16
+  "
 >
-  お話を<br>
-  聞かせてください。
+
+<div
+  class="
+    mx-auto
+    max-w-7xl
+    px-8
+
+    max-sm:px-5
+  "
+>
+
+
+<div
+  class="
+    max-w-5xl
+  "
+>
+
+
+<p
+  class="
+    contact-reveal
+    mb-4
+    tracking-[0.45em]
+    text-sm
+    text-neutral-500
+
+    max-sm:text-[10px]
+    max-sm:tracking-[0.35em]
+  "
+>
+CONTACT
+</p>
+
+
+<h1
+  class="
+    contact-reveal
+    text-6xl
+    leading-tight
+    text-neutral-900
+
+    max-sm:text-3xl
+  "
+  style="font-family:'Cormorant Garamond',serif;"
+>
+茶室へようこそ。
+</h1>
+
+
+<p
+  class="
+    contact-reveal
+    mt-10
+    text-lg
+    leading-10
+    text-neutral-700
+
+    max-sm:mt-6
+    max-sm:text-sm
+    max-sm:leading-7
+  "
+  style="font-family:'Shippori Mincho',serif;"
+>
+
+「こんなことお願いできますか？」
+
+<br><br>
+
+そんな一言からでも大丈夫です。
+
+<br>
+
+個人のクリエイター様から企業・番組・自治体・都市まで、
+
+<br class="hidden sm:block">
+
+一緒に面白いものを作れる出会いを
+
+<br class="hidden sm:block">
+
+楽しみにしています。
+
+</p>
+
+
+</div>
+
+
+
+<div
+class="
+contact-reveal
+mt-28
+mb-16
+
+max-sm:mt-12
+max-sm:mb-8
+"
+>
+
+
+<p
+class="
+tracking-[0.35em]
+text-sm
+text-neutral-500
+
+max-sm:text-[10px]
+"
+>
+COLLABORATION
+</p>
+
+
+<h2
+class="
+mt-3
+text-5xl
+text-neutral-900
+
+max-sm:text-3xl
+"
+style="font-family:'Cormorant Garamond',serif;"
+>
+ご相談いただける内容
+</h2>
+
+
+<p
+class="
+mt-8
+max-w-3xl
+leading-9
+text-neutral-700
+
+max-sm:mt-5
+max-sm:text-sm
+max-sm:leading-7
+"
+>
+制作内容が決まっていなくても問題ありません。
+「こんなことができたら面白そう」
+という段階から一緒に考えます。
+</p>
+
+
+</div>
+
+<!-- =========================
+     CATEGORY CARDS
+========================= -->
+
+<div
+  class="
+    grid
+    gap-8
+    md:grid-cols-2
+
+    max-sm:grid-cols-2
+    max-sm:gap-3
+  "
+>
+
+{
+categories.map((item,index)=>(
+
+<article
+class="
+contact-reveal
+
+rounded-[2rem]
+border
+border-white/70
+bg-white/70
+
+p-10
+
+backdrop-blur-md
+transition
+duration-500
+
+hover:-translate-y-2
+hover:shadow-2xl
+
+
+max-sm:
+rounded-xl
+p-4
+"
+style={`transition-delay:${index * 120}ms;`}
+>
+
+
+<p
+class="
+tracking-[0.35em]
+text-xs
+text-rose-400
+
+max-sm:text-[8px]
+"
+>
+{item.subtitle}
+</p>
+
+
+<h3
+class="
+mt-4
+text-3xl
+text-neutral-900
+
+max-sm:mt-2
+max-sm:text-base
+"
+style="font-family:'Cormorant Garamond',serif;"
+>
+{item.title}
+</h3>
+
+
+<p
+class="
+mt-6
+leading-8
+text-neutral-700
+
+max-sm:mt-3
+max-sm:text-[11px]
+max-sm:leading-5
+"
+>
+{item.text}
+</p>
+
+
+</article>
+
+))
+}
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<!-- =========================
+     INVITATION
+========================= -->
+
+
+<section
+class="
+bg-white
+py-28
+
+max-sm:py-14
+"
+>
+
+<div
+class="
+mx-auto
+max-w-6xl
+px-8
+
+max-sm:px-5
+"
+>
+
+
+<div
+class="
+contact-reveal
+text-center
+"
+>
+
+
+<p
+class="
+tracking-[0.35em]
+text-sm
+text-neutral-500
+
+max-sm:text-[10px]
+"
+>
+INVITATION
+</p>
+
+
+<h2
+class="
+mt-4
+text-5xl
+text-neutral-900
+
+max-sm:text-3xl
+"
+style="font-family:'Cormorant Garamond',serif;"
+>
+こんなお話を歓迎しています。
+</h2>
+
+
+<p
+class="
+mx-auto
+mt-8
+max-w-3xl
+leading-9
+text-neutral-700
+
+max-sm:mt-5
+max-sm:text-sm
+max-sm:leading-7
+"
+>
+小さなアイデアから大きな企画まで。
+「一緒に作ってみたい。」
+そんな気持ちを大切にしています。
+</p>
+
+
+</div>
+
+
+
+<div
+class="
+mt-20
+grid
+gap-6
+md:grid-cols-2
+lg:grid-cols-3
+
+max-sm:mt-10
+max-sm:grid-cols-2
+max-sm:gap-3
+"
+>
+
+
+<div class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8 max-sm:rounded-xl max-sm:p-4">
+<h3 class="text-2xl max-sm:text-sm">
+🎥 YouTube・配信
+</h3>
+<p class="mt-4 leading-8 text-neutral-700 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
+動画企画、配信企画、世界観制作、
+Minecraft建築など。
+</p>
+</div>
+
+
+<div class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8 max-sm:rounded-xl max-sm:p-4">
+<h3 class="text-2xl max-sm:text-sm">
+🤝 コラボレーション
+</h3>
+<p class="mt-4 leading-8 text-neutral-700 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
+クリエイター同士の共同制作、
+イベント企画、
+SNSでの発信など。
+</p>
+</div>
+
+
+<div class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8 max-sm:rounded-xl max-sm:p-4">
+<h3 class="text-2xl max-sm:text-sm">
+🏯 地域・文化
+</h3>
+<p class="mt-4 leading-8 text-neutral-700 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
+自治体、
+博物館、
+観光、
+歴史文化発信への協力。
+</p>
+</div>
+
+
+<div class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8 max-sm:rounded-xl max-sm:p-4">
+<h3 class="text-2xl max-sm:text-sm">
+📺 メディア
+</h3>
+<p class="mt-4 leading-8 text-neutral-700 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
+テレビ、
+Webメディア、
+雑誌、
+映像制作への出演・制作協力。
+</p>
+</div>
+
+
+<div class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8 max-sm:rounded-xl max-sm:p-4">
+<h3 class="text-2xl max-sm:text-sm">
+📚 監修・資料提供
+</h3>
+<p class="mt-4 leading-8 text-neutral-700 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
+城郭、
+御殿、
+歴史建築、
+世界観設定など。
+</p>
+</div>
+
+
+<div class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8 max-sm:rounded-xl max-sm:p-4">
+<h3 class="text-2xl max-sm:text-sm">
+✨ その他
+</h3>
+<p class="mt-4 leading-8 text-neutral-700 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
+「こんなこと出来ますか？」
+という段階からお気軽にご相談ください。
+</p>
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+<!-- =========================
+     MESSAGE
+========================= -->
+
+<section
+class="
+bg-[#f7f5ef]
+py-32
+
+max-sm:py-16
+"
+>
+
+<div
+class="
+mx-auto
+max-w-5xl
+px-8
+text-center
+
+max-sm:px-5
+"
+>
+
+
+<div class="contact-reveal">
+
+
+<p
+class="
+tracking-[0.35em]
+text-sm
+text-neutral-500
+
+max-sm:text-[10px]
+"
+>
+MESSAGE
+</p>
+
+
+<h2
+class="
+mt-4
+text-5xl
+text-neutral-900
+
+max-sm:text-3xl
+"
+style="font-family:'Cormorant Garamond',serif;"
+>
+一緒に、
+面白い景色を作りませんか。
+</h2>
+
+
+<p
+class="
+mx-auto
+mt-10
+max-w-3xl
+leading-9
+text-neutral-700
+
+max-sm:mt-6
+max-sm:text-sm
+max-sm:leading-7
+"
+style="font-family:'Shippori Mincho',serif;"
+>
+
+歴史でも、
+
+ゲームでも、
+
+写真でも、
+
+映像でも。
+
+<br><br>
+
+「こんな景色が見てみたい。」
+
+<br><br>
+
+そんな想像から始まる出会いを
+楽しみにしています。
+
+</p>
+
+
+</div>
+
+
+
+<a
+href="/contact/form/"
+class="
+contact-reveal
+
+mt-14
+
+inline-flex
+h-44
+w-44
+
+items-center
+justify-center
+
+rounded-full
+
+border
+border-neutral-900
+
+bg-white
+
+text-center
+text-lg
+
+transition
+duration-500
+
+hover:-translate-y-2
+hover:shadow-2xl
+
+
+max-sm:
+mt-8
+h-28
+w-28
+text-xs
+"
+style="transition-delay:250ms;"
+>
+
+お話を<br>
+聞かせてください。
+
 </a>
 
-  </div>
+
+</div>
 
 </section>
 
-<section class="bg-white py-24">
 
-  <div class="mx-auto max-w-5xl px-8">
 
-    <div class="contact-reveal text-center">
 
-      <p
-        class="tracking-[0.35em] text-sm text-neutral-500"
-      >
-        FAQ
-      </p>
 
-      <h2
-        class="mt-4 text-5xl"
-        style="font-family:'Cormorant Garamond',serif;"
-      >
-        よくあるご相談
-      </h2>
+<!-- =========================
+     FAQ
+========================= -->
 
-    </div>
+<section
+class="
+bg-white
+py-24
 
-    <div class="mt-16 space-y-8">
+max-sm:py-14
+"
+>
 
-      <div
-        class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8"
-        style="transition-delay:0ms;"
-      >
-        <h3 class="text-xl font-semibold">
-          企画がまだ固まっていません。
-        </h3>
+<div
+class="
+mx-auto
+max-w-5xl
+px-8
 
-        <p class="mt-4 leading-8 text-neutral-700">
-          問題ありません。
-          アイデア段階から一緒に考えることも歓迎しています。
-        </p>
-      </div>
+max-sm:px-5
+"
+>
 
-      <div
-        class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8"
-        style="transition-delay:120ms;"
-      >
-        <h3 class="text-xl font-semibold">
-          個人でも相談できますか？
-        </h3>
 
-        <p class="mt-4 leading-8 text-neutral-700">
-          もちろんです。
-          個人・クリエイター・配信活動者の方からのご相談も歓迎しています。
-        </p>
-      </div>
+<div
+class="
+contact-reveal
+text-center
+"
+>
 
-      <div
-        class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8"
-        style="transition-delay:240ms;"
-      >
-        <h3 class="text-xl font-semibold">
-          相談だけでも大丈夫ですか？
-        </h3>
 
-        <p class="mt-4 leading-8 text-neutral-700">
-          はい。
-          「こんなことができたら面白そう」という段階でもお気軽にご連絡ください。
-        </p>
-      </div>
+<p
+class="
+tracking-[0.35em]
+text-sm
+text-neutral-500
 
-    </div>
+max-sm:text-[10px]
+"
+>
+FAQ
+</p>
 
-  </div>
+
+<h2
+class="
+mt-4
+text-5xl
+
+max-sm:text-3xl
+"
+style="font-family:'Cormorant Garamond',serif;"
+>
+よくあるご相談
+</h2>
+
+
+</div>
+
+
+
+<div
+class="
+mt-16
+space-y-8
+
+max-sm:mt-8
+max-sm:space-y-3
+"
+>
+
+
+<div
+class="
+contact-reveal
+rounded-[2rem]
+bg-[#faf8f3]
+p-8
+
+max-sm:
+rounded-xl
+p-4
+"
+>
+
+<h3
+class="
+text-xl
+font-semibold
+
+max-sm:text-sm
+"
+>
+企画がまだ固まっていません。
+</h3>
+
+
+<p
+class="
+mt-4
+leading-8
+text-neutral-700
+
+max-sm:
+mt-2
+text-[11px]
+leading-5
+"
+>
+問題ありません。
+アイデア段階から一緒に考えることも歓迎しています。
+</p>
+
+
+</div>
+
+
+
+
+<div
+class="
+contact-reveal
+rounded-[2rem]
+bg-[#faf8f3]
+p-8
+
+max-sm:
+rounded-xl
+p-4
+"
+>
+
+<h3
+class="
+text-xl
+font-semibold
+
+max-sm:text-sm
+"
+>
+個人でも相談できますか？
+</h3>
+
+
+<p
+class="
+mt-4
+leading-8
+text-neutral-700
+
+max-sm:
+mt-2
+text-[11px]
+leading-5
+"
+>
+もちろんです。
+個人・クリエイター・配信活動者の方からのご相談も歓迎しています。
+</p>
+
+
+</div>
+
+
+
+
+
+<div
+class="
+contact-reveal
+rounded-[2rem]
+bg-[#faf8f3]
+p-8
+
+max-sm:
+rounded-xl
+p-4
+"
+>
+
+<h3
+class="
+text-xl
+font-semibold
+
+max-sm:text-sm
+"
+>
+相談だけでも大丈夫ですか？
+</h3>
+
+
+<p
+class="
+mt-4
+leading-8
+text-neutral-700
+
+max-sm:
+mt-2
+text-[11px]
+leading-5
+"
+>
+はい。
+「こんなことができたら面白そう」
+という段階でもお気軽にご連絡ください。
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
 
 </section>
+
+
+
+
 
 <style>
 
 .contact-image{
-  animation:contactFloat 10s ease-in-out infinite;
-  transform-origin:center;
+
+animation:
+contactFloat 10s ease-in-out infinite;
+
+transform-origin:center;
+
 }
+
+
 
 @keyframes contactFloat{
 
 0%{
-transform:translateY(0) scale(1.02);
+
+transform:
+translateY(0)
+scale(1.02);
+
 }
+
 
 50%{
-transform:translateY(-16px) scale(1.04);
+
+transform:
+translateY(-16px)
+scale(1.04);
+
 }
+
 
 100%{
-transform:translateY(0) scale(1.02);
-}
+
+transform:
+translateY(0)
+scale(1.02);
 
 }
 
-/* ----------------------------- */
-/* Scroll Reveal */
-/* ----------------------------- */
+}
+
+
+
+/* mobile animation adjustment */
+
+@media(max-width:640px){
+
+.contact-image{
+
+animation-duration:
+14s;
+
+}
+
+
+.contact-reveal{
+
+transform:
+translateY(35px)
+scale(.98);
+
+}
+
+}
+
+
 
 .contact-reveal{
 
@@ -417,9 +1021,13 @@ transform:
 translateY(70px)
 scale(.96);
 
+
 transition:
+
 opacity .9s cubic-bezier(.22,1,.36,1),
+
 transform .9s cubic-bezier(.22,1,.36,1);
+
 
 will-change:
 transform,
@@ -427,14 +1035,22 @@ opacity;
 
 }
 
+
+
 .contact-show{
 
+
 animation:
+
 contactBounce .9s cubic-bezier(.22,1,.36,1) forwards;
+
 
 }
 
+
+
 @keyframes contactBounce{
+
 
 0%{
 
@@ -445,6 +1061,8 @@ translateY(70px)
 scale(.96);
 
 }
+
+
 
 65%{
 
@@ -456,6 +1074,8 @@ scale(1.02);
 
 }
 
+
+
 100%{
 
 opacity:1;
@@ -466,9 +1086,14 @@ scale(1);
 
 }
 
+
 }
 
+
+
 </style>
+
+
 
 <script>
 
@@ -476,27 +1101,42 @@ const observer = new IntersectionObserver((entries)=>{
 
 entries.forEach((entry)=>{
 
+
 if(!entry.isIntersecting) return;
+
 
 const el = entry.target;
 
+
 el.classList.add("contact-show");
+
 
 observer.unobserve(el);
 
+
 });
 
+
 },{
+
 threshold:0.18,
+
 rootMargin:"0px 0px -10% 0px"
+
 });
+
+
 
 document.querySelectorAll(".contact-reveal").forEach((el)=>{
 
+
 observer.observe(el);
+
 
 });
 
+
 </script>
+
 
 </Layout>
