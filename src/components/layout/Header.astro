@@ -173,20 +173,41 @@ const menuItems = [
       width: 100%;
       display: grid;
       /* 12分割のグリッドでより細かく幅調整できるように変更 */
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      row-gap: 8px;
-      column-gap: 0;
-    }
+      grid-template-columns:repeat(23, minmax(0,1fr));
 
-    /* 上段：4つのメニュー (各 3/12 幅) */
-    .header-link:nth-child(1) { grid-column: 1 / span 3; }
-    .header-link:nth-child(2) { grid-column: 4 / span 3; }
-    .header-link:nth-child(3) { grid-column: 7 / span 3; }
-    .header-link:nth-child(4) { grid-column: 10 / span 3; }
+    row-gap:8px;
 
-    /* 下段：文字数の長いACHIEVEMENTSに広めのエリア（7/12）を割り当て */
-    .header-link:nth-child(5) { grid-column: 3 / span 8; }
-    .header-link:nth-child(6) { grid-column: 18 / span 5; }
+    column-gap:0;
+
+  }
+
+
+  /* 上段 */
+  .header-link:nth-child(1){
+    grid-column:1 / span 5;
+  }
+
+  .header-link:nth-child(2){
+    grid-column:6 / span 5;
+  }
+
+  .header-link:nth-child(3){
+    grid-column:11 / span 5;
+  }
+
+  .header-link:nth-child(4){
+    grid-column:16 / span 8;
+  }
+
+
+  /* 下段 */
+  .header-link:nth-child(5){
+    grid-column:1 / span 14;
+  }
+
+  .header-link:nth-child(6){
+    grid-column:16 / span 8;
+  }
 
     .header-link {
       white-space: nowrap;
