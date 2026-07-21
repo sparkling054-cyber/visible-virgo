@@ -154,6 +154,115 @@ const menuItems = [
   </div>
 </header>
 
+<style>
+  #header-nav {
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+
+  .header-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(40px);
+  }
+
+  /* スマホ版（画面幅 639px 以下）のみに適用されるCSS */
+  @media (max-width: 639px) {
+
+  #header-nav {
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    grid-template-rows:auto auto;
+
+    row-gap:10px;
+
+    column-gap:0;
+
+  }
+
+
+  /* HOME */
+  .header-link:nth-child(1){
+
+    grid-column:1;
+
+    grid-row:1;
+
+  }
+
+
+  /* ABOUT */
+  .header-link:nth-child(2){
+
+    grid-column:2;
+
+    grid-row:1;
+
+  }
+
+
+  /* ACHIEVEMENTS */
+  .header-link:nth-child(5){
+
+    grid-column:3;
+
+    grid-row:1;
+
+  }
+
+
+  /* WORKS */
+  .header-link:nth-child(3){
+
+    grid-column:1;
+
+    grid-row:2;
+
+  }
+
+
+  /* PROFILE */
+  .header-link:nth-child(4){
+
+    grid-column:2;
+
+    grid-row:2;
+
+  }
+
+
+  /* CONTACT */
+  .header-link:nth-child(6){
+
+    grid-column:3;
+
+    grid-row:2;
+
+  }
+
+
+  .header-link{
+
+    white-space:nowrap;
+
+    font-size:13px;
+
+    letter-spacing:0.02em;
+
+    text-align:center;
+
+    width:100%;
+
+  }
+
+}
+</style>
 
 <script is:inline>
   function initHeader() {
