@@ -44,7 +44,7 @@ const categories = [
     relative overflow-hidden
     h-[820px]
     sm:h-[820px]
-    max-sm:h-[65vh]
+    max-sm:min-h-screen
   "
 >
 
@@ -64,7 +64,6 @@ const categories = [
     draggable="false"
   />
 
-
   <!-- Mobile -->
   <img
     src="/images/contact-m.png"
@@ -75,15 +74,14 @@ const categories = [
       block sm:hidden
       h-full w-full
       object-cover
+      object-center
       select-none
       pointer-events-none
     "
     draggable="false"
   />
 
-
   <div class="absolute inset-0 bg-black/10"></div>
-
 
   <!-- Scroll -->
   <div
@@ -92,20 +90,11 @@ const categories = [
       bottom-16 right-12
       z-20
       flex flex-col items-center
-
-      max-sm:
-      bottom-8
-      right-6
+      max-sm:bottom-8
+      max-sm:right-6
     "
   >
-
-    <div
-      class="
-        h-20 w-px bg-white/70
-
-        max-sm:h-12
-      "
-    ></div>
+    <div class="h-20 w-px bg-white/70 max-sm:h-12"></div>
 
     <span
       class="
@@ -113,13 +102,11 @@ const categories = [
         text-xs
         tracking-[0.45em]
         text-white
-
         max-sm:text-[10px]
       "
     >
       SCROLL
     </span>
-
   </div>
 
 </section>
