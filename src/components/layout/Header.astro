@@ -268,64 +268,56 @@ translateX(40px);
 
 @media (max-width:639px){
 
-  #header-nav{
+#header-nav{
 
-    width:100%;
+width:100%;
 
-    display:grid;
-    grid-template-columns:repeat(8,minmax(0,1fr));
+/* 8列グリッドに変更 */
+display:grid;
+grid-template-columns:repeat(8,minmax(0,1fr));
 
-    column-gap:6px;
-    row-gap:10px;
+row-gap:8px;
+column-gap:6px;
 
-    justify-items:center;
-    align-items:center;
+}
 
-  }
+/* 上段4つ */
+.header-link:nth-child(1){
+grid-column:1 / span 2;
+}
 
-  /* 上段4つ */
-  .header-link:nth-child(1){
-    grid-column:1 / span 2;
-  }
+.header-link:nth-child(2){
+grid-column:3 / span 2;
+}
 
-  .header-link:nth-child(2){
-    grid-column:3 / span 2;
-  }
+.header-link:nth-child(3){
+grid-column:5 / span 2;
+}
 
-  .header-link:nth-child(3){
-    grid-column:5 / span 2;
-  }
+.header-link:nth-child(4){
+grid-column:7 / span 2;
+}
 
-  .header-link:nth-child(4){
-    grid-column:7 / span 2;
-  }
+/* 下段2つは広め */
+.header-link:nth-child(5){
+grid-column:2 / span 3;
+}
 
-  /* 下段2つを中央寄せ */
-  .header-link:nth-child(5){
-    grid-column:3 / span 2;
-  }
+.header-link:nth-child(6){
+grid-column:5 / span 3;
+}
 
-  .header-link:nth-child(6){
-    grid-column:5 / span 2;
-  }
+.header-link{
 
-  .header-link{
+white-space:nowrap;
 
-    width:100%;
+font-size:14px;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+letter-spacing:.02em;
 
-    white-space:nowrap;
+text-align:center;
 
-    font-size:13px;
-
-    letter-spacing:.02em;
-
-    text-align:center;
-
-  }
+}
 
 }
 
