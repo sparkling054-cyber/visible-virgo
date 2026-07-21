@@ -3,6 +3,7 @@ import '../styles/global.css';
 
 import Header from "../components/layout/Header.astro";
 import SocialRail from "../components/layout/SocialRail.astro";
+import Footer from "../components/layout/Footer.astro";
 
 interface Props {
 
@@ -16,7 +17,7 @@ const {
 
   title = "錦乃｜日本文化・歴史・城郭クリエイター",
 
-  description = "錦乃は、日本の伝統文化・歴史・城郭・建築を中心に、写真、動画、デジタル作品を通じて日本文化の魅力を発信するクリエイターです。"
+  description = "マイクラで和風建築や和風城、御殿、武家屋敷、神社、城下町などを史料文献等の設計図をもとに制作する日本の伝統文化・歴史・城郭・建築を中心に、写真、動画、デジタル作品を発信するクリエイター錦乃（にしきの）のオフィシャルサイト。"
 
 } = Astro.props;
 
@@ -162,6 +163,8 @@ content={ogImage}
   <SocialRail />
 
   <slot />
+
+  <Footer />
 
   <!-- X(Twitter) Embed -->
   <script

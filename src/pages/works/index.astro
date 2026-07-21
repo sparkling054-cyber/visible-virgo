@@ -107,8 +107,7 @@ const works = [
 
       </div>
 
-
-      <div class="works-grid mt-24">
+      <div class="works-grid mt-20">
 
         {
           works.map((work, index) => (
@@ -116,7 +115,7 @@ const works = [
             <a
               href={work.link}
               class="works-reveal works-card group"
-              style={`transition-delay:${index * 60}ms;`}
+              style={`transition-delay:${index * 50}ms;`}
             >
 
               <div class="works-image-wrap">
@@ -130,23 +129,18 @@ const works = [
 
               </div>
 
+              <div class="works-body">
 
-              <div class="px-7 pb-7">
-
-                <p
-                  class="text-[13px] tracking-[0.28em] text-neutral-500"
-                >
+                <p class="works-category">
                   {work.category}
                 </p>
 
-
                 <h2
-                  class="mt-2 text-3xl leading-snug text-neutral-900"
+                  class="works-title"
                   style="font-family:'Cormorant Garamond',serif;"
                 >
                   {work.title}
                 </h2>
-
 
               </div>
 
@@ -156,7 +150,6 @@ const works = [
         }
 
       </div>
-
 
     </Container>
 
@@ -168,28 +161,35 @@ const works = [
 
 .works-container{
 
-  max-width:1800px;
+max-width:1800px;
 
 }
 
-
-/* Grid */
+/* ===== Grid ===== */
 
 .works-grid{
 
 display:grid;
 
-grid-template-columns:repeat(4,minmax(0,1fr));
+grid-template-columns:repeat(5,minmax(0,1fr));
 
-gap:2rem;
+gap:1.35rem;
 
 align-items:start;
 
 }
 
+@media(max-width:1700px){
 
+.works-grid{
 
-@media(max-width:1600px){
+grid-template-columns:repeat(4,minmax(0,1fr));
+
+}
+
+}
+
+@media(max-width:1200px){
 
 .works-grid{
 
@@ -199,305 +199,246 @@ grid-template-columns:repeat(3,minmax(0,1fr));
 
 }
 
-
-
-@media(max-width:1000px){
+@media(max-width:760px){
 
 .works-grid{
 
 grid-template-columns:repeat(2,minmax(0,1fr));
 
-}
+gap:.8rem;
 
 }
 
-
+}
 
 @media(max-width:640px){
 
 .works-container{
 
-padding-left:.75rem;
+padding-left:.8rem;
 
-padding-right:.75rem;
-
-}
-
-
-
-.works-grid{
-
-grid-template-columns:repeat(2,minmax(0,1fr));
-
-gap:1rem;
+padding-right:.8rem;
 
 }
 
 }
 
-
-
-/* Card */
+/* ===== Card ===== */
 
 .works-card{
 
 display:block;
 
-width:100%;
+background:rgba(255,255,255,.78);
 
-background:rgba(255,255,255,.72);
+backdrop-filter:blur(16px);
 
-backdrop-filter:blur(14px);
+border:1px solid rgba(255,255,255,.65);
 
-border:1px solid rgba(255,255,255,.7);
-
-border-radius:2rem;
+border-radius:1.25rem;
 
 overflow:hidden;
 
-transition:.45s;
+transition:
+transform .35s ease,
+box-shadow .35s ease;
 
 }
-
-
 
 .works-card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-8px);
 
-box-shadow:0 25px 60px rgba(0,0,0,.18);
+box-shadow:0 18px 40px rgba(0,0,0,.18);
 
 }
-
-
-
-/* Image */
 
 .works-image-wrap{
 
-padding:1.25rem;
+padding:.7rem;
 
 }
 
-
-
 .works-image{
-
-width:100%;
-
-height:auto;
 
 display:block;
 
-border-radius:1.5rem;
+width:100%;
 
-transition:
-transform .8s cubic-bezier(.22,1,.36,1);
-
-}
-
-
-
-.works-card:hover .works-image{
-
-transform:scale(1.06);
-
-}
-
-
-
-/* Smartphone */
-
-@media(max-width:640px){
-
-
-.works-card{
-
-border-radius:1.2rem;
-
-}
-
-
-
-.works-image-wrap{
-
-padding:.55rem;
-
-}
-
-
-
-.works-image{
-
-aspect-ratio:1 / 1;
+aspect-ratio:1/1;
 
 object-fit:cover;
 
-border-radius:.8rem;
+border-radius:.9rem;
+
+transition:transform .8s cubic-bezier(.22,1,.36,1);
 
 }
 
+.works-card:hover .works-image{
 
-
-.works-card .px-7{
-
-padding-left:.7rem;
-
-padding-right:.7rem;
-
-padding-bottom:.8rem;
+transform:scale(1.05);
 
 }
 
+.works-body{
 
+padding:0 .8rem .9rem;
 
-.works-card p{
+}
 
-font-size:9px;
+.works-category{
+
+font-size:11px;
 
 letter-spacing:.18em;
 
-}
+color:#6a6a6a;
 
-
-
-.works-card h2{
-
-font-size:1rem;
-
-line-height:1.3;
-
-margin-top:.25rem;
+text-transform:uppercase;
 
 }
 
+.works-title{
 
+margin-top:.3rem;
+
+font-size:1.45rem;
+
+line-height:1.25;
+
+color:#181818;
 
 }
 
+@media(max-width:760px){
 
+.works-card{
 
-/* Reveal */
+border-radius:1rem;
+
+}
+
+.works-image-wrap{
+
+padding:.5rem;
+
+}
+
+.works-image{
+
+border-radius:.7rem;
+
+}
+
+.works-body{
+
+padding:0 .55rem .65rem;
+
+}
+
+.works-category{
+
+font-size:8px;
+
+letter-spacing:.12em;
+
+}
+
+.works-title{
+
+font-size:.95rem;
+
+line-height:1.25;
+
+}
+
+}
+
+/* ===== Reveal ===== */
 
 .works-reveal{
 
 opacity:0;
 
 transform:
-
-translateY(70px)
-
+translateY(60px)
 scale(.96);
 
-
-
 transition:
-
 opacity .9s cubic-bezier(.22,1,.36,1),
-
 transform .9s cubic-bezier(.22,1,.36,1);
 
-
-
 will-change:
-
-transform,
-
-opacity;
+opacity,
+transform;
 
 }
-
-
 
 .works-show{
 
 animation:
-
 worksBounce .9s cubic-bezier(.22,1,.36,1) forwards;
 
 }
 
-
-
 @keyframes worksBounce{
-
 
 0%{
 
 opacity:0;
 
 transform:
-
-translateY(70px)
-
+translateY(60px)
 scale(.96);
 
 }
-
-
 
 65%{
 
 opacity:1;
 
 transform:
-
-translateY(-10px)
-
+translateY(-8px)
 scale(1.02);
 
 }
-
-
 
 100%{
 
 opacity:1;
 
 transform:
-
 translateY(0)
-
 scale(1);
 
 }
 
-
 }
-
 
 </style>
 
-
-
 <script>
 
-const observer = new IntersectionObserver((entries)=>{
+const observer=new IntersectionObserver((entries)=>{
 
 entries.forEach((entry)=>{
 
-
-if(!entry.isIntersecting) return;
-
+if(!entry.isIntersecting)return;
 
 entry.target.classList.add("works-show");
 
-
 observer.unobserve(entry.target);
-
 
 });
 
-
 },{
 
-threshold:0.18,
+threshold:.15,
 
 rootMargin:"0px 0px -10% 0px"
 
 });
-
-
 
 document.querySelectorAll(".works-reveal").forEach((el)=>{
 
@@ -505,8 +446,6 @@ observer.observe(el);
 
 });
 
-
 </script>
-
 
 </Layout>
