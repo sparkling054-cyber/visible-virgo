@@ -90,7 +90,7 @@ const works = [
 
   <div class="relative z-10 py-32">
 
-    <Container>
+    <Container class="works-container">
 
       <div class="mx-auto max-w-5xl">
 
@@ -99,13 +99,14 @@ const works = [
         </p>
 
         <h1
-  class="works-reveal text-6xl max-sm:text-6xl leading-tight text-white"
-  style="font-family:'Cormorant Garamond',serif;"
->
-  作品紹介
-</h1>
+          class="works-reveal text-6xl leading-tight text-white"
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          作品紹介
+        </h1>
 
       </div>
+
 
       <div class="works-grid mt-24">
 
@@ -129,6 +130,7 @@ const works = [
 
               </div>
 
+
               <div class="px-7 pb-7">
 
                 <p
@@ -137,12 +139,14 @@ const works = [
                   {work.category}
                 </p>
 
+
                 <h2
                   class="mt-2 text-3xl leading-snug text-neutral-900"
                   style="font-family:'Cormorant Garamond',serif;"
                 >
                   {work.title}
                 </h2>
+
 
               </div>
 
@@ -153,6 +157,7 @@ const works = [
 
       </div>
 
+
     </Container>
 
   </div>
@@ -160,6 +165,15 @@ const works = [
 </section>
 
 <style>
+
+.works-container{
+
+  max-width:1800px;
+
+}
+
+
+/* Grid */
 
 .works-grid{
 
@@ -174,6 +188,7 @@ align-items:start;
 }
 
 
+
 @media(max-width:1600px){
 
 .works-grid{
@@ -183,6 +198,7 @@ grid-template-columns:repeat(3,minmax(0,1fr));
 }
 
 }
+
 
 
 @media(max-width:1000px){
@@ -196,13 +212,24 @@ grid-template-columns:repeat(2,minmax(0,1fr));
 }
 
 
+
 @media(max-width:640px){
+
+.works-container{
+
+padding-left:.75rem;
+
+padding-right:.75rem;
+
+}
+
+
 
 .works-grid{
 
 grid-template-columns:repeat(2,minmax(0,1fr));
 
-gap:.8rem;
+gap:1rem;
 
 }
 
@@ -286,9 +313,10 @@ transform:scale(1.06);
 
 .works-card{
 
-border-radius:2rem;
+border-radius:1.2rem;
 
 }
+
 
 
 .works-image-wrap{
@@ -298,11 +326,17 @@ padding:.55rem;
 }
 
 
+
 .works-image{
+
+aspect-ratio:1 / 1;
+
+object-fit:cover;
 
 border-radius:.8rem;
 
 }
+
 
 
 .works-card .px-7{
@@ -316,6 +350,7 @@ padding-bottom:.8rem;
 }
 
 
+
 .works-card p{
 
 font-size:9px;
@@ -323,6 +358,7 @@ font-size:9px;
 letter-spacing:.18em;
 
 }
+
 
 
 .works-card h2{
@@ -336,28 +372,37 @@ margin-top:.25rem;
 }
 
 
+
 }
 
 
 
-/* ---------------- */
 /* Reveal */
-/* ---------------- */
 
 .works-reveal{
 
 opacity:0;
 
 transform:
+
 translateY(70px)
+
 scale(.96);
 
+
+
 transition:
+
 opacity .9s cubic-bezier(.22,1,.36,1),
+
 transform .9s cubic-bezier(.22,1,.36,1);
 
+
+
 will-change:
+
 transform,
+
 opacity;
 
 }
@@ -367,6 +412,7 @@ opacity;
 .works-show{
 
 animation:
+
 worksBounce .9s cubic-bezier(.22,1,.36,1) forwards;
 
 }
@@ -375,39 +421,54 @@ worksBounce .9s cubic-bezier(.22,1,.36,1) forwards;
 
 @keyframes worksBounce{
 
+
 0%{
 
 opacity:0;
 
 transform:
+
 translateY(70px)
+
 scale(.96);
 
 }
+
+
 
 65%{
 
 opacity:1;
 
 transform:
+
 translateY(-10px)
+
 scale(1.02);
 
 }
+
+
 
 100%{
 
 opacity:1;
 
 transform:
+
 translateY(0)
+
 scale(1);
 
 }
 
+
 }
 
+
 </style>
+
+
 
 <script>
 
@@ -415,18 +476,28 @@ const observer = new IntersectionObserver((entries)=>{
 
 entries.forEach((entry)=>{
 
+
 if(!entry.isIntersecting) return;
+
 
 entry.target.classList.add("works-show");
 
+
 observer.unobserve(entry.target);
 
+
 });
 
+
 },{
+
 threshold:0.18,
+
 rootMargin:"0px 0px -10% 0px"
+
 });
+
+
 
 document.querySelectorAll(".works-reveal").forEach((el)=>{
 
@@ -434,6 +505,8 @@ observer.observe(el);
 
 });
 
+
 </script>
+
 
 </Layout>
