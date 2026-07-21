@@ -69,6 +69,7 @@ lg:h-16
 
 <nav
 id="header-nav"
+
 class="
 ml-auto
 mr-2
@@ -76,9 +77,13 @@ mr-2
 grid
 grid-cols-4
 gap-x-2
-gap-y-3
+gap-y-2
+
+justify-items-center
+items-center
 
 opacity-100
+
 transition-all
 duration-700
 ease-in-out
@@ -88,45 +93,53 @@ sm:items-center
 sm:gap-5
 
 lg:gap-8
+
 xl:gap-12
 "
 >
 
 {
-menuItems.map((item,index)=>(
+menuItems.map((item)=>(
 
 <a
 href={item.href}
 
-class:list={[
-"header-link",
+class="
+header-link
 
-"text-center",
+w-full
+text-center
 
-"font-['Cormorant_Garamond']",
+font-['Cormorant_Garamond']
 
-"text-[10px]",
+text-[11px]
 
-"font-medium",
+font-medium
 
-"tracking-[0.05em]",
+tracking-[0.04em]
 
-"text-white",
+leading-none
 
-"transition",
+text-white
 
-"duration-300",
+transition
+duration-300
 
-"hover:text-[#f8dfc1]",
+hover:text-[#f8dfc1]
 
-"sm:text-[11px]",
-"lg:text-[13px]",
-"xl:text-[17px]",
 
-"sm:tracking-[0.16em]",
-"xl:tracking-[0.18em]",
+sm:w-auto
 
-]}
+sm:text-[11px]
+
+sm:tracking-[0.16em]
+
+lg:text-[13px]
+
+xl:text-[17px]
+
+xl:tracking-[0.18em]
+"
 >
 
 {item.name}
@@ -298,7 +311,7 @@ grid-column:5 / span 3;
 
 white-space:nowrap;
 
-font-size:10px;
+font-size:13px;
 
 letter-spacing:.02em;
 
