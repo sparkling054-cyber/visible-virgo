@@ -270,14 +270,24 @@ translateX(40px);
 
 #header-nav{
 
-width:100%;
+position:absolute;
 
-/* 8列グリッドに変更 */
+left:50%;
+top:50%;
+
+transform:translate(-50%,-50%);
+
+width:calc(100% - 120px);
+max-width:420px;
+
 display:grid;
 grid-template-columns:repeat(8,minmax(0,1fr));
 
 row-gap:8px;
 column-gap:6px;
+
+justify-items:center;
+align-items:center;
 
 }
 
@@ -308,6 +318,12 @@ grid-column:5 / span 3;
 }
 
 .header-link{
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+width:100%;
 
 white-space:nowrap;
 
