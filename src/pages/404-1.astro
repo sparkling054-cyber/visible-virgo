@@ -43,6 +43,26 @@ body{
   user-select:none;
   pointer-events:none;
 }
+
+.pc{
+  display:block;
+}
+
+.mobile{
+  display:none;
+}
+
+@media (max-width:900px){
+
+  .pc{
+    display:none;
+  }
+
+  .mobile{
+    display:block;
+  }
+
+}
 </style>
 
 </head>
@@ -54,7 +74,14 @@ body{
 <img
   src="/images/404-1.png"
   alt=""
-  class="bg"
+  class="bg pc"
+  draggable="false"
+/>
+
+<img
+  src="/images/404-2m.png"
+  alt=""
+  class="bg mobile"
   draggable="false"
 />
 
