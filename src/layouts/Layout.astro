@@ -163,8 +163,10 @@ content={ogImage}
   <SocialRail />
 
   <slot />
-
+  
+{!Astro.url.pathname.startsWith("/profile") && (
   <Footer />
+)}
 
   <!-- X(Twitter) Embed -->
   <script

@@ -114,7 +114,7 @@ const works = [
 
             <a
               href={work.link}
-              class="works-reveal works-card group"
+              class="works-reveal works-card"
               style={`transition-delay:${index * 50}ms;`}
             >
 
@@ -224,6 +224,13 @@ padding-right:.8rem;
 }
 
 /* ===== Card ===== */
+.works-card{
+
+display:block;
+width:100%;
+min-width:0;
+
+}
 
 .works-card{
 
@@ -255,7 +262,13 @@ box-shadow:0 18px 40px rgba(0,0,0,.18);
 
 .works-image-wrap{
 
-padding:.7rem;
+width:100%;
+
+}
+
+.works-body{
+
+width:100%;
 
 }
 
