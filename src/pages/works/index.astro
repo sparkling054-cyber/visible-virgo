@@ -99,7 +99,7 @@ const works = [
         </p>
 
         <h1
-  class="works-reveal textgit status-6xl max-sm:text-5xl leading-tight text-white"
+  class="works-reveal text-6xl max-sm:text-6xl leading-tight text-white"
   style="font-family:'Cormorant Garamond',serif;"
 >
   作品紹介
@@ -161,13 +161,6 @@ const works = [
 
 <style>
 
-.works-grid{
-
-column-count:4;
-column-gap:2rem;
-
-}
-
 @media(max-width:1600px){
 
 .works-grid{
@@ -203,23 +196,14 @@ column-gap:.8rem;
 
 .works-card{
 
-display:inline-block;
+display:block;
+
+}
+
+.works-card{
+
 width:100%;
-margin:0 0 2rem;
-
-background:rgba(255,255,255,.72);
-
-backdrop-filter:blur(14px);
-
-border:1px solid rgba(255,255,255,.7);
-
-border-radius:2rem;
-
-overflow:hidden;
-
-transition:.45s;
-
-break-inside:avoid;
+max-width:100%;
 
 }
 
@@ -267,10 +251,6 @@ transform:scale(1.06);
 }
 
 
-
-/* ---------------- */
-/* Mobile */
-/* ---------------- */
 
 @media(max-width:640px){
 

@@ -264,7 +264,6 @@ translateX(40px);
 }
 
 
-/* ---------- Mobile ---------- */
 
 @media (max-width:639px){
 
@@ -272,16 +271,13 @@ translateX(40px);
 
 width:100%;
 
-/* 8列グリッドに変更 */
 display:grid;
 grid-template-columns:repeat(8,minmax(0,1fr));
 
-row-gap:8px;
-column-gap:6px;
-
+row-gap:10px;
+column-gap:0;
 }
 
-/* 上段4つ */
 .header-link:nth-child(1){
 grid-column:1 / span 2;
 }
@@ -298,13 +294,13 @@ grid-column:5 / span 2;
 grid-column:7 / span 2;
 }
 
-/* 下段2つは広め */
+/* 下段2つ */
 .header-link:nth-child(5){
-grid-column:2 / span 3;
+grid-column:1 / span 4;
 }
 
 .header-link:nth-child(6){
-grid-column:5 / span 3;
+grid-column:5 / span 4;
 }
 
 .header-link{
