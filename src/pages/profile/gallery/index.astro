@@ -1,0 +1,356 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Container from "../../../components/common/Container.astro";
+---
+
+<Layout
+  title="ギャラリー｜PROFILE｜錦乃"
+  description=""
+>
+
+<!-- Hero -->
+<section class="relative h-[920px] overflow-hidden bg-[#f5f1ea]">
+
+  <!-- Background -->
+  <img
+ src="/images/profile-bg.png"
+ alt=""
+    class="work-hero absolute inset-0 h-full w-full object-cover pointer-events-none select-none"
+    draggable="false"
+  />
+
+  <!-- Content -->
+  <div class="absolute inset-0 z-20 flex items-center">
+
+    <Container>
+
+  <div class="hero-content max-w-3xl">
+
+
+
+        <!-- Title -->
+        <h1
+          class="mt-1 text-[68px] leading-none text-[#FFFFFF]"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          設定画
+        </h1>
+
+        <!-- Gold Line -->
+        <div class="mt-12 flex items-center">
+
+          <div class="h-[1px] w-[360px] bg-[#caa14d]"></div>
+
+        </div>
+
+        <!-- Summary -->
+        <div class="mt-14 max-w-2xl">
+
+        </div>
+
+      </div>
+
+    </Container>
+
+  </div>
+
+  <!-- Scroll -->
+  <div class="absolute bottom-16 right-12 z-30 flex flex-col items-center">
+
+    <div class="h-20 w-px bg-white/70"></div>
+
+    <span class="mt-4 text-xs tracking-[0.45em] text-white">
+      SCROLL
+    </span>
+
+  </div>
+
+</section>
+
+<!-- Introduction -->
+<section class="relative bg-[#f8f6f2] overflow-hidden works-detail">
+
+  <!-- Washi Background -->
+<img
+  src="/images/washi-bg.png"
+  alt=""
+  class="absolute right-0 top-0 h-full w-full opacity-[0.3] pointer-events-none select-none -z-0"
+/>
+
+  <Container class="py-32 relative z-10">
+
+      
+    
+    <!-- Gallery -->
+
+    <div class="mx-auto max-w-9xl">
+
+      <div class="flex items-center gap-5">
+
+        <span class="h-px w-20 bg-[#caa14d]"></span>
+
+        <p
+          class="tracking-[0.45em] text-[#a58c65]"
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          GALLERY
+        </p>
+
+      </div>
+
+      <h2
+        class="mt-6 text-4xl"
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        展示
+      </h2>
+
+      <div class="gallery mt-12">
+
+        <img src="/images/profile.jpg" alt="にしきのアイコン">
+        <img src="/images/gallery1.png" alt="">
+        <img src="/images/nishikino-setting.png" alt="設定画">
+        <img src="/images/nishikino-setting1.png" alt="">
+        <img src="/images/contact-bg.png" alt="">
+        <img src="/images/78adb63e-2db7-4749-bef0-f032743afcde3.png" alt="">
+
+      </div>
+
+      <!-- Share -->
+
+<div class="mt-32 text-center">
+
+  <div class="flex items-center justify-center gap-5">
+
+    <span class="h-px w-16 bg-[#caa14d]"></span>
+
+    <p
+      class="tracking-[0.45em] text-[#a58c65]"
+      style="font-family:'Cormorant Garamond',serif;"
+    >
+      SHARE
+    </p>
+
+    <span class="h-px w-16 bg-[#caa14d]"></span>
+
+  </div>
+
+
+  <h2
+    class="mt-6 text-3xl text-[#2b2724]"
+    style="font-family:'Shippori Mincho',serif;"
+  >
+    シェア
+  </h2>
+
+
+  <div class="mt-8 flex justify-center gap-4 flex-wrap">
+
+    <a
+      href="#"
+      class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
+    >
+      X
+    </a>
+
+
+    <a
+      href="#"
+      class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
+    >
+      Instagram
+    </a>
+
+
+    <button
+      class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
+    >
+      URLをコピー
+    </button>
+
+  </div>
+
+</div>
+
+    </div>
+
+  </Container>
+
+</section>
+
+<style>
+
+.work-hero{
+  animation:heroFloat 12s ease-in-out infinite;
+  transform-origin:center;
+}
+
+@keyframes heroFloat{
+
+0%{
+transform:scale(1.03) translateY(0);
+}
+
+50%{
+transform:scale(1.06) translateY(-18px);
+}
+
+100%{
+transform:scale(1.03) translateY(0);
+}
+
+}
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(2,minmax(0,1fr));
+
+gap:1.5rem;
+
+}
+
+.gallery img{
+
+display:block;
+
+width:100%;
+
+aspect-ratio:16/10;
+
+object-fit:cover;
+
+border-radius:1.25rem;
+
+border:1px solid #ddd3c8;
+
+background:#ece6dc;
+
+transition:
+transform .45s cubic-bezier(.22,1,.36,1),
+box-shadow .45s;
+
+}
+
+.gallery img:hover{
+
+transform:translateY(-8px) scale(1.02);
+
+box-shadow:0 25px 60px rgba(0,0,0,.14);
+
+}
+
+section{
+
+position:relative;
+
+}
+
+section::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+background-image:
+
+radial-gradient(circle at 8% 10%,rgba(205,175,98,.08),transparent 18%),
+
+radial-gradient(circle at 92% 82%,rgba(205,175,98,.06),transparent 22%);
+
+}
+
+aside{
+
+position:sticky;
+
+top:120px;
+
+height:max-content;
+
+}
+
+a{
+
+transition:.35s;
+
+}
+
+@media(max-width:1100px){
+
+section{
+
+overflow:hidden;
+
+}
+
+}
+
+@media(max-width:900px){
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+aside{
+
+position:relative;
+
+top:auto;
+
+}
+
+}
+
+@media(max-width:768px){
+
+section:first-child{
+
+height:760px;
+
+}
+
+h1{
+
+font-size:44px !important;
+
+line-height:1.15;
+
+}
+
+h2{
+
+font-size:32px !important;
+
+}
+
+.work-hero{
+
+animation:none;
+
+}
+
+.gallery img{
+
+border-radius:1rem;
+
+}
+
+}
+
+</style>
+
+</Layout>

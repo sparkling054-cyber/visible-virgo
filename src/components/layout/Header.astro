@@ -105,7 +105,7 @@ const menuItems = [
 
               hover:text-[#f8dfc1]
 
-              lg:text-[13px]
+              lg:text-[17px]
 
               xl:text-[17px]
 
@@ -343,11 +343,140 @@ const menuItems = [
 
 }
 
+/* -------------------------
+   PC Header Ornament
+-------------------------- */
 
+.header-link{
+
+position:relative;
+
+display:inline-flex;
+
+justify-content:center;
+
+padding-bottom:12px;
+
+}
+
+/* 和風文様 */
+
+.header-link::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+bottom:-28px;
+
+width:90px;
+height:80px;
+
+transform:
+translateX(-50%)
+translateY(4px);
+
+opacity:0;
+
+background:
+url("/images/header-ornament.png")
+center/contain
+no-repeat;
+
+transition:
+opacity .35s ease,
+transform .35s ease;
+
+pointer-events:none;
+
+}
+
+/* PC Hover */
+
+.header-link:hover::after,
+.header-link:focus-visible::after{
+
+opacity:1;
+
+transform:
+translateX(-50%)
+translateY(0);
+
+}
+
+/* タップ時 */
+
+.header-link:active::after{
+
+opacity:1;
+
+transform:
+translateX(-50%)
+translateY(0);
+
+}
+
+/* -------------------------
+   Mobile
+-------------------------- */
+
+.mobile-link{
+
+position:relative;
+
+display:inline-flex;
+
+justify-content:center;
+
+padding-bottom:8px;
+
+}
+
+.mobile-link::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+bottom:0;
+
+width:54px;
+height:8px;
+
+background:
+url("/images/header-ornament.svg")
+center/contain
+no-repeat;
+
+opacity:0;
+
+transform:
+translateX(-50%)
+translateY(4px);
+
+transition:
+opacity .35s ease,
+transform .35s ease;
+
+pointer-events:none;
+
+}
+
+.mobile-link:hover::after,
+.mobile-link:focus-visible::after,
+.mobile-link:active::after{
+
+opacity:1;
+
+transform:
+translateX(-50%)
+translateY(0);
+
+}
 
 </style>
-
-
 
 <script is:inline>
 

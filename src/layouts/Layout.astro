@@ -168,7 +168,7 @@ content={ogImage}
   <Footer />
 )}
 
-  <!-- X(Twitter) Embed -->
+    <!-- X(Twitter) Embed -->
   <script
     async
     src="https://platform.twitter.com/widgets.js"
@@ -184,6 +184,20 @@ content={ogImage}
 
     window.addEventListener("load", loadTwitter);
     document.addEventListener("astro:page-load", loadTwitter);
+  </script>
+
+  <script is:inline>
+    document.addEventListener("contextmenu", (e) => {
+      if (e.target.closest("img")) {
+        e.preventDefault();
+      }
+    });
+
+    document.addEventListener("dragstart", (e) => {
+      if (e.target.closest("img")) {
+        e.preventDefault();
+      }
+    });
   </script>
 
 </body>

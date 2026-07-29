@@ -13,22 +13,41 @@
 
     <!-- PC / Tablet -->
     <img
-      src="/images/78adb63e-2db7-4749-bef0-f032743afcde3.png"
-      alt="Hero"
-      class="absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
-      draggable="false"
-    />
+  src="/images/78adb63e-2db7-4749-bef0-f032743afcde3.png"
+  alt="Hero"
+  class="hero-bg absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+  draggable="false"
+/>
   </picture>
 
   <!-- Mobile Image -->
   <img
     src="/images/home-mobile.png"
     alt="Hero Mobile"
-    class="absolute inset-0 hidden h-full w-full object-cover select-none pointer-events-none sm:hidden"
+    class="hero-bg absolute inset-0 hidden h-full w-full object-cover select-none pointer-events-none sm:hidden"
     draggable="false"
   />
 
   <!-- Overlay -->
   <div class="absolute inset-0 bg-black/10"></div>
+
+<style>
+.hero-bg{
+animation:heroFloat 12s ease-in-out infinite;
+will-change:transform;
+}
+
+@keyframes heroFloat{
+0%{
+transform:scale(1.05) translateY(0px);
+}
+50%{
+transform:scale(1.08) translateY(-15px);
+}
+100%{
+transform:scale(1.05) translateY(0px);
+}
+}
+</style>
 
 </section>
