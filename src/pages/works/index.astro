@@ -221,46 +221,101 @@ const works = [
   description="城郭を中心に、町並みや神社、武家屋敷、創作作品、図面・建築考証など錦乃の制作作品を紹介しています。"
 >
 
-<section class="relative min-h-screen overflow-hidden bg-[#140f0d]">
+<section class="bg-[#faf8f3] min-h-screen">
+
+   <!-- Hero Image -->
+<section class="relative h-[820px] overflow-hidden">
 
   <img
     src="/images/works-bg.png"
-    alt="作品紹介背景"
-    class="absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+    alt="作品紹介"
+    class="works-bg absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
     draggable="false"
   />
 
-  <div class="absolute inset-0 bg-black/15"></div>
+  </section>
 
-  <div class="relative z-10 py-32">
 
-    <Container class="works-container">
 
-      <div class="mx-auto max-w-5xl">
+<!-- Introduction -->
 
-        <p class="works-reveal mb-4 tracking-[0.45em] text-sm text-white/80">
-          WORKS
-        </p>
+<section class="relative overflow-hidden py-20">
 
-        <h1
-          class="works-reveal text-6xl leading-tight text-white"
-          style="font-family:'Cormorant Garamond',serif;"
-        >
-          作品紹介
-        </h1>
+  <img
+    src="/images/washi-bg.png"
+    alt=""
+    class="absolute inset-0 h-full w-full object-cover pointer-events-none select-none"
+    draggable="false"
+  />
 
-      </div>
+  <div class="absolute inset-0 bg-white/55"></div>
 
-      <div class="works-grid mt-20">
+  <div class="relative mx-auto max-w-7xl px-8">
+
+    <p
+      class="tracking-[0.45em] text-sm text-neutral-500"
+      style="font-family:'Cormorant Garamond',serif;"
+    >
+      WORKS
+    </p>
+
+    <h1
+      class="mt-5 text-5xl md:text-7xl text-neutral-900"
+      style="font-family:'Shippori Mincho',serif;"
+    >
+      作品紹介
+    </h1>
+
+    <p
+      class="mt-10 max-w-3xl text-lg leading-10 text-neutral-700"
+      style="font-family:'Shippori Mincho',serif;"
+    >
+      日本の城郭や和風建築、
+      和風の町並み、神社、庭園など実在する建物や歴史考証から再現・復元した作品から
+      乗り物、ファンタジー建築、キャラクター造形に至るまで、
+      <br />
+      数多の作品をご紹介。
+    </p>
+
+  </div>
+
+</section>
+
+  <!-- Works List -->
+
+  <section
+    class="relative min-h-screen overflow-hidden py-32"
+  >
+
+    <img
+      src="/images/washi-bg.png"
+      alt=""
+      class="absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+      draggable="false"
+    />
+
+
+    <div class="absolute inset-0 bg-white/30"></div>
+
+
+
+    <div
+      class="relative mx-auto max-w-[1800px] px-8"
+    >
+
+
+      <div class="works-grid">
+
 
         {
-          works.map((work, index) => (
+          works.map((work,index)=>(
 
             <a
               href={work.link}
-              class="works-reveal works-card"
-              style={`transition-delay:${index * 50}ms;`}
+              class="works-card"
+              
             >
+
 
               <div class="works-image-wrap">
 
@@ -273,11 +328,13 @@ const works = [
 
               </div>
 
+
               <div class="works-body">
 
                 <p class="works-category">
                   {work.category}
                 </p>
+
 
                 <h2
                   class="works-title"
@@ -288,28 +345,26 @@ const works = [
 
               </div>
 
+
             </a>
 
           ))
         }
 
+
       </div>
 
-    </Container>
 
-  </div>
+    </div>
+
+
+  </section>
+
 
 </section>
 
+
 <style>
-
-.works-container{
-
-max-width:1800px;
-
-}
-
-/* ===== Grid ===== */
 
 .works-grid{
 
@@ -323,6 +378,7 @@ align-items:start;
 
 }
 
+
 @media(max-width:640px){
 
 .works-container{
@@ -335,15 +391,8 @@ padding-right:.8rem;
 
 }
 
-/* ===== Card ===== */
-.works-card{
 
-display:block;
-width:100%;
-min-width:0;
-
-
-}
+/* Card */
 
 .works-card{
 
@@ -359,31 +408,27 @@ border-radius:1.25rem;
 
 overflow:hidden;
 
+transform-style:preserve-3d;
+
 transition:
-transform .35s ease,
-box-shadow .35s ease;
+transform .4s cubic-bezier(.22,1,.36,1),
+box-shadow .4s ease;
 
 }
+
 
 .works-card:hover{
 
-transform:translateY(-8px);
+transform:
+translateY(-10px)
+rotateX(4deg)
+rotateY(-5deg);
 
-box-shadow:0 18px 40px rgba(0,0,0,.18);
-
-}
-
-.works-image-wrap{
-
-width:100%;
+box-shadow:
+0 25px 50px rgba(0,0,0,.2);
 
 }
 
-.works-body{
-
-width:100%;
-
-}
 
 .works-image{
 
@@ -401,17 +446,20 @@ transition:transform .8s cubic-bezier(.22,1,.36,1);
 
 }
 
+
 .works-card:hover .works-image{
 
 transform:scale(1.05);
 
 }
 
+
 .works-body{
 
-padding:0 .8rem .9rem;
+padding:.8rem .8rem .9rem;
 
 }
+
 
 .works-category{
 
@@ -425,6 +473,7 @@ text-transform:uppercase;
 
 }
 
+
 .works-title{
 
 margin-top:.3rem;
@@ -437,6 +486,8 @@ color:#181818;
 
 }
 
+
+
 @media(max-width:760px){
 
 .works-card{
@@ -445,98 +496,9 @@ border-radius:1rem;
 
 }
 
-.works-image-wrap{
-
-padding:.5rem;
-
-}
-
-.works-image{
-
-border-radius:.7rem;
-
-}
-
-.works-body{
-
-padding:0 .55rem .65rem;
-
-}
-
-.works-category{
-
-font-size:8px;
-
-letter-spacing:.12em;
-
-}
-
 .works-title{
 
 font-size:.95rem;
-
-line-height:1.25;
-
-}
-
-}
-
-/* ===== Reveal ===== */
-
-.works-reveal{
-
-opacity:0;
-
-transform:
-translateY(60px)
-scale(.96);
-
-transition:
-opacity .9s cubic-bezier(.22,1,.36,1),
-transform .9s cubic-bezier(.22,1,.36,1);
-
-will-change:
-opacity,
-transform;
-
-}
-
-.works-show{
-
-animation:
-worksBounce .9s cubic-bezier(.22,1,.36,1) forwards;
-
-}
-
-@keyframes worksBounce{
-
-0%{
-
-opacity:0;
-
-transform:
-translateY(60px)
-scale(.96);
-
-}
-
-65%{
-
-opacity:1;
-
-transform:
-translateY(-8px)
-scale(1.02);
-
-}
-
-100%{
-
-opacity:1;
-
-transform:
-translateY(0)
-scale(1);
 
 }
 
@@ -544,34 +506,5 @@ scale(1);
 
 </style>
 
-<script>
-
-const observer=new IntersectionObserver((entries)=>{
-
-entries.forEach((entry)=>{
-
-if(!entry.isIntersecting)return;
-
-entry.target.classList.add("works-show");
-
-observer.unobserve(entry.target);
-
-});
-
-},{
-
-threshold:.15,
-
-rootMargin:"0px 0px -10% 0px"
-
-});
-
-document.querySelectorAll(".works-reveal").forEach((el)=>{
-
-observer.observe(el);
-
-});
-
-</script>
 
 </Layout>
