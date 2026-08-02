@@ -14,7 +14,7 @@ const services = [
     text: "YouTube向け紹介動画やSNS向けコンテンツ、世界観づくりまで、皆様の所有物の伝えたい魅力に合わせた映像表現をお手伝いします。"
   },
   {
-    title: "クリエイターさん・配信者さんコラボレーション",
+    title: "クリエイターさん配信者さんコラボレーション",
     text: "ジャンルや活動内容を問わず、動画・配信・企画など色んな形で皆さんの「一緒にこんな企画しませんか？」を叶えます。"
   },
   {
@@ -26,14 +26,35 @@ const services = [
 
 <ScrollReveal>
 
-<Section>
+<div class="relative overflow-hidden">
 
-<Container>
 
-<SectionTitle
+  <!-- 和紙背景 -->
+  <img
+    src="/images/washi-bg1.png"
+    alt=""
+    class="absolute inset-0 h-full w-full object-cover pointer-events-none select-none"
+    draggable="false"
+  />
+
+
+  <!-- 白い透過レイヤー -->
+  <div class="absolute inset-0 bg-white/30"></div>
+
+
+  <section class="relative">
+
+
+    <Section>
+
+      <Container>
+
+
+    <SectionTitle
   en="COLLABORATION"
   title="ご依頼・コラボレーション"
   description="個人から企業・自治体・文化機関まで、様々な制作や企画のご相談ができます。"
+  light
 />
 
 <div class="mt-16 grid gap-8 md:grid-cols-2">
@@ -70,7 +91,7 @@ const services = [
         </h3>
 
         <div
-          class="mt-6 h-px w-16 bg-gradient-to-r from-rose-300 via-amber-300 to-sky-300"
+          class="mt-6 h-px w-30 bg-gradient-to-r from-rose-300 via-amber-300 to-sky-300"
         ></div>
 
         <p
@@ -87,8 +108,15 @@ const services = [
 
 </div>
 
-</Container>
 
-</Section>
+         </Container>
+
+      </Section>
+
+
+  </section>
+
+
+</div>
 
 </ScrollReveal>

@@ -28,9 +28,28 @@ const achievements = [
 
 <ScrollReveal>
 
-<Section>
+<div class="relative overflow-hidden">
 
-  <Container>
+
+  <!-- 和紙背景 -->
+  <img
+    src="/images/washi-bg.png"
+    alt=""
+    class="absolute inset-0 h-full w-full object-cover pointer-events-none select-none"
+    draggable="false"
+  />
+
+
+  <!-- 白い透過レイヤー -->
+  <div class="absolute inset-0 bg-white/30"></div>
+
+
+  <section class="relative">
+
+
+    <Section>
+
+      <Container>
 
 
     <SectionTitle
@@ -87,8 +106,14 @@ const achievements = [
     </div>
 
 
-  </Container>
+         </Container>
 
-</Section>
+      </Section>
+
+
+  </section>
+
+
+</div>
 
 </ScrollReveal>
