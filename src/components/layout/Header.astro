@@ -153,19 +153,19 @@ const menuItems = [
 
 
       <a
-  href="/about/"
-  class="mobile-link about-link"
->
-  ABOUT
-</a>
+        href="/about/"
+        class="mobile-link"
+      >
+        ABOUT
+      </a>
 
 
       <a
-  href="/achievements/"
-  class="mobile-link achievements-link"
->
-  ACHIEVEMENTS
-</a>
+        href="/achievements/"
+        class="mobile-link achievements-link"
+      >
+        ACHIEVEMENTS
+      </a>
 
 
       <a
@@ -334,12 +334,9 @@ const menuItems = [
     flex:1;
   }
 
-  .about-link{
-    transform:translateX(-10px);
-  }
-
   .achievements-link{
-    transform:translateX(24px);
+    justify-self:end;
+    left:32px;
   }
 
 }
