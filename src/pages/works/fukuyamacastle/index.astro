@@ -5,7 +5,7 @@ import Container from "../../../components/common/Container.astro";
 
 <Layout
   title="錦乃｜広島県福山市 福山城天守｜WORKS"
-  description="福山城天守の歴史や建築的特徴と、Minecraftで制作した福山城を紹介します。"
+  description=description="錦乃によるMinecraft和風建築作品「福山城天守」。江戸時代初期に築かれた福山城の天守を、歴史資料や実物をもとに現代のデジタル空間へ復元したものです。"
 >
 
 <!-- Hero -->
@@ -53,12 +53,15 @@ import Container from "../../../components/common/Container.astro";
           備後に聳える、江戸期最後の大城郭。
         </p>
 
-        <!-- Gold Line -->
-        <div class="mt-12 flex items-center">
-
-          <div class="h-[1px] w-[360px] bg-[#caa14d]"></div>
-
-        </div>
+        <!-- Gold Divider -->
+<div class="mt-1">
+  <img
+    src="/images/gold-divider.png"
+    alt=""
+    class="w-[420px] h-auto select-none pointer-events-none"
+    draggable="false"
+  />
+</div>
 
         <!-- Summary -->
         <div class="mt-14 max-w-2xl">
@@ -119,7 +122,7 @@ import Container from "../../../components/common/Container.astro";
       </h2>
 
       <p
-        class="mt-10 max-w-4xl leading-10 text-[#55504a]"
+        class="mt-10 max-w-4xl leading-10 text-xl text-[#55504a]"
         style="font-family:'Shippori Mincho',serif;"
       >
         広島県福山市に築かれた近世城郭・福山城は、<br>
