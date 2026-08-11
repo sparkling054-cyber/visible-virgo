@@ -321,6 +321,12 @@ const works = [
     image: "/images/cat.jpg",
     link: "https://youtube.com/shorts/GLOjkjCk6W0"
   },
+  {
+    title: "アマテ・ユズリハ",
+    category: "キャラクター",
+    image: "/images/yuzu.jpg",
+    link: "#"
+  },
     {
     title: "スチームパンクファンタジー住宅",
     category: "ファンタジー",
@@ -488,141 +494,290 @@ const works = [
 
 <style>
 
-.works-grid{
+/* =========================================
+   Works Grid
+========================================= */
 
-display:grid !important;
-
-grid-template-columns:repeat(5,1fr) !important;
-
-gap:20px !important;
-
-align-items:start;
-
+.works-grid {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 20px !important;
+  align-items: start;
 }
 
 
-@media(max-width:640px){
+/* =========================================
+   Card
+========================================= */
 
-.works-container{
+.works-card {
+  position: relative;
+  display: block;
 
-padding-left:.8rem;
+  aspect-ratio: 1 / 1;
 
-padding-right:.8rem;
+  overflow: hidden;
 
-}
+  border-radius: 1.35rem;
 
-}
+  border: 1px solid rgba(255, 255, 255, 0.55);
 
+  background: rgba(100, 180, 220, 0.18);
 
-/* Card */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
-.works-card{
+  box-shadow:
+    0 10px 30px rgba(40, 100, 130, 0.12);
 
-display:block;
+  transform-style: preserve-3d;
 
-background:rgba(255,255,255,.78);
-
-backdrop-filter:blur(16px);
-
-border:1px solid rgba(255,255,255,.65);
-
-border-radius:1.25rem;
-
-overflow:hidden;
-
-transform-style:preserve-3d;
-
-transition:
-transform .4s cubic-bezier(.22,1,.36,1),
-box-shadow .4s ease;
-
-}
-
-
-.works-card:hover{
-
-transform:
-translateY(-10px)
-rotateX(4deg)
-rotateY(-5deg);
-
-box-shadow:
-0 25px 50px rgba(0,0,0,.2);
-
-}
-
-
-.works-image{
-
-display:block;
-
-width:100%;
-
-aspect-ratio:1/1;
-
-object-fit:cover;
-
-border-radius:.9rem;
-
-transition:transform .8s cubic-bezier(.22,1,.36,1);
-
-}
-
-
-.works-card:hover .works-image{
-
-transform:scale(1.05);
-
-}
-
-
-.works-body{
-
-padding:.8rem .8rem .9rem;
-
-}
-
-
-.works-category{
-
-font-size:11px;
-
-letter-spacing:.18em;
-
-color:#6a6a6a;
-
-text-transform:uppercase;
-
-}
-
-
-.works-title{
-
-margin-top:.3rem;
-
-font-size:1.45rem;
-
-line-height:1.25;
-
-color:#181818;
-
+  transition:
+    transform 0.45s cubic-bezier(.22, 1, .36, 1),
+    box-shadow 0.45s ease;
 }
 
 
 
-@media(max-width:760px){
 
-.works-card{
+/* =========================================
+   Hover
+========================================= */
 
-border-radius:1rem;
+.works-card:hover {
+  transform:
+    translateY(-8px)
+    rotateX(2deg)
+    rotateY(-2deg);
+
+  box-shadow:
+    0 22px 45px rgba(30, 100, 140, 0.22);
+}
+
+
+/* =========================================
+   Image
+========================================= */
+
+.works-image-wrap {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+.works-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  aspect-ratio: auto;
+
+  object-fit: cover;
+
+  border-radius: 0;
+
+  transition:
+    transform 0.8s cubic-bezier(.22, 1, .36, 1),
+    filter 0.5s ease;
+}
+
+
+/* Hover時に少しズーム */
+
+.works-card:hover .works-image {
+  transform: scale(1.045);
+}
+
+
+/* =========================================
+   Text Area
+========================================= */
+
+.works-body {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  display: block;
+
+  padding: 1.2rem;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   Category
+   → 左下
+========================================= */
+
+.works-category {
+  position: absolute;
+
+  left: 1.2rem;
+  bottom: 1.05rem;
+
+  margin: 0;
+
+  font-family:
+    "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif;
+
+  font-size: clamp(0.7rem, 0.9vw, 1rem);
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  line-height: 1.3;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================
+   Title
+   → 左上
+========================================= */
+
+.works-title {
+  position: absolute;
+
+  top: 1.1rem;
+  left: 1.1rem;
+
+  margin: 0;
+
+  display: inline-block;
+
+  max-width: calc(100% - 2.2rem);
+
+  padding:
+    0.45rem
+    0.7rem;
+
+  border-radius: 0.65rem;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  font-family:
+    "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif !important;
+
+  font-size: clamp(0.8rem, 1vw, 1.1rem);
+
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.22);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .works-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
 
 }
 
-.works-title{
 
-font-size:.95rem;
+@media (max-width: 760px) {
+
+  .works-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+
+  .works-card {
+    border-radius: 1.1rem;
+  }
+
+  .works-body {
+    padding: 0.8rem;
+  }
+
+  .works-title {
+    top: 0.75rem;
+    left: 0.75rem;
+
+    max-width: calc(100% - 1.5rem);
+
+    padding:
+      0.45rem
+      0.65rem;
+
+    border-radius: 0.5rem;
+
+    font-size: 0.9rem;
+  }
+
+  .works-category {
+    left: 0.75rem;
+    bottom: 0.7rem;
+
+    font-size: 0.65rem;
+  }
 
 }
+
+
+@media (max-width: 480px) {
+
+  .works-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .works-card {
+    aspect-ratio: 16 / 9;
+  }
+
+}
+
+
+/* =========================================
+   Introduction / Container
+   ※既存のレイアウト用
+========================================= */
+
+@media (max-width: 640px) {
+
+  .works-container {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
 
 }
 
