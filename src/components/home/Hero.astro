@@ -841,105 +841,104 @@
     </div>
 
 
-    <!-- =====================================================
-         YouTube
-    ====================================================== -->
+<!-- =====================================================
+     YouTube
+====================================================== -->
 
-    <div class="mt-6">
+<div class="mt-6">
 
-      <div
+  <div
+    class="
+      mb-3
+      flex
+      items-end
+      justify-between
+      gap-3
+    "
+  >
+
+    <div>
+
+      <p
         class="
-          mb-3
-          flex
-          items-end
-          justify-between
-          gap-3
+          text-[8px]
+          tracking-[0.25em]
+          text-white/55
         "
       >
+        YOUTUBE
+      </p>
 
-        <div>
-
-          <p
-            class="
-              text-[8px]
-              tracking-[0.25em]
-              text-white/55
-            "
-          >
-            YOUTUBE
-          </p>
-
-          <h3
-            class="
-              mt-1
-              text-base
-              text-white
-              sm:text-lg
-            "
-          >
-            𝓨𝓸𝓾𝓣𝓾𝓫𝓮
-          </h3>
-
-        </div>
-
-
-        <a
-          href="https://www.youtube.com/@MikuNiki5471"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="
-            hidden
-            rounded-full
-            border
-            border-white/40
-            px-4
-            py-1.5
-            text-[10px]
-            text-white/85
-            transition
-            hover:bg-white
-            hover:text-neutral-900
-            sm:inline-flex
-          "
-        >
-          YouTubeを見る
-        </a>
-
-      </div>
-
-
-      <div
+      <h3
         class="
-          overflow-hidden
-          rounded-[1rem]
-          border
-          border-white/20
-          bg-black/30
-          shadow-xl
-          backdrop-blur-sm
-          sm:rounded-[1.25rem]
+          mt-1
+          text-base
+          text-white
+          sm:text-lg
         "
       >
-
-             <div class="aspect-video w-full">
-
-          <iframe
-        src="https://www.youtube.com/@MikuNiki5471"
-        title="YouTube"
-        class="h-full w-full"
-        loading="lazy"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-
-        </div>
-
-      </div>
+        𝓨𝓸𝓾𝓣𝓾𝓫𝓮
+      </h3>
 
     </div>
 
+
+    <a
+      href="https://www.youtube.com/@MikuNiki5471"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="
+        hidden
+        rounded-full
+        border
+        border-white/40
+        px-4
+        py-1.5
+        text-[10px]
+        text-white/85
+        transition
+        hover:bg-white
+        hover:text-neutral-900
+        sm:inline-flex
+      "
+    >
+      YouTubeを見る
+    </a>
+
+  </div>
+
+
+  <div
+    class="
+      overflow-hidden
+      rounded-[1rem]
+      border
+      border-white/20
+      bg-black/30
+      shadow-xl
+      backdrop-blur-sm
+      sm:rounded-[1.25rem]
+    "
+  >
+
+     <div class="aspect-video w-full">
+
+  <iframe
+    src="https://www.youtube.com/embed/VPN70coAmY0"
+    title="錦乃 YouTube"
+    class="h-full w-full"
+    loading="lazy"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>
+
+    </div>
+
+  </div>
+
+</div>
     <!-- =====================================================
          X / TikTok
     ====================================================== -->
@@ -987,7 +986,7 @@
   "
 >
 
-    <div id="x-timeline-container"></div>
+    <a class="twitter-timeline" href="https://x.com/MikuNiki5471?ref_src=twsrc%5Etfw">Posts by MikuNiki5471</a> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 
   </div>
 
@@ -1045,34 +1044,7 @@
               </a>
 
             </section>
-<script is:inline>
-  function loadXTimeline() {
-    if (window.twttr && window.twttr.widgets) {
-      window.twttr.widgets.createTimeline(
-        {
-          sourceType: "profile",
-          screenName: "MikuNiki5471"
-        },
-        document.getElementById("x-timeline-container"),
-        {
-          height: 400,
-          theme: "light",
-          dnt: true
-        }
-      );
-    }
-  }
 
-  if (!window.twttr) {
-    const script = document.createElement("script");
-    script.src = "https://platform.twitter.com/widgets.js";
-    script.async = true;
-    script.onload = loadXTimeline;
-    document.head.appendChild(script);
-  } else {
-    loadXTimeline();
-  }
-</script>
           </blockquote>
 
         </div>
@@ -1588,10 +1560,6 @@
           absolute
           inset-0
           opacity-[0.05]
-        "
-        style="
-          background-image:url('/images/gold-pattern.webp');
-          background-size:180px;
         "
       ></div>
 
