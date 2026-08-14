@@ -1,53 +1,2343 @@
+---
+// src/components/home/Hero.astro
+---
+
 <section
   id="hero"
-  class="relative min-h-screen overflow-hidden bg-[#140f0d]"
 >
 
-  <!-- Hero Image -->
-  <picture>
-    <!-- Smartphone -->
-    <source
-      media="(max-width: 639px)"
-      srcset="/images/home-mobile.png"
+  <!-- =========================================================
+       HERO
+  ========================================================== -->
+
+  <div class="relative min-h-screen overflow-hidden">
+
+    <picture>
+
+      <!-- Smartphone -->
+      <source
+        media="(max-width: 639px)"
+        srcset="/images/home-mobile.png"
+      />
+
+      <!-- PC / Tablet -->
+      <img
+        src="/images/78adb63e-2db7-4749-bef0-f032743afcde3.png"
+        alt="錦乃"
+        class="hero-bg absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+        draggable="false"
+      />
+
+    </picture>
+
+
+    <!-- Mobile -->
+    <img
+      src="/images/home-mobile.png"
+      alt="錦乃"
+      class="hero-mobile absolute inset-0 hidden h-full w-full object-cover select-none pointer-events-none"
+      draggable="false"
     />
 
-    <!-- PC / Tablet -->
-    <img
-  src="/images/78adb63e-2db7-4749-bef0-f032743afcde3.png"
-  alt="Hero"
-  class="hero-bg absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
-  draggable="false"
-/>
-  </picture>
 
-  <!-- Mobile Image -->
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/10"></div>
+
+
+    <!-- Hero Content -->
+
+    <div
+      class="
+        absolute
+        inset-x-0
+        bottom-0
+        z-10
+        mx-auto
+        flex
+        max-w-7xl
+        items-end
+        justify-between
+        px-6
+        pb-28
+        sm:px-10
+        lg:px-12
+        lg:pb-24
+      "
+    >
+
+      <div class="max-w-2xl">
+
+        <p
+          class="
+            mb-4
+            text-xs
+            tracking-[0.45em]
+            text-white/90
+            sm:text-sm
+          "
+        >
+          NISHIKINO
+        </p>
+
+        <h1
+          class="
+            text-4xl
+            leading-tight
+            text-white
+            drop-shadow-2xl
+            sm:text-6xl
+            lg:text-8xl
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          錦乃
+        </h1>
+
+        <p
+          class="
+            mt-4
+            max-w-xl
+            text-sm
+            leading-7
+            text-white/90
+            sm:text-base
+            sm:leading-8
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          日本の伝統や歴史、建築を愛し、
+          デジタル空間から新しい文化表現を生み出す
+          クリエイター
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- Scroll -->
+
+    <div
+      class="
+        absolute
+        bottom-16
+        right-6
+        z-20
+        hidden
+        flex-col
+        items-center
+        sm:right-12
+        sm:flex
+      "
+    >
+
+      <div class="h-20 w-px bg-white/70"></div>
+
+      <span
+        class="
+          mt-4
+          text-xs
+          tracking-[0.45em]
+          text-white
+        "
+      >
+        SCROLL
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <!-- =========================================================
+     ABOUT
+     このサイトについて
+========================================================== -->
+
+<section
+  id="about"
+  class="
+    relative
+    overflow-hidden
+    py-8
+    sm:py-10
+    lg:py-12
+  "
+>
+
+  <!-- Background -->
+
   <img
-    src="/images/home-mobile.png"
-    alt="Hero Mobile"
-    class="hero-bg absolute inset-0 hidden h-full w-full object-cover select-none pointer-events-none sm:hidden"
+    src="/images/washi-bg1.png"
+    alt=""
+    class="
+      absolute
+      inset-0
+      h-full
+      w-full
+      object-cover
+      pointer-events-none
+      select-none
+    "
     draggable="false"
   />
 
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-black/10"></div>
+  <div
+    class="
+      absolute
+      inset-0
+      bg-white/35
+    "
+  ></div>
 
-<style>
-.hero-bg{
-animation:heroFloat 12s ease-in-out infinite;
-will-change:transform;
-}
 
-@keyframes heroFloat{
-0%{
-transform:scale(1.05) translateY(0px);
-}
-50%{
-transform:scale(1.08) translateY(-15px);
-}
-100%{
-transform:scale(1.05) translateY(0px);
-}
-}
-</style>
+  <div
+    class="
+      relative
+      mx-auto
+      max-w-7xl
+      px-3
+      sm:px-5
+      lg:px-6
+    "
+  >
+
+    <!-- ===================================
+     SECTION TITLE
+=================================== -->
+
+<div class="text-left">
+
+  <p
+    class="
+      text-[8px]
+      tracking-[0.3em]
+      text-white/80
+      uppercase
+    "
+  >
+    ABOUT THIS SITE
+  </p>
+
+  <h2
+    class="
+      mt-2
+      text-xl
+      leading-tight
+      text-white
+      sm:text-2xl
+      lg:text-3xl
+    "
+    style="font-family:'Shippori Mincho',serif;"
+  >
+    このサイトについて
+  </h2>
+
+  <div
+    class="
+      mt-3
+      h-px
+      w-16
+      bg-gradient-to-r
+      from-rose-300
+      via-amber-300
+      to-sky-300
+    "
+  ></div>
+
+</div>
+
+
+<!-- ===================================
+     ABOUT CONTENT
+=================================== -->
+
+<div
+  class="
+    mt-6
+    grid
+    gap-3
+    lg:grid-cols-[1.15fr_.85fr]
+    sm:gap-4
+  "
+>
+
+  <!-- Overview -->
+
+  <article
+    class="
+      rounded-[1rem]
+      border
+      border-white/70
+      bg-white/75
+      p-4
+      shadow-md
+      backdrop-blur-xl
+      sm:rounded-[1.25rem]
+      sm:p-5
+    "
+  >
+
+    <p
+      class="
+        text-[8px]
+        tracking-[0.25em]
+        text-neutral-500
+        uppercase
+      "
+    >
+      OVERVIEW
+    </p>
+
+    <h3
+      class="
+        mt-2
+        text-base
+        text-neutral-900
+        sm:text-lg
+      "
+      style="font-family:'Shippori Mincho',serif;"
+    >
+      このサイトについて
+    </h3>
+
+    <div
+      class="
+        mt-3
+        h-px
+        w-16
+        bg-gradient-to-r
+        from-rose-300
+        via-amber-300
+        to-sky-300
+      "
+    ></div>
+
+    <p
+      class="
+        mt-3
+        text-xs
+        leading-6
+        text-neutral-700
+        sm:text-sm
+        sm:leading-7
+      "
+      style="font-family:'Shippori Mincho',serif;"
+    >
+      このサイトは、インフルエンサー／クリエイター「錦乃」の活動や作品を紹介する公式サイトです。
+      ゲーム・デジタル空間で制作した日本の城郭や歴史的建造物を中心に、数多の制作・発信の概要をご覧いただけます。
+    </p>
+
+    <p
+      class="
+        mt-3
+        text-xs
+        leading-6
+        text-neutral-700
+        sm:text-sm
+        sm:leading-7
+      "
+      style="font-family:'Shippori Mincho',serif;"
+    >
+      作品の紹介だけでなく、プロフィールや制作の背景、資料調査、動画・SNSでの活動、
+      これまでの実績、ご依頼・コラボレーションに関する情報など、
+      活動の概要全体をひとつにまとめています。
+    </p>
+
+  </article>
+
+</div>
+
+</div>
 
 </section>
+
+<div class="section-divider" aria-hidden="true"></div>
+
+ <!-- =========================================================
+     ACHIEVEMENTS PREVIEW
+========================================================== -->
+
+<section
+  id="achievements"
+  class="
+    relative
+    overflow-hidden
+    py-8
+    sm:py-10
+    lg:py-12
+  "
+>
+
+  <img
+    src="/images/washi-bg.png"
+    alt=""
+    class="
+      absolute
+      inset-0
+      h-full
+      w-full
+      object-cover
+      pointer-events-none
+      select-none
+    "
+    draggable="false"
+  />
+
+  <div
+    class="
+      absolute
+      inset-0
+      bg-white/35
+    "
+  ></div>
+
+
+  <div
+    class="
+      relative
+      mx-auto
+      max-w-7xl
+      px-3
+      sm:px-5
+      lg:px-6
+    "
+  >
+
+    <!-- ===================================
+         SECTION TITLE
+    ==================================== -->
+
+    <div
+      class="
+        flex
+        flex-col
+        justify-between
+        gap-4
+        sm:flex-row
+        sm:items-end
+      "
+    >
+
+      <div>
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.3em]
+            text-rose-500
+          "
+        >
+          ACHIEVEMENTS
+        </p>
+
+        <h2
+          class="
+            mt-2
+            text-2xl
+            text-neutral-900
+            sm:text-2xl
+            lg:text-3xl
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          実績
+        </h2>
+
+        <p
+          class="
+            mt-3
+            max-w-xl
+            text-sm
+            leading-6
+            text-neutral-600
+          "
+        >
+          これまでの制作活動・発信活動についてご紹介します。
+        </p>
+
+      </div>
+
+
+      <a
+        href="/achievements/"
+        class="
+          inline-flex
+          shrink-0
+          items-center
+          justify-center
+          rounded-full
+          border
+          border-neutral-800
+          bg-white/70
+          px-5
+          py-2
+          text-xs
+          text-neutral-900
+          backdrop-blur
+          transition
+          duration-500
+          hover:-translate-y-1
+          hover:bg-neutral-900
+          hover:text-white
+          hover:shadow-xl
+        "
+      >
+        実績をすべて見る
+      </a>
+
+    </div>
+
+
+    <!-- ===================================
+         ACHIEVEMENT CARDS
+    ==================================== -->
+
+    <div
+      class="
+        mt-6
+        grid
+        gap-3
+        sm:grid-cols-2
+        sm:gap-4
+      "
+    >
+
+      <!-- 01 -->
+
+      <article
+        class="
+          rounded-[1rem]
+          border
+          border-white/70
+          bg-white/80
+          p-4
+          shadow-md
+          backdrop-blur-xl
+          transition
+          duration-500
+          hover:-translate-y-1
+          hover:shadow-xl
+          sm:rounded-[1.25rem]
+          sm:p-5
+        "
+      >
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.25em]
+            text-rose-400
+          "
+        >
+          01
+        </p>
+
+        <h3
+          class="
+            mt-2
+            text-base
+            text-neutral-900
+            sm:text-lg
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          建築・空間作品制作
+        </h3>
+
+        <p
+          class="
+            mt-2
+            text-xs
+            leading-6
+            text-neutral-600
+            sm:text-sm
+            sm:leading-7
+          "
+        >
+          ゲーム・3DCGなどのデジタル空間を活用し、
+          城郭・建築・町並み・庭園など様々な空間作品を制作しています。
+        </p>
+
+      </article>
+
+
+      <!-- 02 -->
+
+      <article
+        class="
+          rounded-[1rem]
+          border
+          border-white/70
+          bg-white/80
+          p-4
+          shadow-md
+          backdrop-blur-xl
+          transition
+          duration-500
+          hover:-translate-y-1
+          hover:shadow-xl
+          sm:rounded-[1.25rem]
+          sm:p-5
+        "
+      >
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.25em]
+            text-amber-500
+          "
+        >
+          02
+        </p>
+
+        <h3
+          class="
+            mt-2
+            text-base
+            text-neutral-900
+            sm:text-lg
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          資料調査・空間考証
+        </h3>
+
+        <p
+          class="
+            mt-2
+            text-xs
+            leading-6
+            text-neutral-600
+            sm:text-sm
+            sm:leading-7
+          "
+        >
+          設計図や写真、歴史資料などをもとに、
+          建物の構造や地域の成り立ちを調べ、制作へ反映しています。
+        </p>
+
+      </article>
+
+
+      <!-- 03 -->
+
+      <article
+        class="
+          rounded-[1rem]
+          border
+          border-white/70
+          bg-white/80
+          p-4
+          shadow-md
+          backdrop-blur-xl
+          transition
+          duration-500
+          hover:-translate-y-1
+          hover:shadow-xl
+          sm:rounded-[1.25rem]
+          sm:p-5
+        "
+      >
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.25em]
+            text-sky-500
+          "
+        >
+          03
+        </p>
+
+        <h3
+          class="
+            mt-2
+            text-base
+            text-neutral-900
+            sm:text-lg
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          作品発信・メディア
+        </h3>
+
+        <p
+          class="
+            mt-2
+            text-xs
+            leading-6
+            text-neutral-600
+            sm:text-sm
+            sm:leading-7
+          "
+        >
+          制作した作品を動画や写真、SNSなどを通じて発信し、
+          より多くの人に魅力を届けています。
+        </p>
+
+      </article>
+
+
+      <!-- 04 -->
+
+      <article
+        class="
+          rounded-[1rem]
+          border
+          border-white/70
+          bg-white/80
+          p-4
+          shadow-md
+          backdrop-blur-xl
+          transition
+          duration-500
+          hover:-translate-y-1
+          hover:shadow-xl
+          sm:rounded-[1.25rem]
+          sm:p-5
+        "
+      >
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.25em]
+            text-violet-500
+          "
+        >
+          04
+        </p>
+
+        <h3
+          class="
+            mt-2
+            text-base
+            text-neutral-900
+            sm:text-lg
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          世界・設定制作
+        </h3>
+
+        <p
+          class="
+            mt-2
+            text-xs
+            leading-6
+            text-neutral-600
+            sm:text-sm
+            sm:leading-7
+          "
+        >
+          実在する建物だけに限らず、
+          ファンタジーな建築や風景、キャラクターなど、
+          想像から生まれる世界観の制作にも取り組んでいます。
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<div class="section-divider" aria-hidden="true"></div>
+
+  <!-- =========================================================
+     MEDIA
+     YouTube / X / TikTok
+========================================================== -->
+
+<section
+  id="media"
+  class="
+    relative
+    overflow-hidden
+    py-8
+    text-white
+    sm:py-10
+    lg:py-12
+  "
+>
+
+  <!-- Background -->
+
+  <img
+    src="/images/washi-bg1.png"
+    alt=""
+    class="
+      absolute
+      inset-0
+      h-full
+      w-full
+      object-cover
+      pointer-events-none
+      select-none
+    "
+    draggable="false"
+  />
+
+
+
+  <div
+    class="
+      relative
+      mx-auto
+      max-w-7xl
+      px-3
+      sm:px-5
+      lg:px-6
+    "
+  >
+
+
+    <!-- ===================================
+         MEDIA HEADING
+    ==================================== -->
+
+    <div class="max-w-3xl">
+
+      <p
+        class="
+          text-[8px]
+          tracking-[0.3em]
+          text-white
+        "
+      >
+        MEDIA
+      </p>
+
+      <h2
+        class="
+          mt-2
+          text-xl
+          text-white
+          sm:text-2xl
+          lg:text-3xl
+        "
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        動画・SNS
+      </h2>
+
+      <p
+        class="
+          mt-3
+          text-xs
+          leading-6
+          text-white/75
+        "
+      >
+        Minecraftで制作した作品や制作活動、
+        日本文化・建築に関するコンテンツを発信しています。
+      </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         YouTube
+    ====================================================== -->
+
+    <div class="mt-6">
+
+      <div
+        class="
+          mb-3
+          flex
+          items-end
+          justify-between
+          gap-3
+        "
+      >
+
+        <div>
+
+          <p
+            class="
+              text-[8px]
+              tracking-[0.25em]
+              text-white/55
+            "
+          >
+            YOUTUBE
+          </p>
+
+          <h3
+            class="
+              mt-1
+              text-base
+              text-white
+              sm:text-lg
+            "
+          >
+            𝓨𝓸𝓾𝓣𝓾𝓫𝓮
+          </h3>
+
+        </div>
+
+
+        <a
+          href="https://www.youtube.com/@MikuNiki5471"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="
+            hidden
+            rounded-full
+            border
+            border-white/40
+            px-4
+            py-1.5
+            text-[10px]
+            text-white/85
+            transition
+            hover:bg-white
+            hover:text-neutral-900
+            sm:inline-flex
+          "
+        >
+          YouTubeを見る
+        </a>
+
+      </div>
+
+
+      <div
+        class="
+          overflow-hidden
+          rounded-[1rem]
+          border
+          border-white/20
+          bg-black/30
+          shadow-xl
+          backdrop-blur-sm
+          sm:rounded-[1.25rem]
+        "
+      >
+
+             <div class="aspect-video w-full">
+
+          <iframe
+        src="https://www.youtube.com/@MikuNiki5471"
+        title="YouTube"
+        class="h-full w-full"
+        loading="lazy"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- =====================================================
+         X / TikTok
+    ====================================================== -->
+
+    <div
+      class="
+        mt-6
+        grid
+        gap-4
+        lg:grid-cols-2
+      "
+    >
+
+
+      <!-- X -->
+
+      <article>
+
+        <div class="mb-3">
+
+          <h3
+            class="
+              mt-1
+              text-base
+              text-white
+              sm:text-lg
+            "
+          >
+           𝓧 / 𝓣𝔀𝓲𝓽𝓽𝓮𝓻
+          </h3>
+
+        </div>
+
+
+        <div
+  class="
+    media-embed-box
+    min-h-[280px]
+    overflow-hidden
+    rounded-[1rem]
+    bg-white
+    p-3
+    sm:min-h-[320px]
+    sm:rounded-[1.25rem]
+  "
+>
+
+    <div id="x-timeline-container"></div>
+
+  </div>
+
+</article>
+
+      <!-- TikTok -->
+
+      <article>
+
+        <div class="mb-3">
+
+          <h3
+            class="
+              mt-1
+              text-base
+              text-white
+              sm:text-lg
+            "
+          >
+            𝓣𝓲𝓴𝓣𝓸𝓴
+          </h3>
+
+        </div>
+
+
+        <div
+          class="
+            media-embed-box
+            min-h-[280px]
+            overflow-hidden
+            rounded-[1rem]
+            bg-white
+            p-3
+            sm:min-h-[320px]
+            sm:rounded-[1.25rem]
+          "
+        >
+
+          <blockquote
+            class="tiktok-embed"
+            cite="https://www.tiktok.com/@nishikino_official"
+            data-unique-id="nishikino_official"
+            data-embed-type="creator"
+            style="max-width:780px; min-width:288px;"
+          >
+
+            <section>
+
+              <a
+                target="_blank"
+                href="https://www.tiktok.com/@nishikino_official?refer=creator_embed"
+                rel="noopener noreferrer"
+              >
+                @nishikino_official
+              </a>
+
+            </section>
+<script is:inline>
+  function loadXTimeline() {
+    if (window.twttr && window.twttr.widgets) {
+      window.twttr.widgets.createTimeline(
+        {
+          sourceType: "profile",
+          screenName: "MikuNiki5471"
+        },
+        document.getElementById("x-timeline-container"),
+        {
+          height: 400,
+          theme: "light",
+          dnt: true
+        }
+      );
+    }
+  }
+
+  if (!window.twttr) {
+    const script = document.createElement("script");
+    script.src = "https://platform.twitter.com/widgets.js";
+    script.async = true;
+    script.onload = loadXTimeline;
+    document.head.appendChild(script);
+  } else {
+    loadXTimeline();
+  }
+</script>
+          </blockquote>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         SOCIAL BUTTONS
+    ====================================================== -->
+
+    <div
+      class="
+        mt-5
+        flex
+        flex-wrap
+        gap-2
+      "
+    >
+
+      <a
+        href="https://www.youtube.com/@MikuNiki5471"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-button"
+      >
+        YouTube
+      </a>
+
+      <a
+        href="https://x.com/MikuNiki5471"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-button"
+      >
+        X
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@nishikino_official"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-button"
+      >
+        TikTok
+      </a>
+
+      <a
+        href="https://www.planetminecraft.com/member/NishikinoLab/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-button"
+      >
+        Planet Minecraft
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     COLLABORATION / CONTACT PREVIEW
+========================================================== -->
+
+<section
+  id="contact-preview"
+  class="
+    relative
+    overflow-hidden
+    py-8
+    sm:py-10
+    lg:py-12
+  "
+>
+
+  <!-- 和紙背景 -->
+
+  <img
+    src="/images/washi-bg1.png"
+    alt=""
+    class="
+      absolute
+      inset-0
+      h-full
+      w-full
+      object-cover
+      pointer-events-none
+      select-none
+    "
+    draggable="false"
+  />
+
+
+  <!-- 白い透過レイヤー -->
+
+  <div
+    class="
+      absolute
+      inset-0
+      bg-white/30
+    "
+  ></div>
+
+
+  <div
+    class="
+      relative
+      mx-auto
+      max-w-7xl
+      px-3
+      sm:px-5
+      lg:px-6
+    "
+  >
+
+
+    <!-- ===================================
+         SECTION TITLE
+    ==================================== -->
+
+    <div class="text-left">
+
+      <p
+        class="
+          text-[8px]
+          tracking-[0.3em]
+          text-rose-500
+          uppercase
+        "
+      >
+        COLLABORATION
+      </p>
+
+      <h2
+        class="
+          mt-2
+          text-xl
+          text-white
+          sm:text-2xl
+          lg:text-3xl
+        "
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        ご依頼・コラボレーション
+      </h2>
+
+      <p
+        class="
+          mt-3
+          max-w-xl
+          text-sm
+          leading-6
+          text-white
+        "
+      >
+        個人から企業・自治体・文化機関まで、様々な制作や企画のご相談ができます。
+      </p>
+
+    </div>
+
+
+    <!-- ===================================
+         SERVICES
+    ==================================== -->
+
+    <div
+      class="
+        mt-6
+        grid
+        gap-3
+        sm:grid-cols-2
+        sm:gap-4
+      "
+    >
+
+      <!-- 01 -->
+
+      <article
+        class="
+          group
+          overflow-hidden
+          rounded-[1rem]
+          border
+          border-white/60
+          bg-gradient-to-br
+          from-white/90
+          via-rose-50/70
+          to-sky-50/70
+          p-4
+          backdrop-blur-md
+          shadow-md
+          transition-all
+          duration-500
+          hover:-translate-y-1
+          hover:shadow-xl
+          sm:rounded-[1.25rem]
+          sm:p-5
+        "
+      >
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.25em]
+            text-neutral-500
+            uppercase
+          "
+        >
+          Collaboration
+        </p>
+
+        <h3
+          class="
+            mt-2
+            text-base
+            text-neutral-900
+            sm:text-lg
+          "
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          立体空間コンテンツ制作
+        </h3>
+
+        <div
+          class="
+            mt-3
+            h-px
+            w-16
+            bg-gradient-to-r
+            from-rose-300
+            via-amber-300
+            to-sky-300
+          "
+        ></div>
+
+        <p
+          class="
+            mt-3
+            text-xs
+            leading-6
+            text-neutral-700
+            sm:text-sm
+            sm:leading-7
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          城郭・屋敷・住宅・神社寺院町並みなど数多の歴史的建造物の制作や、文化を活かしたデジタルコンテンツの制作を行えます。
+        </p>
+
+      </article>
+
+
+      <!-- 02 -->
+
+      <article
+        class="
+          group
+          overflow-hidden
+          rounded-[1rem]
+          border
+          border-white/60
+          bg-gradient-to-br
+          from-white/90
+          via-rose-50/70
+          to-sky-50/70
+          p-4
+          backdrop-blur-md
+          shadow-md
+          transition-all
+          duration-500
+          hover:-translate-y-1
+          hover:shadow-xl
+          sm:rounded-[1.25rem]
+          sm:p-5
+        "
+      >
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.25em]
+            text-neutral-500
+            uppercase
+          "
+        >
+          Collaboration
+        </p>
+
+        <h3
+          class="
+            mt-2
+            text-base
+            text-neutral-900
+            sm:text-lg
+          "
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          映像・写真・SNSコンテンツ
+        </h3>
+
+        <div
+          class="
+            mt-3
+            h-px
+            w-16
+            bg-gradient-to-r
+            from-rose-300
+            via-amber-300
+            to-sky-300
+          "
+        ></div>
+
+        <p
+          class="
+            mt-3
+            text-xs
+            leading-6
+            text-neutral-700
+            sm:text-sm
+            sm:leading-7
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          YouTube向け紹介動画やSNS向けコンテンツ、世界観づくりまで、皆様の所有物の伝えたい魅力に合わせた映像表現をお手伝いします。
+        </p>
+
+      </article>
+
+
+      <!-- 03 -->
+
+      <article
+        class="
+          group
+          overflow-hidden
+          rounded-[1rem]
+          border
+          border-white/60
+          bg-gradient-to-br
+          from-white/90
+          via-rose-50/70
+          to-sky-50/70
+          p-4
+          backdrop-blur-md
+          shadow-md
+          transition-all
+          duration-500
+          hover:-translate-y-1
+          hover:shadow-xl
+          sm:rounded-[1.25rem]
+          sm:p-5
+        "
+      >
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.25em]
+            text-neutral-500
+            uppercase
+          "
+        >
+          Collaboration
+        </p>
+
+        <h3
+          class="
+            mt-2
+            text-base
+            text-neutral-900
+            sm:text-lg
+          "
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          クリエイターさん配信者さんコラボレーション
+        </h3>
+
+        <div
+          class="
+            mt-3
+            h-px
+            w-16
+            bg-gradient-to-r
+            from-rose-300
+            via-amber-300
+            to-sky-300
+          "
+        ></div>
+
+        <p
+          class="
+            mt-3
+            text-xs
+            leading-6
+            text-neutral-700
+            sm:text-sm
+            sm:leading-7
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          ジャンルや活動内容を問わず、動画・配信・企画など色んな形で皆さんの「一緒にこんな企画しませんか？」を叶えます。
+        </p>
+
+      </article>
+
+
+      <!-- 04 -->
+
+      <article
+        class="
+          group
+          overflow-hidden
+          rounded-[1rem]
+          border
+          border-white/60
+          bg-gradient-to-br
+          from-white/90
+          via-rose-50/70
+          to-sky-50/70
+          p-4
+          backdrop-blur-md
+          shadow-md
+          transition-all
+          duration-500
+          hover:-translate-y-1
+          hover:shadow-xl
+          sm:rounded-[1.25rem]
+          sm:p-5
+        "
+      >
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.25em]
+            text-neutral-500
+            uppercase
+          "
+        >
+          Collaboration
+        </p>
+
+        <h3
+          class="
+            mt-2
+            text-base
+            text-neutral-900
+            sm:text-lg
+          "
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          企業・自治体・都市とのプロジェクト
+        </h3>
+
+        <div
+          class="
+            mt-3
+            h-px
+            w-16
+            bg-gradient-to-r
+            from-rose-300
+            via-amber-300
+            to-sky-300
+          "
+        ></div>
+
+        <p
+          class="
+            mt-3
+            text-xs
+            leading-6
+            text-neutral-700
+            sm:text-sm
+            sm:leading-7
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          観光・都市または地域振興・歴史および現代文化・展示企画・教育分野など、小規模から大規模まで空間表現やデジタル制作を活かした様々な案件をご一緒いたします。
+        </p>
+
+      </article>
+
+    </div>
+
+
+    <!-- ===================================
+         INFORMATION / CTA
+    ==================================== -->
+
+    <section
+      class="
+        relative
+        mt-6
+        overflow-hidden
+        rounded-[1.25rem]
+        text-neutral-800
+        sm:mt-8
+        sm:rounded-[1.5rem]
+      "
+    >
+
+      <!-- Pattern -->
+
+      <div
+        class="
+          absolute
+          inset-0
+          opacity-[0.05]
+        "
+        style="
+          background-image:url('/images/gold-pattern.webp');
+          background-size:180px;
+        "
+      ></div>
+
+
+      <div
+        class="
+          relative
+          rounded-[1.25rem]
+          border
+          border-white/70
+          bg-white/80
+          p-5
+          text-center
+          backdrop-blur
+          sm:rounded-[1.5rem]
+          sm:p-6
+        "
+      >
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.25em]
+            text-neutral-500
+          "
+        >
+          CONTACT
+        </p>
+
+
+        <h3
+          class="
+            mt-2
+            text-lg
+            text-neutral-900
+            sm:text-xl
+          "
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          一緒に、新しい物語を。
+        </h3>
+
+
+        <p
+          class="
+            mx-auto
+            mt-3
+            max-w-xl
+            text-xs
+            leading-6
+            text-neutral-600
+            sm:text-sm
+            sm:leading-7
+          "
+        >
+          「こんなことはできるだろうか」
+          そんな小さなアイデアからでも大歓迎です。<br />
+          個人・クリエイター・企業・自治体・研究機関など、
+          新しい企画やコラボレーションにつながる第一歩として、
+          まずはお気軽にお話を聞かせてください。
+        </p>
+
+
+        <a
+          href="/contact/"
+          class="
+            mt-5
+            inline-flex
+            h-16
+            w-16
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-neutral-800
+            bg-white
+            text-[10px]
+            text-neutral-900
+            transition
+            duration-500
+            hover:-translate-y-1
+            hover:shadow-xl
+            sm:h-20
+            sm:w-20
+            sm:text-xs
+          "
+        >
+          ご相談はこちら
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </div>
+</section>
+</section>
+
+<!-- ===================================
+     SITE MENU
+=================================== -->
+
+<section
+  id="menu"
+  class="
+    relative
+    overflow-hidden
+    bg-[#140f0d]
+    py-6
+    text-white
+    sm:py-8
+  "
+>
+
+  <!-- Background Image -->
+
+  <div
+    class="
+      absolute
+      inset-0
+      bg-cover
+      bg-center
+    "
+    style="
+      background-image:url('/images/kawagoe2.png');
+    "
+  ></div>
+
+
+  <!-- Dark Overlay -->
+
+  <div
+    class="
+      absolute
+      inset-0
+      bg-black/5
+    "
+  ></div>
+
+
+  <div
+    class="
+      relative
+      mx-auto
+      max-w-7xl
+      px-3
+      text-center
+      sm:px-4
+      lg:px-6
+    "
+  >
+
+    <div>
+
+      <p
+        class="
+          text-[8px]
+          tracking-[0.3em]
+          !text-white
+        "
+      >
+        SITE MAP
+      </p>
+
+      <h2
+        class="
+          mt-1
+          text-lg
+          !text-white
+          sm:text-xl
+        "
+        style="font-family:'Zen Kaku Gothic New',sans-serif;"
+      >
+        サイトマップ
+      </h2>
+
+    </div>
+
+
+    <div
+      class="
+        mt-5
+        grid
+        gap-x-5
+        gap-y-4
+        sm:grid-cols-2
+        lg:grid-cols-3
+      "
+    >
+
+      <!-- Column 1 -->
+
+      <nav class="text-center">
+
+        <div class="space-y-1">
+
+          <a
+            href="/"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            Home
+          </a>
+
+          <a
+            href="/profile/"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            プロフィール
+          </a>
+
+          <a
+            href="/achievements/"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            実績
+          </a>
+
+          <a
+            href="/contact/"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            ご依頼・お問い合わせ
+          </a>
+
+          <a
+            href="/gallery/"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            キャラクターギャラリー
+          </a>
+
+        </div>
+
+      </nav>
+
+
+      <!-- Column 2 -->
+
+      <nav class="text-center">
+
+        <div class="space-y-1">
+
+          <a
+            href="/works/"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            作品一覧
+          </a>
+
+          <a
+            href="/#about"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            このサイトについて
+          </a>
+
+          <a
+            href="/#media"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            動画・SNS
+          </a>
+
+          <a
+            href="/#menu"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            サイトマップ
+          </a>
+
+        </div>
+
+      </nav>
+
+
+      <!-- Column 3 -->
+
+      <div class="text-center">
+
+        <div class="space-y-1">
+
+          <a
+            href="https://www.youtube.com/@MikuNiki5471"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            YouTube
+          </a>
+
+          <a
+            href="https://x.com/MikuNiki5471"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            X
+          </a>
+
+          <a
+            href="https://www.tiktok.com/@nishikino_official"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            TikTok
+          </a>
+
+          <a
+            href="https://www.planetminecraft.com/member/NishikinoLab/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            Planet Minecraft
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     EXTERNAL EMBED SCRIPTS
+========================================================== -->
+
+<script
+  async
+  src="https://platform.twitter.com/widgets.js"
+  charset="utf-8"
+></script>
+
+<script
+  async
+  src="https://www.tiktok.com/embed.js"
+></script>
+
+
+<!-- =========================================================
+     STYLE
+========================================================== -->
+
+<style>
+
+.section-divider {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(253, 164, 175, 0.45) 25%,
+    rgba(252, 211, 77, 0.45) 50%,
+    rgba(125, 211, 252, 0.45) 75%,
+    transparent 100%
+  );
+}
+
+.hero-bg {
+  animation: heroFloat 12s ease-in-out infinite;
+  will-change: transform;
+}
+
+.hero-mobile {
+  animation: heroFloat 12s ease-in-out infinite;
+  will-change: transform;
+}
+
+
+@keyframes heroFloat {
+
+  0% {
+    transform: scale(1.05) translateY(0px);
+  }
+
+  50% {
+    transform: scale(1.08) translateY(-15px);
+  }
+
+  100% {
+    transform: scale(1.05) translateY(0px);
+  }
+
+}
+
+
+/* =========================================================
+   MEDIA
+========================================================= */
+
+.media-embed-box {
+  position: relative;
+}
+
+
+.media-embed-box iframe {
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   SOCIAL BUTTON
+========================================================= */
+
+.social-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+
+  border: 1px solid rgba(255,255,255,.2);
+
+  border-radius: 9999px;
+
+  padding:
+    .65rem
+    1.2rem;
+
+  background: rgba(255,255,255,.05);
+
+  color: rgba(255,255,255,.8);
+
+  font-size: .8rem;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition:
+    transform .35s ease,
+    background .35s ease,
+    color .35s ease,
+    border-color .35s ease;
+}
+
+
+.social-button:hover {
+  transform: translateY(-3px);
+
+  background: #ffffff;
+
+  border-color: #ffffff;
+
+  color: #181818;
+}
+
+
+/* =========================================================
+   CONTACT CARDS
+========================================================= */
+
+.contact-card {
+  border:
+    1px solid
+    rgba(255,255,255,.7);
+
+  border-radius: 2rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.9),
+      rgba(255,245,247,.7),
+      rgba(240,249,255,.7)
+    );
+
+  padding: 2rem;
+
+  box-shadow:
+    0 10px 35px rgba(0,0,0,.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  transition:
+    transform .5s cubic-bezier(.22,1,.36,1),
+    box-shadow .5s ease;
+}
+
+
+.contact-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 25px 55px rgba(0,0,0,.14);
+}
+
+
+.contact-number {
+  font-size: .75rem;
+
+  letter-spacing: .3em;
+
+  color: #b7a2a2;
+}
+
+
+.contact-title {
+  margin-top: 1rem;
+
+  font-family:
+    "Shippori Mincho",
+    serif;
+
+  font-size: 1.45rem;
+
+  line-height: 1.5;
+
+  color: #181818;
+}
+
+
+.contact-text {
+  margin-top: 1rem;
+
+  font-size: .95rem;
+
+  line-height: 2;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .hero-bg {
+    animation-duration: 15s;
+  }
+
+}
+
+/* =========================================================
+   SITE MENU
+========================================================= */
+
+.site-menu-link {
+  display: block;
+
+  position: relative;
+
+  width: fit-content;
+
+  color: rgba(255,255,255,.78);
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+
+  transition:
+    color .3s ease,
+    transform .3s ease;
+}
+
+
+.site-menu-link::before {
+  content: "•";
+
+  display: inline-block;
+
+  margin-right: .65rem;
+
+  color: rgba(255,255,255,.3);
+
+  transition:
+    color .3s ease,
+    transform .3s ease;
+}
+
+
+.site-menu-link:hover {
+  color: #ffffff;
+
+  transform: translateX(5px);
+}
+
+
+.site-menu-link:hover::before {
+  color: #f5c7a5;
+
+  transform: scale(1.2);
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 639px) {
+
+  .hero-bg {
+    display: none;
+  }
+
+  .hero-mobile {
+    display: block;
+  }
+
+
+  .site-menu-link {
+    font-size: .9rem;
+  }
+
+
+  .contact-card {
+    padding: 1.5rem;
+
+    border-radius: 1.5rem;
+  }
+
+
+  .contact-title {
+    font-size: 1.25rem;
+  }
+
+
+  .contact-text {
+    font-size: .9rem;
+
+    line-height: 1.9;
+  }
+
+
+  .media-embed-box {
+    border-radius: 1.25rem;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .contact-card {
+    padding: 1.25rem;
+  }
+
+  .social-button {
+    width: 100%;
+  }
+
+}
+
+</style>

@@ -12,7 +12,7 @@ const categories = [
     title: "企業",
     subtitle: "Business",
     text:
-       "広告・SNS・映像・イベント・プロモーション・コンテンツ制作など、企業様が取り組まれているさまざまな活動に、出演・コラボレーション・制作協力などの形で携わります。歴史や日本文化に関する企画に限らず、ゲーム・エンターテインメント・旅行・ライフスタイルなど、幅広い分野において、企画の目的や内容に合わせたコンテンツづくりをご一緒できます。すでに具体的な企画がある場合はもちろん、新たな取り組みを検討されている段階から、内容に応じてご一緒することが可能です。"
+      "広告・SNS・映像・イベント・プロモーション・コンテンツ制作など、企業様が取り組まれているさまざまな活動に、出演・コラボレーション・制作協力などの形で携わります。歴史や日本文化に関する企画に限らず、ゲーム・エンターテインメント・旅行・ライフスタイルなど、幅広い分野において、企画の目的や内容に合わせたコンテンツづくりをご一緒できます。すでに具体的な企画がある場合はもちろん、新たな取り組みを検討されている段階から、内容に応じてご一緒することが可能です。"
   },
   {
     title: "自治体・文化機関",
@@ -41,7 +41,8 @@ const categories = [
 
 <section
   class="
-    relative overflow-hidden
+    relative
+    overflow-hidden
     h-[820px]
     sm:h-[820px]
     max-sm:min-h-screen
@@ -49,6 +50,7 @@ const categories = [
 >
 
   <!-- PC / Tablet -->
+
   <img
     src="/images/contact-bg.png"
     alt="茶室の背景"
@@ -64,7 +66,9 @@ const categories = [
     draggable="false"
   />
 
+
   <!-- Mobile -->
+
   <img
     src="/images/contact-m.png"
     alt="茶室の背景"
@@ -83,7 +87,9 @@ const categories = [
 
   <div class="absolute inset-0 bg-black/10"></div>
 
+
   <!-- Scroll -->
+
   <div
     class="
       absolute
@@ -94,19 +100,21 @@ const categories = [
       max-sm:right-6
     "
   >
+
     <div class="h-20 w-px bg-white/70 max-sm:h-12"></div>
 
     <span
       class="
         mt-4
-        text-xs
+        text-[10px]
         tracking-[0.45em]
         text-white
-        max-sm:text-[10px]
+        max-sm:text-[9px]
       "
     >
       SCROLL
     </span>
+
   </div>
 
 </section>
@@ -120,8 +128,9 @@ const categories = [
 <section
   class="
     bg-[#faf8f3]
-    py-32
-
+    py-24
+    sm:py-28
+    lg:py-32
     max-sm:py-16
   "
 >
@@ -130,16 +139,16 @@ const categories = [
   class="
     mx-auto
     max-w-7xl
-    px-8
-
-    max-sm:px-5
+    px-5
+    sm:px-8
+    lg:px-12
   "
 >
 
 
 <div
   class="
-    max-w-5xl
+    max-w-4xl
   "
 >
 
@@ -147,13 +156,11 @@ const categories = [
 <p
   class="
     contact-reveal
-    mb-4
-    tracking-[0.45em]
-    text-sm
+    mb-3
+    text-[10px]
+    tracking-[0.4em]
     text-neutral-500
-
-    max-sm:text-[10px]
-    max-sm:tracking-[0.35em]
+    sm:text-xs
   "
 >
 CONTACT
@@ -163,11 +170,11 @@ CONTACT
 <h1
   class="
     contact-reveal
-    text-6xl
+    text-3xl
     leading-tight
     text-neutral-900
-
-    max-sm:text-2xl
+    sm:text-4xl
+    lg:text-5xl
   "
   style="font-family:'Cormorant Garamond',serif;"
 >
@@ -178,32 +185,32 @@ CONTACT
 <p
   class="
     contact-reveal
-    mt-10
-    text-lg
-    leading-10
+    mt-7
+    text-sm
+    leading-7
     text-neutral-700
-
-    max-sm:mt-6
-    max-sm:text-sm
-    max-sm:leading-7
+    sm:mt-8
+    sm:text-base
+    sm:leading-8
   "
   style="font-family:'Shippori Mincho',serif;"
 >
 
 「こんなこと、一緒にできませんか？」
 
-<br><br>
+<br /><br />
 
 そんな一言からでも大丈夫です。
 
-<br>
+<br />
 
 まだ活動を始めたばかりの方から、すでに多くの方に知られているクリエイター様、企業・メディア・自治体・都市、団体・番組の皆様まで。
 
-<br class="hidden sm:block">
+<br class="hidden sm:block" />
 
 広告、SNS、映像、イベント、コンテンツなど、現在お持ちの企画や取り組みに関するご相談もお気軽にお寄せください。
-<br class="hidden sm:block">
+
+<br class="hidden sm:block" />
 
 歴史系等ジャンルや規模に関係なく、新しい出会いやコラボレーションにつながれば嬉しく思います。
 
@@ -216,23 +223,21 @@ CONTACT
 
 <div
 class="
-contact-reveal
-mt-28
-mb-16
-
-max-sm:mt-12
-max-sm:mb-8
+  contact-reveal
+  mt-20
+  mb-12
+  sm:mt-24
+  sm:mb-14
 "
 >
 
 
 <p
 class="
-tracking-[0.35em]
-text-sm
-text-neutral-500
-
-max-sm:text-[10px]
+  text-[10px]
+  tracking-[0.35em]
+  text-neutral-500
+  sm:text-xs
 "
 >
 COLLABORATION
@@ -241,11 +246,11 @@ COLLABORATION
 
 <h2
 class="
-mt-3
-text-5xl
-text-neutral-900
-
-max-sm:text-2xl
+  mt-3
+  text-2xl
+  text-neutral-900
+  sm:text-3xl
+  lg:text-4xl
 "
 style="font-family:'Cormorant Garamond',serif;"
 >
@@ -255,17 +260,18 @@ style="font-family:'Cormorant Garamond',serif;"
 
 <p
 class="
-mt-8
-max-w-3xl
-leading-9
-text-neutral-700
-
-max-sm:mt-5
-max-sm:text-sm
-max-sm:leading-7
+  mt-5
+  max-w-3xl
+  text-sm
+  leading-7
+  text-neutral-700
+  sm:mt-6
+  sm:text-base
+  sm:leading-8
 "
 >
 内容が決まっていなくても問題ありません。
+
 「まだ具体的には決まっていないけれど、何か一緒にできそう」
 
 そんな段階からでも大丈夫です。
@@ -274,6 +280,8 @@ max-sm:leading-7
 
 </div>
 
+
+
 <!-- =========================
      CATEGORY CARDS
 ========================= -->
@@ -281,9 +289,10 @@ max-sm:leading-7
 <div
   class="
     grid
-    gap-8
+    gap-4
     md:grid-cols-2
-
+    sm:gap-5
+    lg:gap-6
     max-sm:grid-cols-2
     max-sm:gap-3
   "
@@ -296,12 +305,12 @@ categories.map((item,index)=>(
 class="
 contact-reveal
 
-rounded-[2rem]
+rounded-[1.25rem]
 border
 border-white/70
 bg-white/70
 
-p-10
+p-5
 
 backdrop-blur-md
 transition
@@ -310,10 +319,13 @@ duration-500
 hover:-translate-y-2
 hover:shadow-2xl
 
+sm:rounded-[1.5rem]
+sm:p-7
 
-max-sm:
-rounded-xl
-p-4
+lg:p-8
+
+max-sm:rounded-xl
+max-sm:p-4
 "
 style={`transition-delay:${index * 120}ms;`}
 >
@@ -321,11 +333,10 @@ style={`transition-delay:${index * 120}ms;`}
 
 <p
 class="
-tracking-[0.35em]
-text-xs
+tracking-[0.3em]
+text-[9px]
 text-rose-400
-
-max-sm:text-[8px]
+sm:text-[10px]
 "
 >
 {item.subtitle}
@@ -334,9 +345,12 @@ max-sm:text-[8px]
 
 <h3
 class="
-mt-4
-text-3xl
+mt-3
+text-xl
 text-neutral-900
+sm:mt-4
+sm:text-2xl
+lg:text-3xl
 
 max-sm:mt-2
 max-sm:text-base
@@ -349,14 +363,23 @@ style="font-family:'Cormorant Garamond',serif;"
 
 <p
 class="
-mt-6
-leading-8
+mt-4
+text-sm
+leading-7
 text-neutral-700
+
+sm:mt-5
+sm:text-sm
+sm:leading-7
+
+lg:text-base
+lg:leading-8
 
 max-sm:mt-3
 max-sm:text-[11px]
 max-sm:leading-5
 "
+style="font-family:'Shippori Mincho',serif;"
 >
 {item.text}
 </p>
@@ -376,17 +399,16 @@ max-sm:leading-5
 
 
 
-
 <!-- =========================
      INVITATION
 ========================= -->
 
-
 <section
 class="
 bg-white
-py-28
-
+py-24
+sm:py-28
+lg:py-32
 max-sm:py-14
 "
 >
@@ -395,9 +417,8 @@ max-sm:py-14
 class="
 mx-auto
 max-w-6xl
-px-8
-
-max-sm:px-5
+px-5
+sm:px-8
 "
 >
 
@@ -412,11 +433,10 @@ text-center
 
 <p
 class="
-tracking-[0.35em]
-text-sm
+tracking-[0.3em]
+text-[10px]
 text-neutral-500
-
-max-sm:text-[10px]
+sm:text-xs
 "
 >
 INVITATION
@@ -425,11 +445,11 @@ INVITATION
 
 <h2
 class="
-mt-4
-text-5xl
+mt-3
+text-2xl
 text-neutral-900
-
-max-sm:text-2xl
+sm:text-3xl
+lg:text-4xl
 "
 style="font-family:'Cormorant Garamond',serif;"
 >
@@ -440,18 +460,20 @@ style="font-family:'Cormorant Garamond',serif;"
 <p
 class="
 mx-auto
-mt-8
+mt-6
 max-w-3xl
-leading-9
+text-sm
+leading-7
 text-neutral-700
-
-max-sm:mt-5
-max-sm:text-sm
-max-sm:leading-7
+sm:mt-7
+sm:text-base
+sm:leading-8
 "
 >
 小さなアイデアから大きな企画まで。
+
 「一緒に作ってみたい。」
+
 そんな気持ちを大切にしています。
 </p>
 
@@ -462,12 +484,13 @@ max-sm:leading-7
 
 <div
 class="
-mt-20
+mt-14
 grid
-gap-6
+gap-4
 md:grid-cols-2
 lg:grid-cols-3
-
+sm:mt-16
+sm:gap-5
 max-sm:mt-10
 max-sm:grid-cols-2
 max-sm:gap-3
@@ -475,64 +498,83 @@ max-sm:gap-3
 >
 
 
-<div class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8 max-sm:rounded-xl max-sm:p-4">
-<h3 class="text-2xl max-sm:text-sm">
- ♦️YouTube・配信
+<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
+
+<h3 class="text-xl sm:text-2xl max-sm:text-sm">
+♦️ YouTube・配信
 </h3>
-<p class="mt-4 leading-8 text-neutral-700 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:text-base sm:leading-8 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
 YouTubeや配信を舞台に、出演・共演・ロケ・ゲームなどを通じて、普段の活動に新しい展開を加えます。Minecraftをはじめ、実写とデジタルを組み合わせた表現など、その人ならではの活動や世界観を活かしたコンテンツを一緒に作ります。
 </p>
+
 </div>
 
 
-<div class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8 max-sm:rounded-xl max-sm:p-4">
-<h3 class="text-2xl max-sm:text-sm">
+<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
+
+<h3 class="text-xl sm:text-2xl max-sm:text-sm">
 🤝 コラボレーション
 </h3>
-<p class="mt-4 leading-8 text-neutral-700 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:text-base sm:leading-8 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
 ジャンルや活動規模を問わず、クリエイター同士だからこそ生まれる交流や共演を大切にしています。動画・配信・SNSでのコラボレーションはもちろん、実際に会って一緒に遊ぶ、撮る、作るといった活動から、新しいつながりを広げていけます。
 </p>
+
 </div>
 
 
-<div class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8 max-sm:rounded-xl max-sm:p-4">
-<h3 class="text-2xl max-sm:text-sm">
+<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
+
+<h3 class="text-xl sm:text-2xl max-sm:text-sm">
 🏯 地域・文化
 </h3>
-<p class="mt-4 leading-8 text-neutral-700 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:text-base sm:leading-8 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
 観光・文化財・歴史イベント・地域活性化など、日本文化の魅力を次世代へ伝える企画やコンテンツ制作、デジタル技術を活用した文化発信のご相談を承ります。
 </p>
+
 </div>
 
 
-<div class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8 max-sm:rounded-xl max-sm:p-4">
-<h3 class="text-2xl max-sm:text-sm">
+<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
+
+<h3 class="text-xl sm:text-2xl max-sm:text-sm">
 📺 メディア
 </h3>
-<p class="mt-4 leading-8 text-neutral-700 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:text-base sm:leading-8 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
 テレビ・Webメディア・雑誌・映像をはじめ、企業の広告やSNS、プロモーションなどにも携わります。歴史や日本文化に限らず、商品・サービス・ブランドの魅力を伝えるコンテンツへの出演やコラボレーション、制作協力など、既存の取り組みに新しい形で参加します。
 </p>
+
 </div>
 
 
-<div class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8 max-sm:rounded-xl max-sm:p-4">
-<h3 class="text-2xl max-sm:text-sm">
+<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
+
+<h3 class="text-xl sm:text-2xl max-sm:text-sm">
 📷 写真・映像
 </h3>
-<p class="mt-4 leading-8 text-neutral-700 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:text-base sm:leading-8 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
 人物・建物・風景など、実写でしか残せない瞬間を写真や映像として記録します。SNSやWebコンテンツ、プロモーションなど、目的に合わせた撮影やコンテンツづくりにも携わります。
 </p>
+
 </div>
 
 
-<div class="contact-reveal rounded-[2rem] bg-[#faf8f3] p-8 max-sm:rounded-xl max-sm:p-4">
-<h3 class="text-2xl max-sm:text-sm">
+<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
+
+<h3 class="text-xl sm:text-2xl max-sm:text-sm">
 ✨ その他
 </h3>
-<p class="mt-4 leading-8 text-neutral-700 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:text-base sm:leading-8 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
 「こんなこと出来ますか？」
+
 という段階からお気軽にご相談ください。
 </p>
+
 </div>
 
 
@@ -543,6 +585,8 @@ YouTubeや配信を舞台に、出演・共演・ロケ・ゲームなどを通�
 
 </section>
 
+
+
 <!-- =========================
      MESSAGE
 ========================= -->
@@ -550,8 +594,9 @@ YouTubeや配信を舞台に、出演・共演・ロケ・ゲームなどを通�
 <section
 class="
 bg-[#f7f5ef]
-py-32
-
+py-24
+sm:py-28
+lg:py-32
 max-sm:py-16
 "
 >
@@ -560,10 +605,9 @@ max-sm:py-16
 class="
 mx-auto
 max-w-5xl
-px-8
+px-5
 text-center
-
-max-sm:px-5
+sm:px-8
 "
 >
 
@@ -573,11 +617,10 @@ max-sm:px-5
 
 <p
 class="
-tracking-[0.35em]
-text-sm
+tracking-[0.3em]
+text-[10px]
 text-neutral-500
-
-max-sm:text-[10px]
+sm:text-xs
 "
 >
 MESSAGE
@@ -586,15 +629,15 @@ MESSAGE
 
 <h2
 class="
-mt-4
-text-5xl
+mt-3
+text-2xl
 text-neutral-900
-
-max-sm:text-2xl
+sm:text-3xl
+lg:text-4xl
 "
 style="font-family:'Cormorant Garamond',serif;"
 >
-一緒に、
+一緒に、<br class="sm:hidden" />
 面白い景色を作りませんか。
 </h2>
 
@@ -602,15 +645,14 @@ style="font-family:'Cormorant Garamond',serif;"
 <p
 class="
 mx-auto
-mt-10
+mt-7
 max-w-3xl
-text-3x1
-leading-9
+text-sm
+leading-7
 text-neutral-700
-
-max-sm:mt-6
-max-sm:text-xs
-max-sm:leading-7
+sm:mt-8
+sm:text-base
+sm:leading-8
 "
 style="font-family:'Shippori Mincho',serif;"
 >
@@ -644,11 +686,11 @@ href="/contact/form/"
 class="
 contact-reveal
 
-mt-14
+mt-10
 
 inline-flex
-h-44
-w-44
+h-32
+w-32
 
 items-center
 justify-center
@@ -661,7 +703,7 @@ border-neutral-900
 bg-white
 
 text-center
-text-lg
+text-sm
 
 transition
 duration-500
@@ -669,12 +711,15 @@ duration-500
 hover:-translate-y-2
 hover:shadow-2xl
 
+sm:mt-12
+sm:h-36
+sm:w-36
+sm:text-base
 
-max-sm:
-mt-8
-h-28
-w-28
-text-base
+max-sm:mt-8
+max-sm:h-28
+max-sm:w-28
+max-sm:text-sm
 "
 style="transition-delay:250ms;"
 >
@@ -691,8 +736,6 @@ style="transition-delay:250ms;"
 
 
 
-
-
 <!-- =========================
      FAQ
 ========================= -->
@@ -700,8 +743,9 @@ style="transition-delay:250ms;"
 <section
 class="
 bg-white
-py-24
-
+py-20
+sm:py-24
+lg:py-28
 max-sm:py-14
 "
 >
@@ -710,9 +754,8 @@ max-sm:py-14
 class="
 mx-auto
 max-w-5xl
-px-8
-
-max-sm:px-5
+px-5
+sm:px-8
 "
 >
 
@@ -727,11 +770,10 @@ text-center
 
 <p
 class="
-tracking-[0.35em]
-text-sm
+tracking-[0.3em]
+text-[10px]
 text-neutral-500
-
-max-sm:text-[10px]
+sm:text-xs
 "
 >
 FAQ
@@ -740,10 +782,11 @@ FAQ
 
 <h2
 class="
-mt-4
-text-5xl
-
-max-sm:text-2xl
+mt-3
+text-2xl
+text-neutral-900
+sm:text-3xl
+lg:text-4xl
 "
 style="font-family:'Cormorant Garamond',serif;"
 >
@@ -757,11 +800,10 @@ style="font-family:'Cormorant Garamond',serif;"
 
 <div
 class="
-mt-16
-space-y-8
-
-max-sm:mt-8
-max-sm:space-y-3
+mt-10
+space-y-4
+sm:mt-12
+sm:space-y-5
 "
 >
 
@@ -769,22 +811,20 @@ max-sm:space-y-3
 <div
 class="
 contact-reveal
-rounded-[2rem]
+rounded-[1.5rem]
 bg-[#faf8f3]
-p-8
-
-max-sm:
-rounded-xl
-p-4
+p-6
+sm:p-7
+max-sm:rounded-xl
+max-sm:p-4
 "
 >
 
 <h3
 class="
-text-xl
+text-base
 font-semibold
-
-max-sm:text-sm
+sm:text-lg
 "
 >
 まだ何をするか決まっていません。
@@ -793,14 +833,15 @@ max-sm:text-sm
 
 <p
 class="
-mt-4
-leading-8
+mt-3
+text-sm
+leading-7
 text-neutral-700
-
-max-sm:text-base
-mt-2
-text-[15px]
-leading-5
+sm:text-base
+sm:leading-8
+max-sm:mt-2
+max-sm:text-[12px]
+max-sm:leading-5
 "
 >
 大丈夫です。
@@ -813,26 +854,23 @@ leading-5
 
 
 
-
 <div
 class="
 contact-reveal
-rounded-[2rem]
+rounded-[1.5rem]
 bg-[#faf8f3]
-p-8
-
-max-sm:
-rounded-xl
-p-4
+p-6
+sm:p-7
+max-sm:rounded-xl
+max-sm:p-4
 "
 >
 
 <h3
 class="
-text-xl
+text-base
 font-semibold
-
-max-sm:text-sm
+sm:text-lg
 "
 >
 個人でも大丈夫ですか？
@@ -841,17 +879,19 @@ max-sm:text-sm
 
 <p
 class="
-mt-4
-leading-8
+mt-3
+text-sm
+leading-7
 text-neutral-700
-
-max-sm:text-base
-mt-2
-text-[15px]
-leading-5
+sm:text-base
+sm:leading-8
+max-sm:mt-2
+max-sm:text-[12px]
+max-sm:leading-5
 "
 >
 もちろんです。
+
 活動を始めたばかりのクリエイター様から、すでに多くの方に知られているインフルエンサー・配信者の方まで、ジャンルや活動規模を問わず歓迎しています。
 </p>
 
@@ -860,27 +900,23 @@ leading-5
 
 
 
-
-
 <div
 class="
 contact-reveal
-rounded-[2rem]
+rounded-[1.5rem]
 bg-[#faf8f3]
-p-8
-
-max-sm:
-rounded-xl
-p-4
+p-6
+sm:p-7
+max-sm:rounded-xl
+max-sm:p-4
 "
 >
 
 <h3
 class="
-text-xl
+text-base
 font-semibold
-
-max-sm:text-sm
+sm:text-lg
 "
 >
 歴史や日本文化に関係ない内容でも大丈夫ですか？
@@ -889,14 +925,15 @@ max-sm:text-sm
 
 <p
 class="
-mt-4
-leading-8
+mt-3
+text-sm
+leading-7
 text-neutral-700
-
-max-sm:text-base
-mt-2
-text-[15px]
-leading-5
+sm:text-base
+sm:leading-8
+max-sm:mt-2
+max-sm:text-[12px]
+max-sm:leading-5
 "
 >
 もちろんです。
@@ -907,25 +944,25 @@ leading-5
 
 </div>
 
+
+
 <div
 class="
 contact-reveal
-rounded-[2rem]
+rounded-[1.5rem]
 bg-[#faf8f3]
-p-8
-
-max-sm:
-rounded-xl
-p-4
+p-6
+sm:p-7
+max-sm:rounded-xl
+max-sm:p-4
 "
 >
 
 <h3
 class="
-text-xl
+text-base
 font-semibold
-
-max-sm:text-sm
+sm:text-lg
 "
 >
 すでに企画が決まっていて、協力してほしい場合も相談できますか？
@@ -934,42 +971,44 @@ max-sm:text-sm
 
 <p
 class="
-mt-4
-leading-8
+mt-3
+text-sm
+leading-7
 text-neutral-700
-
-max-sm:text-base
-mt-2
-text-[15px]
-leading-5
+sm:text-base
+sm:leading-8
+max-sm:mt-2
+max-sm:text-[12px]
+max-sm:leading-5
 "
 >
 もちろんです。
+
 すでに企画・案件・プロジェクトの内容が決まっている場合も、その内容をお聞かせください。
 </p>
 
 
 </div>
 
+
+
 <div
 class="
 contact-reveal
-rounded-[2rem]
+rounded-[1.5rem]
 bg-[#faf8f3]
-p-8
-
-max-sm:
-rounded-xl
-p-4
+p-6
+sm:p-7
+max-sm:rounded-xl
+max-sm:p-4
 "
 >
 
 <h3
 class="
-text-xl
+text-base
 font-semibold
-
-max-sm:text-sm
+sm:text-lg
 "
 >
 企業からの相談もできますか？
@@ -978,22 +1017,25 @@ max-sm:text-sm
 
 <p
 class="
-mt-4
-leading-8
+mt-3
+text-sm
+leading-7
 text-neutral-700
-
-max-sm:text-base
-mt-2
-text-[15px]
-leading-5
+sm:text-base
+sm:leading-8
+max-sm:mt-2
+max-sm:text-[12px]
+max-sm:leading-5
 "
 >
 はい、もちろんご相談いただけます。
+
 広告・SNS・映像・プロモーション・イベント・コンテンツ制作など、歴史や日本文化に限らず、企業様が取り組まれているさまざまな企画・活動についても内容に応じて協力いたします。
 </p>
 
 
 </div>
+
 
 </div>
 
@@ -1002,8 +1044,6 @@ leading-5
 
 
 </section>
-
-
 
 
 
@@ -1152,8 +1192,6 @@ scale(1);
 
 }
 
-
-
 </style>
 
 
@@ -1170,9 +1208,7 @@ if(!entry.isIntersecting) return;
 
 const el = entry.target;
 
-
 el.classList.add("contact-show");
-
 
 observer.unobserve(el);
 

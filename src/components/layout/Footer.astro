@@ -32,105 +32,124 @@ const socials = [
 ---
 
 <footer
-class="relative overflow-hidden bg-[#f6f3eb] text-neutral-800"
+  class="relative overflow-hidden text-neutral-800"
 >
 
+  <!-- SECTION DIVIDER -->
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <!-- Background -->
+  <img
+    src="/images/white-bg.png"
+    alt=""
+    class="
+      absolute
+      inset-0
+      h-full
+      w-full
+      object-cover
+      pointer-events-none
+      select-none
+    "
+    draggable="false"
+  />
+
   <div
     class="
-      absolute inset-0 opacity-[0.05]
-    "
-    style="
-      background-image:url('/images/gold-pattern.webp');
-      background-size:450px;
-    "
-  ></div>
-
-
-  <div
-    class="
-      relative mx-auto max-w-7xl
-
-      px-3 py-8
-
-      sm:px-6 sm:py-20
-
-      lg:px-8 lg:py-24
+      relative
+      mx-auto
+      max-w-7xl
+      px-3
+      py-8
+      sm:px-6
+      sm:py-20
+      lg:px-8
+      lg:py-24
     "
   >
-
 
     <!-- 下部 -->
 
     <div
-    class="
-      mt-12
-      sm:mt-20
-      lg:mt-24
-
-      border-t
-      border-neutral-300
-
-      pt-6
-      sm:pt-10
-    ">
-
+      class="
+        mt-12
+        sm:mt-2
+        lg:mt-4
+        border-t
+        border-neutral-300
+        pt-6
+        sm:pt-10
+      "
+    >
 
       <div
-      class="
-        flex
-        flex-col
-        items-center
-        justify-between
-
-        gap-4
-        sm:gap-6
-
-        md:flex-row
-      ">
-
+        class="
+          flex
+          flex-col
+          items-center
+          justify-between
+          gap-4
+          sm:gap-6
+          md:flex-row
+        "
+      >
 
         <div>
 
           <h3
-          class="
-            text-2xl
-            sm:text-3xl
-          "
-          style="font-family:'Cormorant Garamond',serif;">
+            class="
+              text-2xl
+              sm:text-3xl
+            "
+            style="font-family:'Cormorant Garamond',serif;"
+          >
             にしきの / 錦乃
           </h3>
 
-
           <p
-          class="
-            mt-1
-            text-xs
-            sm:text-sm
-            text-neutral-500
-          ">
+            class="
+              mt-1
+              text-xs
+              sm:text-sm
+              text-neutral-500
+            "
+          >
             Official Website
           </p>
 
-
         </div>
 
-
         <p
-        class="
-          text-xs
-          sm:text-sm
-          text-neutral-500
-        ">
+          class="
+            text-xs
+            sm:text-sm
+            text-neutral-500
+          "
+        >
           © {new Date().getFullYear()} Nishikino All Rights Reserved.
         </p>
 
-
       </div>
-
 
     </div>
 
-
   </div>
+<style>
 
+.section-divider {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(253, 164, 175, 0.45) 25%,
+    rgba(252, 211, 77, 0.45) 50%,
+    rgba(125, 211, 252, 0.45) 75%,
+    transparent 100%
+  );
+}
+
+</style>
 </footer>
