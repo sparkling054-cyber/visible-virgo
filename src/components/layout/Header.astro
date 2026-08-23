@@ -79,11 +79,9 @@ const menuItems = [
         max-sm:ml-0
         max-sm:mr-2
         max-sm:grid
-        max-sm:w-[210px]
-        max-sm:shrink-0
         max-sm:grid-cols-3
-        max-sm:gap-x-2
-        max-sm:gap-y-2
+        max-sm:gap-x-5
+        max-sm:gap-y-3
         max-sm:text-center
       "
     >
@@ -107,11 +105,11 @@ const menuItems = [
               hover:text-[#f8dfc1]
 
               xl:text-[17px]
+
               xl:tracking-[0.18em]
 
-              max-sm:w-full
-              max-sm:text-[9px]
-              max-sm:tracking-[0.08em]
+              max-sm:text-[11px]
+              max-sm:tracking-[0.12em]
               max-sm:pb-0
             "
           >
@@ -262,7 +260,7 @@ const menuItems = [
     no-repeat;
 
   transition:
-    opacity .35s ease, 
+    opacity .35s ease,
     transform .35s ease;
 
   pointer-events:none;
@@ -301,7 +299,7 @@ const menuItems = [
    Smartphone
 -------------------------- */
 
-@media (max-width: 639px){
+@media (max-width: 699px){
 
   .header-link::after{
 
@@ -311,23 +309,17 @@ const menuItems = [
 
   #desktop-nav{
 
-    width:210px;
-
-    min-width:210px;
-    max-width:210px;
-
-    flex-shrink:0;
-
     display:grid;
 
     grid-template-columns:
       repeat(3, minmax(0, 1fr));
 
-    grid-template-rows:
-      repeat(2, auto);
+    flex-shrink:0;
 
-    column-gap:8px;
-    row-gap:8px;
+    column-gap:20px;
+    row-gap:12px;
+
+    text-align:center;
 
   }
 
