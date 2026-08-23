@@ -105,7 +105,6 @@ const menuItems = [
               hover:text-[#f8dfc1]
 
               xl:text-[17px]
-
               xl:tracking-[0.18em]
 
               max-sm:text-[11px]
@@ -299,7 +298,7 @@ const menuItems = [
    Smartphone
 -------------------------- */
 
-@media (max-width: 699px){
+@media (max-width: 639px){
 
   .header-link::after{
 
@@ -307,19 +306,23 @@ const menuItems = [
 
   }
 
+
   #desktop-nav{
 
     display:grid;
 
     grid-template-columns:
-      repeat(3, minmax(0, 1fr));
+      repeat(3, auto);
+
+    column-gap:20px;
+
+    row-gap:12px;
 
     flex-shrink:0;
 
-    column-gap:20px;
-    row-gap:12px;
+    align-items:center;
 
-    text-align:center;
+    justify-items:center;
 
   }
 
