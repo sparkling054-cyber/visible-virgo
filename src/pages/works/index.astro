@@ -409,7 +409,7 @@ const works = [
       class="mt-10 max-w-3xl text-lg leading-10 text-white"
       style="font-family:'Shippori Mincho',serif;"
     >
-      日本の城郭や和風建築、
+      うち錦乃が制作した作品群ページです。日本の城郭や和風建築、
       和風の町並み、神社、庭園など実在する建物や歴史考証から再現・復元した景観、
       乗り物、ファンタジー、キャラクター造形に至るまでたくさん掲載しています。
       <br />
@@ -700,86 +700,6 @@ const works = [
   box-sizing: border-box;
 }
 
-
-/* =========================================
-   Mobile
-========================================= */
-
-@media (max-width: 1100px) {
-
-  .works-grid {
-    grid-template-columns: repeat(3, 1fr) !important;
-  }
-
-}
-
-
-@media (max-width: 760px) {
-
-  .works-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 14px !important;
-  }
-
-  .works-card {
-    border-radius: 1.1rem;
-  }
-
-  .works-body {
-    padding: 0.8rem;
-  }
-
-  .works-title {
-    top: 0.75rem;
-    left: 0.75rem;
-
-    max-width: calc(100% - 1.5rem);
-
-    padding:
-      0.45rem
-      0.65rem;
-
-    border-radius: 0.5rem;
-
-    font-size: 0.9rem;
-  }
-
-  .works-category {
-    left: 0.75rem;
-    bottom: 0.7rem;
-
-    font-size: 0.65rem;
-  }
-
-}
-
-
-@media (max-width: 480px) {
-
-  .works-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .works-card {
-    aspect-ratio: 16 / 9;
-  }
-
-}
-
-
-/* =========================================
-   Introduction / Container
-   ※既存のレイアウト用
-========================================= */
-
-@media (max-width: 640px) {
-
-  .works-container {
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-  }
-
-}
 
 </style>
 

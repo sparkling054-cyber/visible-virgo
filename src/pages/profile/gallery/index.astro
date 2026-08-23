@@ -5,30 +5,34 @@ import Container from "../../../components/common/Container.astro";
 
 <Layout
   title="錦乃｜ギャラリー｜PROFILE"
-  description="description="錦乃のキャラクタービジュアル、設定画、イラスト、ギャラリーを掲載。日本文化や歴史をテーマに活動するクリエイター錦乃の世界観やデザインをご覧いただけます。""
+  description="錦乃のキャラクタービジュアル、設定画、イラスト、ギャラリーを掲載。日本文化や歴史をテーマに活動するクリエイター錦乃の世界観やデザインをご覧いただけます。"
 >
 
-<!-- Hero -->
-<section class="relative h-[920px] overflow-hidden bg-[#f5f1ea]">
+<!-- =========================================================
+     HERO
+========================================================== -->
+
+<section class="relative h-[920px] overflow-hidden bg-[#f5f1ea] gallery-hero">
 
   <!-- Background -->
+
   <img
- src="/images/gallery-bg.png"
- alt=""
+    src="/images/gallery-bg.png"
+    alt=""
     class="work-hero absolute inset-0 h-full w-full object-cover pointer-events-none select-none"
     draggable="false"
   />
 
   <!-- Content -->
+
   <div class="absolute inset-0 z-20 flex items-center">
 
     <Container>
 
-  <div class="hero-content max-w-3xl">
-
-
+      <div class="hero-content max-w-3xl">
 
         <!-- Title -->
+
         <h1
           class="mt-1 text-[68px] leading-none text-[#FFFFFF]"
           style="font-family:'Shippori Mincho',serif;"
@@ -37,18 +41,21 @@ import Container from "../../../components/common/Container.astro";
         </h1>
 
         <!-- Gold Divider -->
-<div class="mt-1">
-  <img
-    src="/images/gold-divider.png"
-    alt=""
-    class="w-[420px] h-auto select-none pointer-events-none"
-    draggable="false"
-  />
-</div>
+
+        <div class="mt-1">
+
+          <img
+            src="/images/gold-divider.png"
+            alt=""
+            class="w-[420px] h-auto select-none pointer-events-none"
+            draggable="false"
+          />
+
+        </div>
 
         <!-- Summary -->
-        <div class="mt-14 max-w-2xl">
 
+        <div class="mt-14 max-w-2xl">
         </div>
 
       </div>
@@ -58,6 +65,7 @@ import Container from "../../../components/common/Container.astro";
   </div>
 
   <!-- Scroll -->
+
   <div class="absolute bottom-16 right-12 z-30 flex flex-col items-center">
 
     <div class="h-20 w-px bg-white/70"></div>
@@ -70,20 +78,24 @@ import Container from "../../../components/common/Container.astro";
 
 </section>
 
-<!-- Introduction -->
+
+<!-- =========================================================
+     INTRODUCTION / GALLERY
+========================================================== -->
+
 <section class="relative bg-[#f8f6f2] overflow-hidden works-detail">
 
   <!-- Washi Background -->
-<img
-  src="/images/washi-bg.png"
-  alt=""
-  class="absolute right-0 top-0 h-full w-full opacity-[0.3] pointer-events-none select-none -z-0"
-/>
+
+  <img
+    src="/images/washi-bg.png"
+    alt=""
+    class="absolute right-0 top-0 h-full w-full opacity-[0.3] pointer-events-none select-none -z-0"
+  />
+
 
   <Container class="py-32 relative z-10">
 
-      
-    
     <!-- Gallery -->
 
     <div class="mx-auto max-w-9xl">
@@ -101,6 +113,7 @@ import Container from "../../../components/common/Container.astro";
 
       </div>
 
+
       <h2
         class="mt-6 text-4xl"
         style="font-family:'Shippori Mincho',serif;"
@@ -108,17 +121,46 @@ import Container from "../../../components/common/Container.astro";
         新ビジュアルアート展示室
       </h2>
 
+
       <div class="gallery mt-12">
 
-        <img src="/images/profile.jpg" alt="にしきのアイコン">
-        <img src="/images/gallery1.png" alt="">
-        <img src="/images/nishikino-setting.png" alt="設定画">
-        <img src="/images/nishikino-setting1.png" alt="">
-        <img src="/images/contact-bg.png" alt="">
-        <img src="/images/78adb63e-2db7-4749-bef0-f032743afcde3.png" alt="">
-<img src="/images/edb6eded-c0ea-4c8c-8185-8c5d74303269.png" alt="">
+        <img
+          src="/images/profile.jpg"
+          alt="にしきのアイコン"
+        >
 
-     </div>
+        <img
+          src="/images/gallery1.png"
+          alt=""
+        >
+
+        <img
+          src="/images/nishikino-setting.png"
+          alt="設定画"
+        >
+
+        <img
+          src="/images/nishikino-setting1.png"
+          alt=""
+        >
+
+        <img
+          src="/images/contact-bg.png"
+          alt=""
+        >
+
+        <img
+          src="/images/78adb63e-2db7-4749-bef0-f032743afcde3.png"
+          alt=""
+        >
+
+        <img
+          src="/images/edb6eded-c0ea-4c8c-8185-8c5d74303269.png"
+          alt=""
+        >
+
+      </div>
+
 
       <!-- Back -->
 
@@ -132,61 +174,63 @@ import Container from "../../../components/common/Container.astro";
         </a>
 
       </div>
+
+
       <!-- Share -->
 
-<div class="mt-32 text-center">
+      <div class="mt-32 text-center">
 
-  <div class="flex items-center justify-center gap-5">
+        <div class="flex items-center justify-center gap-5">
 
-    <span class="h-px w-16 bg-[#caa14d]"></span>
+          <span class="h-px w-16 bg-[#caa14d]"></span>
 
-    <p
-      class="tracking-[0.45em] text-[#a58c65]"
-      style="font-family:'Cormorant Garamond',serif;"
-    >
-      SHARE
-    </p>
+          <p
+            class="tracking-[0.45em] text-[#a58c65]"
+            style="font-family:'Cormorant Garamond',serif;"
+          >
+            SHARE
+          </p>
 
-    <span class="h-px w-16 bg-[#caa14d]"></span>
+          <span class="h-px w-16 bg-[#caa14d]"></span>
 
-  </div>
-
-
-  <h2
-    class="mt-6 text-3xl text-[#2b2724]"
-    style="font-family:'Shippori Mincho',serif;"
-  >
-    シェア
-  </h2>
+        </div>
 
 
-  <div class="mt-8 flex justify-center gap-4 flex-wrap">
-
-    <a
-      href="#"
-      class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
-    >
-      X
-    </a>
+        <h2
+          class="mt-6 text-3xl text-[#2b2724]"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          シェア
+        </h2>
 
 
-    <a
-      href="#"
-      class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
-    >
-      Instagram
-    </a>
+        <div class="mt-8 flex justify-center gap-4 flex-wrap">
+
+          <a
+            href="#"
+            class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
+          >
+            X
+          </a>
 
 
-    <button
-      class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
-    >
-      URLをコピー
-    </button>
+          <a
+            href="#"
+            class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
+          >
+            Instagram
+          </a>
 
-  </div>
 
-</div>
+          <button
+            class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
+          >
+            URLをコピー
+          </button>
+
+        </div>
+
+      </div>
 
     </div>
 
@@ -194,176 +238,644 @@ import Container from "../../../components/common/Container.astro";
 
 </section>
 
+
 <style>
 
 .work-hero{
+
   animation:heroFloat 12s ease-in-out infinite;
+
   transform-origin:center;
+
 }
+
 
 @keyframes heroFloat{
 
-0%{
-transform:scale(1.03) translateY(0);
+  0%{
+    transform:scale(1.03) translateY(0);
+  }
+
+  50%{
+    transform:scale(1.06) translateY(-18px);
+  }
+
+  100%{
+    transform:scale(1.03) translateY(0);
+  }
+
 }
 
-50%{
-transform:scale(1.06) translateY(-18px);
-}
-
-100%{
-transform:scale(1.03) translateY(0);
-}
-
-}
 
 .gallery{
 
-display:grid;
+  display:grid;
 
-grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-columns:repeat(2,minmax(0,1fr));
 
-gap:1.5rem;
+  gap:1.5rem;
 
 }
+
 
 .gallery img{
 
-display:block;
+  display:block;
 
-width:100%;
+  width:100%;
 
-aspect-ratio:16/10;
+  aspect-ratio:16/10;
 
-object-fit:cover;
+  object-fit:cover;
 
-border-radius:1.25rem;
+  border-radius:1.25rem;
 
-border:1px solid #ddd3c8;
+  border:1px solid #ddd3c8;
 
-background:#ece6dc;
+  background:#ece6dc;
 
-transition:
-transform .45s cubic-bezier(.22,1,.36,1),
-box-shadow .45s;
+  transition:
+    transform .45s cubic-bezier(.22,1,.36,1),
+    box-shadow .45s;
 
 }
+
 
 .gallery img:hover{
 
-transform:translateY(-8px) scale(1.02);
+  transform:translateY(-8px) scale(1.02);
 
-box-shadow:0 25px 60px rgba(0,0,0,.14);
+  box-shadow:0 25px 60px rgba(0,0,0,.14);
 
 }
+
 
 section{
 
-position:relative;
+  position:relative;
 
 }
+
 
 section::before{
 
-content:"";
+  content:"";
 
-position:absolute;
+  position:absolute;
 
-left:0;
+  left:0;
 
-top:0;
+  top:0;
 
-width:100%;
+  width:100%;
 
-height:100%;
+  height:100%;
 
-pointer-events:none;
+  pointer-events:none;
 
-background-image:
+  background-image:
 
-radial-gradient(circle at 8% 10%,rgba(205,175,98,.08),transparent 18%),
+    radial-gradient(
+      circle at 8% 10%,
+      rgba(205,175,98,.08),
+      transparent 18%
+    ),
 
-radial-gradient(circle at 92% 82%,rgba(205,175,98,.06),transparent 22%);
+    radial-gradient(
+      circle at 92% 82%,
+      rgba(205,175,98,.06),
+      transparent 22%
+    );
 
 }
+
 
 aside{
 
-position:sticky;
+  position:sticky;
 
-top:120px;
+  top:120px;
 
-height:max-content;
+  height:max-content;
 
 }
+
 
 a{
 
-transition:.35s;
+  transition:.35s;
 
 }
+
 
 @media(max-width:1100px){
 
-section{
+  section{
 
-overflow:hidden;
+    overflow:hidden;
+
+  }
 
 }
 
-}
 
 @media(max-width:900px){
 
-.gallery{
+  .gallery{
 
-grid-template-columns:1fr;
+    grid-template-columns:1fr;
+
+  }
+
+  aside{
+
+    position:relative;
+
+    top:auto;
+
+  }
 
 }
 
-aside{
-
-position:relative;
-
-top:auto;
-
-}
-
-}
 
 @media(max-width:768px){
 
-section:first-child{
+  /* =========================================================
+     HERO
+     スマホではPC版とは別の構図にする
+  ========================================================== */
 
-height:760px;
+  .gallery-hero{
+
+    height:680px;
+
+  }
+
+
+  .work-hero{
+
+    animation:none;
+
+    /*
+      gallery-bg.png は16:9前提のPC用構図から変更。
+      スマホでは画像を大きく見せ、
+      左右の切れ方と上下位置を個別に調整する。
+    */
+
+    width:auto;
+
+    min-width:100%;
+
+    height:100%;
+
+    max-width:none;
+
+    object-fit:cover;
+
+    object-position:62% center;
+
+    transform:scale(1.22);
+
+  }
+
+
+  .gallery-hero > div:nth-child(2){
+
+    align-items:flex-end;
+
+    padding-bottom:120px;
+
+  }
+
+
+  .hero-content{
+
+    width:100%;
+
+    max-width:none;
+
+    padding:0 20px;
+
+  }
+
+
+  /* =========================================================
+     HERO TITLE
+  ========================================================== */
+
+  .hero-content h1{
+
+    margin-top:0;
+
+    font-size:40px !important;
+
+    line-height:1.2;
+
+    letter-spacing:.02em;
+
+    white-space:nowrap;
+
+  }
+
+
+  /* =========================================================
+     GOLD DIVIDER
+  ========================================================== */
+
+  .hero-content img{
+
+    width:250px;
+
+    max-width:72vw;
+
+  }
+
+
+  .hero-content > div{
+
+    margin-top:10px;
+
+  }
+
+
+  /* =========================================================
+     SCROLL
+  ========================================================== */
+
+  .gallery-hero > div:last-child{
+
+    right:20px;
+
+    bottom:28px;
+
+  }
+
+
+  .gallery-hero > div:last-child > div{
+
+    height:52px;
+
+  }
+
+
+  .gallery-hero > div:last-child span{
+
+    margin-top:10px;
+
+    font-size:9px;
+
+    letter-spacing:.32em;
+
+  }
+
+
+  /* =========================================================
+     GALLERY CONTENT
+  ========================================================== */
+
+  .works-detail > div{
+
+    padding-top:72px;
+
+    padding-bottom:72px;
+
+  }
+
+
+  .works-detail .max-w-9xl{
+
+    padding-left:20px;
+
+    padding-right:20px;
+
+  }
+
+
+  /* =========================================================
+     GALLERY LABEL
+  ========================================================== */
+
+  .works-detail .flex.items-center.gap-5{
+
+    gap:12px;
+
+  }
+
+
+  .works-detail .flex.items-center.gap-5 span{
+
+    width:42px;
+
+    flex:none;
+
+  }
+
+
+  .works-detail .flex.items-center.gap-5 p{
+
+    font-size:11px;
+
+    letter-spacing:.32em;
+
+  }
+
+
+  /* =========================================================
+     GALLERY TITLE
+  ========================================================== */
+
+  .works-detail h2{
+
+    margin-top:18px;
+
+    font-size:28px !important;
+
+    line-height:1.45;
+
+    letter-spacing:.02em;
+
+  }
+
+
+  /* =========================================================
+     GALLERY IMAGES
+  ========================================================== */
+
+  .gallery{
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+
+    margin-top:32px;
+
+  }
+
+
+  .gallery img{
+
+    aspect-ratio:16/10;
+
+    border-radius:1rem;
+
+  }
+
+
+  .gallery img:hover{
+
+    transform:none;
+
+    box-shadow:none;
+
+  }
+
+
+  /* =========================================================
+     BACK BUTTON
+  ========================================================== */
+
+  .works-detail .mt-24{
+
+    margin-top:56px;
+
+  }
+
+
+  .works-detail .mt-24 a{
+
+    width:100%;
+
+    justify-content:center;
+
+    padding:14px 20px;
+
+    font-size:13px;
+
+  }
+
+
+  /* =========================================================
+     SHARE
+  ========================================================== */
+
+  .works-detail .mt-32{
+
+    margin-top:80px;
+
+  }
+
+
+  .works-detail .mt-32 .flex.items-center{
+
+    gap:12px;
+
+  }
+
+
+  .works-detail .mt-32 .flex.items-center span{
+
+    width:38px;
+
+    flex:none;
+
+  }
+
+
+  .works-detail .mt-32 .flex.items-center p{
+
+    font-size:11px;
+
+    letter-spacing:.32em;
+
+  }
+
+
+  .works-detail .mt-32 h2{
+
+    margin-top:18px;
+
+    font-size:26px !important;
+
+  }
+
+
+  .works-detail .mt-32 .mt-8{
+
+    margin-top:24px;
+
+    gap:10px;
+
+  }
+
+
+  .works-detail .mt-32 .mt-8 a,
+  .works-detail .mt-32 .mt-8 button{
+
+    padding:11px 20px;
+
+    font-size:12px;
+
+  }
 
 }
 
-h1{
 
-font-size:44px !important;
+@media(max-width:480px){
 
-line-height:1.15;
+  /* =========================================================
+     HERO
+  ========================================================== */
 
-}
+  .gallery-hero{
 
-h2{
+    height:620px;
 
-font-size:32px !important;
+  }
 
-}
 
-.work-hero{
+  /*
+    さらに縦長になるスマートフォンでは
+    gallery-bg.png の被写体を右寄りに配置。
+    PC版とは完全に異なる見せ方にする。
+  */
 
-animation:none;
+  .work-hero{
 
-}
+    width:auto;
 
-.gallery img{
+    height:100%;
 
-border-radius:1rem;
+    min-width:130%;
 
-}
+    object-position:68% center;
+
+    transform:scale(1.28);
+
+  }
+
+
+  .gallery-hero > div:nth-child(2){
+
+    padding-bottom:105px;
+
+  }
+
+
+  .hero-content{
+
+    padding:0 18px;
+
+  }
+
+
+  .hero-content h1{
+
+    font-size:34px !important;
+
+    line-height:1.25;
+
+  }
+
+
+  .hero-content img{
+
+    width:220px;
+
+    max-width:68vw;
+
+  }
+
+
+  .gallery-hero > div:last-child{
+
+    right:16px;
+
+    bottom:22px;
+
+  }
+
+
+  .gallery-hero > div:last-child > div{
+
+    height:42px;
+
+  }
+
+
+  /* =========================================================
+     CONTENT
+  ========================================================== */
+
+  .works-detail > div{
+
+    padding-top:60px;
+
+    padding-bottom:60px;
+
+  }
+
+
+  .works-detail .max-w-9xl{
+
+    padding-left:18px;
+
+    padding-right:18px;
+
+  }
+
+
+  .works-detail h2{
+
+    font-size:25px !important;
+
+    line-height:1.5;
+
+  }
+
+
+  .gallery{
+
+    margin-top:28px;
+
+    gap:14px;
+
+  }
+
+
+  .gallery img{
+
+    border-radius:.9rem;
+
+  }
+
+
+  .works-detail .mt-24{
+
+    margin-top:48px;
+
+  }
+
+
+  .works-detail .mt-32{
+
+    margin-top:68px;
+
+  }
+
+
+  .works-detail .mt-32 .mt-8{
+
+    gap:8px;
+
+  }
+
+
+  .works-detail .mt-32 .mt-8 a,
+  .works-detail .mt-32 .mt-8 button{
+
+    padding:10px 18px;
+
+  }
 
 }
 
