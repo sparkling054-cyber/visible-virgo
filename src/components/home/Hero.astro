@@ -320,7 +320,7 @@
       "
       style="font-family:'Shippori Mincho',serif;"
     >
-      このサイトは、インフルエンサー／クリエイター「錦乃」の活動や作品を紹介する公式サイトです。
+      このサイトは、インフルエンサー／クリエイター「錦乃」の活動や作品を紹介する公式サイトです。<br>
       ゲーム・デジタル空間で制作した日本の城郭や歴史的建造物を中心に、数多の制作・発信の概要をご覧いただけます。
     </p>
 
@@ -2310,4 +2310,348 @@
 
 }
 
+/* =========================================================
+   DISPLAY COLOR PROTECTION
+   PCとスマホ実機で同じ色・カードデザインを維持
+========================================================= */
+
+:global(html) {
+  color-scheme: light;
+}
+
+:global(body) {
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+#hero > div:first-of-type p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+#about {
+  color-scheme: light;
+}
+
+#about > div.relative {
+  color: #181818;
+}
+
+
+/* ABOUT section title */
+
+#about h2 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+#about > div.relative > div.text-left > p {
+  color: rgba(255, 255, 255, 0.8) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* ABOUT card */
+
+#about article {
+  background: rgba(255, 255, 255, 0.75) !important;
+  border-color: rgba(255, 255, 255, 0.7) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ABOUT card text */
+
+#about article > p:first-of-type {
+  color: #737373 !important;
+  -webkit-text-fill-color: #737373;
+}
+
+#about article h3 {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+}
+
+#about article p:not(:first-of-type) {
+  color: #404040 !important;
+  -webkit-text-fill-color: #404040;
+}
+
+
+/* =========================================================
+   ACHIEVEMENTS
+========================================================= */
+
+#achievements {
+  color-scheme: light;
+}
+
+
+/* Section title */
+
+#achievements h2 {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+}
+
+#achievements > div.relative > div:first-child p {
+  color: #e11d48 !important;
+  -webkit-text-fill-color: #e11d48;
+}
+
+#achievements > div.relative > div:first-child p:last-child {
+  color: #525252 !important;
+  -webkit-text-fill-color: #525252;
+}
+
+
+/* Achievement button */
+
+#achievements a {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-color: #262626 !important;
+}
+
+
+/* Achievement cards */
+
+#achievements article {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.7) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Achievement card number */
+
+#achievements article:nth-child(1) > p {
+  color: #fb7185 !important;
+  -webkit-text-fill-color: #fb7185;
+}
+
+#achievements article:nth-child(2) > p {
+  color: #f59e0b !important;
+  -webkit-text-fill-color: #f59e0b;
+}
+
+#achievements article:nth-child(3) > p {
+  color: #0ea5e9 !important;
+  -webkit-text-fill-color: #0ea5e9;
+}
+
+#achievements article:nth-child(4) > p {
+  color: #8b5cf6 !important;
+  -webkit-text-fill-color: #8b5cf6;
+}
+
+
+/* Achievement card headings */
+
+#achievements article h3 {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+}
+
+
+/* Achievement card descriptions */
+
+#achievements article p:last-child {
+  color: #525252 !important;
+  -webkit-text-fill-color: #525252;
+}
+
+
+/* =========================================================
+   GRADIENT LINES
+   実機で省略・変色されないよう明示
+========================================================= */
+
+#about .bg-gradient-to-r,
+#contact-preview .bg-gradient-to-r {
+  background-image: linear-gradient(
+    to right,
+    rgb(253, 164, 175),
+    rgb(252, 211, 77),
+    rgb(125, 211, 252)
+  ) !important;
+
+  background-color: transparent !important;
+
+  color: transparent !important;
+}
+
+
+/* =========================================================
+   CONTACT / COLLABORATION
+========================================================= */
+
+#contact-preview {
+  color-scheme: light;
+}
+
+
+/* Section title */
+
+#contact-preview h2 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+#contact-preview > div.relative > div.text-left > p:last-child {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* Collaboration cards */
+
+#contact-preview article {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 245, 247, 0.7),
+      rgba(240, 249, 255, 0.7)
+    ) !important;
+
+  border-color: rgba(255, 255, 255, 0.6) !important;
+
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Collaboration card label */
+
+#contact-preview article > p:first-of-type {
+  color: #737373 !important;
+  -webkit-text-fill-color: #737373;
+}
+
+
+/* Collaboration card heading */
+
+#contact-preview article h3 {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+}
+
+
+/* Collaboration card description */
+
+#contact-preview article p:last-child {
+  color: #404040 !important;
+  -webkit-text-fill-color: #404040;
+}
+
+
+/* =========================================================
+   CONTACT CTA
+========================================================= */
+
+#contact-preview section {
+  color: #262626;
+}
+
+
+/* CTA card */
+
+#contact-preview section > div.relative {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+
+/* CTA label */
+
+#contact-preview section > div.relative > p {
+  color: #737373 !important;
+  -webkit-text-fill-color: #737373;
+}
+
+
+/* CTA heading */
+
+#contact-preview section h3 {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+}
+
+
+/* CTA description */
+
+#contact-preview section h3 + p {
+  color: #525252 !important;
+  -webkit-text-fill-color: #525252;
+}
+
+
+/* CTA button */
+
+#contact-preview section a {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+  background: #ffffff !important;
+  border-color: #262626 !important;
+}
+
+
+/* =========================================================
+   MOBILE REAL DEVICE COLOR PROTECTION
+========================================================= */
+
+@media (max-width: 639px) {
+
+  #hero > div:first-of-type p,
+  #about h2,
+  #about > div.relative > div.text-left > p,
+  #about article > p:first-of-type,
+  #about article h3,
+  #about article p:not(:first-of-type),
+  #achievements h2,
+  #achievements > div.relative > div:first-child p,
+  #achievements article h3,
+  #achievements article p:last-child,
+  #contact-preview h2,
+  #contact-preview > div.relative > div.text-left > p:last-child,
+  #contact-preview article > p:first-of-type,
+  #contact-preview article h3,
+  #contact-preview article p:last-child,
+  #contact-preview section > div.relative > p,
+  #contact-preview section h3,
+  #contact-preview section h3 + p,
+  #contact-preview section a {
+    forced-color-adjust: none;
+  }
+
+  #about article,
+  #achievements article,
+  #contact-preview article,
+  #contact-preview section > div.relative {
+    forced-color-adjust: none;
+  }
+
+  #about .bg-gradient-to-r,
+  #contact-preview .bg-gradient-to-r {
+    forced-color-adjust: none;
+  }
+
+}
+
 </style>
+

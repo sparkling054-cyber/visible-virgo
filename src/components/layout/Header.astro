@@ -1,3 +1,4 @@
+
 ---
 const menuItems = [
   { name: "HOME", href: "/" },
@@ -60,29 +61,20 @@ const menuItems = [
     </a>
 
 
-
     <!-- PC Navigation -->
     <nav
       id="desktop-nav"
       class="
         hidden
-
         ml-auto
         items-center
-
         font-['Cormorant_Garamond']
-
         text-white
-
         transition-all
         duration-700
-
         sm:flex
-
         gap-5
-
         lg:gap-8
-
         xl:gap-12
       "
     >
@@ -93,22 +85,14 @@ const menuItems = [
             href={item.href}
             class="
               header-link
-
               whitespace-nowrap
-
               text-[14px]
-
               tracking-[0.16em]
-
               transition
               duration-300
-
               hover:text-[#f8dfc1]
-
               lg:text-[17px]
-
               xl:text-[17px]
-
               xl:tracking-[0.18em]
             "
           >
@@ -120,81 +104,47 @@ const menuItems = [
     </nav>
 
 
-
     <!-- Smartphone Navigation -->
     <nav
       id="mobile-nav"
       class="
         grid
-
-        grid-cols-3
-
-        gap-y-3
-
-        text-center
-
+        grid-cols-2
+        gap-x-3
+        gap-y-1
         font-['Cormorant_Garamond']
-
         text-white
-
         transition-all
         duration-700
-
         sm:hidden
       "
     >
 
-      <a
-        href="/"
-        class="mobile-link"
-      >
+      <a href="/" class="mobile-link">
         HOME
       </a>
 
-
-      <a
-        href="/about/"
-        class="mobile-link"
-      >
+      <a href="/about/" class="mobile-link">
         ABOUT
       </a>
 
-
-      <a
-        href="/achievements/"
-        class="mobile-link achievements-link"
-      >
-        ACHIEVEMENTS
-      </a>
-
-
-      <a
-        href="/works/"
-        class="mobile-link"
-      >
+      <a href="/works/" class="mobile-link">
         WORKS
       </a>
 
-
-      <a
-        href="/profile/"
-        class="mobile-link"
-      >
+      <a href="/profile/" class="mobile-link">
         PROFILE
       </a>
 
+      <a href="/achievements/" class="mobile-link">
+        ACHIEVEMENTS
+      </a>
 
-      <a
-        href="/contact/"
-        class="mobile-link"
-      >
+      <a href="/contact/" class="mobile-link">
         CONTACT
       </a>
 
-
     </nav>
-
-
 
 
     <!-- Menu -->
@@ -204,19 +154,13 @@ const menuItems = [
       aria-label="Toggle Navigation"
       class="
         ml-2
-
         flex
-
         h-9
         w-9
-
         shrink-0
-
         items-center
         justify-center
-
         sm:ml-4
-
         sm:h-12
         sm:w-12
       "
@@ -227,7 +171,6 @@ const menuItems = [
           flex
           flex-col
           gap-1.5
-
           sm:gap-2
         "
       >
@@ -238,11 +181,9 @@ const menuItems = [
             h-px
             w-5
             bg-white
-
             sm:w-7
           "
         ></span>
-
 
         <span
           class="
@@ -250,11 +191,9 @@ const menuItems = [
             h-px
             w-5
             bg-white
-
             sm:w-7
           "
         ></span>
-
 
         <span
           class="
@@ -262,7 +201,6 @@ const menuItems = [
             h-px
             w-5
             bg-white
-
             sm:w-7
           "
         ></span>
@@ -271,11 +209,9 @@ const menuItems = [
 
     </button>
 
-
   </div>
 
 </header>
-
 
 
 <style>
@@ -301,180 +237,304 @@ const menuItems = [
 }
 
 
+/* =========================================================
+   Mobile Navigation
+========================================================= */
 
 .mobile-link{
 
+  position:relative;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  min-width:58px;
+
+  padding:
+    4px
+    5px
+    6px;
+
   white-space:nowrap;
 
-  font-size:13px;
+  font-size:12px;
 
-  letter-spacing:.04em;
+  letter-spacing:.08em;
 
-  transition:.3s;
+  line-height:1;
+
+  transition:
+    color .3s ease,
+    opacity .3s ease;
 
 }
 
 
+.mobile-link::after{
 
-.mobile-link:hover{
+  content:"";
+
+  position:absolute;
+
+  left:50%;
+  bottom:0;
+
+  width:34px;
+  height:5px;
+
+  background:
+    url("/images/header-ornament.svg")
+    center/contain
+    no-repeat;
+
+  opacity:0;
+
+  transform:
+    translateX(-50%)
+    translateY(3px);
+
+  transition:
+    opacity .3s ease,
+    transform .3s ease;
+
+  pointer-events:none;
+
+}
+
+
+.mobile-link:hover,
+.mobile-link:focus-visible,
+.mobile-link:active{
 
   color:#f8dfc1;
 
 }
 
 
+.mobile-link:hover::after,
+.mobile-link:focus-visible::after,
+.mobile-link:active::after{
 
-@media(max-width:639px){
+  opacity:1;
 
-  #site-header > div{
-    gap:8px;
-  }
-
-  #mobile-nav{
-    flex:1;
-  }
-
-  .achievements-link{
-    justify-self:end;
-    left:40px;
-  }
+  transform:
+    translateX(-50%)
+    translateY(0);
 
 }
 
-/* -------------------------
+
+/* =========================================================
    PC Header Ornament
--------------------------- */
+========================================================= */
 
 .header-link{
 
-position:relative;
+  position:relative;
 
-display:inline-flex;
+  display:inline-flex;
 
-justify-content:center;
+  justify-content:center;
 
-padding-bottom:12px;
+  padding-bottom:12px;
 
 }
+
 
 /* 和風文様 */
 
 .header-link::after{
 
-content:"";
+  content:"";
 
-position:absolute;
+  position:absolute;
 
-left:50%;
-bottom:-28px;
+  left:50%;
+  bottom:-28px;
 
-width:90px;
-height:80px;
+  width:90px;
+  height:80px;
 
-transform:
-translateX(-50%)
-translateY(4px);
+  transform:
+    translateX(-50%)
+    translateY(4px);
 
-opacity:0;
+  opacity:0;
 
-background:
-url("/images/header-ornament.png")
-center/contain
-no-repeat;
+  background:
+    url("/images/header-ornament.png")
+    center/contain
+    no-repeat;
 
-transition:
-opacity .35s ease,
-transform .35s ease;
+  transition:
+    opacity .35s ease,
+    transform .35s ease;
 
-pointer-events:none;
+  pointer-events:none;
 
 }
+
 
 /* PC Hover */
 
 .header-link:hover::after,
 .header-link:focus-visible::after{
 
-opacity:1;
+  opacity:1;
 
-transform:
-translateX(-50%)
-translateY(0);
+  transform:
+    translateX(-50%)
+    translateY(0);
 
 }
+
 
 /* タップ時 */
 
 .header-link:active::after{
 
-opacity:1;
+  opacity:1;
 
-transform:
-translateX(-50%)
-translateY(0);
-
-}
-
-/* -------------------------
-   Mobile
--------------------------- */
-
-.mobile-link{
-
-position:relative;
-
-display:inline-flex;
-
-justify-content:center;
-
-padding-bottom:8px;
+  transform:
+    translateX(-50%)
+    translateY(0);
 
 }
 
-.mobile-link::after{
 
-content:"";
+/* =========================================================
+   Smartphone
+========================================================= */
 
-position:absolute;
+@media(max-width:639px){
 
-left:50%;
-bottom:0;
+  #site-header > div{
 
-width:54px;
-height:8px;
+    gap:10px;
 
-background:
-url("/images/header-ornament.svg")
-center/contain
-no-repeat;
+    min-height:72px;
 
-opacity:0;
+    padding-top:12px;
+    padding-bottom:12px;
 
-transform:
-translateX(-50%)
-translateY(4px);
+  }
 
-transition:
-opacity .35s ease,
-transform .35s ease;
 
-pointer-events:none;
+  #header-logo img{
+
+    height:38px;
+
+  }
+
+
+  #mobile-nav{
+
+    flex:
+      0
+      1
+      auto;
+
+    width:auto;
+
+    gap:
+      2px
+      7px;
+
+  }
+
+
+  .mobile-link{
+
+    font-size:12px;
+
+  }
+
+
+  #menu-toggle{
+
+    margin-left:2px;
+
+    width:34px;
+    height:34px;
+
+  }
+
+
+  #menu-toggle span{
+
+    width:19px;
+
+  }
 
 }
 
-.mobile-link:hover::after,
-.mobile-link:focus-visible::after,
-.mobile-link:active::after{
 
-opacity:1;
+/* =========================================================
+   Very Small Smartphone
+========================================================= */
 
-transform:
-translateX(-50%)
-translateY(0);
+@media(max-width:380px){
 
-}
+  #site-header > div{
+
+    gap:6px;
+
+    padding-left:10px;
+    padding-right:10px;
+
+  }
+
+
+  #header-logo img{
+
+    height:34px;
+
+  }
+
+
+  #mobile-nav{
+
+    gap:
+      1px
+      4px;
+
+  }
+
+
+  .mobile-link{
+
+    min-width:52px;
+
+    padding:
+      4px
+      2px
+      5px;
+
+    font-size:11px;
+
+    letter-spacing:.06em;
+
+  }
+
+
+  #menu-toggle{
+
+    width:31px;
+    height:31px;
+
+  }
+
+
+  #menu-toggle span{
+
+    width:18px;
+
+  }
 
 </style>
+
 
 <script is:inline>
 
@@ -496,14 +556,12 @@ function initHeader(){
     document.getElementById("menu-toggle");
 
 
-
   if(
     !header ||
     !desktop ||
     !mobile ||
     !toggle
   ) return;
-
 
 
   if(toggle.dataset.ready)
@@ -513,18 +571,14 @@ function initHeader(){
   toggle.dataset.ready="true";
 
 
-
   let menuOpen=false;
-
 
 
   toggle.addEventListener(
     "click",
     ()=>{
 
-
       menuOpen=!menuOpen;
-
 
 
       if(menuOpen){
@@ -541,7 +595,6 @@ function initHeader(){
 
       }else{
 
-
         desktop.classList.remove(
           "header-hidden"
         );
@@ -551,21 +604,15 @@ function initHeader(){
           "header-hidden"
         );
 
-
       }
-
 
     }
   );
 
 
-
-
   const scrollHandler=()=>{
 
-
     if(window.scrollY>40){
-
 
       header.classList.add(
         "bg-[#201710]/35",
@@ -573,9 +620,7 @@ function initHeader(){
         "shadow-lg"
       );
 
-
     }else{
-
 
       header.classList.remove(
         "bg-[#201710]/35",
@@ -583,16 +628,12 @@ function initHeader(){
         "shadow-lg"
       );
 
-
     }
-
 
   };
 
 
-
   scrollHandler();
-
 
 
   window.addEventListener(
@@ -603,9 +644,7 @@ function initHeader(){
     }
   );
 
-
 }
-
 
 
 initHeader();
@@ -615,6 +654,5 @@ document.addEventListener(
   "astro:page-load",
   initHeader
 );
-
 
 </script>

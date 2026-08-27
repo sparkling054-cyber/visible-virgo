@@ -342,6 +342,257 @@ details summary::-webkit-details-marker{
   display:none;
 }
 
+/* =========================================================
+   PROFILE DISPLAY COLOR PROTECTION
+   PCとスマホ実機で同じ色・カードデザインを維持
+   ※ サイズ・レイアウトは変更しない
+========================================================= */
+
+:global(html) {
+  color-scheme: light;
+}
+
+:global(body) {
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+/* =========================================================
+   PROFILE MAIN TEXT
+========================================================= */
+
+.profile-content p,
+.profile-content h1,
+.profile-content h2,
+.profile-content h3,
+.profile-content strong {
+  forced-color-adjust: none;
+}
+
+
+/* PROFILE label */
+
+.profile-content > p:first-child {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* PROFILE name */
+
+.profile-content h1 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* Profile introduction text */
+
+.profile-content > p:not(:first-child) {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================================================
+   PROFILE CARDS
+========================================================= */
+
+.profile-card {
+  forced-color-adjust: none;
+
+  background-color: transparent !important;
+
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+
+/* =========================================================
+   INTRODUCTION / MESSAGE LABEL
+========================================================= */
+
+.profile-card > p:first-child {
+  color: rgba(255, 255, 255, 0.6) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
+
+  forced-color-adjust: none;
+}
+
+
+/* =========================================================
+   CARD MAIN TEXT
+========================================================= */
+
+.profile-card > div {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+
+  forced-color-adjust: none;
+}
+
+
+.profile-card > div p {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+
+  forced-color-adjust: none;
+}
+
+
+/* =========================================================
+   INTRODUCTION INFORMATION AREA
+========================================================= */
+
+.profile-card > div > div.border-t {
+  border-top-color: rgba(255, 255, 255, 0.15) !important;
+
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+
+  forced-color-adjust: none;
+}
+
+
+.profile-card > div > div.border-t p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================================================
+   MESSAGE TEXT
+========================================================= */
+
+#messageDetails {
+  color: #ffffff !important;
+  forced-color-adjust: none;
+}
+
+
+#messageDetails > div {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+
+  forced-color-adjust: none;
+}
+
+
+#messageDetails > div p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================================================
+   READ MORE / COLLAPSE
+========================================================= */
+
+#messageSummary {
+  color: rgb(254, 205, 211) !important;
+  -webkit-text-fill-color: rgb(254, 205, 211);
+
+  forced-color-adjust: none;
+}
+
+
+#messageSummary:hover {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* =========================================================
+   GALLERY LINK
+========================================================= */
+
+#messageDetails a {
+  color: rgb(254, 205, 211) !important;
+  -webkit-text-fill-color: rgb(254, 205, 211);
+
+  forced-color-adjust: none;
+}
+
+
+#messageDetails a:hover {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* =========================================================
+   MOBILE REAL DEVICE COLOR PROTECTION
+========================================================= */
+
+@media (max-width: 639px) {
+
+  .profile-content,
+  .profile-content *,
+  .profile-card,
+  .profile-card *,
+  #messageDetails,
+  #messageDetails *,
+  #messageSummary {
+    forced-color-adjust: none;
+  }
+
+  .profile-card {
+    background-color: transparent !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+  }
+
+  .profile-content > p:first-child,
+  .profile-content h1 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+  }
+
+  .profile-content > p:not(:first-child) {
+    color: rgba(255, 255, 255, 0.9) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .profile-card > p:first-child {
+    color: rgba(255, 255, 255, 0.6) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .profile-card > div,
+  .profile-card > div p {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+  }
+
+  .profile-card > div > div.border-t,
+  .profile-card > div > div.border-t p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+
+    border-top-color: rgba(255, 255, 255, 0.15) !important;
+  }
+
+  #messageDetails > div,
+  #messageDetails > div p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+  }
+
+  #messageSummary,
+  #messageDetails a {
+    color: rgb(254, 205, 211) !important;
+    -webkit-text-fill-color: rgb(254, 205, 211);
+  }
+
+}
+
+@media (max-width: 639px) {
+
+  #profileBg2 {
+    object-position: center center !important;
+  }
+
+}
+
 </style>
 
 

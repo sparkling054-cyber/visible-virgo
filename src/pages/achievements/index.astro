@@ -460,9 +460,9 @@ import Layout from "../../layouts/Layout.astro";
           </article>
 
 
-          <!-- =================================================
+          <!-- ===============
                CARD 03
-          ================================================== -->
+          ==================== -->
 
           <article
             class="
@@ -627,9 +627,9 @@ import Layout from "../../layouts/Layout.astro";
     </section>
 
 
-    <!-- =======================================================
+    <!-- ===============
          BOTTOM
-    ======================================================== -->
+    ========== -->
 
     <section
       class="
@@ -731,6 +731,305 @@ import Layout from "../../layouts/Layout.astro";
 
 .achievement-media .twitter-tweet {
   margin: 0 auto !important;
+}
+
+/* =========================================================
+   DISPLAY COLOR PROTECTION
+   PCとスマホ実機で同じ表示を維持
+   ※サイズ・レイアウトは変更しない
+========================================================= */
+
+:global(html) {
+  color-scheme: light;
+}
+
+:global(body) {
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+/* =========================================================
+   ACHIEVEMENTS PAGE
+========================================================= */
+
+section.bg-\[\#faf8f3\] {
+  color-scheme: light;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+section.bg-\[\#faf8f3\] > section:nth-child(2) {
+  color-scheme: light;
+}
+
+section.bg-\[\#faf8f3\] > section:nth-child(2) h1 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+section.bg-\[\#faf8f3\] > section:nth-child(2) > div > p:first-child {
+  color: rgba(244, 63, 94, 0.8) !important;
+  -webkit-text-fill-color: rgba(244, 63, 94, 0.8);
+}
+
+section.bg-\[\#faf8f3\] > section:nth-child(2) > div > p:last-child {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================================================
+   ACHIEVEMENT CARDS
+========================================================= */
+
+.achievement-media + div {
+  color-scheme: light;
+}
+
+
+/* Card itself */
+
+.achievement-media + div {
+  background-color: #ffffff;
+}
+
+
+/* =========================================================
+   CARD DATE
+========================================================= */
+
+.achievement-media + div > p:first-child {
+  color: #737373 !important;
+  -webkit-text-fill-color: #737373;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.achievement-media + div h2 {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+}
+
+
+/* =========================================================
+   CARD SUBTITLE
+========================================================= */
+
+.achievement-media + div h2 + p {
+  color: #737373 !important;
+  -webkit-text-fill-color: #737373;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.achievement-details {
+  color: #171717;
+}
+
+.achievement-details summary {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+}
+
+.achievement-details > div {
+  color: #404040 !important;
+  -webkit-text-fill-color: #404040;
+}
+
+.achievement-details strong {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+}
+
+
+/* =========================================================
+   CARD BUTTONS
+========================================================= */
+
+.achievement-media + div a {
+  color: #262626 !important;
+  -webkit-text-fill-color: #262626;
+
+  background-color: transparent !important;
+
+  border-color: #d4d4d4 !important;
+}
+
+.achievement-media + div a:hover {
+  background-color: #171717 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* =========================================================
+   BOTTOM / NEXT CHAPTER
+========================================================= */
+
+section.bg-\[\#faf8f3\] > div.relative > section:last-child {
+  color-scheme: light;
+}
+
+
+/* Bottom card */
+
+section.bg-\[\#faf8f3\] > div.relative > section:last-child > div {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+
+/* NEXT CHAPTER */
+
+section.bg-\[\#faf8f3\] > div.relative > section:last-child p:first-child {
+  color: #737373 !important;
+  -webkit-text-fill-color: #737373;
+}
+
+
+/* Bottom heading */
+
+section.bg-\[\#faf8f3\] > div.relative > section:last-child h2 {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+}
+
+
+/* Bottom description */
+
+section.bg-\[\#faf8f3\] > div.relative > section:last-child p:last-child {
+  color: #404040 !important;
+  -webkit-text-fill-color: #404040;
+}
+
+
+/* =========================================================
+   CARD / BORDER COLOR PROTECTION
+========================================================= */
+
+.achievement-media + div {
+  forced-color-adjust: none;
+  -webkit-forced-color-adjust: none;
+}
+
+
+/* =========================================================
+   REAL SMARTPHONE
+   色だけをPC表示に固定
+   サイズ・配置は変更しない
+========================================================= */
+
+@media (max-width: 639px) {
+
+  .achievement-media + div,
+  .achievement-media + div p,
+  .achievement-media + div h2,
+  .achievement-media + div summary,
+  .achievement-media + div div,
+  .achievement-media + div strong,
+  .achievement-media + div a,
+  section.bg-\[\#faf8f3\] > section:nth-child(2) h1,
+  section.bg-\[\#faf8f3\] > section:nth-child(2) p,
+  section.bg-\[\#faf8f3\] > div.relative > section:last-child > div,
+  section.bg-\[\#faf8f3\] > div.relative > section:last-child p,
+  section.bg-\[\#faf8f3\] > div.relative > section:last-child h2 {
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* Card */
+
+  .achievement-media + div {
+    background-color: #ffffff !important;
+    border-color: transparent;
+  }
+
+
+  /* Date */
+
+  .achievement-media + div > p:first-child {
+    color: #737373 !important;
+    -webkit-text-fill-color: #737373;
+  }
+
+
+  /* Title */
+
+  .achievement-media + div h2 {
+    color: #171717 !important;
+    -webkit-text-fill-color: #171717;
+  }
+
+
+  /* Subtitle */
+
+  .achievement-media + div h2 + p {
+    color: #737373 !important;
+    -webkit-text-fill-color: #737373;
+  }
+
+
+  /* Details */
+
+  .achievement-details summary {
+    color: #171717 !important;
+    -webkit-text-fill-color: #171717;
+  }
+
+  .achievement-details > div {
+    color: #404040 !important;
+    -webkit-text-fill-color: #404040;
+  }
+
+  .achievement-details strong {
+    color: #171717 !important;
+    -webkit-text-fill-color: #171717;
+  }
+
+
+  /* Buttons */
+
+  .achievement-media + div a {
+    color: #262626 !important;
+    -webkit-text-fill-color: #262626;
+    background-color: transparent !important;
+    border-color: #d4d4d4 !important;
+  }
+
+
+  /* Bottom card */
+
+  section.bg-\[\#faf8f3\] > div.relative > section:last-child > div {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    border-color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  section.bg-\[\#faf8f3\] > div.relative > section:last-child p:first-child {
+    color: #737373 !important;
+    -webkit-text-fill-color: #737373;
+  }
+
+  section.bg-\[\#faf8f3\] > div.relative > section:last-child h2 {
+    color: #171717 !important;
+    -webkit-text-fill-color: #171717;
+  }
+
+  section.bg-\[\#faf8f3\] > div.relative > section:last-child p:last-child {
+    color: #404040 !important;
+    -webkit-text-fill-color: #404040;
+  }
+
 }
 
 </style>
