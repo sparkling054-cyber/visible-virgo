@@ -8,23 +8,36 @@ import Layout from "../../layouts/Layout.astro";
 >
 
 <!-- Hero Image -->
+
 <section class="relative h-[820px] overflow-hidden">
 
-  <img
-    src="/images/about-bg.png"
-    alt="世界観について"
-    class="about-image absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
-    draggable="false"
-  />
+  <picture>
+
+    <!-- Smartphone -->
+    <source
+      media="(max-width: 639px)"
+      srcset="/images/about-bg-mobile.png"
+    />
+
+    <!-- PC -->
+    <img
+      src="/images/about-bg.png"
+      alt="世界観について"
+      class="about-image absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+      draggable="false"
+    />
+
+  </picture>
 
   <!-- Scroll -->
+
   <div
     class="absolute bottom-16 right-12 z-20 flex flex-col items-center"
   >
 
     <div class="h-20 w-px bg-white/70"></div>
 
-    <span class="mt-4 text-xs tracking-[0.45em] text-white">
+    <span class="mt-4 text-base tracking-[0.45em] text-white">
       SCROLL
     </span>
 
@@ -35,6 +48,7 @@ import Layout from "../../layouts/Layout.astro";
 <div class="relative overflow-hidden">
 
   <!-- Washi Background -->
+
   <img
     src="/images/washi-bg1.png"
     alt=""
@@ -45,13 +59,14 @@ import Layout from "../../layouts/Layout.astro";
   <div class="absolute inset-0 bg-white/30"></div>
 
 <!-- About -->
+
 <section class="relative overflow-hidden py-32">
 
   <div class="mx-auto max-w-7xl px-8">
 
     <div class="max-w-7xl">
 
-      <p class="scroll-fade delay-1 mb-4 tracking-[0.45em] text-sm text-white">
+      <p class="scroll-fade delay-1 mb-4 tracking-[0.45em] text-base text-white">
         ABOUT
       </p>
 
@@ -63,7 +78,7 @@ import Layout from "../../layouts/Layout.astro";
       </h1>
 
       <p
-        class="scroll-fade delay-3 mt-10 text-lg leading-10 text-white"
+        class="scroll-fade delay-3 mt-10 text-base leading-8 text-white"
         style="font-family:'Shippori Mincho',serif;"
       >
 
@@ -79,7 +94,7 @@ import Layout from "../../layouts/Layout.astro";
       <div class="mt-10 grid items-center gap-12 lg:grid-cols-[1fr_380px]">
 
         <p
-          class="scroll-fade delay-1 text-lg leading-10 text-white"
+          class="scroll-fade delay-1 text-base leading-8 text-white"
           style="font-family:'Shippori Mincho',serif;"
         >
 
@@ -121,26 +136,27 @@ import Layout from "../../layouts/Layout.astro";
 
   <div class="mx-auto max-w-7xl px-8">
 
-    <div class="grid gap-10 md:grid-cols-3">
+    <div class="grid gap-8 md:grid-cols-3">
 
       <!-- PLAY STYLE -->
+
       <article
-        class="scroll-fade delay-1 rounded-[2rem] border border-white/60 bg-white/85 p-8 lg:p-10 backdrop-blur-sm transition duration-500 hover:-translate-y-2 hover:shadow-2xl"
+        class="scroll-fade delay-1 rounded-[2rem] border border-white/60 bg-white/85 p-7 lg:p-8 backdrop-blur-sm transition duration-500 hover:-translate-y-2 hover:shadow-2xl"
       >
 
-        <p class="text-xs tracking-[0.35em] text-neutral-500">
+        <p class="text-base tracking-[0.35em] text-neutral-500">
           ⋆﻿˙𝓹𝓵𝓪𝔂 𝓼𝓽𝔂𝓵𝔢˙⋆﻿
         </p>
 
         <h2
-          class="mt-4 text-3xl"
+          class="mt-4 text-2xl"
           style="font-family:'Cormorant Garamond',serif;"
         >
           遊び方
         </h2>
 
         <p
-          class="mt-6 leading-8 text-neutral-700"
+          class="mt-6 text-base leading-8 text-neutral-700"
           style="font-family:'Shippori Mincho',serif;"
         >
 
@@ -153,23 +169,24 @@ import Layout from "../../layouts/Layout.astro";
       </article>
 
       <!-- BUILDING -->
+
       <article
-        class="scroll-fade delay-2 rounded-[2rem] border border-white/60 bg-white/85 p-8 lg:p-10 backdrop-blur-sm transition duration-500 hover:-translate-y-2 hover:shadow-2xl"
+        class="scroll-fade delay-2 rounded-[2rem] border border-white/60 bg-white/85 p-7 lg:p-8 backdrop-blur-sm transition duration-500 hover:-translate-y-2 hover:shadow-2xl"
       >
 
-        <p class="text-xs tracking-[0.35em] text-neutral-500">
+        <p class="text-base tracking-[0.35em] text-neutral-500">
           ⋆﻿˙𝓫𝓾𝓲𝓵𝓭𝓲𝓷𝓰˙⋆﻿
         </p>
 
         <h2
-          class="mt-4 text-3xl"
+          class="mt-4 text-2xl"
           style="font-family:'Cormorant Garamond',serif;"
         >
           制作ジャンル
         </h2>
 
         <p
-          class="mt-6 leading-8 text-neutral-700"
+          class="mt-6 text-base leading-8 text-neutral-700"
           style="font-family:'Shippori Mincho',serif;"
         >
 
@@ -197,34 +214,37 @@ import Layout from "../../layouts/Layout.astro";
       </article>
 
       <!-- LINK -->
+
       <article
-        class="scroll-fade delay-3 rounded-[2rem] border border-white/60 bg-white/85 p-8 lg:p-10 backdrop-blur-sm transition duration-500 hover:-translate-y-2 hover:shadow-2xl"
+        class="scroll-fade delay-3 rounded-[2rem] border border-white/60 bg-white/85 p-7 lg:p-8 backdrop-blur-sm transition duration-500 hover:-translate-y-2 hover:shadow-2xl"
       >
 
-        <p class="text-xs tracking-[0.35em] text-neutral-500">
+        <p class="text-base tracking-[0.35em] text-neutral-500">
           ⋆﻿˙𝓵𝓲𝓷𝓴˙⋆﻿
         </p>
 
         <h2
-          class="mt-4 text-3xl"
+          class="mt-4 text-2xl"
           style="font-family:'Cormorant Garamond',serif;"
         >
           SNS
         </h2>
 
         <div
-          class="mt-6 space-y-6 text-neutral-700"
+          class="mt-6 space-y-6 text-base text-neutral-700"
           style="font-family:'Shippori Mincho',serif;"
         >
 
           <div>
-            <p class="mt-2 text-sm leading-7">
+
+            <p class="mt-2 text-base leading-7">
               制作風景や建築写真、<br>
               Minecraft作品の公開や日々の活動を発信しています。
             </p>
+
           </div>
 
-          <div class="pt-6 border-t border-neutral-300 text-sm break-all space-y-3">
+          <div class="pt-6 border-t border-neutral-300 text-base break-all space-y-3">
 
             <a
               href="https://www.youtube.com/@MikuNiki5471"
@@ -234,7 +254,7 @@ import Layout from "../../layouts/Layout.astro";
             >
               ♦️
               <span class="text-neutral-500">
-                youtube.com/@NISHIKINO_Official
+                YouTube（@NISHIKINO_Official）
               </span>
             </a>
 
@@ -246,7 +266,7 @@ import Layout from "../../layouts/Layout.astro";
             >
               🐦
               <span class="text-neutral-500">
-                x.com/MikuNiki5471
+                X（MikuNiki5471）
               </span>
             </a>
 
@@ -258,7 +278,7 @@ import Layout from "../../layouts/Layout.astro";
             >
               🌏
               <span class="text-neutral-500">
-                planetminecraft.com/nishikinolab/
+                Planetminecraft（nishikinolab）
               </span>
             </a>
 
@@ -270,7 +290,7 @@ import Layout from "../../layouts/Layout.astro";
             >
               🎸
               <span class="text-neutral-500">
-                tiktok.com/@nishikino_official
+                TikTok（@nishikino_official）
               </span>
             </a>
 
@@ -282,7 +302,7 @@ import Layout from "../../layouts/Layout.astro";
             >
               📸
               <span class="text-neutral-500">
-                instagram.com/nishikinolab_official
+                Instagram（nishikinolab_official）
               </span>
             </a>
 
@@ -294,7 +314,7 @@ import Layout from "../../layouts/Layout.astro";
             >
               🎨
               <span class="text-neutral-500">
-                pixiv.net/users/72809287
+                Pixiv（users/72809287）
               </span>
             </a>
 
@@ -402,6 +422,210 @@ translateY(0)
 scale(1);
 
 }
+
+}
+
+
+:global(html) {
+  color-scheme: light;
+}
+
+:global(body) {
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+
+:global(#about) {
+  color-scheme: light;
+}
+
+
+section.relative.overflow-hidden.py-32 p.text-white {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* 世界観について */
+
+section.relative.overflow-hidden.py-32 h1 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* Introduction body */
+
+section.relative.overflow-hidden.py-32 > div > div > p {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+section.relative.py-32 article {
+  color-scheme: light;
+
+  background-color: rgba(255, 255, 255, 0.85) !important;
+
+  border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+
+/* Card headings */
+
+section.relative.py-32 article h2 {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+}
+
+
+/* Card category labels */
+
+section.relative.py-32 article > p:first-child {
+  color: #737373 !important;
+  -webkit-text-fill-color: #737373;
+}
+
+
+/* Card main text */
+
+section.relative.py-32 article > p:not(:first-child) {
+  color: #404040 !important;
+  -webkit-text-fill-color: #404040;
+}
+
+
+section.relative.py-32 article .text-neutral-700 {
+  color: #404040 !important;
+  -webkit-text-fill-color: #404040;
+}
+
+
+/* SNS introductory text */
+
+section.relative.py-32 article .text-neutral-700 p {
+  color: #404040 !important;
+  -webkit-text-fill-color: #404040;
+}
+
+
+/* SNS links */
+
+section.relative.py-32 article a {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+}
+
+
+/* SNS URL */
+
+section.relative.py-32 article a span.text-neutral-500 {
+  color: #737373 !important;
+  -webkit-text-fill-color: #737373;
+}
+
+
+/* SNS divider */
+
+section.relative.py-32 article .border-t {
+  border-color: #d4d4d4 !important;
+}
+
+
+
+section.relative.py-32 article {
+  forced-color-adjust: none;
+  -webkit-forced-color-adjust: none;
+}
+
+
+
+@media (max-width: 639px) {
+
+  /* Hero / About text */
+
+  section.relative.overflow-hidden.py-32 p.text-white,
+  section.relative.overflow-hidden.py-32 h1,
+  section.relative.overflow-hidden.py-32 > div > div > p {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* Cards */
+
+  section.relative.py-32 article {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    border-color: rgba(255, 255, 255, 0.6) !important;
+
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* Card labels */
+
+  section.relative.py-32 article > p:first-child {
+    color: #737373 !important;
+    -webkit-text-fill-color: #737373;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* Card headings */
+
+  section.relative.py-32 article h2 {
+    color: #171717 !important;
+    -webkit-text-fill-color: #171717;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* Card text */
+
+  section.relative.py-32 article > p:not(:first-child),
+  section.relative.py-32 article .text-neutral-700,
+  section.relative.py-32 article .text-neutral-700 p {
+    color: #404040 !important;
+    -webkit-text-fill-color: #404040;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* SNS links */
+
+  section.relative.py-32 article a {
+    color: #171717 !important;
+    -webkit-text-fill-color: #171717;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* SNS URL */
+
+  section.relative.py-32 article a span.text-neutral-500 {
+    color: #737373 !important;
+    -webkit-text-fill-color: #737373;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* SNS divider */
+
+  section.relative.py-32 article .border-t {
+    border-color: #d4d4d4 !important;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
 
 }
 

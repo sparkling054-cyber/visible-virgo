@@ -1,0 +1,940 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/common/Container.astro";
+---
+
+<Layout
+  title="広島県福山市 福山城天守｜錦乃｜WORKS"
+  description="錦乃によるMinecraft和風建築作品「福山城天守」。江戸時代初期に築かれた福山城の天守を、歴史資料や実物をもとに現代のデジタル空間へ復元したものです。"
+>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="relative h-[920px] overflow-hidden bg-[#f5f1ea]">
+
+  <!-- Background -->
+
+  <picture>
+
+    <!-- Smartphone -->
+    <source
+      media="(max-width: 768px)"
+      srcset="/images/fukuyamacastle-mobile.jpg"
+    />
+
+    <!-- PC -->
+    <img
+      src="/images/fukuyama2.jpg"
+      alt="福山城天守"
+      class="work-hero absolute inset-0 h-full w-full object-cover pointer-events-none select-none"
+      draggable="false"
+    />
+
+  </picture>
+
+
+  <!-- Content -->
+  <div class="absolute inset-0 z-20 flex items-center">
+
+    <Container>
+
+      <div class="hero-content max-w-3xl">
+
+        <!-- English -->
+        <p
+          class="mt-10 text-base tracking-[0.45em] text-[#f6e8c8]"
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          FUKUYAMA CASTLE MAIN TOWER
+        </p>
+
+        <!-- Title -->
+        <h1
+          class="mt-1 text-[48px] leading-[1.15] text-[#ffffff]"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          福山城天守
+        </h1>
+
+        <!-- Subtitle -->
+        <p
+          class="mt-6 text-xl text-[#ffffff]"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          備後に聳える、江戸期最後の大城郭。
+        </p>
+
+        <!-- Gold Divider -->
+        <div class="mt-1">
+          <img
+            src="/images/gold-divider.png"
+            alt=""
+            class="w-[420px] h-auto select-none pointer-events-none"
+            draggable="false"
+          />
+        </div>
+
+        <!-- Summary -->
+        <div class="mt-14 max-w-2xl">
+        </div>
+
+      </div>
+
+    </Container>
+
+  </div>
+
+  <!-- Scroll -->
+  <div class="absolute bottom-16 right-12 z-30 flex flex-col items-center">
+
+    <div class="h-20 w-px bg-white/70"></div>
+
+    <span class="mt-4 text-base tracking-[0.45em] text-white">
+      SCROLL
+    </span>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTRODUCTION
+========================================================= -->
+
+<section class="relative bg-[#f8f6f2] overflow-hidden works-detail">
+
+  <!-- Washi Background -->
+  <img
+    src="/images/washi-bg.png"
+    alt=""
+    class="absolute right-0 top-0 h-full w-full opacity-[0.3] pointer-events-none select-none -z-0"
+  />
+
+  <Container class="py-32 relative z-10">
+
+    <!-- =====================================================
+         OVERVIEW
+    ====================================================== -->
+
+    <div class="mx-auto max-w-6xl">
+
+      <div class="flex items-center gap-6">
+
+        <span class="h-px w-24 bg-[#caa14d]"></span>
+
+        <p
+          class="text-base tracking-[0.45em] text-[#9a8358]"
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          OVERVIEW
+        </p>
+
+      </div>
+
+      <h2
+        class="mt-8 text-3xl text-[#2b2724]"
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        作品概要
+      </h2>
+
+      <p
+        class="mt-10 max-w-4xl text-base leading-10 text-[#55504a]"
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        広島県福山市に築かれた近世城郭・福山城は、<br>
+        西国支配の要として徳川幕府が築いた近世城郭であり、<br>
+        江戸時代を通して城下町とともに繁栄しました。<br>
+        元和8年（1622年）、初代福山藩主・水野勝成によって築城が開始され、翌元和9年（1623年）に完成。<br>
+        北面を鉄板で覆った全国でも極めて珍しい天守を備え、西日本有数の近世城郭として知られています。
+      </p>
+
+    </div>
+
+
+    <div class="mx-auto mt-20 max-w-6xl"></div>
+
+
+    <!-- =====================================================
+         INFORMATION
+    ====================================================== -->
+
+    <div class="mx-auto mt-24 grid max-w-6xl gap-16 lg:grid-cols-[1fr_360px]">
+
+      <!-- Left -->
+
+      <div>
+
+        <div class="flex items-center gap-5">
+
+          <span class="h-px w-20 bg-[#caa14d]"></span>
+
+          <p
+            class="text-base tracking-[0.4em] text-[#9a8358]"
+            style="font-family:'Cormorant Garamond',serif;"
+          >
+            HISTORY
+          </p>
+
+        </div>
+
+        <h2
+          class="mt-8 text-3xl text-[#2b2724]"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          福山城・天守について
+        </h2>
+
+        <p
+          class="mt-10 text-base leading-10 text-[#4f4944]"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+
+          福山城天守は、元和5年（1619年）に備後10万石へ入封した水野勝成によって築城が進められ、
+          元和8年（1622年）に完成した福山城の象徴です。お城自体は徳川江戸幕府による西国支配・防衛の重要拠点として整備された近世城郭であり、江戸時代最後期に築かれた完成度の高い城郭として評価されています。
+
+          <br><br>
+
+          天守閣は五重六階・地下一階の複合式層塔型天守で、
+          北側全面に鉄板を張る全国的にも珍しい構造を備えていたことが最大の特徴です。
+          また、天守の近くにある伏見櫓は京都・伏見城の「松の丸東櫓」を徳川秀忠の命によって移築した現存遺構であり、
+          白壁三層の優美な姿には桃山時代の建築様式を今に伝えています。
+
+          <br><br>
+
+          福山藩は水野家五代、松平家一代、阿部家十代へと受け継がれ、
+          明治維新まで福山城は城下町の藩政の中心として機能しました。
+          しかし、明治6年(1873年)の廃城令により御殿や蔵など多くの建物が失われます。
+          さらに昭和20年(1945年)の福山大空襲では、
+          国宝に指定されていた天守と御湯殿さえ焼失してしまったのです。
+
+          <br><br>
+
+          その後、昭和41年（1966年）に福山市市制50周年事業として天守・御湯殿・月見櫓が復元され、
+          2022年には築城400年を記念した大規模改修により、
+          福山城を象徴する北側鉄板張りの外観も復元されました。
+
+          <br><br>
+
+          本作品では、2022年改修後の天守を制作対象とし、
+          今もなおみられる最新の姿をマイクラ和風建築として立体化しました。
+          内装は戦前まで現存していたものを模型や設計図の考証などから復元。
+          柱の各構造に加え屋根裏に至るまで精巧な再現と復元を完遂することができました。
+
+        </p>
+
+      </div>
+
+
+      <!-- DATA -->
+
+      <aside class="relative">
+
+        <div
+          class="rounded-[2rem] border border-[#e2d8cb] bg-[#fffdfa] p-10 shadow-[0_20px_60px_rgba(0,0,0,.07)]"
+        >
+
+          <p
+            class="text-base tracking-[0.4em] text-[#a68b64]"
+            style="font-family:'Cormorant Garamond',serif;"
+          >
+            DATA
+          </p>
+
+          <div class="mt-10 space-y-8">
+
+            <div>
+              <p class="text-base text-[#8c8378]">作品名</p>
+              <p class="text-base">福山城天守</p>
+            </div>
+
+            <div>
+              <p class="text-base text-[#8c8378]">分類</p>
+              <p class="text-base">和風城郭・天守</p>
+            </div>
+
+            <div>
+              <p class="text-base text-[#8c8378]">建築時期</p>
+              <p class="text-base">江戸時代初期</p>
+            </div>
+
+            <div>
+              <p class="text-base text-[#8c8378]">所在地</p>
+              <p class="text-base">
+                〒720-0061 広島県福山市丸之内一丁目8番
+              </p>
+            </div>
+
+            <div>
+              <p class="text-base text-[#8c8378]">築城年</p>
+              <p class="text-base">元和8年（1622年）</p>
+            </div>
+
+            <div>
+              <p class="text-base text-[#8c8378]">築城主</p>
+              <p class="text-base">水野勝成</p>
+            </div>
+
+            <div>
+              <p class="text-base text-[#8c8378]">形式</p>
+              <p class="text-base">複合式層塔型天守</p>
+            </div>
+
+            <div>
+              <p class="text-base text-[#8c8378]">制作ソフト</p>
+              <p class="text-base">Minecraft Java Edition</p>
+            </div>
+
+            <div>
+              <p class="text-base text-[#8c8378]">作品区分</p>
+              <p class="text-base">和風建築復元・再現</p>
+            </div>
+
+            <div>
+              <p class="text-base text-[#8c8378]">制作状況</p>
+              <p class="text-base">完成</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+
+    <!-- =====================================================
+         GALLERY
+    ====================================================== -->
+
+    <div class="mx-auto mt-32 max-w-6xl">
+
+      <div class="flex items-center gap-5">
+
+        <span class="h-px w-20 bg-[#caa14d]"></span>
+
+        <p
+          class="text-base tracking-[0.45em] text-[#a58c65]"
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          GALLERY
+        </p>
+
+      </div>
+
+      <h2
+        class="mt-6 text-4xl"
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        展示写真
+      </h2>
+
+      <div class="gallery mt-12">
+
+        <div class="gallery-frame">
+          <img
+            src="/images/fukuyama4.jpg"
+            alt="福山城天守"
+          />
+        </div>
+
+        <div class="gallery-frame">
+          <img
+            src="/images/fukuyama1.jpg"
+            alt="福山城天守"
+          />
+        </div>
+
+        <div class="gallery-frame">
+          <img
+            src="/images/fukuyama2.jpg"
+            alt="福山城天守"
+          />
+        </div>
+
+        <div class="gallery-frame">
+          <img
+            src="/images/fukuyama3.jpg"
+            alt="福山城天守"
+          />
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         BACK / LINKS
+    ====================================================== -->
+
+    <div class="mt-24 flex flex-wrap gap-4">
+
+      <a
+        href="/works/"
+        class="inline-flex rounded-full border border-[#d7c8b3] bg-white px-8 py-4 text-base transition hover:bg-[#2b2724] hover:text-white"
+      >
+        ← 作品一覧へ戻る
+      </a>
+
+      <a
+        href="https://youtube.com/shorts/_70qfq3ZFxc"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex rounded-full border border-[#d7c8b3] bg-white px-8 py-4 text-base transition hover:bg-[#2b2724] hover:text-white"
+      >
+        もっと作品を見る →
+      </a>
+
+    </div>
+
+
+    <!-- =====================================================
+         SHARE
+    ====================================================== -->
+
+    <div class="mt-32 text-center">
+
+      <div class="flex items-center justify-center gap-5">
+
+        <span class="h-px w-16 bg-[#caa14d]"></span>
+
+        <p
+          class="text-base tracking-[0.45em] text-[#a58c65]"
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          SHARE
+        </p>
+
+        <span class="h-px w-16 bg-[#caa14d]"></span>
+
+      </div>
+
+      <h2
+        class="mt-6 text-3xl text-[#2b2724]"
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        作品をシェア
+      </h2>
+
+      <div class="mt-8 flex justify-center gap-4 flex-wrap">
+
+        <!-- X -->
+        <a
+          href="https://x.com/intent/post?text=%E9%8C%A6%E4%B9%83%E3%80%8C%E7%A6%8F%E5%B1%B1%E5%9F%8E%E5%A4%A9%E5%AE%88%E3%80%8D%20%7C%20WORKS&url=https%3A%2F%2Fwww.nishikinolab.net%2Ffukuyamacastle%2F"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-base hover:bg-[#2b2724] hover:text-white"
+        >
+          X
+        </a>
+
+        <!-- Instagram -->
+        <button
+          type="button"
+          id="instagram-share"
+          class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-base hover:bg-[#2b2724] hover:text-white"
+        >
+          Instagram
+        </button>
+
+        <!-- Copy -->
+        <button
+          type="button"
+          id="copy-url"
+          class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-base hover:bg-[#2b2724] hover:text-white"
+        >
+          URLをコピー
+        </button>
+
+      </div>
+
+    </div>
+
+  </Container>
+
+</section>
+
+
+<!-- =========================================================
+     SHARE SCRIPT
+========================================================= -->
+
+<script>
+
+  const pageUrl =
+    "https://www.nishikinolab.net/fukuyamacastle/";
+
+  const copyButton =
+    document.getElementById("copy-url");
+
+  const instagramButton =
+    document.getElementById("instagram-share");
+
+
+  /* =========================================================
+     COPY URL
+  ========================================================== */
+
+  copyButton?.addEventListener("click", async () => {
+
+    try {
+
+      await navigator.clipboard.writeText(pageUrl);
+
+      if (copyButton) {
+
+        copyButton.textContent = "コピーしました";
+
+        setTimeout(() => {
+
+          copyButton.textContent = "URLをコピー";
+
+        }, 2000);
+
+      }
+
+    } catch (error) {
+
+      console.error(error);
+
+    }
+
+  });
+
+
+  /* =========================================================
+     INSTAGRAM SHARE
+  ========================================================== */
+
+  instagramButton?.addEventListener("click", () => {
+
+    const dialog =
+      document.createElement("div");
+
+
+    dialog.innerHTML = `
+
+      <div
+        id="instagram-share-overlay"
+        style="
+          position:fixed;
+          inset:0;
+          z-index:9999;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          padding:24px;
+          background:rgba(43,39,36,.55);
+          backdrop-filter:blur(6px);
+        "
+      >
+
+        <div
+          style="
+            width:100%;
+            max-width:420px;
+            padding:36px;
+            border:1px solid #e2d8cb;
+            border-radius:28px;
+            background:#fffdfa;
+            box-shadow:0 20px 60px rgba(0,0,0,.18);
+            text-align:center;
+          "
+        >
+
+          <p
+            style="
+              margin:0;
+              font-family:'Cormorant Garamond',serif;
+              font-size:14px;
+              letter-spacing:.35em;
+              color:#a58c65;
+            "
+          >
+            SHARE
+          </p>
+
+
+          <h3
+            style="
+              margin:14px 0 0;
+              font-family:'Shippori Mincho',serif;
+              font-size:24px;
+              color:#2b2724;
+              font-weight:400;
+            "
+          >
+            Instagramでシェア
+          </h3>
+
+
+          <p
+            style="
+              margin:20px 0 0;
+              font-family:'Shippori Mincho',serif;
+              font-size:14px;
+              line-height:2;
+              color:#625a52;
+            "
+          >
+            この作品ページのURLをコピーして<br>
+            Instagramを開きます。
+          </p>
+
+
+          <button
+            id="instagram-open"
+            type="button"
+            style="
+              width:100%;
+              margin-top:28px;
+              padding:14px 20px;
+              border:1px solid #d7c8b3;
+              border-radius:999px;
+              background:#2b2724;
+              color:#fff;
+              font-family:'Shippori Mincho',serif;
+              font-size:15px;
+              cursor:pointer;
+            "
+          >
+            URLをコピーしてInstagramを開く
+          </button>
+
+
+          <button
+            id="instagram-cancel"
+            type="button"
+            style="
+              width:100%;
+              margin-top:10px;
+              padding:12px 20px;
+              border:0;
+              background:transparent;
+              color:#8c8378;
+              font-family:'Shippori Mincho',serif;
+              font-size:14px;
+              cursor:pointer;
+            "
+          >
+            キャンセル
+          </button>
+
+        </div>
+
+      </div>
+
+    `;
+
+
+    document.body.appendChild(dialog);
+
+
+    const overlay =
+      document.getElementById(
+        "instagram-share-overlay"
+      );
+
+    const openButton =
+      document.getElementById(
+        "instagram-open"
+      );
+
+    const cancelButton =
+      document.getElementById(
+        "instagram-cancel"
+      );
+
+
+    openButton?.addEventListener(
+      "click",
+      async () => {
+
+        try {
+
+          await navigator.clipboard.writeText(
+            pageUrl
+          );
+
+        } catch (error) {
+
+          console.error(error);
+
+        }
+
+
+        window.open(
+          "https://www.instagram.com/",
+          "_blank",
+          "noopener,noreferrer"
+        );
+
+
+        overlay?.remove();
+
+      }
+    );
+
+
+    cancelButton?.addEventListener(
+      "click",
+      () => {
+
+        overlay?.remove();
+
+      }
+    );
+
+
+    overlay?.addEventListener(
+      "click",
+      (event) => {
+
+        if (event.target === overlay) {
+
+          overlay.remove();
+
+        }
+
+      }
+    );
+
+  });
+
+</script>
+
+
+<!-- =========================================================
+     STYLE
+========================================================= -->
+
+<style>
+
+.work-hero {
+
+  animation:
+    heroFloat 12s ease-in-out infinite;
+
+  transform-origin:
+    center;
+
+}
+
+
+@keyframes heroFloat {
+
+  0% {
+
+    transform:
+      scale(1.03)
+      translateY(0);
+
+  }
+
+  50% {
+
+    transform:
+      scale(1.06)
+      translateY(-18px);
+
+  }
+
+  100% {
+
+    transform:
+      scale(1.03)
+      translateY(0);
+
+  }
+
+}
+
+
+section {
+
+  position:
+    relative;
+
+}
+
+
+section::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left:
+    0;
+
+  top:
+    0;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  pointer-events:
+    none;
+
+  background-image:
+
+    radial-gradient(
+      circle at 8% 10%,
+      rgba(205,175,98,.08),
+      transparent 18%
+    ),
+
+    radial-gradient(
+      circle at 92% 82%,
+      rgba(205,175,98,.06),
+      transparent 22%
+    );
+
+}
+
+
+aside {
+
+  position:
+    sticky;
+
+  top:
+    120px;
+
+  height:
+    max-content;
+
+}
+
+
+a {
+
+  transition:
+    .35s;
+
+}
+
+
+/* =========================================================
+   GALLERY GRADIENT FRAME
+   江戸城完成形と同じ写真ごとのグラデーション縁取り
+========================================================= */
+
+
+
+.gallery-frame {
+
+  position:
+    relative;
+
+  padding:
+    2px;
+
+  border-radius:
+    1.25rem;
+
+  background:
+
+    linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(253, 164, 175, 0.65) 25%,
+      rgba(252, 211, 77, 0.65) 50%,
+      rgba(125, 211, 252, 0.65) 75%,
+      transparent 100%
+    );
+
+  overflow:
+    hidden;
+
+}
+
+
+.gallery-frame img {
+
+  display:
+    block;
+
+  width:
+    100%;
+
+  height:
+    auto;
+
+  border-radius:
+    calc(1.25rem - 2px);
+
+  background:
+    #f8f6f2;
+
+}
+
+
+.gallery-frame:hover {
+
+  background:
+
+    linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(253, 164, 175, 0.9) 25%,
+      rgba(252, 211, 77, 0.9) 50%,
+      rgba(125, 211, 252, 0.9) 75%,
+      transparent 100%
+    );
+
+}
+
+
+@media (max-width:1100px) {
+
+  section {
+
+    overflow:
+      hidden;
+
+  }
+
+}
+
+
+
+@media (max-width:768px) {
+
+  section:first-child {
+
+    height:
+      760px;
+
+  }
+
+  .gallery-frame {
+
+    border-radius:
+      1rem;
+
+  }
+
+  .gallery-frame img {
+
+    border-radius:
+      calc(1rem - 2px);
+
+  }
+
+}
+
+
+</style>
+
+</Layout>

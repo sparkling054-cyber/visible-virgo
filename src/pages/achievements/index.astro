@@ -9,11 +9,14 @@ import Layout from "../../layouts/Layout.astro";
 
 <section class="bg-[#faf8f3] min-h-screen">
 
-  <!-- =========================================================
-       HERO
-  ========================================================== -->
 
-  <section class="relative h-[820px] overflow-hidden">
+<section class="relative h-[820px] overflow-hidden">
+
+  <picture>
+    <source
+      media="(max-width: 639px)"
+      srcset="/images/achievements-bg-mobile.jpg"
+    />
 
     <img
       src="/images/achievements-bg.jpg"
@@ -21,14 +24,11 @@ import Layout from "../../layouts/Layout.astro";
       class="achievement-hero-bg absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
       draggable="false"
     />
+  </picture>
 
-  </section>
+</section>
 
 
-  <!-- =========================================================
-       ACHIEVEMENTS CONTENT
-       wash-bg1.png をこのページ全体の背景として統合
-  ========================================================== -->
 
   <div class="relative overflow-hidden">
 
@@ -42,9 +42,6 @@ import Layout from "../../layouts/Layout.astro";
     />
 
 
-    <!-- =========================================================
-         INTRODUCTION
-    ========================================================== -->
 
     <section
       class="
@@ -117,9 +114,6 @@ import Layout from "../../layouts/Layout.astro";
     </section>
 
 
-    <!-- =========================================================
-         ACHIEVEMENT LIST
-    ========================================================== -->
 
     <section
       class="
@@ -155,9 +149,6 @@ import Layout from "../../layouts/Layout.astro";
         >
 
 
-          <!-- =================================================
-               CARD 01
-          ================================================== -->
 
           <article
             class="
@@ -304,9 +295,6 @@ import Layout from "../../layouts/Layout.astro";
           </article>
 
 
-          <!-- =================================================
-               CARD 02
-          ================================================== -->
 
           <article
             class="
@@ -459,10 +447,6 @@ import Layout from "../../layouts/Layout.astro";
 
           </article>
 
-
-          <!-- ===============
-               CARD 03
-          ==================== -->
 
           <article
             class="
@@ -627,10 +611,6 @@ import Layout from "../../layouts/Layout.astro";
     </section>
 
 
-    <!-- ===============
-         BOTTOM
-    ========== -->
-
     <section
       class="
         relative
@@ -733,11 +713,8 @@ import Layout from "../../layouts/Layout.astro";
   margin: 0 auto !important;
 }
 
-/* =========================================================
-   DISPLAY COLOR PROTECTION
-   PCとスマホ実機で同じ表示を維持
-   ※サイズ・レイアウトは変更しない
-========================================================= */
+<style>
+
 
 :global(html) {
   color-scheme: light;
@@ -749,102 +726,124 @@ import Layout from "../../layouts/Layout.astro";
 }
 
 
-/* =========================================================
-   ACHIEVEMENTS PAGE
-========================================================= */
 
 section.bg-\[\#faf8f3\] {
   color-scheme: light;
 }
 
 
-/* =========================================================
-   INTRODUCTION
-========================================================= */
 
-section.bg-\[\#faf8f3\] > section:nth-child(2) {
-  color-scheme: light;
-}
+/* ACHIEVEMENTS */
 
-section.bg-\[\#faf8f3\] > section:nth-child(2) h1 {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff;
-}
-
-section.bg-\[\#faf8f3\] > section:nth-child(2) > div > p:first-child {
+section.relative.overflow-hidden.py-14 p.text-rose-500\/80 {
   color: rgba(244, 63, 94, 0.8) !important;
   -webkit-text-fill-color: rgba(244, 63, 94, 0.8);
 }
 
-section.bg-\[\#faf8f3\] > section:nth-child(2) > div > p:last-child {
+
+/* 歩んできた軌跡 */
+
+section.relative.overflow-hidden.py-14 h1 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* Introduction body */
+
+section.relative.overflow-hidden.py-14 > div > p {
   color: rgba(255, 255, 255, 0.9) !important;
   -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
 }
 
 
-/* =========================================================
-   ACHIEVEMENT CARDS
-========================================================= */
 
-.achievement-media + div {
+article {
   color-scheme: light;
+
+  background-color: rgba(255, 255, 255, 0.9) !important;
+
+  border-color: rgba(255, 255, 255, 0.6) !important;
+
+  forced-color-adjust: none;
+  -webkit-forced-color-adjust: none;
 }
 
 
-/* Card itself */
 
-.achievement-media + div {
+.achievement-media {
+  color-scheme: light;
+
+  background-color: #ffffff;
+
+  forced-color-adjust: none;
+  -webkit-forced-color-adjust: none;
+}
+
+
+/* YouTube */
+
+.achievement-media iframe {
   background-color: #ffffff;
 }
 
 
-/* =========================================================
-   CARD DATE
-========================================================= */
+/* X */
 
-.achievement-media + div > p:first-child {
+.achievement-media:has(.twitter-tweet) {
+  background-color: #ffffff !important;
+}
+
+
+
+article p.text-neutral-500 {
   color: #737373 !important;
   -webkit-text-fill-color: #737373;
 }
 
 
-/* =========================================================
-   CARD TITLE
-========================================================= */
 
-.achievement-media + div h2 {
+article h2 {
   color: #171717 !important;
   -webkit-text-fill-color: #171717;
 }
 
 
-/* =========================================================
-   CARD SUBTITLE
-========================================================= */
 
-.achievement-media + div h2 + p {
+article > div > p.text-xs {
   color: #737373 !important;
   -webkit-text-fill-color: #737373;
 }
 
 
-/* =========================================================
-   DETAILS
-========================================================= */
 
 .achievement-details {
-  color: #171717;
+  color-scheme: light;
+
+  forced-color-adjust: none;
+  -webkit-forced-color-adjust: none;
 }
+
+
+/* 続きを読む */
 
 .achievement-details summary {
   color: #171717 !important;
   -webkit-text-fill-color: #171717;
+
+  cursor: pointer;
 }
+
+
+/* 詳細本文 */
 
 .achievement-details > div {
   color: #404040 !important;
   -webkit-text-fill-color: #404040;
 }
+
+
+/* strong */
 
 .achievement-details strong {
   color: #171717 !important;
@@ -852,46 +851,44 @@ section.bg-\[\#faf8f3\] > section:nth-child(2) > div > p:last-child {
 }
 
 
-/* =========================================================
-   CARD BUTTONS
-========================================================= */
 
-.achievement-media + div a {
-  color: #262626 !important;
-  -webkit-text-fill-color: #262626;
-
-  background-color: transparent !important;
+article a {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
 
   border-color: #d4d4d4 !important;
+
+  forced-color-adjust: none;
+  -webkit-forced-color-adjust: none;
 }
 
-.achievement-media + div a:hover {
-  background-color: #171717 !important;
+
+/* Button hover */
+
+article a:hover {
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff;
+
+  background-color: #171717 !important;
 }
 
 
-/* =========================================================
-   BOTTOM / NEXT CHAPTER
-========================================================= */
 
-section.bg-\[\#faf8f3\] > div.relative > section:last-child {
+section.relative.mx-auto.max-w-7xl > div {
   color-scheme: light;
-}
 
-
-/* Bottom card */
-
-section.bg-\[\#faf8f3\] > div.relative > section:last-child > div {
   background-color: rgba(255, 255, 255, 0.85) !important;
+
   border-color: rgba(255, 255, 255, 0.6) !important;
+
+  forced-color-adjust: none;
+  -webkit-forced-color-adjust: none;
 }
 
 
 /* NEXT CHAPTER */
 
-section.bg-\[\#faf8f3\] > div.relative > section:last-child p:first-child {
+section.relative.mx-auto.max-w-7xl > div p.text-neutral-500 {
   color: #737373 !important;
   -webkit-text-fill-color: #737373;
 }
@@ -899,137 +896,237 @@ section.bg-\[\#faf8f3\] > div.relative > section:last-child p:first-child {
 
 /* Bottom heading */
 
-section.bg-\[\#faf8f3\] > div.relative > section:last-child h2 {
+section.relative.mx-auto.max-w-7xl > div h2 {
   color: #171717 !important;
   -webkit-text-fill-color: #171717;
 }
 
 
-/* Bottom description */
+/* Bottom text */
 
-section.bg-\[\#faf8f3\] > div.relative > section:last-child p:last-child {
+section.relative.mx-auto.max-w-7xl > div p.text-neutral-700 {
   color: #404040 !important;
   -webkit-text-fill-color: #404040;
 }
 
 
-/* =========================================================
-   CARD / BORDER COLOR PROTECTION
-========================================================= */
-
-.achievement-media + div {
-  forced-color-adjust: none;
-  -webkit-forced-color-adjust: none;
-}
-
-
-/* =========================================================
-   REAL SMARTPHONE
-   色だけをPC表示に固定
-   サイズ・配置は変更しない
-========================================================= */
 
 @media (max-width: 639px) {
 
-  .achievement-media + div,
-  .achievement-media + div p,
-  .achievement-media + div h2,
-  .achievement-media + div summary,
-  .achievement-media + div div,
-  .achievement-media + div strong,
-  .achievement-media + div a,
-  section.bg-\[\#faf8f3\] > section:nth-child(2) h1,
-  section.bg-\[\#faf8f3\] > section:nth-child(2) p,
-  section.bg-\[\#faf8f3\] > div.relative > section:last-child > div,
-  section.bg-\[\#faf8f3\] > div.relative > section:last-child p,
-  section.bg-\[\#faf8f3\] > div.relative > section:last-child h2 {
+
+  section.relative.overflow-hidden.py-14 p.text-rose-500\/80 {
+    color: rgba(244, 63, 94, 0.8) !important;
+    -webkit-text-fill-color: rgba(244, 63, 94, 0.8);
+
     forced-color-adjust: none;
     -webkit-forced-color-adjust: none;
   }
 
 
-  /* Card */
+  section.relative.overflow-hidden.py-14 h1 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
 
-  .achievement-media + div {
-    background-color: #ffffff !important;
-    border-color: transparent;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
   }
 
 
-  /* Date */
+  section.relative.overflow-hidden.py-14 > div > p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
 
-  .achievement-media + div > p:first-child {
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+
+  article {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+
+    border-color: rgba(255, 255, 255, 0.6) !important;
+
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  .achievement-media {
+    background-color: #ffffff !important;
+
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  .achievement-media iframe {
+    background-color: #ffffff !important;
+  }
+
+
+  .achievement-media:has(.twitter-tweet) {
+    background-color: #ffffff !important;
+
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+
+  article p.text-neutral-500 {
     color: #737373 !important;
     -webkit-text-fill-color: #737373;
+
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
   }
 
 
-  /* Title */
 
-  .achievement-media + div h2 {
+  article h2 {
     color: #171717 !important;
     -webkit-text-fill-color: #171717;
+
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
   }
 
 
-  /* Subtitle */
 
-  .achievement-media + div h2 + p {
+  article > div > p.text-xs {
     color: #737373 !important;
     -webkit-text-fill-color: #737373;
+
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
   }
 
 
-  /* Details */
+
+  .achievement-details {
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* 続きを読む */
 
   .achievement-details summary {
     color: #171717 !important;
     -webkit-text-fill-color: #171717;
+
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
   }
+
+
+  /* 詳細本文 */
 
   .achievement-details > div {
     color: #404040 !important;
     -webkit-text-fill-color: #404040;
+
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
   }
+
+
+  /* strong */
 
   .achievement-details strong {
     color: #171717 !important;
     -webkit-text-fill-color: #171717;
+
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
   }
 
 
-  /* Buttons */
 
-  .achievement-media + div a {
-    color: #262626 !important;
-    -webkit-text-fill-color: #262626;
-    background-color: transparent !important;
-    border-color: #d4d4d4 !important;
-  }
-
-
-  /* Bottom card */
-
-  section.bg-\[\#faf8f3\] > div.relative > section:last-child > div {
-    background-color: rgba(255, 255, 255, 0.85) !important;
-    border-color: rgba(255, 255, 255, 0.6) !important;
-  }
-
-  section.bg-\[\#faf8f3\] > div.relative > section:last-child p:first-child {
-    color: #737373 !important;
-    -webkit-text-fill-color: #737373;
-  }
-
-  section.bg-\[\#faf8f3\] > div.relative > section:last-child h2 {
+  article a {
     color: #171717 !important;
     -webkit-text-fill-color: #171717;
+
+    border-color: #d4d4d4 !important;
+
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
   }
 
-  section.bg-\[\#faf8f3\] > div.relative > section:last-child p:last-child {
+
+  article a:hover {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+
+    background-color: #171717 !important;
+  }
+
+
+
+  section.relative.mx-auto.max-w-7xl > div {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+
+    border-color: rgba(255, 255, 255, 0.6) !important;
+
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* NEXT CHAPTER */
+
+  section.relative.mx-auto.max-w-7xl > div p.text-neutral-500 {
+    color: #737373 !important;
+    -webkit-text-fill-color: #737373;
+
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* Bottom heading */
+
+  section.relative.mx-auto.max-w-7xl > div h2 {
+    color: #171717 !important;
+    -webkit-text-fill-color: #171717;
+
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* Bottom text */
+
+  section.relative.mx-auto.max-w-7xl > div p.text-neutral-700 {
     color: #404040 !important;
     -webkit-text-fill-color: #404040;
+
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
   }
 
+}
+
+
+
+.achievement-media iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+}
+
+
+.achievement-media:has(.twitter-tweet) {
+  aspect-ratio: auto;
+  overflow: visible;
+  background: #fff;
+}
+
+
+.achievement-media .twitter-tweet {
+  margin: 0 auto !important;
 }
 
 </style>

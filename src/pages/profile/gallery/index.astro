@@ -8,16 +8,12 @@ import Container from "../../../components/common/Container.astro";
   description="錦乃のキャラクタービジュアル、設定画、イラスト、ギャラリーを掲載。日本文化や歴史をテーマに活動するクリエイター錦乃の世界観やデザインをご覧いただけます。"
 >
 
-<!-- =========================================================
-     HERO
-========================================================== -->
-
 <section class="relative h-[920px] overflow-hidden bg-[#f5f1ea] gallery-hero">
 
   <!-- Background -->
 
   <img
-    src="/images/gallery-bg.png"
+    src="/images/about-bg-mobile.png"
     alt=""
     class="work-hero absolute inset-0 h-full w-full object-cover pointer-events-none select-none"
     draggable="false"
@@ -30,28 +26,6 @@ import Container from "../../../components/common/Container.astro";
     <Container>
 
       <div class="hero-content max-w-3xl">
-
-        <!-- Title -->
-
-        <h1
-          class="mt-1 text-[68px] leading-none text-[#FFFFFF]"
-          style="font-family:'Shippori Mincho',serif;"
-        >
-          にしきの / 錦乃
-        </h1>
-
-        <!-- Gold Divider -->
-
-        <div class="mt-1">
-
-          <img
-            src="/images/gold-divider.png"
-            alt=""
-            class="w-[420px] h-auto select-none pointer-events-none"
-            draggable="false"
-          />
-
-        </div>
 
         <!-- Summary -->
 
@@ -78,10 +52,6 @@ import Container from "../../../components/common/Container.astro";
 
 </section>
 
-
-<!-- =========================================================
-     INTRODUCTION / GALLERY
-========================================================== -->
 
 <section class="relative bg-[#f8f6f2] overflow-hidden works-detail">
 
@@ -156,6 +126,10 @@ import Container from "../../../components/common/Container.astro";
 
         <img
           src="/images/edb6eded-c0ea-4c8c-8185-8c5d74303269.png"
+          alt=""
+        >
+         <img
+          src="/images/gallery-bg.png"
           alt=""
         >
 
@@ -241,640 +215,115 @@ import Container from "../../../components/common/Container.astro";
 
 <style>
 
-.work-hero{
 
-  animation:heroFloat 12s ease-in-out infinite;
 
-  transform-origin:center;
+:global(html) {
+  color-scheme: light;
+}
 
+:global(body) {
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
 }
 
 
-@keyframes heroFloat{
 
-  0%{
-    transform:scale(1.03) translateY(0);
-  }
-
-  50%{
-    transform:scale(1.06) translateY(-18px);
-  }
-
-  100%{
-    transform:scale(1.03) translateY(0);
-  }
-
+:global(#profile) {
+  color-scheme: light;
 }
 
 
-.gallery{
-
-  display:grid;
-
-  grid-template-columns:repeat(2,minmax(0,1fr));
-
-  gap:1.5rem;
-
-}
-
-
-.gallery img{
-
-  display:block;
-
-  width:100%;
-
-  aspect-ratio:16/10;
-
-  object-fit:cover;
-
-  border-radius:1.25rem;
-
-  border:1px solid #ddd3c8;
-
-  background:#ece6dc;
-
-  transition:
-    transform .45s cubic-bezier(.22,1,.36,1),
-    box-shadow .45s;
-
-}
-
-
-.gallery img:hover{
-
-  transform:translateY(-8px) scale(1.02);
-
-  box-shadow:0 25px 60px rgba(0,0,0,.14);
-
-}
-
-
-section{
-
-  position:relative;
-
-}
-
-
-section::before{
-
-  content:"";
-
-  position:absolute;
-
-  left:0;
-
-  top:0;
-
-  width:100%;
-
-  height:100%;
-
-  pointer-events:none;
-
-  background-image:
-
-    radial-gradient(
-      circle at 8% 10%,
-      rgba(205,175,98,.08),
-      transparent 18%
-    ),
-
-    radial-gradient(
-      circle at 92% 82%,
-      rgba(205,175,98,.06),
-      transparent 22%
-    );
-
-}
-
-
-aside{
-
-  position:sticky;
-
-  top:120px;
-
-  height:max-content;
-
-}
-
-
-a{
-
-  transition:.35s;
-
-}
-
-
-@media(max-width:1100px){
-
-  section{
-
-    overflow:hidden;
-
-  }
-
-}
-
-
-@media(max-width:900px){
-
-  .gallery{
-
-    grid-template-columns:1fr;
-
-  }
-
-  aside{
-
-    position:relative;
-
-    top:auto;
-
-  }
-
-}
-
-
-@media(max-width:768px){
-
-  /* =========================================================
-     HERO
-     スマホではPC版とは別の構図にする
-  ========================================================== */
-
-  .gallery-hero{
-
-    height:680px;
-
-  }
-
-
-  .work-hero{
-
-    animation:none;
-
-    /*
-      gallery-bg.png は16:9前提のPC用構図から変更。
-      スマホでは画像を大きく見せ、
-      左右の切れ方と上下位置を個別に調整する。
-    */
-
-    width:auto;
-
-    min-width:100%;
-
-    height:100%;
-
-    max-width:none;
-
-    object-fit:cover;
-
-    object-position:62% center;
-
-    transform:scale(1.22);
-
-  }
-
-
-  .gallery-hero > div:nth-child(2){
-
-    align-items:flex-end;
-
-    padding-bottom:120px;
-
-  }
-
-
-  .hero-content{
-
-    width:100%;
-
-    max-width:none;
-
-    padding:0 20px;
-
-  }
-
-
-  /* =========================================================
-     HERO TITLE
-  ========================================================== */
-
-  .hero-content h1{
-
-    margin-top:0;
-
-    font-size:40px !important;
-
-    line-height:1.2;
-
-    letter-spacing:.02em;
-
-    white-space:nowrap;
-
-  }
-
-
-  /* =========================================================
-     GOLD DIVIDER
-  ========================================================== */
-
-  .hero-content img{
-
-    width:250px;
-
-    max-width:72vw;
-
-  }
-
-
-  .hero-content > div{
-
-    margin-top:10px;
-
-  }
-
-
-  /* =========================================================
-     SCROLL
-  ========================================================== */
-
-  .gallery-hero > div:last-child{
-
-    right:20px;
-
-    bottom:28px;
-
-  }
-
-
-  .gallery-hero > div:last-child > div{
-
-    height:52px;
-
-  }
-
-
-  .gallery-hero > div:last-child span{
-
-    margin-top:10px;
-
-    font-size:9px;
-
-    letter-spacing:.32em;
-
-  }
-
-
-  /* =========================================================
-     GALLERY CONTENT
-  ========================================================== */
-
-  .works-detail > div{
-
-    padding-top:72px;
-
-    padding-bottom:72px;
-
-  }
-
-
-  .works-detail .max-w-9xl{
-
-    padding-left:20px;
-
-    padding-right:20px;
-
-  }
-
-
-  /* =========================================================
-     GALLERY LABEL
-  ========================================================== */
-
-  .works-detail .flex.items-center.gap-5{
-
-    gap:12px;
-
-  }
-
-
-  .works-detail .flex.items-center.gap-5 span{
-
-    width:42px;
-
-    flex:none;
-
-  }
-
-
-  .works-detail .flex.items-center.gap-5 p{
-
-    font-size:11px;
-
-    letter-spacing:.32em;
-
-  }
-
-
-  /* =========================================================
-     GALLERY TITLE
-  ========================================================== */
-
-  .works-detail h2{
-
-    margin-top:18px;
-
-    font-size:28px !important;
-
-    line-height:1.45;
-
-    letter-spacing:.02em;
-
-  }
-
-
-  /* =========================================================
-     GALLERY IMAGES
-  ========================================================== */
-
-  .gallery{
-
-    grid-template-columns:1fr;
-
-    gap:18px;
-
-    margin-top:32px;
-
-  }
-
-
-  .gallery img{
-
-    aspect-ratio:16/10;
-
-    border-radius:1rem;
-
-  }
-
-
-  .gallery img:hover{
-
-    transform:none;
-
-    box-shadow:none;
-
-  }
-
-
-  /* =========================================================
-     BACK BUTTON
-  ========================================================== */
-
-  .works-detail .mt-24{
-
-    margin-top:56px;
-
-  }
-
-
-  .works-detail .mt-24 a{
-
-    width:100%;
-
-    justify-content:center;
-
-    padding:14px 20px;
-
-    font-size:13px;
-
-  }
-
-
-  /* =========================================================
-     SHARE
-  ========================================================== */
-
-  .works-detail .mt-32{
-
-    margin-top:80px;
-
-  }
-
-
-  .works-detail .mt-32 .flex.items-center{
-
-    gap:12px;
-
-  }
-
-
-  .works-detail .mt-32 .flex.items-center span{
-
-    width:38px;
-
-    flex:none;
-
-  }
-
-
-  .works-detail .mt-32 .flex.items-center p{
-
-    font-size:11px;
-
-    letter-spacing:.32em;
-
-  }
-
-
-  .works-detail .mt-32 h2{
-
-    margin-top:18px;
-
-    font-size:26px !important;
-
-  }
-
-
-  .works-detail .mt-32 .mt-8{
-
-    margin-top:24px;
-
-    gap:10px;
-
-  }
-
-
-  .works-detail .mt-32 .mt-8 a,
-  .works-detail .mt-32 .mt-8 button{
-
-    padding:11px 20px;
-
-    font-size:12px;
-
-  }
-
-}
-
-
-@media(max-width:480px){
-
-  /* =========================================================
-     HERO
-  ========================================================== */
-
-  .gallery-hero{
-
-    height:620px;
-
-  }
-
+@media (max-width: 639px) {
 
   /*
-    さらに縦長になるスマートフォンでは
-    gallery-bg.png の被写体を右寄りに配置。
-    PC版とは完全に異なる見せ方にする。
-  */
+   * ブラウザ・スマホ実機による自動文字サイズ調整を抑制
+   */
+  :global(html) {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
 
-  .work-hero{
-
-    width:auto;
-
-    height:100%;
-
-    min-width:130%;
-
-    object-position:68% center;
-
-    transform:scale(1.28);
-
+  :global(body) {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
 
-  .gallery-hero > div:nth-child(2){
 
-    padding-bottom:105px;
-
+  .gallery-hero h1 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
   }
 
 
-  .hero-content{
-
-    padding:0 18px;
-
+  .gallery-hero span {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
   }
 
 
-  .hero-content h1{
 
-    font-size:34px !important;
-
-    line-height:1.25;
-
+  .works-detail {
+    color-scheme: light;
   }
 
 
-  .hero-content img{
-
-    width:220px;
-
-    max-width:68vw;
-
+  .works-detail p,
+  .works-detail h2,
+  .works-detail a,
+  .works-detail button {
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
   }
 
 
-  .gallery-hero > div:last-child{
+  /* GALLERY / SHARE */
 
-    right:16px;
-
-    bottom:22px;
-
+  .works-detail p {
+    -webkit-text-fill-color: currentColor;
   }
 
 
-  .gallery-hero > div:last-child > div{
 
-    height:42px;
-
+  .works-detail .text-xs,
+  .works-detail .text-sm {
+    font-size: 1rem !important;
+    line-height: 1.75;
   }
 
 
-  /* =========================================================
-     CONTENT
-  ========================================================== */
 
-  .works-detail > div{
-
-    padding-top:60px;
-
-    padding-bottom:60px;
-
+  .works-detail a,
+  .works-detail button {
+    font-size: 1rem !important;
   }
 
 
-  .works-detail .max-w-9xl{
-
-    padding-left:18px;
-
-    padding-right:18px;
-
+  .works-detail > .relative p {
+    -webkit-text-fill-color: currentColor;
   }
 
 
-  .works-detail h2{
-
-    font-size:25px !important;
-
-    line-height:1.5;
-
+  .works-detail .text-\[\#a58c65\] {
+    color: #a58c65 !important;
+    -webkit-text-fill-color: #a58c65;
   }
 
 
-  .gallery{
-
-    margin-top:28px;
-
-    gap:14px;
-
+  .works-detail .text-\[\#2b2724\] {
+    color: #2b2724 !important;
+    -webkit-text-fill-color: #2b2724;
   }
 
 
-  .gallery img{
-
-    border-radius:.9rem;
-
-  }
-
-
-  .works-detail .mt-24{
-
-    margin-top:48px;
-
-  }
-
-
-  .works-detail .mt-32{
-
-    margin-top:68px;
-
-  }
-
-
-  .works-detail .mt-32 .mt-8{
-
-    gap:8px;
-
-  }
-
-
-  .works-detail .mt-32 .mt-8 a,
-  .works-detail .mt-32 .mt-8 button{
-
-    padding:10px 18px;
-
+  .works-detail a,
+  .works-detail button {
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
   }
 
 }
