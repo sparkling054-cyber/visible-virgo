@@ -928,35 +928,27 @@
 
   </div>
 
-
   <div
     class="
       media-embed-box
-      min-h-[280px]
+      min-h-[500px]
       overflow-hidden
       rounded-[1rem]
       bg-white
-      p-3
-      sm:min-h-[320px]
       sm:rounded-[1.25rem]
     "
   >
 
     <a
       class="twitter-timeline"
-      data-theme="light"
       data-height="500"
-      href="https://x.com/nishikinolab"
+      data-theme="light"
+      href="https://x.com/nishikinolab?ref_src=twsrc%5Etfw"
     >
       Posts by nishikinolab
     </a>
 
   </div>
-<script
-  async
-  src="https://platform.twitter.com/widgets.js"
-  charset="utf-8"
-></script>
 
 </article>
 
@@ -1924,6 +1916,12 @@
 
 </section>
 
+<script
+  is:inline
+  async
+  src="https://platform.x.com/widgets.js"
+  charset="utf-8"
+></script>
 
 <script
   async
@@ -2522,5 +2520,18 @@
 
 }
 
+.media-embed-box {
+  position: relative;
+  width: 100%;
+}
+
+.media-embed-box .twitter-timeline {
+  width: 100% !important;
+}
+
+.media-embed-box iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+}
 </style>
 
