@@ -149,62 +149,66 @@ import Container from "../../../components/common/Container.astro";
 
       </div>
 
+<!-- Share -->
 
-      <!-- Share -->
+<div class="mt-32 text-center">
 
-      <div class="mt-32 text-center">
+  <div class="flex items-center justify-center gap-5">
 
-        <div class="flex items-center justify-center gap-5">
+    <span class="h-px w-16 bg-[#caa14d]"></span>
 
-          <span class="h-px w-16 bg-[#caa14d]"></span>
+    <p
+      class="tracking-[0.45em] text-[#a58c65]"
+      style="font-family:'Cormorant Garamond',serif;"
+    >
+      SHARE
+    </p>
 
-          <p
-            class="tracking-[0.45em] text-[#a58c65]"
-            style="font-family:'Cormorant Garamond',serif;"
-          >
-            SHARE
-          </p>
+    <span class="h-px w-16 bg-[#caa14d]"></span>
 
-          <span class="h-px w-16 bg-[#caa14d]"></span>
-
-        </div>
-
-
-        <h2
-          class="mt-6 text-3xl text-[#2b2724]"
-          style="font-family:'Shippori Mincho',serif;"
-        >
-          シェア
-        </h2>
+  </div>
 
 
-        <div class="mt-8 flex justify-center gap-4 flex-wrap">
-
-          <a
-            href="#"
-            class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
-          >
-            X
-          </a>
+  <h2
+    class="mt-6 text-3xl text-[#2b2724]"
+    style="font-family:'Shippori Mincho',serif;"
+  >
+    シェア
+  </h2>
 
 
-          <a
-            href="#"
-            class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
-          >
-            Instagram
-          </a>
+  <div class="mt-8 flex justify-center gap-4 flex-wrap">
+
+    <a
+      href="https://x.com/intent/post?text=%E9%8C%A6%E4%B9%83%E3%80%8C%E3%82%AE%E3%83%A3%E3%83%A9%E3%83%AA%E3%83%BC%E3%80%8D%20%7C%20PROFILE&url=https%3A%2F%2Fwww.nishikinolab.net%2Fprofile%2Fgallery"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
+    >
+      X
+    </a>
 
 
-          <button
-            class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
-          >
-            URLをコピー
-          </button>
+    <button
+      type="button"
+      id="instagram-share"
+      class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
+    >
+      Instagram
+    </button>
 
-        </div>
 
-      </div>
+    <button
+      type="button"
+      id="copy-url"
+      class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
+    >
+      URLをコピー
+    </button>
+
+  </div>
+
+</div>
 
     </div>
 
@@ -327,6 +331,174 @@ import Container from "../../../components/common/Container.astro";
   }
 
 }
+
+<script>
+  const pageUrl = "https://www.nishikinolab.net/profile/gallery";
+
+  const copyButton = document.getElementById("copy-url");
+  const instagramButton = document.getElementById("instagram-share");
+
+  copyButton?.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(pageUrl);
+
+      if (copyButton) {
+        copyButton.textContent = "コピーしました";
+
+        setTimeout(() => {
+          copyButton.textContent = "URLをコピー";
+        }, 2000);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  });
+
+  instagramButton?.addEventListener("click", () => {
+
+    const dialog = document.createElement("div");
+
+    dialog.innerHTML = `
+      <div
+        id="instagram-share-overlay"
+        style="
+          position:fixed;
+          inset:0;
+          z-index:9999;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          padding:24px;
+          background:rgba(43,39,36,.55);
+          backdrop-filter:blur(6px);
+        "
+      >
+        <div
+          style="
+            width:100%;
+            max-width:420px;
+            padding:36px;
+            border:1px solid #e2d8cb;
+            border-radius:28px;
+            background:#fffdfa;
+            box-shadow:0 20px 60px rgba(0,0,0,.18);
+            text-align:center;
+          "
+        >
+
+          <p
+            style="
+              margin:0;
+              font-family:'Cormorant Garamond',serif;
+              font-size:14px;
+              letter-spacing:.35em;
+              color:#a58c65;
+            "
+          >
+            SHARE
+          </p>
+
+          <h3
+            style="
+              margin:14px 0 0;
+              font-family:'Shippori Mincho',serif;
+              font-size:24px;
+              color:#2b2724;
+              font-weight:400;
+            "
+          >
+            Instagramでシェア
+          </h3>
+
+          <p
+            style="
+              margin:20px 0 0;
+              font-family:'Shippori Mincho',serif;
+              font-size:14px;
+              line-height:2;
+              color:#625a52;
+            "
+          >
+            このギャラリーページのURLをコピーして<br>
+            Instagramを開きます。
+          </p>
+
+          <button
+            id="instagram-open"
+            type="button"
+            style="
+              width:100%;
+              margin-top:28px;
+              padding:14px 20px;
+              border:1px solid #d7c8b3;
+              border-radius:999px;
+              background:#2b2724;
+              color:#fff;
+              font-family:'Shippori Mincho',serif;
+              font-size:15px;
+              cursor:pointer;
+            "
+          >
+            URLをコピーしてInstagramを開く
+          </button>
+
+          <button
+            id="instagram-cancel"
+            type="button"
+            style="
+              width:100%;
+              margin-top:10px;
+              padding:12px 20px;
+              border:0;
+              background:transparent;
+              color:#8c8378;
+              font-family:'Shippori Mincho',serif;
+              font-size:14px;
+              cursor:pointer;
+            "
+          >
+            キャンセル
+          </button>
+
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(dialog);
+
+    const overlay = document.getElementById("instagram-share-overlay");
+    const openButton = document.getElementById("instagram-open");
+    const cancelButton = document.getElementById("instagram-cancel");
+
+    openButton?.addEventListener("click", async () => {
+
+      try {
+        await navigator.clipboard.writeText(pageUrl);
+      } catch (error) {
+        console.error(error);
+      }
+
+      window.open(
+        "https://www.instagram.com/",
+        "_blank",
+        "noopener,noreferrer"
+      );
+
+      overlay?.remove();
+    });
+
+    cancelButton?.addEventListener("click", () => {
+      overlay?.remove();
+    });
+
+    overlay?.addEventListener("click", (event) => {
+      if (event.target === overlay) {
+        overlay.remove();
+      }
+    });
+
+  });
+</script>
 
 </style>
 
