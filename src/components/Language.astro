@@ -261,9 +261,8 @@ document.addEventListener(
 
   display:block;
 
-  width:22px;
-
-  height:22px;
+  width:20px;
+  height:20px;
 
   object-fit:contain;
 
@@ -275,13 +274,21 @@ document.addEventListener(
 
 }
 
+@media (min-width:768px){
 
-.nishikino-language-button:hover
-.nishikino-language-icon{
+  .nishikino-language-icon{
+    width:24px;
+    height:24px;
+  }
 
-  transform:scale(1.1);
+}
 
-  opacity:1;
+@media (min-width:1024px){
+
+  .nishikino-language-icon{
+    width:28px;
+    height:28px;
+  }
 
 }
 
