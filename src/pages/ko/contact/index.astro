@@ -1,0 +1,1219 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const categories = [
+  {
+    title: "개인",
+    subtitle: "Creator",
+    text:
+      "YouTube·SNS·방송 활동 등을 하고 계신 크리에이터 여러분과의 교류와 협업을 진행합니다. 영상이나 방송에서의 출연 및 공동 출연, Minecraft를 통한 활동, SNS에서의 협업 등 장르를 가리지 않고 다양한 형태로 함께 활동할 수 있기를 바랍니다."
+  },
+  {
+    title: "기업",
+    subtitle: "Business",
+    text:
+      "광고·SNS·영상·이벤트·프로모션·콘텐츠 제작 등 기업에서 진행하고 계신 다양한 활동에 출연·협업·제작 협력 등의 형태로 참여합니다. 역사나 일본 문화에 관한 기획에 한정하지 않고, 게임·엔터테인먼트·여행·라이프스타일 등 폭넓은 분야에서 기획의 목적과 내용에 맞는 콘텐츠를 함께 만들어갈 수 있습니다. 이미 구체적인 기획이 있는 경우는 물론, 새로운 프로젝트를 검토하고 계신 단계부터도 내용에 따라 함께할 수 있습니다."
+  },
+  {
+    title: "지자체·문화기관",
+    subtitle: "Public",
+    text:
+      "관광·문화재의 유지와 계승·역사 이벤트·지역 활성화 등 일본의 전통문화와 건축물이 지닌 매력을 미래로 이어가는 활동을 비롯해, 디지털 콘텐츠를 활용한 문화 홍보와 교육 분야에서의 활용에 대해서도 상담하실 수 있습니다."
+  },
+  {
+    title: "자문·자료 제공",
+    subtitle: "Research",
+    text:
+      "성곽·어전·역사 건축물을 중심으로 자료 조사·고증·자문을 진행하고 있습니다. 방송·영상·게임·전시 등에서 역사 건축물을 표현하는 과정에서도 자료 제공이나 제작 협력이 가능합니다."
+  }
+];
+---
+
+<Layout
+  title="錦乃니시키노｜CONTACT｜협업·문의"
+  description="일본풍 건축물과 성곽, 신사와 사찰 등의 Minecraft 건축, 영상·사진·SNS 콘텐츠 제작, 크리에이터 협업, 기업·지자체·도시와의 프로젝트 등 다양한 문의를 받고 있습니다."
+>
+
+
+
+<section
+  class="
+    relative
+    overflow-hidden
+    h-[820px]
+    sm:h-[820px]
+    max-sm:min-h-screen
+  "
+>
+
+  <!-- PC / Tablet -->
+
+  <img
+    src="/images/contact-bg.png"
+    alt="다실 배경"
+    class="
+      contact-image
+      absolute inset-0
+      hidden sm:block
+      h-full w-full
+      object-cover
+      select-none
+      pointer-events-none
+    "
+    draggable="false"
+  />
+
+
+  <!-- Mobile -->
+
+  <img
+    src="/images/contact-m.png"
+    alt="다실 배경"
+    class="
+      contact-image
+      absolute inset-0
+      block sm:hidden
+      h-full w-full
+      object-cover
+      object-center
+      select-none
+      pointer-events-none
+    "
+    draggable="false"
+  />
+
+  <div class="absolute inset-0 bg-black/10"></div>
+
+
+  <!-- Scroll -->
+
+  <div
+    class="
+      absolute
+      bottom-16 right-12
+      z-20
+      flex flex-col items-center
+      max-sm:bottom-8
+      max-sm:right-6
+    "
+  >
+
+    <div class="h-20 w-px bg-white/70 max-sm:h-12"></div>
+
+    <span
+      class="
+        mt-4
+        text-[10px]
+        tracking-[0.45em]
+        text-white
+        max-sm:text-[9px]
+      "
+    >
+      SCROLL
+    </span>
+
+  </div>
+
+</section>
+
+
+
+<section
+  class="
+    bg-[#faf8f3]
+    py-24
+    sm:py-28
+    lg:py-32
+    max-sm:py-16
+  "
+>
+
+<div
+  class="
+    mx-auto
+    max-w-7xl
+    px-5
+    sm:px-8
+    lg:px-12
+  "
+>
+
+
+<div
+  class="
+    max-w-4xl
+  "
+>
+
+
+<p
+  class="
+    contact-reveal
+    mb-3
+    text-[10px]
+    tracking-[0.4em]
+    text-neutral-500
+    sm:text-xs
+  "
+>
+CONTACT
+</p>
+
+
+<h1
+  class="
+    contact-reveal
+    text-3xl
+    leading-tight
+    text-neutral-900
+    sm:text-4xl
+    lg:text-5xl
+  "
+  style="font-family:'Cormorant Garamond',serif;"
+>
+다실에 오신 것을 환영합니다.
+</h1>
+
+
+<p
+  class="
+    contact-reveal
+    mt-7
+    text-sm
+    leading-7
+    text-neutral-700
+    sm:mt-8
+    sm:text-base
+    sm:leading-8
+  "
+  style="font-family:'Shippori Mincho',serif;"
+>
+
+「이런 일, 함께 해볼 수 있을까요?」
+
+<br /><br />
+
+그런 한마디로 시작해도 괜찮습니다.
+
+<br />
+
+이제 막 활동을 시작한 분부터, 이미 많은 분들에게 알려진 크리에이터 여러분, 기업·미디어·지자체·도시, 단체·방송 관계자 여러분까지.
+
+<br class="hidden sm:block" />
+
+광고, SNS, 영상, 이벤트, 콘텐츠 등 현재 진행하고 계신 기획이나 활동에 관한 문의도 편하게 보내주세요.
+
+<br class="hidden sm:block" />
+
+역사 관련 분야를 비롯해 장르나 규모에 관계없이, 새로운 만남과 협업으로 이어질 수 있다면 기쁘겠습니다.
+
+</p>
+
+
+</div>
+
+
+
+<div
+class="
+  contact-reveal
+  mt-20
+  mb-12
+  sm:mt-24
+  sm:mb-14
+"
+>
+
+
+<p
+class="
+  text-[10px]
+  tracking-[0.35em]
+  text-neutral-500
+  sm:text-xs
+"
+>
+COLLABORATION
+</p>
+
+
+<h2
+class="
+  mt-3
+  text-2xl
+  text-neutral-900
+  sm:text-3xl
+  lg:text-4xl
+"
+style="font-family:'Cormorant Garamond',serif;"
+>
+상담하실 수 있는 내용
+</h2>
+
+
+<p
+  class="
+    mt-5
+    max-w-3xl
+    text-sm
+    leading-7
+    text-neutral-700
+    sm:mt-6
+    sm:text-base
+    sm:leading-8
+  "
+>
+내용이 아직 정해지지 않아도 괜찮습니다.
+
+「아직 구체적으로 정해진 것은 없지만, 뭔가 함께할 수 있을 것 같다」
+
+그런 단계에서부터도 편하게 이야기해 주세요.
+</p>
+
+
+</div>
+
+
+
+<div
+  class="
+    grid
+    gap-4
+    md:grid-cols-2
+    sm:gap-5
+    lg:gap-6
+    max-sm:grid-cols-2
+    max-sm:gap-3
+  "
+>
+
+{
+categories.map((item,index)=>(
+
+<article
+class="
+contact-reveal
+
+rounded-[1.25rem]
+border
+border-white/70
+bg-white/70
+
+p-5
+
+backdrop-blur-md
+transition
+duration-500
+
+hover:-translate-y-2
+hover:shadow-2xl
+
+sm:rounded-[1.5rem]
+sm:p-7
+
+lg:p-8
+
+max-sm:rounded-xl
+max-sm:p-4
+"
+style={`transition-delay:${index * 120}ms;`}
+>
+
+
+<p
+class="
+tracking-[0.3em]
+text-[9px]
+text-rose-400
+sm:text-[10px]
+"
+>
+{item.subtitle}
+</p>
+
+
+<h3
+class="
+mt-3
+text-xl
+text-neutral-900
+sm:mt-4
+sm:text-2xl
+lg:text-3xl
+
+max-sm:mt-2
+max-sm:text-base
+"
+style="font-family:'Cormorant Garamond',serif;"
+>
+{item.title}
+</h3>
+
+
+<p
+class="
+mt-4
+text-sm
+leading-7
+text-neutral-700
+
+sm:mt-5
+sm:text-sm
+sm:leading-7
+
+lg:text-base
+lg:leading-8
+
+max-sm:mt-3
+max-sm:text-[11px]
+max-sm:leading-5
+"
+style="font-family:'Shippori Mincho',serif;"
+>
+{item.text}
+</p>
+
+
+</article>
+
+))
+}
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<section
+class="
+bg-white
+py-24
+sm:py-28
+lg:py-32
+max-sm:py-14
+"
+>
+
+<div
+class="
+mx-auto
+max-w-6xl
+px-5
+sm:px-8
+"
+>
+
+
+<div
+class="
+contact-reveal
+text-center
+"
+>
+
+
+<p
+class="
+tracking-[0.3em]
+text-[10px]
+text-neutral-500
+sm:text-xs
+"
+>
+INVITATION
+</p>
+
+
+<h2
+class="
+mt-3
+text-2xl
+text-neutral-900
+sm:text-3xl
+lg:text-4xl
+"
+style="font-family:'Cormorant Garamond',serif;"
+>
+이런 이야기를 기다리고 있습니다.
+</h2>
+
+
+<p
+class="
+mx-auto
+mt-6
+max-w-3xl
+text-sm
+leading-7
+text-neutral-700
+sm:mt-7
+sm:text-base
+sm:leading-8
+"
+>
+작은 아이디어부터 큰 기획까지.
+
+「함께 만들어보고 싶다」
+
+그런 마음을 소중히 여기고 있습니다.
+</p>
+
+
+</div>
+
+
+
+<div
+class="
+mt-14
+grid
+gap-4
+md:grid-cols-2
+lg:grid-cols-3
+sm:mt-16
+sm:gap-5
+max-sm:mt-10
+max-sm:grid-cols-2
+max-sm:gap-3
+"
+>
+
+
+<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
+
+<h3 class="text-xl sm:text-2xl max-sm:text-sm">
+♦️ YouTube·방송
+</h3>
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:text-base sm:leading-8 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
+YouTube와 방송을 무대로 출연·공연·로케이션 촬영·게임 등을 통해 평소의 활동에 새로운 전개를 더합니다. Minecraft를 비롯해 실사와 디지털을 결합한 표현 등, 각자의 활동 방식과 세계관을 살린 콘텐츠를 함께 만들어갑니다.
+</p>
+
+</div>
+
+
+<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
+
+<h3 class="text-xl sm:text-2xl max-sm:text-sm">
+🤝 협업
+</h3>
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:text-base sm:leading-8 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
+장르나 활동 규모와 관계없이, 크리에이터끼리이기에 만들어낼 수 있는 교류와 함께하는 시간을 소중히 생각합니다. 영상·방송·SNS에서의 협업은 물론, 직접 만나 함께 놀고, 촬영하고, 만들어보는 활동을 통해 새로운 인연을 넓혀갈 수 있습니다.
+</p>
+
+</div>
+
+
+<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
+
+<h3 class="text-xl sm:text-2xl max-sm:text-sm">
+🏯 지역·문화
+</h3>
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:text-base sm:leading-8 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
+관광·문화재·역사 이벤트·지역 활성화 등 일본 문화의 매력을 다음 세대에 전하는 기획과 콘텐츠 제작, 디지털 기술을 활용한 문화 홍보에 관한 상담을 받고 있습니다.
+</p>
+
+</div>
+
+
+<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
+
+<h3 class="text-xl sm:text-2xl max-sm:text-sm">
+📺 미디어
+</h3>
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:text-base sm:leading-8 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
+TV·Web 미디어·잡지·영상을 비롯해 기업의 광고나 SNS, 프로모션 등에도 참여합니다. 역사나 일본 문화에 한정하지 않고, 상품·서비스·브랜드의 매력을 전달하는 콘텐츠에 출연하거나 협업하고 제작을 지원하는 등, 기존의 활동에 새로운 형태로 함께합니다.
+</p>
+
+</div>
+
+
+<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
+
+<h3 class="text-xl sm:text-2xl max-sm:text-sm">
+📷 사진·영상
+</h3>
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:text-base sm:leading-8 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
+사람·건물·풍경 등 실사로만 남길 수 있는 순간을 사진과 영상으로 기록합니다. SNS와 Web 콘텐츠, 프로모션 등 목적에 맞는 촬영과 콘텐츠 제작에도 참여합니다.
+</p>
+
+</div>
+
+
+<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
+
+<h3 class="text-xl sm:text-2xl max-sm:text-sm">
+✨ 기타
+</h3>
+
+<p class="mt-3 text-sm leading-7 text-neutral-700 sm:mt-4 sm:text-base sm:leading-8 max-sm:mt-2 max-sm:text-[11px] max-sm:leading-5">
+「이런 것도 할 수 있을까요?」
+
+라는 단계에서부터 편하게 상담해 주세요.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section
+class="
+bg-[#f7f5ef]
+py-24
+sm:py-28
+lg:py-32
+max-sm:py-16
+"
+>
+
+<div
+class="
+mx-auto
+max-w-5xl
+px-5
+text-center
+sm:px-8
+"
+>
+
+
+<div class="contact-reveal">
+
+
+<p
+class="
+tracking-[0.3em]
+text-[10px]
+text-neutral-500
+sm:text-xs
+"
+>
+MESSAGE
+</p>
+
+
+<h2
+class="
+mt-3
+text-2xl
+text-neutral-900
+sm:text-3xl
+lg:text-4xl
+"
+style="font-family:'Cormorant Garamond',serif;"
+>
+함께,<br class="sm:hidden" />
+재미있는 풍경을 만들어보지 않으시겠어요?
+</h2>
+
+
+<p
+class="
+mx-auto
+mt-7
+max-w-3xl
+text-sm
+leading-7
+text-neutral-700
+sm:mt-8
+sm:text-base
+sm:leading-8
+"
+style="font-family:'Shippori Mincho',serif;"
+>
+
+역사든,
+
+게임이든,
+
+사진이든,
+
+영상이든.
+
+<br><br>
+
+「이런 풍경을 보고 싶다」
+
+<br><br>
+
+그런 상상에서 시작되는 만남을
+기대하고 있습니다.
+
+</p>
+
+
+</div>
+
+
+
+<a
+href="/contact/form/"
+class="
+contact-reveal
+
+mt-10
+
+inline-flex
+h-32
+w-32
+
+items-center
+justify-center
+
+rounded-full
+
+border
+border-neutral-900
+
+bg-white
+
+text-center
+text-sm
+
+transition
+duration-500
+
+hover:-translate-y-2
+hover:shadow-2xl
+
+sm:mt-12
+sm:h-36
+sm:w-36
+sm:text-base
+
+max-sm:mt-8
+max-sm:h-28
+max-sm:w-28
+max-sm:text-sm
+"
+style="transition-delay:250ms;"
+>
+
+이야기를<br>
+들려주세요.
+
+</a>
+
+
+</div>
+
+</section>
+
+
+
+<section
+class="
+bg-white
+py-20
+sm:py-24
+lg:py-28
+max-sm:py-14
+"
+>
+
+<div
+class="
+mx-auto
+max-w-5xl
+px-5
+sm:px-8
+"
+>
+
+
+<div
+class="
+contact-reveal
+text-center
+"
+>
+
+
+<p
+class="
+tracking-[0.3em]
+text-[10px]
+text-neutral-500
+sm:text-xs
+"
+>
+FAQ
+</p>
+
+
+<h2
+class="
+mt-3
+text-2xl
+text-neutral-900
+sm:text-3xl
+lg:text-4xl
+"
+style="font-family:'Cormorant Garamond',serif;"
+>
+자주 묻는 질문
+</h2>
+
+
+</div>
+
+
+
+<div
+class="
+mt-10
+space-y-4
+sm:mt-12
+sm:space-y-5
+"
+>
+
+
+<div
+class="
+contact-reveal
+rounded-[1.5rem]
+bg-[#faf8f3]
+p-6
+sm:p-7
+max-sm:rounded-xl
+max-sm:p-4
+"
+>
+
+<h3
+class="
+text-base
+font-semibold
+sm:text-lg
+"
+>
+아직 무엇을 할지 정하지 못했습니다.
+</h3>
+
+
+<p
+class="
+mt-3
+text-sm
+leading-7
+text-neutral-700
+sm:text-base
+sm:leading-8
+max-sm:mt-2
+max-sm:text-[12px]
+max-sm:leading-5
+"
+>
+괜찮습니다.
+
+「무언가 함께할 수 있을 것 같다」「이런 일을 해보고 싶다」는 단계에서부터 이야기를 들려주세요.
+</p>
+
+
+</div>
+
+
+
+<div
+class="
+contact-reveal
+rounded-[1.5rem]
+bg-[#faf8f3]
+p-6
+sm:p-7
+max-sm:rounded-xl
+max-sm:p-4
+"
+>
+
+<h3
+class="
+text-base
+font-semibold
+sm:text-lg
+"
+>
+개인도 괜찮은가요?
+</h3>
+
+
+<p
+class="
+mt-3
+text-sm
+leading-7
+text-neutral-700
+sm:text-base
+sm:leading-8
+max-sm:mt-2
+max-sm:text-[12px]
+max-sm:leading-5
+"
+>
+물론입니다.
+
+이제 막 활동을 시작한 크리에이터부터 이미 많은 분들에게 알려진 인플루언서·방송 활동을 하는 분들까지, 장르나 활동 규모와 관계없이 환영합니다.
+</p>
+
+
+</div>
+
+
+
+<div
+class="
+contact-reveal
+rounded-[1.5rem]
+bg-[#faf8f3]
+p-6
+sm:p-7
+max-sm:rounded-xl
+max-sm:p-4
+"
+>
+
+<h3
+class="
+text-base
+font-semibold
+sm:text-lg
+"
+>
+역사나 일본 문화와 관계없는 내용도 괜찮은가요?
+</h3>
+
+
+<p
+class="
+mt-3
+text-sm
+leading-7
+text-neutral-700
+sm:text-base
+sm:leading-8
+max-sm:mt-2
+max-sm:text-[12px]
+max-sm:leading-5
+"
+>
+물론입니다.
+
+역사·일본 문화에 관한 활동뿐만 아니라 YouTube, SNS, 게임, 사진, 영상, 이벤트 등 다양한 분야에서의 협업과 상담을 환영합니다.
+</p>
+
+
+</div>
+
+
+
+<div
+class="
+contact-reveal
+rounded-[1.5rem]
+bg-[#faf8f3]
+p-6
+sm:p-7
+max-sm:rounded-xl
+max-sm:p-4
+"
+>
+
+<h3
+class="
+text-base
+font-semibold
+sm:text-lg
+"
+>
+이미 기획이 정해져 있고 협력을 요청하고 싶은 경우에도 상담할 수 있나요?
+</h3>
+
+
+<p
+class="
+mt-3
+text-sm
+leading-7
+text-neutral-700
+sm:text-base
+sm:leading-8
+max-sm:mt-2
+max-sm:text-[12px]
+max-sm:leading-5
+"
+>
+물론입니다.
+
+이미 기획·프로젝트·의뢰 내용이 정해져 있는 경우에도 그 내용을 들려주세요.
+</p>
+
+
+</div>
+
+
+
+<div
+class="
+contact-reveal
+rounded-[1.5rem]
+bg-[#faf8f3]
+p-6
+sm:p-7
+max-sm:rounded-xl
+max-sm:p-4
+"
+>
+
+<h3
+class="
+text-base
+font-semibold
+sm:text-lg
+"
+>
+기업에서의 문의도 가능한가요?
+</h3>
+
+
+<p
+class="
+mt-3
+text-sm
+leading-7
+text-neutral-700
+sm:text-base
+sm:leading-8
+max-sm:mt-2
+max-sm:text-[12px]
+max-sm:leading-5
+"
+>
+네, 물론 상담하실 수 있습니다.
+
+광고·SNS·영상·프로모션·이벤트·콘텐츠 제작 등 역사나 일본 문화에 한정하지 않고, 기업에서 진행하고 계신 다양한 기획과 활동에 대해서도 내용에 따라 협력합니다.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<style>
+
+.contact-image{
+
+animation:
+contactFloat 10s ease-in-out infinite;
+
+transform-origin:center;
+
+}
+
+
+
+@keyframes contactFloat{
+
+0%{
+
+transform:
+translateY(0)
+scale(1.02);
+
+}
+
+
+50%{
+
+transform:
+translateY(-16px)
+scale(1.04);
+
+}
+
+
+100%{
+
+transform:
+translateY(0)
+scale(1.02);
+
+}
+
+}
+
+
+
+/* mobile animation adjustment */
+
+@media(max-width:640px){
+
+.contact-image{
+
+animation-duration:
+14s;
+
+}
+
+
+.contact-reveal{
+
+transform:
+translateY(35px)
+scale(.98);
+
+}
+
+}
+
+
+
+.contact-reveal{
+
+opacity:0;
+
+transform:
+translateY(70px)
+scale(.96);
+
+
+transition:
+
+opacity .9s cubic-bezier(.22,1,.36,1),
+
+transform .9s cubic-bezier(.22,1,.36,1);
+
+
+will-change:
+transform,
+opacity;
+
+}
+
+
+
+.contact-show{
+
+
+animation:
+
+contactBounce .9s cubic-bezier(.22,1,.36,1) forwards;
+
+
+}
+
+
+
+@keyframes contactBounce{
+
+
+0%{
+
+opacity:0;
+
+transform:
+translateY(70px)
+scale(.96);
+
+}
+
+
+
+65%{
+
+opacity:1;
+
+transform:
+translateY(-10px)
+scale(1.02);
+
+}
+
+
+
+100%{
+
+opacity:1;
+
+transform:
+translateY(0)
+scale(1);
+
+}
+
+
+}
+
+</style>
+
+
+
+<script>
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+
+if(!entry.isIntersecting) return;
+
+
+const el = entry.target;
+
+el.classList.add("contact-show");
+
+observer.unobserve(el);
+
+
+});
+
+
+},{
+
+threshold:0.18,
+
+rootMargin:"0px 0px -10% 0px"
+
+});
+
+
+
+document.querySelectorAll(".contact-reveal").forEach((el)=>{
+
+
+observer.observe(el);
+
+
+});
+
+
+</script>
+
+
+</Layout>

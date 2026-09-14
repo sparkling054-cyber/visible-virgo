@@ -1,0 +1,353 @@
+---
+const currentPath = Astro.url.pathname;
+
+const locales = [
+  {
+    code: "ja",
+    label: "日本語",
+    prefix: "",
+  },
+  {
+    code: "en",
+    label: "English",
+    prefix: "/en",
+  },
+  {
+    code: "zh-cn",
+    label: "简体中文",
+    prefix: "/zh-cn",
+  },
+  {
+    code: "ko",
+    label: "한국어",
+    prefix: "/ko",
+  },
+];
+
+function getLocalizedPath(prefix: string) {
+  let path = currentPath;
+
+  path = path.replace(/^\/(en|zh-cn|ko)(?=\/|$)/, "");
+
+  if (!path) {
+    path = "/";
+  }
+
+  if (!prefix) {
+    return path;
+  }
+
+  if (path === "/") {
+    return `${prefix}/`;
+  }
+
+  return `${prefix}${path}`;
+}
+
+function isCurrent(prefix: string) {
+  if (!prefix) {
+    return !/^\/(en|zh-cn|ko)(\/|$)/.test(currentPath);
+  }
+
+  return (
+    currentPath === `${prefix}/` ||
+    currentPath.startsWith(`${prefix}/`)
+  );
+}
+---
+
+<div class="nishikino-language">
+
+  <button
+    type="button"
+    class="nishikino-language-button"
+    aria-expanded="false"
+    aria-controls="nishikino-language-menu"
+    aria-label="Language"
+  >
+
+    <img
+      src="/images/language.png"
+      alt="Language"
+      class="nishikino-language-icon"
+    />
+
+  </button>
+
+
+  <div
+    id="nishikino-language-menu"
+    class="nishikino-language-menu"
+    hidden
+  >
+
+    {
+      locales.map((locale) => (
+
+        <a
+          href={getLocalizedPath(locale.prefix)}
+          class:list={[
+            "nishikino-language-item",
+            {
+              "nishikino-language-current":
+                isCurrent(locale.prefix),
+            },
+          ]}
+          aria-current={
+            isCurrent(locale.prefix)
+              ? "page"
+              : undefined
+          }
+        >
+          {locale.label}
+        </a>
+
+      ))
+    }
+
+  </div>
+
+</div>
+
+
+<script>
+
+function initLanguage(){
+
+  const roots =
+    document.querySelectorAll(
+      ".nishikino-language"
+    );
+
+
+  roots.forEach((root) => {
+
+    const button =
+      root.querySelector(
+        ".nishikino-language-button"
+      );
+
+    const menu =
+      root.querySelector(
+        ".nishikino-language-menu"
+      );
+
+
+    if (!button || !menu) return;
+
+
+    if (
+      (button as HTMLElement).dataset.ready
+    ) {
+      return;
+    }
+
+
+    (button as HTMLElement).dataset.ready =
+      "true";
+
+
+    button.addEventListener(
+      "click",
+      (event) => {
+
+        event.stopPropagation();
+
+        const open =
+          button.getAttribute(
+            "aria-expanded"
+          ) === "true";
+
+
+        button.setAttribute(
+          "aria-expanded",
+          String(!open)
+        );
+
+
+        if (open) {
+
+          menu.setAttribute(
+            "hidden",
+            ""
+          );
+
+        } else {
+
+          menu.removeAttribute(
+            "hidden"
+          );
+
+        }
+
+      }
+    );
+
+
+    document.addEventListener(
+      "click",
+      (event) => {
+
+        if (
+          !root.contains(
+            event.target as Node
+          )
+        ) {
+
+          menu.setAttribute(
+            "hidden",
+            ""
+          );
+
+          button.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        }
+
+      }
+    );
+
+  });
+
+}
+
+
+initLanguage();
+
+
+document.addEventListener(
+  "astro:page-load",
+  initLanguage
+);
+
+</script>
+
+
+<style>
+
+.nishikino-language{
+
+  position:relative;
+
+  width:100%;
+
+}
+
+
+.nishikino-language-button{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  width:100%;
+
+  padding:12px 0;
+
+  border:0;
+
+  background:transparent;
+
+  cursor:pointer;
+
+}
+
+
+.nishikino-language-icon{
+
+  display:block;
+
+  width:22px;
+
+  height:22px;
+
+  object-fit:contain;
+
+  opacity:.8;
+
+  transition:
+    transform .3s ease,
+    opacity .3s ease;
+
+}
+
+
+.nishikino-language-button:hover
+.nishikino-language-icon{
+
+  transform:scale(1.1);
+
+  opacity:1;
+
+}
+
+
+.nishikino-language-menu{
+
+  position:absolute;
+
+  right:calc(100% + 12px);
+
+  bottom:0;
+
+  min-width:130px;
+
+  padding:6px 0;
+
+  border:1px solid rgba(255,255,255,.35);
+
+  background:rgba(25,22,20,.94);
+
+  backdrop-filter:blur(12px);
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.18);
+
+}
+
+
+.nishikino-language-item{
+
+  display:block;
+
+  padding:9px 14px;
+
+  color:#fff;
+
+  text-decoration:none;
+
+  font-family:sans-serif;
+
+  font-size:11px;
+
+  letter-spacing:.04em;
+
+  white-space:nowrap;
+
+  transition:
+    background .2s ease,
+    color .2s ease;
+
+}
+
+
+.nishikino-language-item:hover{
+
+  background:rgba(245,197,66,.12);
+
+  color:#f5c542;
+
+}
+
+
+.nishikino-language-current{
+
+  color:#f5c542;
+
+}
+
+</style>

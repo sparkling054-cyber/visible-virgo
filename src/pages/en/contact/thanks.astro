@@ -1,0 +1,116 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Thank You for Your Inquiry｜Nishikino"
+  description=""
+>
+
+<section class="relative min-h-screen overflow-hidden bg-[#140f0d]">
+
+  <img
+    src="/images/contact-form-bg.png"
+    alt=""
+    class="absolute inset-0 h-full w-full object-cover"
+    draggable="false"
+  />
+
+  <div class="absolute inset-0 bg-black/45"></div>
+
+  <div class="relative z-10 flex min-h-screen items-center justify-center px-8">
+
+    <div class="thanks-show max-w-3xl rounded-[2.8rem] border border-white/20 bg-white/10 p-14 text-center text-white backdrop-blur-xl">
+
+      <p class="tracking-[0.45em] text-sm">
+        THANK YOU
+      </p>
+
+      <h1
+        class="mt-6 text-5xl leading-tight"
+        style="font-family:'Cormorant Garamond',serif;"
+      >
+        Thank You for Your Inquiry.
+      </h1>
+
+      <p
+        class="mt-10 leading-9 text-white/90"
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        I will review your message and get back to you in due course.<br>
+        If you do not receive a reply after a few days,<br>
+        please also check your spam or junk mail folder.
+      </p>
+
+      <div class="mt-14 flex flex-wrap justify-center gap-5">
+
+        <a
+          href="/en/"
+          class="rounded-full border border-white px-10 py-4 transition duration-300 hover:bg-white hover:text-black"
+        >
+          Back to TOP
+        </a>
+
+        <a
+          href="/en/contact/"
+          class="rounded-full border border-white/40 px-10 py-4 transition duration-300 hover:border-white hover:bg-white/10"
+        >
+          Back to CONTACT
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+.thanks-show{
+
+opacity:0;
+
+animation:
+thanksFade 1s cubic-bezier(.22,1,.36,1) forwards;
+
+}
+
+@keyframes thanksFade{
+
+0%{
+
+opacity:0;
+
+transform:
+translateY(60px)
+scale(.96);
+
+}
+
+70%{
+
+opacity:1;
+
+transform:
+translateY(-8px)
+scale(1.02);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:
+translateY(0)
+scale(1);
+
+}
+
+}
+
+</style>
+
+</Layout>

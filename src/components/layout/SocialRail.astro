@@ -1,4 +1,6 @@
 ---
+import Language from "../Language.astro";
+
 const socials = [
   {
     name: "YouTube",
@@ -34,11 +36,11 @@ const socials = [
     <span
       class="mb-6 h-20 w-px bg-white/35"
     ></span>
-
-    {
+          {
       socials.map((social) => (
 
         <>
+
           <a
             href={social.href}
             target="_blank"
@@ -68,6 +70,10 @@ const socials = [
 
       ))
     }
+
+    <!-- LANGUAGE -->
+
+    <Language />
 
     <!-- 下ライン -->
 

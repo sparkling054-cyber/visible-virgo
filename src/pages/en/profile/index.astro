@@ -1,0 +1,711 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout
+  title="PROFILE｜Nishikino"
+  description=""
+>
+
+<section id="profileSection" class="relative min-h-screen overflow-hidden">
+
+  <!-- Background -->
+  <img
+    id="profileBg1"
+    src="/images/profile-bg.png"
+    alt="Profile background"
+    class="profile-bg profile-bg-front absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+    draggable="false"
+  />
+
+  <img
+    id="profileBg2"
+    src="/images/profile-bg-message.png"
+    alt=""
+    class="profile-bg profile-bg-back absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+    draggable="false"
+  />
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/27"></div>
+
+  <!-- Content -->
+  <div
+    class="relative z-10 mx-auto flex min-h-screen max-w-[1700px]
+           flex-col items-center justify-between
+           px-5 py-24
+           sm:px-8 sm:py-28
+           lg:flex-row lg:px-20 lg:py-24"
+  >
+
+    <!-- Left -->
+    <div
+      id="profileLeft"
+      class="profile-content w-full
+             lg:w-[30%]"
+    >
+
+      <p
+        class="text-[10px] tracking-[0.35em] text-white
+               sm:text-sm sm:tracking-[0.55em]"
+        style="font-family:'Inter',sans-serif;"
+      >
+        PROFILE
+      </p>
+
+      <h1
+        class="mt-4 text-4xl font-light text-white
+               sm:text-6xl
+               lg:mt-6 lg:text-7xl"
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        NISHIKINO
+      </h1>
+
+      <p
+        class="mt-6 text-xs leading-6 text-white/90
+               sm:text-base sm:leading-10
+               lg:mt-8"
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        
+        <br />
+        A video creator who loves Japanese traditions and architecture,
+        <br />
+        exploring new ways to express my ideas through my work.
+        <br /><br />
+
+        I enjoy visiting famous places,
+        <br />
+        capturing landscapes and moments on camera,
+        <br />
+        and turning the things I love into creations of my own.
+      </p>
+
+    </div>
+
+
+    <!-- Center -->
+    <div class="hidden lg:block lg:w-[18%]"></div>
+
+
+    <!-- Right -->
+    <div
+      class="profile-content delay mt-10 w-full space-y-5
+             sm:mt-12 sm:space-y-6
+             lg:mt-0 lg:w-[34%] lg:space-y-6"
+    >
+
+      <!-- INTRODUCTION -->
+      <div
+        id="introductionCard"
+        class="profile-card rounded-[24px] border border-white/20
+               bg-transparent p-5
+               sm:rounded-[34px] sm:p-8"
+      >
+
+        <p
+          class="text-[9px] tracking-[0.35em] text-white/60
+                 sm:text-xs sm:tracking-[0.45em]"
+        >
+          INTRODUCTION
+        </p>
+
+        <div
+          class="mt-4 space-y-3 text-xs leading-6 text-white
+                 sm:mt-5 sm:space-y-4 sm:text-base sm:leading-8"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+
+          <p>
+            The name <strong>錦乃</strong> brings together two ideas:
+            <strong>錦</strong>, a word associated with rich, colorful beauty,
+            like the patterns of brocade, and <strong>乃</strong>,
+            which gives the name an elegant, classical character.
+            <br />
+            I combined the two to create a name that conveys
+            something rich, beautiful, and timeless.
+          </p>
+
+          <div class="border-t border-white/15 pt-4 text-white/90">
+            <p>Yuya Tousaka</p>
+            <p>Age: 23</p>
+            <p>Birthday: May 4, 2003</p>
+            <p>Hometown: Ota, Gunma, Japan</p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- MESSAGE -->
+      <div
+        id="messageCard"
+        class="profile-card rounded-[24px] border border-white/20
+               bg-transparent p-5
+               sm:rounded-[34px] sm:p-8"
+      >
+
+        <p
+          class="text-[10px] tracking-[0.4em] text-white/60
+                 sm:text-xs sm:tracking-[0.45em]"
+        >
+          MESSAGE
+        </p>
+
+        <div
+          class="mt-5 text-[13px] leading-7 text-white
+                 sm:text-base sm:leading-8"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+
+          <p>
+            Welcome. It is a pleasure to have you here.<br>
+          </p>
+
+          <p class="mt-4">
+            I first came to be known for my work recreating traditional
+            Japanese landmarks in the globally popular sandbox game,
+            <em>Minecraft</em>, sharing those creations under the name
+            “Nishikino.”
+          </p>
+
+<details id="messageDetails" class="mt-6 group">
+
+  <!-- Read More -->
+  <summary
+    id="messageSummary"
+    class="cursor-pointer select-none text-rose-200 transition hover:text-white"
+  >
+    ▶ Read More
+  </summary>
+
+
+  <!-- MESSAGE DETAIL -->
+  <div
+    class="mt-6 space-y-6 text-[13px] leading-7 text-white/90
+           sm:text-base sm:leading-8"
+  >
+
+    <p>
+      I have loved cities and the energy of busy streets since I was young.
+      My interest in Japanese traditions and architecture grew naturally from
+      that fascination with places and the atmosphere they create.
+      (To be honest, I was not originally someone who was especially interested
+      in traditional Japanese architecture!)
+    </p>
+
+    <p>
+      Everything began when I was in middle school and fell in love at first
+      sight with the keep of Edo Castle depicted in the famous
+      <em>Edo-zu Byōbu</em>, a historical folding screen depicting the city of Edo.
+    </p>
+
+    <p>
+      In Minecraft, I originally wanted to build a sturdy house that enemies
+      could not destroy in Survival Mode. That idea led me to build a castle
+      keep, which became the starting point of my journey into architecture.
+    </p>
+
+    <p>
+      From there, I began recreating real places simply because I wanted to be
+      able to look at the places I loved whenever I wanted.
+      Eventually, I realized that I could also recreate buildings and
+      landscapes that no longer exist.
+    </p>
+
+    <p>
+      Today, I explore cities and visit famous landmarks, castles,
+      historic sites, and places connected to the Tokugawa family.
+      I share the things I love in my own way through photography,
+      video, and digital creations.
+    </p>
+
+    <p>
+      I originally did all of this simply as a hobby, but as more people began
+      to appreciate my work, I eventually started receiving commissions as well...!
+    </p>
+
+    <p>
+      There is a Japanese saying, <em>suki koso mono no jōzu nare</em>,
+      which is often translated as
+      “Love what you do, and you will become good at it.”
+      I have come to understand just how true those words are through my own
+      experience.
+    </p>
+
+    <p>
+      When it comes to architecture, my approach is fundamentally about
+      reconstruction.
+      I love creating buildings that go beyond the game itself and look
+      almost indistinguishable from the real thing.
+    </p>
+
+    <p>
+      Outside of traditional Japanese architecture, I also enjoy watching
+      gaming creators play a wide variety of Steam games,
+      taking photographs and making videos,
+      watching anime,
+      and traveling and sightseeing without limiting myself to any particular
+      style or destination.
+      I am also interested in learning how to make great coffee,
+      as well as fashion and beauty.
+    </p>
+
+    <p>
+      Aside from Minecraft, my favorite games include
+      <em>UNDERTALE</em> and <em>Deltarune</em>.
+      I also tend to get really into YouTubers and voice actors.
+      (There are a few in particular that I follow closely:
+      a green YouTuber with a clover on his avatar who creates educational
+      content,
+      a YouTuber who lives at a school and periodically causes explosions
+      — literally,
+      and a male voice actor who has played several characters connected to
+      other worlds.
+      I also once considered attending a voice-acting school and was accepted
+      through its audition process.)
+    </p>
+
+    <p>
+      Once something catches my interest, I research it thoroughly,
+      experience it for myself,
+      and find my own way to preserve what I discover.
+      Driven by pure curiosity and the strong energy that comes with it,
+      I enjoy the entire process itself.
+    </p>
+
+  </div>
+
+  <div class="message-actions">
+
+    <a
+      href="/en/profile/gallery"
+      class="cursor-pointer select-none text-rose-200 transition hover:text-white"
+    >
+    ▶ Gallery
+    </a>
+
+    <button
+      id="collapseMessage"
+      type="button"
+      class="cursor-pointer select-none text-rose-200 transition hover:text-white"
+    >
+    </button>
+
+  </div>
+
+</details>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<style>
+
+.profile-bg{
+  animation:profileFloat 12s ease-in-out infinite;
+  transition:opacity .7s ease;
+}
+
+.profile-bg-front{
+  opacity:1;
+}
+
+.profile-bg-back{
+  opacity:0;
+}
+
+@keyframes profileFloat{
+  0%{
+    transform:scale(1.05) translateY(0px);
+  }
+  50%{
+    transform:scale(1.08) translateY(-15px);
+  }
+  100%{
+    transform:scale(1.05) translateY(0px);
+  }
+}
+
+.profile-content{
+  opacity:0;
+  transform:translateY(80px) scale(.96);
+  animation:profileAppear 1.2s cubic-bezier(.18,.89,.32,1.28) forwards;
+}
+
+.profile-content.delay{
+  animation-delay:.25s;
+}
+
+@keyframes profileAppear{
+  0%{
+    opacity:0;
+    transform:translateY(80px) scale(.96);
+  }
+  70%{
+    opacity:1;
+    transform:translateY(-12px) scale(1.02);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+.profile-card{
+  transition:transform .6s ease, background .6s ease;
+  animation:cardFloat 8s ease-in-out infinite;
+}
+
+.profile-card:nth-child(2){
+  animation-delay:1s;
+}
+
+@keyframes cardFloat{
+  0%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-8px);
+  }
+  100%{
+    transform:translateY(0);
+  }
+}
+
+details summary{
+  list-style:none;
+}
+
+details summary::-webkit-details-marker{
+  display:none;
+}
+
+
+
+:global(html) {
+  color-scheme: light;
+}
+
+:global(body) {
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+.profile-content p,
+.profile-content h1,
+.profile-content h2,
+.profile-content h3,
+.profile-content strong {
+  forced-color-adjust: none;
+}
+
+
+/* PROFILE label */
+
+.profile-content > p:first-child {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* PROFILE name */
+
+.profile-content h1 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* Profile introduction text */
+
+.profile-content > p:not(:first-child) {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+
+.profile-card {
+  forced-color-adjust: none;
+
+  background-color: transparent !important;
+
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+
+.profile-card > p:first-child {
+  color: rgba(255, 255, 255, 0.6) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
+
+  forced-color-adjust: none;
+}
+
+.profile-card > div {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+
+  forced-color-adjust: none;
+}
+
+
+.profile-card > div p {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+
+  forced-color-adjust: none;
+}
+
+.profile-card > div > div.border-t {
+  border-top-color: rgba(255, 255, 255, 0.15) !important;
+
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+
+.profile-card > div > div.border-t p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+#messageDetails {
+  color: #ffffff !important;
+  forced-color-adjust: none;
+}
+
+
+#messageDetails > div {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+
+  forced-color-adjust: none;
+}
+
+
+#messageDetails > div p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+#messageSummary {
+  color: rgb(254, 205, 211) !important;
+  -webkit-text-fill-color: rgb(254, 205, 211);
+
+  forced-color-adjust: none;
+}
+
+
+#messageSummary:hover {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+#messageDetails a {
+  color: rgb(254, 205, 211) !important;
+  -webkit-text-fill-color: rgb(254, 205, 211);
+
+  forced-color-adjust: none;
+}
+
+
+#messageDetails a:hover {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+@media (max-width: 639px) {
+
+  .profile-content,
+  .profile-content *,
+  .profile-card,
+  .profile-card *,
+  #messageDetails,
+  #messageDetails *,
+  #messageSummary {
+    forced-color-adjust: none;
+  }
+
+  .profile-card {
+    background-color: transparent !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+  }
+
+  .profile-content > p:first-child,
+  .profile-content h1 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+  }
+
+  .profile-content > p:not(:first-child) {
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .profile-card > p:first-child {
+    color: rgba(255, 255, 255, 0.6) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .profile-card > div,
+  .profile-card > div p {
+    font-size: 14px !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+  }
+
+  .profile-card > div > div.border-t,
+  .profile-card > div > div.border-t p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+
+    border-top-color: rgba(255, 255, 255, 0.15) !important;
+  }
+
+  #messageDetails > div,
+  #messageDetails > div p {
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+  }
+
+  #messageSummary,
+  #messageDetails a {
+    color: rgb(254, 205, 211) !important;
+    -webkit-text-fill-color: rgb(254, 205, 211);
+  }
+
+
+  #profileSection.message-open #profileLeft,
+  #profileSection.message-open #introductionCard {
+    display: none !important;
+  }
+
+  #profileSection.message-open > div.relative.z-10 {
+    justify-content: flex-start !important;
+  }
+
+  #profileSection.message-open #messageCard {
+    width: 100% !important;
+  }
+
+}
+
+
+@media (max-width: 639px) {
+
+  #profileBg2 {
+    object-position: center center !important;
+  }
+
+}
+
+</style>
+
+<script is:inline>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const section = document.getElementById("profileSection");
+  const profileLeft = document.getElementById("profileLeft");
+  const introductionCard = document.getElementById("introductionCard");
+  const messageCard = document.getElementById("messageCard");
+
+  const details = document.getElementById("messageDetails");
+  const summary = document.getElementById("messageSummary");
+
+  const bg1 = document.getElementById("profileBg1");
+  const bg2 = document.getElementById("profileBg2");
+
+  if (
+    !section ||
+    !profileLeft ||
+    !introductionCard ||
+    !messageCard ||
+    !details ||
+    !summary ||
+    !bg1 ||
+    !bg2
+  ) return;
+
+
+  details.addEventListener("toggle", () => {
+
+    const isMobile = window.innerWidth <= 639;
+
+    if (details.open) {
+
+      /* Switch background */
+      bg1.style.opacity = "0";
+      bg2.style.opacity = "1";
+
+      /* Show collapse button */
+      summary.textContent = "  ▶ Collapse";
+
+
+      if (isMobile) {
+
+        profileLeft.style.display = "none";
+        introductionCard.style.display = "none";
+
+        /* Make MESSAGE full width */
+        messageCard.style.width = "100%";
+
+        /* Position MESSAGE toward the top */
+        const content = section.querySelector(
+          ".relative.z-10"
+        );
+
+        if (content) {
+          content.style.justifyContent = "flex-start";
+        }
+
+      }
+
+    } else {
+
+      /* Restore background */
+      bg1.style.opacity = "1";
+      bg2.style.opacity = "0";
+
+      /* Show read more button */
+      summary.textContent = "Read More";
+
+
+      if (isMobile) {
+
+        profileLeft.style.display = "";
+        introductionCard.style.display = "";
+        messageCard.style.width = "";
+
+        const content = section.querySelector(
+          ".relative.z-10"
+        );
+
+        if (content) {
+          content.style.justifyContent = "";
+        }
+
+      }
+
+    }
+
+  });
+
+});
+</script>
+
+
+</Layout>

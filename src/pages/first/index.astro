@@ -296,7 +296,8 @@ import Container from "../../components/common/Container.astro";
         <div class="mt-8 flex justify-center gap-4 flex-wrap">
 
           <a
-            href="https://x.com/intent/post?text=%E9%8C%A6%E4%B9%83%E3%80%8C%E3%81%AF%E3%81%98%E3%81%BE%E3%82%8A%E3%80%8D%20%7C%20WORKS&url=https%3A%2F%2Fwww.nishikinolab.net%2Ffirst%2F"
+            href="#"
+            id="x-share"
             target="_blank"
             rel="noopener noreferrer"
             class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-base hover:bg-[#2b2724] hover:text-white"
@@ -333,8 +334,33 @@ import Container from "../../components/common/Container.astro";
 <script>
   const pageUrl = "https://www.nishikinolab.net/first/";
 
+  const sharePhrases = [
+    "これ見つけた。",
+    "これ、なんか好き。",
+    "これちょっと見て。",
+    "なんか気になるの見つけた。",
+    "こんなの見っけた。",
+    "これ知ってる？",
+    "なんか見つけた。",
+    "こんなのあった。",
+    "ちょっと気になるもの見つけたかも。"
+  ];
+
+  const randomPhrase =
+    sharePhrases[Math.floor(Math.random() * sharePhrases.length)];
+
+  const shareText = `${randomPhrase} Minecraft はじまり | WORKS`;
+
+  const xShareButton = document.getElementById("x-share");
   const copyButton = document.getElementById("copy-url");
   const instagramButton = document.getElementById("instagram-share");
+
+  if (xShareButton) {
+    xShareButton.setAttribute(
+      "href",
+      `https://x.com/intent/post?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageUrl)}`
+    );
+  }
 
   copyButton?.addEventListener("click", async () => {
     try {

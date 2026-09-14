@@ -1,0 +1,566 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+
+const categories = [
+  "个人・创作者",
+  "企业・法人",
+  "地方政府・文化机构",
+  "媒体・活动",
+  "研究・资料合作",
+  "其他"
+];
+
+const purposes = [
+  "YouTube・视频制作",
+  "社交媒体・内容制作",
+  "创作者合作",
+  "我的世界・数字制作",
+  "历史・城郭・文化相关",
+  "监修・资料提供",
+  "媒体出演・采访",
+  "企业・城市・专业机构・地方政府项目",
+  "其他"
+];
+---
+
+<Layout
+  title="锦乃｜咨询"
+  description=""
+>
+
+<section
+  class="relative h-[650px] overflow-hidden"
+>
+
+<img
+  src="/images/contact-form-bg.png"
+  alt="咨询背景"
+  class="form-image absolute inset-0 h-full w-full object-cover select-none"
+  draggable="false"
+/>
+
+<div
+  class="absolute inset-0 bg-black/20"
+></div>
+
+<div
+  class="relative z-10 flex h-full items-center justify-center px-8 text-center text-white"
+>
+
+<div
+  class="form-reveal"
+>
+
+<p
+  class="tracking-[0.45em] text-sm"
+>
+CONTACT FORM
+</p>
+
+<h1
+  class="form-title mt-6 text-6xl"
+  style="font-family:'Cormorant Garamond',serif;"
+>
+咨询・联系
+</h1>
+
+<p
+  class="mt-8 leading-9"
+  style="font-family:'Shippori Mincho',serif;"
+>
+“这样的事情可以拜托您吗？”<br><br>
+
+即使只是这样的一句话，也完全没问题。<br>
+
+即使具体内容还没有确定，<br>
+也欢迎先和我聊聊您的想法。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section
+class="bg-[#faf8f3] py-32"
+>
+
+<div
+class="mx-auto max-w-5xl px-8"
+>
+
+<div
+class="form-reveal mb-20 text-center"
+>
+
+<p
+class="tracking-[0.35em] text-sm text-neutral-500"
+>
+MESSAGE
+</p>
+
+<h2
+class="form-subtitle mt-5 text-5xl text-neutral-900"
+style="font-family:'Cormorant Garamond',serif;"
+>
+欢迎随时联系。
+</h2>
+
+<p
+class="mx-auto mt-8 max-w-3xl leading-9 text-neutral-700"
+style="font-family:'Shippori Mincho',serif;"
+>
+
+无论是制作委托、企划咨询，还是合作邀约，<br>
+即使目前还没有确定具体内容，也非常欢迎。
+
+<br><br>
+
+“如果能做成这样的事情，一定会很有意思。”<br><br>
+
+如果能从这样的想象出发，一起把它变成现实，我会非常开心。
+
+</p>
+
+</div>
+
+<form
+action="/api/contact"
+method="POST"
+class="form-card form-reveal rounded-[2.5rem] border border-white bg-white/80 p-10 shadow-xl backdrop-blur-md md:p-14"
+>
+
+<input
+type="hidden"
+name="locale"
+value="zh-cn"
+/>
+
+<div
+class="hidden"
+aria-hidden="true"
+>
+
+<label>
+请留空此栏
+</label>
+
+<input
+type="text"
+name="website"
+/>
+
+</div>
+
+<div
+class="grid gap-8"
+>
+
+<div>
+
+<label
+for="category"
+class="block text-sm tracking-widest text-neutral-600"
+>
+咨询者身份
+</label>
+
+<select
+id="category"
+name="category"
+required
+class="form-field mt-4 w-full rounded-2xl border border-neutral-200 bg-white px-5 py-4 text-neutral-800 outline-none transition focus:border-neutral-800"
+>
+
+<option value="">
+请选择
+</option>
+
+{
+categories.map((category)=>
+  <option value={category}>
+    {category}
+  </option>
+)
+}
+
+</select>
+
+</div>
+
+<div>
+
+<label
+for="name"
+class="block text-sm tracking-widest text-neutral-600"
+>
+姓名
+</label>
+
+<input
+id="name"
+name="name"
+type="text"
+required
+maxlength="50"
+placeholder="请输入您的姓名或活动名称"
+class="form-field mt-4 w-full rounded-2xl border border-neutral-200 bg-white px-5 py-4 text-neutral-800 outline-none transition focus:border-neutral-800"
+/>
+
+</div>
+
+<div>
+
+<label
+for="sns"
+class="block text-sm tracking-widest text-neutral-600"
+>
+社交媒体・网站（选填）
+</label>
+
+<input
+id="sns"
+name="sns"
+type="url"
+placeholder="YouTube・X・网站等URL"
+class="form-field mt-4 w-full rounded-2xl border border-neutral-200 bg-white px-5 py-4 text-neutral-800 outline-none transition focus:border-neutral-800"
+/>
+
+</div>
+
+<div>
+
+<label
+for="email"
+class="block text-sm tracking-widest text-neutral-600"
+>
+电子邮箱
+</label>
+
+<input
+id="email"
+name="email"
+type="email"
+required
+placeholder="example@example.com"
+class="form-field mt-4 w-full rounded-2xl border border-neutral-200 bg-white px-5 py-4 text-neutral-800 outline-none transition focus:border-neutral-800"
+/>
+
+</div>
+
+<div>
+
+<label
+for="organization"
+class="block text-sm tracking-widest text-neutral-600"
+>
+企业・团体名称（选填）
+</label>
+
+<input
+id="organization"
+name="organization"
+type="text"
+maxlength="100"
+placeholder="请输入企业名称・团体名称等"
+class="form-field mt-4 w-full rounded-2xl border border-neutral-200 bg-white px-5 py-4 text-neutral-800 outline-none transition focus:border-neutral-800"
+/>
+
+</div>
+
+<div>
+
+<label
+for="purpose"
+class="block text-sm tracking-widest text-neutral-600"
+>
+咨询事项
+</label>
+
+<select
+id="purpose"
+name="purpose"
+required
+class="form-field mt-4 w-full rounded-2xl border border-neutral-200 bg-white px-5 py-4 text-neutral-800 outline-none transition focus:border-neutral-800"
+>
+
+<option value="">
+请选择
+</option>
+
+{
+purposes.map((purpose)=>
+  <option value={purpose}>
+    {purpose}
+  </option>
+)
+}
+
+</select>
+
+</div>
+
+<div
+id="other-purpose-area"
+class="hidden"
+>
+
+<label
+for="otherPurpose"
+class="block text-sm tracking-widest text-neutral-600"
+>
+咨询事项（自由填写）
+</label>
+
+<input
+id="otherPurpose"
+name="otherPurpose"
+type="text"
+maxlength="200"
+placeholder="请自由填写您的咨询内容"
+class="form-field mt-4 w-full rounded-2xl border border-neutral-200 bg-white px-5 py-4 text-neutral-800 outline-none transition focus:border-neutral-800"
+/>
+
+</div>
+
+<div>
+
+<label
+for="message"
+class="block text-sm tracking-widest text-neutral-600"
+>
+咨询内容
+</label>
+
+<textarea
+id="message"
+name="message"
+required
+maxlength="2000"
+rows="8"
+placeholder="请在您了解的范围内填写咨询内容、希望实现的事情等。
+
+即使具体内容还没有确定，也完全没问题。"
+class="form-field mt-4 w-full rounded-2xl border border-neutral-200 bg-white px-5 py-4 leading-8 text-neutral-800 outline-none transition focus:border-neutral-800"
+></textarea>
+
+<p
+class="mt-3 text-xs text-neutral-500"
+>
+最多可输入2000字。
+</p>
+
+</div>
+
+<div
+class="pt-8 text-center"
+>
+
+<button
+type="submit"
+class="form-submit inline-flex h-40 w-40 items-center justify-center rounded-full border border-neutral-900 bg-white text-lg transition duration-500 hover:-translate-y-2 hover:shadow-2xl"
+>
+发送
+</button>
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+</section>
+
+<section
+class="bg-white py-24"
+>
+
+<div
+class="mx-auto max-w-5xl px-8 text-center"
+>
+
+<div
+class="form-reveal"
+>
+
+</div>
+
+<a
+href="/zh-cn/contact/"
+class="form-reveal mt-16 inline-flex rounded-full border border-neutral-800 px-10 py-4 transition hover:bg-neutral-900 hover:text-white"
+>
+返回 CONTACT 页面
+</a>
+
+</div>
+
+</section>
+
+<style>
+
+.form-image{
+
+animation:formFloat 12s ease-in-out infinite;
+transform-origin:center;
+
+}
+
+@keyframes formFloat{
+
+0%{transform:scale(1.03) translateY(0);}
+50%{transform:scale(1.06) translateY(-18px);}
+100%{transform:scale(1.03) translateY(0);}
+
+}
+
+.form-reveal{
+
+opacity:0;
+
+transform:translateY(60px) scale(.97);
+
+transition:
+opacity .9s cubic-bezier(.22,1,.36,1),
+transform .9s cubic-bezier(.22,1,.36,1);
+
+}
+
+.form-show{
+
+animation:formBounce .9s cubic-bezier(.22,1,.36,1) forwards;
+
+}
+
+@keyframes formBounce{
+
+0%{
+opacity:0;
+transform:translateY(60px) scale(.97);
+}
+
+70%{
+opacity:1;
+transform:translateY(-8px) scale(1.02);
+}
+
+100%{
+opacity:1;
+transform:translateY(0) scale(1);
+}
+
+}
+
+.hidden{
+display:none;
+}
+
+
+@media (max-width:640px){
+
+.form-title{
+
+font-size:2.1rem;
+
+}
+
+.form-subtitle{
+
+font-size:2.3rem;
+
+}
+
+.form-card{
+
+padding:1.5rem;
+
+border-radius:1.8rem;
+
+}
+
+.form-field{
+
+font-size:.92rem;
+
+padding:.85rem 1rem;
+
+}
+
+.form-submit{
+
+width:7.5rem;
+height:7.5rem;
+font-size:1rem;
+
+}
+
+}
+
+</style>
+
+<script>
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(!entry.isIntersecting)return;
+
+entry.target.classList.add("form-show");
+
+observer.unobserve(entry.target);
+
+});
+
+},{
+threshold:0.18
+});
+
+document.querySelectorAll(".form-reveal").forEach((element)=>{
+
+observer.observe(element);
+
+});
+
+const purposeSelect=document.getElementById("purpose");
+const otherArea=document.getElementById("other-purpose-area");
+const otherInput=document.getElementById("otherPurpose");
+
+function toggleOtherPurpose(){
+
+if(
+  purposeSelect &&
+  otherArea &&
+  otherInput &&
+  purposeSelect.value==="其他"
+){
+
+otherArea.classList.remove("hidden");
+otherInput.required=true;
+
+}else if(
+  otherArea &&
+  otherInput
+){
+
+otherArea.classList.add("hidden");
+otherInput.required=false;
+otherInput.value="";
+
+}
+
+}
+
+toggleOtherPurpose();
+
+if(purposeSelect){
+
+purposeSelect.addEventListener("change",toggleOtherPurpose);
+
+}
+
+</script>
+
+</Layout>

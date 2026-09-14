@@ -1,0 +1,725 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout
+  title="프로필｜PROFILE｜니시키노"
+  description="일본의 전통과 건축, 역사에 관심을 가지고 다양한 창작 활동을 펼치는 영상 크리에이터 니시키노의 공식 프로필입니다."
+>
+
+<section id="profileSection" class="relative min-h-screen overflow-hidden">
+
+  <!-- Background -->
+  <img
+    id="profileBg1"
+    src="/images/profile-bg.png"
+    alt="프로필 배경"
+    class="profile-bg profile-bg-front absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+    draggable="false"
+  />
+
+  <img
+    id="profileBg2"
+    src="/images/profile-bg-message.png"
+    alt=""
+    class="profile-bg profile-bg-back absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+    draggable="false"
+  />
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/27"></div>
+
+  <!-- Content -->
+  <div
+    class="relative z-10 mx-auto flex min-h-screen max-w-[1700px]
+           flex-col items-center justify-between
+           px-5 py-24
+           sm:px-8 sm:py-28
+           lg:flex-row lg:px-20 lg:py-24"
+  >
+
+    <!-- Left -->
+    <div
+      id="profileLeft"
+      class="profile-content w-full
+             lg:w-[30%]"
+    >
+
+      <p
+        class="text-[10px] tracking-[0.35em] text-white
+               sm:text-sm sm:tracking-[0.55em]"
+        style="font-family:'Inter',sans-serif;"
+      >
+        PROFILE
+      </p>
+
+      <h1
+        class="mt-4 text-4xl font-light text-white
+               sm:text-6xl
+               lg:mt-6 lg:text-7xl"
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        錦乃
+      </h1>
+
+      <p
+        class="mt-6 text-xs leading-6 text-white/90
+               sm:text-base sm:leading-10
+               lg:mt-8"
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        니시키노
+        <br />
+        일본의 전통문화와 건축을 좋아하며,
+        <br />
+        새로운 표현을 만들어가는 영상 크리에이터
+        <br /><br />
+
+        평소에도 여러 명소를 찾아다니며
+        <br />
+        풍경과 영상을 촬영하고,
+        <br />
+        제가 좋아하는 것들을
+        <br />
+        저만의 작품으로 만들어가고 있습니다.
+      </p>
+
+    </div>
+
+
+    <!-- Center -->
+    <div class="hidden lg:block lg:w-[18%]"></div>
+
+
+    <!-- Right -->
+    <div
+      class="profile-content delay mt-10 w-full space-y-5
+             sm:mt-12 sm:space-y-6
+             lg:mt-0 lg:w-[34%] lg:space-y-6"
+    >
+
+      <!-- INTRODUCTION -->
+      <div
+        id="introductionCard"
+        class="profile-card rounded-[24px] border border-white/20
+               bg-transparent p-5
+               sm:rounded-[34px] sm:p-8"
+      >
+
+        <p
+          class="text-[9px] tracking-[0.35em] text-white/60
+                 sm:text-xs sm:tracking-[0.45em]"
+        >
+          INTRODUCTION
+        </p>
+
+        <div
+          class="mt-4 space-y-3 text-xs leading-6 text-white
+                 sm:mt-5 sm:space-y-4 sm:text-base sm:leading-8"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+
+          <p>
+            「錦織」처럼 화려하고 풍요로운 색채를 떠올리게 하는
+            <strong>「錦」</strong>과,
+            <br />
+            고풍스럽고 우아한 울림을 지닌
+            <strong>「乃」</strong>.
+            <br />
+            두 글자를 조합하여
+            <br />
+            「풍요롭고 아름답기를」이라는 마음을 담아
+            이름을 만들었습니다.
+          </p>
+
+          <div class="border-t border-white/15 pt-4 text-white/90">
+            <p>토사카 유야 (東坂 優谷)</p>
+            <p>나이: 23세</p>
+            <p>생일: 2003년 5월 4일</p>
+            <p>출생지: 일본 군마현 오타시</p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- MESSAGE -->
+      <div
+        id="messageCard"
+        class="profile-card rounded-[24px] border border-white/20
+               bg-transparent p-5
+               sm:rounded-[34px] sm:p-8"
+      >
+
+        <p
+          class="text-[10px] tracking-[0.4em] text-white/60
+                 sm:text-xs sm:tracking-[0.45em]"
+        >
+          MESSAGE
+        </p>
+
+        <div
+          class="mt-5 text-[13px] leading-7 text-white
+                 sm:text-base sm:leading-8"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+
+          <p>
+            잘 오셨습니다. 대청으로 여러분을 모십니다.<br>
+          </p>
+
+          <p class="mt-4">
+            세계적으로 유명한 샌드박스 게임 『Minecraft』에서
+            일본의 전통적인 명소를 제작해 온 것을 계기로,
+            『錦乃』라는 이름과 함께
+            많은 분들께 저의 활동을 알리게 되었습니다.
+          </p>
+
+<details id="messageDetails" class="mt-6 group">
+
+  <!-- 더 읽기 -->
+  <summary
+    id="messageSummary"
+    class="cursor-pointer select-none text-rose-200 transition hover:text-white"
+  >
+    ▶ 더 읽기
+  </summary>
+
+
+  <!-- MESSAGE DETAIL -->
+  <div
+    class="mt-6 space-y-6 text-[13px] leading-7 text-white/90
+           sm:text-base sm:leading-8"
+  >
+
+    <p>
+      저는 어릴 때부터 도시와 사람들로 북적이는 활기찬 분위기를 무척 좋아했습니다.
+      <br />
+      일본의 전통과 일본식 건축에 관심을 가지게 된 것도
+      사실은 이러한 관심에서 자연스럽게 이어진 것이었습니다.
+      <br />
+      (사실 처음부터 일본식 건축을 좋아했던 것은 아니랍니다!)
+    </p>
+
+    <p>
+      모든 것의 시작은 중학생 때였습니다.
+      <br />
+      역사 교과서에서 보았던 「에도즈 병풍」 속 에도성 천수각의 모습에
+      한눈에 반했던 것이 시작이었습니다.
+    </p>
+
+    <p>
+      Minecraft에서는 처음에 서바이벌 모드에서
+      적에게 파괴되지 않는 튼튼한 집을 만들고 싶어서
+      천수각을 지었습니다.
+      <br />
+      그것이 제가 건축을 시작하게 된 계기가 되었습니다.
+    </p>
+
+    <p>
+      그 후 「좋아하는 장소를 언제든 바라볼 수 있다면 좋겠다」는 생각으로
+      실제 존재하는 명소들을 만들기 시작했고,
+      <br />
+      시간이 지나면서 이미 사라진 건물과 풍경까지도
+      복원할 수 있다는 것을 알게 되었습니다.
+    </p>
+
+    <p>
+      그렇게 도시를 돌아다니며 명소와 성곽,
+      도쿠가와 가문과 관련된 장소들을 직접 찾아가고,
+      <br />
+      사진과 영상, 디지털 작품을 통해
+      제가 좋아하는 것들을 저만의 방식으로 기록하고
+      사람들에게 전하게 되었습니다.
+    </p>
+
+    <p>
+      저는 그저 취미로 즐기고 있었지만,
+      작품을 보신 분들께 좋은 평가를 받을 기회가 점점 늘어나면서
+      <br />
+      어느새 프로젝트 의뢰까지 받을 수 있을 정도가 되었습니다...!
+    </p>
+
+    <p>
+      에도 시대부터 전해 내려오는 말 중에
+      「좋아하는 일에야말로 능숙해진다」라는 뜻의
+      <br />
+      「好きこそ物の上手なれ」라는 말이 있습니다.
+      <br />
+      저 역시 직접 경험하면서 정말 그 말 그대로라는 것을 느끼고 있습니다.
+    </p>
+
+    <p>
+      건축 스타일은 기본적으로 실제 모습을 재현하는 것입니다.
+      <br />
+      게임이라는 세계를 넘어
+      「실제로 존재하는 것처럼 보이는」건축물을 만드는 것을 좋아합니다.
+    </p>
+
+    <p>
+      일본식 건축 이외에도 스트리머들이 플레이하는 다양한 Steam 게임,
+      <br />
+      사진 촬영과 영상 제작,
+      애니메이션 감상,
+      <br />
+      일본식이나 현대식이라는 틀에 얽매이지 않는 여행과 관광을 좋아합니다.
+      <br />
+      맛있는 커피를 내리는 방법이나 패션, 뷰티에도 관심이 있습니다.
+    </p>
+
+    <p>
+      Minecraft 이외에 좋아하는 게임은
+      <em>UNDERTALE</em>과 <em>Deltarune</em>입니다.
+      <br />
+      YouTuber와 성우에게 빠지는 경우도 많습니다.
+      <br />
+      한때는 성우 양성소에 다니는 것도 생각했고,
+      실제로 오디션에 응시하여 합격했던 경험도 있습니다.
+    </p>
+
+    <p>
+      한 번 관심을 가지게 되면 끝까지 깊이 조사하고,
+      직접 경험하고,
+      <br />
+      저만의 형태로 남겨갑니다.
+      <br />
+      순수한 호기심에서 비롯된 강한 에너지와 함께
+      그 과정 자체를 즐기고 있습니다.
+    </p>
+
+  </div>
+
+  <div class="message-actions">
+
+    <a
+      href="/ko/profile/gallery"
+      class="cursor-pointer select-none text-rose-200 transition hover:text-white"
+    >
+      ▶ 갤러리
+    </a>
+
+    <button
+      id="collapseMessage"
+      type="button"
+      class="cursor-pointer select-none text-rose-200 transition hover:text-white"
+    >
+    </button>
+
+  </div>
+
+</details>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<style>
+
+.profile-bg{
+  animation:profileFloat 12s ease-in-out infinite;
+  transition:opacity .7s ease;
+}
+
+.profile-bg-front{
+  opacity:1;
+}
+
+.profile-bg-back{
+  opacity:0;
+}
+
+@keyframes profileFloat{
+  0%{
+    transform:scale(1.05) translateY(0px);
+  }
+  50%{
+    transform:scale(1.08) translateY(-15px);
+  }
+  100%{
+    transform:scale(1.05) translateY(0px);
+  }
+}
+
+.profile-content{
+  opacity:0;
+  transform:translateY(80px) scale(.96);
+  animation:profileAppear 1.2s cubic-bezier(.18,.89,.32,1.28) forwards;
+}
+
+.profile-content.delay{
+  animation-delay:.25s;
+}
+
+@keyframes profileAppear{
+  0%{
+    opacity:0;
+    transform:translateY(80px) scale(.96);
+  }
+  70%{
+    opacity:1;
+    transform:translateY(-12px) scale(1.02);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+.profile-card{
+  transition:transform .6s ease, background .6s ease;
+  animation:cardFloat 8s ease-in-out infinite;
+}
+
+.profile-card:nth-child(2){
+  animation-delay:1s;
+}
+
+@keyframes cardFloat{
+  0%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-8px);
+  }
+  100%{
+    transform:translateY(0);
+  }
+}
+
+details summary{
+  list-style:none;
+}
+
+details summary::-webkit-details-marker{
+  display:none;
+}
+
+
+
+:global(html) {
+  color-scheme: light;
+}
+
+:global(body) {
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+.profile-content p,
+.profile-content h1,
+.profile-content h2,
+.profile-content h3,
+.profile-content strong {
+  forced-color-adjust: none;
+}
+
+
+/* PROFILE label */
+
+.profile-content > p:first-child {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* PROFILE name */
+
+.profile-content h1 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* Profile introduction text */
+
+.profile-content > p:not(:first-child) {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+
+.profile-card {
+  forced-color-adjust: none;
+
+  background-color: transparent !important;
+
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+
+.profile-card > p:first-child {
+  color: rgba(255, 255, 255, 0.6) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
+
+  forced-color-adjust: none;
+}
+
+.profile-card > div {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+
+  forced-color-adjust: none;
+}
+
+
+.profile-card > div p {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+
+  forced-color-adjust: none;
+}
+
+.profile-card > div > div.border-t {
+  border-top-color: rgba(255, 255, 255, 0.15) !important;
+
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+
+  forced-color-adjust: none;
+}
+
+
+.profile-card > div > div.border-t p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+#messageDetails {
+  color: #ffffff !important;
+  forced-color-adjust: none;
+}
+
+
+#messageDetails > div {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+
+  forced-color-adjust: none;
+}
+
+
+#messageDetails > div p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+#messageSummary {
+  color: rgb(254, 205, 211) !important;
+  -webkit-text-fill-color: rgb(254, 205, 211);
+
+  forced-color-adjust: none;
+}
+
+
+#messageSummary:hover {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+#messageDetails a {
+  color: rgb(254, 205, 211) !important;
+  -webkit-text-fill-color: rgb(254, 205, 211);
+
+  forced-color-adjust: none;
+}
+
+
+#messageDetails a:hover {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+@media (max-width: 639px) {
+
+  .profile-content,
+  .profile-content *,
+  .profile-card,
+  .profile-card *,
+  #messageDetails,
+  #messageDetails *,
+  #messageSummary {
+    forced-color-adjust: none;
+  }
+
+  .profile-card {
+    background-color: transparent !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+  }
+
+  .profile-content > p:first-child,
+  .profile-content h1 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+  }
+
+  .profile-content > p:not(:first-child) {
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .profile-card > p:first-child {
+    color: rgba(255, 255, 255, 0.6) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .profile-card > div,
+  .profile-card > div p {
+    font-size: 14px !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+  }
+
+  .profile-card > div > div.border-t,
+  .profile-card > div > div.border-t p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+
+    border-top-color: rgba(255, 255, 255, 0.15) !important;
+  }
+
+  #messageDetails > div,
+  #messageDetails > div p {
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+  }
+
+  #messageSummary,
+  #messageDetails a {
+    color: rgb(254, 205, 211) !important;
+    -webkit-text-fill-color: rgb(254, 205, 211);
+  }
+
+
+  #profileSection.message-open #profileLeft,
+  #profileSection.message-open #introductionCard {
+    display: none !important;
+  }
+
+  #profileSection.message-open > div.relative.z-10 {
+    justify-content: flex-start !important;
+  }
+
+  #profileSection.message-open #messageCard {
+    width: 100% !important;
+  }
+
+}
+
+
+@media (max-width: 639px) {
+
+  #profileBg2 {
+    object-position: center center !important;
+  }
+
+}
+
+</style>
+
+<script is:inline>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const section = document.getElementById("profileSection");
+  const profileLeft = document.getElementById("profileLeft");
+  const introductionCard = document.getElementById("introductionCard");
+  const messageCard = document.getElementById("messageCard");
+
+  const details = document.getElementById("messageDetails");
+  const summary = document.getElementById("messageSummary");
+
+  const bg1 = document.getElementById("profileBg1");
+  const bg2 = document.getElementById("profileBg2");
+
+  if (
+    !section ||
+    !profileLeft ||
+    !introductionCard ||
+    !messageCard ||
+    !details ||
+    !summary ||
+    !bg1 ||
+    !bg2
+  ) return;
+
+
+  details.addEventListener("toggle", () => {
+
+    const isMobile = window.innerWidth <= 639;
+
+    if (details.open) {
+
+      /* 배경 전환 */
+      bg1.style.opacity = "0";
+      bg2.style.opacity = "1";
+
+      /* 버튼 표시 */
+      summary.textContent = "  ▶ 접기";
+
+
+      if (isMobile) {
+
+        profileLeft.style.display = "none";
+        introductionCard.style.display = "none";
+
+        /* MESSAGE를 화면 전체 너비로 */
+        messageCard.style.width = "100%";
+
+        /* MESSAGE를 위쪽에서 표시 */
+        const content = section.querySelector(
+          ".relative.z-10"
+        );
+
+        if (content) {
+          content.style.justifyContent = "flex-start";
+        }
+
+      }
+
+    } else {
+
+      /* 배경 복원 */
+      bg1.style.opacity = "1";
+      bg2.style.opacity = "0";
+
+      /* 버튼 표시 */
+      summary.textContent = "더 읽기";
+
+
+      if (isMobile) {
+
+        profileLeft.style.display = "";
+        introductionCard.style.display = "";
+        messageCard.style.width = "";
+
+        const content = section.querySelector(
+          ".relative.z-10"
+        );
+
+        if (content) {
+          content.style.justifyContent = "";
+        }
+
+      }
+
+    }
+
+  });
+
+});
+</script>
+
+
+</Layout>

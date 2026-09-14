@@ -221,7 +221,12 @@ import Container from "../../components/common/Container.astro";
 
           その後、昭和34年（1959年）に鉄筋コンクリート造で再建。<br>
           本丸御殿は慶長期をもとに復元が進められ、2018年より永続的な全面公開が実施。<br><br>
-
+<img
+  src="/images/0804nagoya7.jpeg"
+  alt="nagoya"
+  class="nagoyacastle-image"
+/>
+<br><br>
           最新データ（令和7年度／2025年4月〜2026年3月）では年間入場者数：2,387,217人。<br>
           観光名所としての側面も備え木造天守復元計画や天守階段の模型体験場や二の丸の整備が進められるなど、活発な復元活動に目が離せない城郭の一つです。
 
@@ -420,7 +425,7 @@ import Container from "../../components/common/Container.astro";
 
 
 
-      <div class="mt-32 w-full text-center">
+            <div class="mt-32 w-full text-center">
 
         <div class="flex items-center justify-center gap-5">
 
@@ -452,7 +457,8 @@ import Container from "../../components/common/Container.astro";
           <!-- X -->
 
           <a
-            href="https://x.com/intent/post?text=%E9%8C%A6%E4%B9%83%E3%80%8C%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%9F%8E%E5%A4%A9%E5%AE%88%E3%80%8D%20%7C%20WORKS&url=https%3A%2F%2Fwww.nishikinolab.net%2Fnagoyacastle%2F"
+            href="#"
+            id="x-share"
             target="_blank"
             rel="noopener noreferrer"
             class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-base hover:bg-[#2b2724] hover:text-white"
@@ -495,8 +501,43 @@ import Container from "../../components/common/Container.astro";
 
 <script>
 
+  const sharePhrases = [
+    "これ見つけた。",
+    "これ、なんか好き。",
+    "これちょっと見て。",
+    "なんか気になるの見つけた。",
+    "こんなの見っけた。",
+    "これ知ってる？",
+    "なんか見つけた。",
+    "こんなのあった。",
+    "ちょっと気になるもの見つけたかも。"
+  ];
+
+
+  const randomPhrase =
+    sharePhrases[
+      Math.floor(
+        Math.random() * sharePhrases.length
+      )
+    ];
+
+
   const pageUrl =
     "https://www.nishikinolab.net/nagoyacastle/";
+
+
+  const shareText =
+    `${randomPhrase} Minecraft 名古屋城天守 | WORKS`;
+
+
+  const xShareButton =
+    document.getElementById("x-share");
+
+
+  xShareButton?.setAttribute(
+    "href",
+    `https://x.com/intent/post?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageUrl)}`
+  );
 
 
   const copyButton =

@@ -1,0 +1,2514 @@
+---
+// src/components/home/Hero.zh-cn.astro
+---
+
+<section
+  id="hero"
+>
+
+
+  <div class="relative min-h-screen overflow-hidden">
+
+    <picture>
+
+      <!-- Smartphone -->
+      <source
+        media="(max-width: 639px)"
+        srcset="/images/d34f0156-a65c-4b9b-be23-56dadb9955f3.png"
+      />
+
+      <!-- PC / Tablet -->
+      <img
+        src="/images/78adb63e-2db7-4749-bef0-f032743afcde3.png"
+        alt="Nishikino"
+        class="hero-bg absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+        draggable="false"
+      />
+
+    </picture>
+
+
+    <!-- Mobile -->
+    <img
+      src="/images/d34f0156-a65c-4b9b-be23-56dadb9955f3.png"
+      alt="Nishikino"
+      class="hero-mobile absolute inset-0 hidden h-full w-full object-cover select-none pointer-events-none"
+      draggable="false"
+    />
+
+    <!-- Home専用・縦書きロゴ -->
+    <img
+      src="/images/home-logo-vertical.png"
+      alt="Nishikino"
+      class="
+        hero-vertical-logo
+        absolute
+        left-4
+        top-1/4
+        z-[5]
+        w-20
+        -translate-y-1/2
+        select-none
+        pointer-events-none
+        sm:left-8
+        sm:w-14
+        lg:left-12
+        lg:w-36
+        w-28
+      "
+      draggable="false"
+    />
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/5"></div>
+
+
+    <!-- Hero Content -->
+
+    <div
+      class="
+        absolute
+        inset-x-0
+        bottom-0
+        z-10
+        mx-auto
+        flex
+        max-w-7xl
+        items-end
+        justify-between
+        px-6
+        pb-28
+        sm:px-10
+        lg:px-12
+        lg:pb-24
+      "
+    >
+
+    </div>
+
+
+    <!-- Scroll -->
+
+    <div
+      class="
+        absolute
+        bottom-16
+        right-6
+        z-20
+        hidden
+        flex-col
+        items-center
+        sm:right-12
+        sm:flex
+      "
+    >
+
+      <div class="h-20 w-px bg-white/70"></div>
+
+      <span
+        class="
+          mt-4
+          text-xs
+          tracking-[0.45em]
+          text-white
+        "
+      >
+        SCROLL
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+
+<section
+  id="about"
+  class="
+    relative
+    overflow-hidden
+    py-8
+    sm:py-10
+    lg:py-12
+  "
+>
+
+  <!-- Background -->
+
+  <img
+    src="/images/washi-bg1.png"
+    alt=""
+    class="
+      absolute
+      inset-0
+      h-full
+      w-full
+      object-cover
+      pointer-events-none
+      select-none
+    "
+    draggable="false"
+  />
+
+  <div
+    class="
+      absolute
+      inset-0
+      bg-white/35
+    "
+  ></div>
+
+
+  <div
+    class="
+      relative
+      mx-auto
+      max-w-7xl
+      px-3
+      sm:px-5
+      lg:px-6
+    "
+  >
+
+
+<div class="text-left">
+
+  <p
+    class="
+      text-[8px]
+      tracking-[0.3em]
+      text-white/80
+      uppercase
+    "
+  >
+    ABOUT THIS SITE
+  </p>
+
+  <h2
+    class="
+      mt-2
+      text-xl
+      leading-tight
+      text-white
+      sm:text-2xl
+      lg:text-3xl
+    "
+    style="font-family:'Shippori Mincho',serif;"
+  >
+    关于本站
+  </h2>
+
+  <div
+    class="
+      mt-3
+      h-px
+      w-16
+      bg-gradient-to-r
+      from-rose-300
+      via-amber-300
+      to-sky-300
+    "
+  ></div>
+
+</div>
+
+
+<div
+  class="
+    mt-6
+    grid
+    gap-3
+    lg:grid-cols-[1.15fr_.85fr]
+    sm:gap-4
+  "
+>
+
+  <!-- Overview -->
+
+  <article
+    class="
+      rounded-[1rem]
+      border
+      border-white/70
+      bg-white/75
+      p-4
+      shadow-md
+      backdrop-blur-xl
+      sm:rounded-[1.25rem]
+      sm:p-5
+    "
+  >
+
+    <p
+      class="
+        text-[8px]
+        tracking-[0.25em]
+        text-neutral-500
+        uppercase
+      "
+    >
+      OVERVIEW
+    </p>
+
+    <h3
+      class="
+        mt-2
+        text-base
+        text-neutral-900
+        sm:text-lg
+      "
+      style="font-family:'Shippori Mincho',serif;"
+    >
+      关于本站
+    </h3>
+
+    <div
+      class="
+        mt-3
+        h-px
+        w-16
+        bg-gradient-to-r
+        from-rose-300
+        via-amber-300
+        to-sky-300
+      "
+    ></div>
+
+    <p
+      class="
+        mt-3
+        text-xs
+        leading-6
+        text-neutral-700
+        sm:text-sm
+        sm:leading-7
+      "
+      style="font-family:'Shippori Mincho',serif;"
+    >
+      本网站是介绍创作者「Nishikino」活动与作品的官方网站。<br>
+      这里主要展示我在游戏及数字空间中创作的日本城郭与历史建筑，以及各种创作与发布活动的概要。
+    </p>
+
+    <p
+      class="
+        mt-3
+        text-xs
+        leading-6
+        text-neutral-700
+        sm:text-sm
+        sm:leading-7
+      "
+      style="font-family:'Shippori Mincho',serif;"
+    >
+      除了作品介绍之外，本网站还汇集了我的个人资料、创作背景、资料调查、视频与社交媒体活动、
+      过往成果，以及委托与合作相关的信息，
+      将我的整体创作活动集中于此。
+    </p>
+
+  </article>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="section-divider" aria-hidden="true"></div>
+
+
+<section
+  id="achievements"
+  class="
+    relative
+    overflow-hidden
+    py-8
+    sm:py-10
+    lg:py-12
+  "
+>
+
+  <img
+    src="/images/washi-bg.png"
+    alt=""
+    class="
+      absolute
+      inset-0
+      h-full
+      w-full
+      object-cover
+      pointer-events-none
+      select-none
+    "
+    draggable="false"
+  />
+
+  <div
+    class="
+      absolute
+      inset-0
+      bg-white/35
+    "
+  ></div>
+
+
+  <div
+    class="
+      relative
+      mx-auto
+      max-w-7xl
+      px-3
+      sm:px-5
+      lg:px-6
+    "
+  >
+
+
+    <div
+      class="
+        flex
+        flex-col
+        justify-between
+        gap-4
+        sm:flex-row
+        sm:items-end
+      "
+    >
+
+      <div>
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.3em]
+            text-rose-500
+          "
+        >
+          ACHIEVEMENTS
+        </p>
+
+        <h2
+          class="
+            mt-2
+            text-2xl
+            text-neutral-900
+            sm:text-2xl
+            lg:text-3xl
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          成果
+        </h2>
+
+        <p
+          class="
+            mt-3
+            max-w-xl
+            text-sm
+            leading-6
+            text-neutral-600
+          "
+        >
+          这里介绍我至今的创作活动与内容发布成果。
+        </p>
+
+      </div>
+
+
+      <a
+        href="/zh-cn/achievements/"
+        class="
+          inline-flex
+          shrink-0
+          items-center
+          justify-center
+          rounded-full
+          border
+          border-neutral-800
+          bg-white/70
+          px-5
+          py-2
+          text-xs
+          text-neutral-900
+          backdrop-blur
+          transition
+          duration-500
+          hover:-translate-y-1
+          hover:bg-neutral-900
+          hover:text-white
+          hover:shadow-xl
+        "
+      >
+        查看全部成果
+      </a>
+
+    </div>
+
+
+    <div
+      class="
+        mt-6
+        grid
+        gap-3
+        sm:grid-cols-2
+        sm:gap-4
+      "
+    >
+
+      <!-- 01 -->
+
+      <article
+        class="
+          rounded-[1rem]
+          border
+          border-white/70
+          bg-white/80
+          p-4
+          shadow-md
+          backdrop-blur-xl
+          transition
+          duration-500
+          hover:-translate-y-1
+          hover:shadow-xl
+          sm:rounded-[1.25rem]
+          sm:p-5
+        "
+      >
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.25em]
+            text-rose-400
+          "
+        >
+          01
+        </p>
+
+        <h3
+          class="
+            mt-2
+            text-base
+            text-neutral-900
+            sm:text-lg
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          建筑与空间作品创作
+        </h3>
+
+        <p
+          class="
+            mt-2
+            text-xs
+            leading-6
+            text-neutral-600
+            sm:text-sm
+            sm:leading-7
+          "
+        >
+          利用游戏、3DCG等数字空间，创作城郭、建筑、街景、庭园等各种空间作品。
+        </p>
+
+      </article>
+
+
+      <!-- 02 -->
+
+      <article
+        class="
+          rounded-[1rem]
+          border
+          border-white/70
+          bg-white/80
+          p-4
+          shadow-md
+          backdrop-blur-xl
+          transition
+          duration-500
+          hover:-translate-y-1
+          hover:shadow-xl
+          sm:rounded-[1.25rem]
+          sm:p-5
+        "
+      >
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.25em]
+            text-amber-500
+          "
+        >
+          02
+        </p>
+
+        <h3
+          class="
+            mt-2
+            text-base
+            text-neutral-900
+            sm:text-lg
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          资料调查与空间考证
+        </h3>
+
+        <p
+          class="
+            mt-2
+            text-xs
+            leading-6
+            text-neutral-600
+            sm:text-sm
+            sm:leading-7
+          "
+        >
+          以设计图、照片、历史资料等为依据，研究建筑结构与地域的发展历程，并将调查结果融入作品创作。
+        </p>
+
+      </article>
+
+
+      <!-- 03 -->
+
+      <article
+        class="
+          rounded-[1rem]
+          border
+          border-white/70
+          bg-white/80
+          p-4
+          shadow-md
+          backdrop-blur-xl
+          transition
+          duration-500
+          hover:-translate-y-1
+          hover:shadow-xl
+          sm:rounded-[1.25rem]
+          sm:p-5
+        "
+      >
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.25em]
+            text-sky-500
+          "
+        >
+          03
+        </p>
+
+        <h3
+          class="
+            mt-2
+            text-base
+            text-neutral-900
+            sm:text-lg
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          作品发布与媒体
+        </h3>
+
+        <p
+          class="
+            mt-2
+            text-xs
+            leading-6
+            text-neutral-600
+            sm:text-sm
+            sm:leading-7
+          "
+        >
+          通过视频、照片和社交媒体等方式分享创作作品，让更多人了解每件作品的魅力。
+        </p>
+
+      </article>
+
+
+      <!-- 04 -->
+
+      <article
+        class="
+          rounded-[1rem]
+          border
+          border-white/70
+          bg-white/80
+          p-4
+          shadow-md
+          backdrop-blur-xl
+          transition
+          duration-500
+          hover:-translate-y-1
+          hover:shadow-xl
+          sm:rounded-[1.25rem]
+          sm:p-5
+        "
+      >
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.25em]
+            text-violet-500
+          "
+        >
+          04
+        </p>
+
+        <h3
+          class="
+            mt-2
+            text-base
+            text-neutral-900
+            sm:text-lg
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          世界观与设定创作
+        </h3>
+
+        <p
+          class="
+            mt-2
+            text-xs
+            leading-6
+            text-neutral-600
+            sm:text-sm
+            sm:leading-7
+          "
+        >
+          不仅创作现实中的建筑，也致力于创作源于想象的世界观，例如奇幻建筑、风景、角色以及其他原创构想。
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<div class="section-divider" aria-hidden="true"></div>
+
+
+<section
+  id="media"
+  class="
+    relative
+    overflow-hidden
+    py-8
+    text-white
+    sm:py-10
+    lg:py-12
+  "
+>
+
+  <!-- Background -->
+
+  <img
+    src="/images/washi-bg1.png"
+    alt=""
+    class="
+      absolute
+      inset-0
+      h-full
+      w-full
+      object-cover
+      pointer-events-none
+      select-none
+    "
+    draggable="false"
+  />
+
+
+  <div
+    class="
+      relative
+      mx-auto
+      max-w-7xl
+      px-3
+      sm:px-5
+      lg:px-6
+    "
+  >
+
+
+    <div class="max-w-3xl">
+
+      <p
+        class="
+          text-[8px]
+          tracking-[0.3em]
+          text-white
+        "
+      >
+        MEDIA
+      </p>
+
+      <h2
+        class="
+          mt-2
+          text-xl
+          text-white
+          sm:text-2xl
+          lg:text-3xl
+        "
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        视频与社交媒体
+      </h2>
+
+      <p
+        class="
+          mt-3
+          text-xm
+          leading-6
+          text-white/75
+        "
+      >
+        我通过视频、社交媒体等平台分享在 Minecraft 中创作的作品、创作活动，以及与日本文化和建筑相关的内容。
+      </p>
+
+    </div>
+
+
+<div class="mt-6">
+
+  <div
+    class="
+      mb-3
+      flex
+      items-end
+      justify-between
+      gap-3
+    "
+  >
+
+    <div>
+
+      <p
+        class="
+          text-[8px]
+          tracking-[0.25em]
+          text-white/55
+        "
+      >
+        YOUTUBE
+      </p>
+
+      <h3
+        class="
+          mt-1
+          text-base
+          text-white
+          sm:text-lg
+        "
+      >
+        𝓨𝓸𝓾𝓣𝓾𝓫𝓮
+      </h3>
+
+    </div>
+
+
+    <a
+      href="https://www.youtube.com/@NISHIKINO_Official"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="
+        hidden
+        rounded-full
+        border
+        border-white/40
+        px-4
+        py-1.5
+        text-[10px]
+        text-white/85
+        transition
+        hover:bg-white
+        hover:text-neutral-900
+        sm:inline-flex
+      "
+    >
+      在 YouTube 上观看
+    </a>
+
+  </div>
+
+
+  <div
+    class="
+      overflow-hidden
+      rounded-[1rem]
+      border
+      border-white/20
+      bg-black/30
+      shadow-xl
+      backdrop-blur-sm
+      sm:rounded-[1.25rem]
+    "
+  >
+
+     <div class="aspect-video w-full">
+
+  <iframe
+    src="https://www.youtube.com/embed/VPN70coAmY0"
+    title="Nishikino YouTube"
+    class="h-full w-full"
+    loading="lazy"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>
+
+    </div>
+
+  </div>
+
+</div>
+
+    <div
+      class="
+        mt-6
+        grid
+        gap-4
+        lg:grid-cols-2
+      "
+    >
+
+
+<!-- X -->
+
+<article>
+
+  <div class="mb-3">
+
+    <h3
+      class="
+        mt-1
+        text-base
+        text-white
+        sm:text-lg
+      "
+    >
+      𝓧 / 𝓣𝔀𝓲𝓽𝓽𝓮𝓻
+    </h3>
+
+  </div>
+
+  <div
+    class="
+      media-embed-box
+      min-h-[500px]
+      overflow-hidden
+      rounded-[1rem]
+      bg-white
+      sm:rounded-[1.25rem]
+    "
+  >
+
+    <blockquote class="twitter-tweet">
+      <p lang="ja" dir="ltr">
+        和風の城の堀
+        <a href="https://t.co/XnEicCVmK0">pic.twitter.com/XnEicCVmK0</a>
+      </p>
+      &mdash; にしきの / 錦乃 (@nishikinolab)
+      <a href="https://x.com/nishikinolab/status/1914636187329077479?ref_src=twsrc%5Etfw">
+        April 22, 2025
+      </a>
+    </blockquote>
+
+  </div>
+
+</article>
+
+
+      <!-- TikTok -->
+
+      <article>
+
+        <div class="mb-3">
+
+          <h3
+            class="
+              mt-1
+              text-base
+              text-white
+              sm:text-lg
+            "
+          >
+            𝓣𝓲𝓴𝓣𝓸𝓴
+          </h3>
+
+        </div>
+
+
+        <div
+          class="
+            media-embed-box
+            min-h-[280px]
+            overflow-hidden
+            rounded-[1rem]
+            bg-white
+            p-3
+            sm:min-h-[320px]
+            sm:rounded-[1.25rem]
+          "
+        >
+
+          <blockquote
+            class="tiktok-embed"
+            cite="https://www.tiktok.com/@nishikino_official"
+            data-unique-id="nishikino_official"
+            data-embed-type="creator"
+            style="max-width:780px; min-width:288px;"
+          >
+
+            <section>
+
+              <a
+                target="_blank"
+                href="https://www.tiktok.com/@nishikino_official?refer=creator_embed"
+                rel="noopener noreferrer"
+              >
+                @nishikino_official
+              </a>
+
+            </section>
+
+          </blockquote>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+
+    <div
+      class="
+        mt-5
+        flex
+        flex-wrap
+        gap-2
+      "
+    >
+
+      <a
+        href="https://www.youtube.com/@NISHIKINO_Official"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-button"
+      >
+        YouTube
+      </a>
+
+      <a
+        href="https://x.com/nishikinolab"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-button"
+      >
+        X
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@nishikino_official"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-button"
+      >
+        TikTok
+      </a>
+
+      <a
+        href="https://www.planetminecraft.com/member/NishikinoLab/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-button"
+      >
+        Planet Minecraft
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<section
+  id="contact-preview"
+  class="
+    relative
+    overflow-hidden
+    py-8
+    sm:py-10
+    lg:py-12
+  "
+>
+
+  <!-- 和紙背景 -->
+
+  <img
+    src="/images/washi-bg1.png"
+    alt=""
+    class="
+      absolute
+      inset-0
+      h-full
+      w-full
+      object-cover
+      pointer-events-none
+      select-none
+    "
+    draggable="false"
+  />
+
+
+  <!-- 白い透過レイヤー -->
+
+  <div
+    class="
+      absolute
+      inset-0
+      bg-white/30
+    "
+  ></div>
+
+
+  <div
+    class="
+      relative
+      mx-auto
+      max-w-7xl
+      px-3
+      sm:px-5
+      lg:px-6
+    "
+  >
+
+
+    <div class="text-left">
+
+      <p
+        class="
+          text-[8px]
+          tracking-[0.3em]
+          text-rose-500
+          uppercase
+        "
+      >
+        COLLABORATION
+      </p>
+
+      <h2
+        class="
+          mt-2
+          text-xl
+          text-white
+          sm:text-2xl
+          lg:text-3xl
+        "
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        委托与合作
+      </h2>
+
+      <p
+        class="
+          mt-3
+          max-w-xl
+          text-sm
+          leading-6
+          text-white
+        "
+      >
+        无论是个人、企业、地方政府还是文化机构，都可以就各种创作与企划进行咨询。
+      </p>
+
+    </div>
+
+    <div
+      class="
+        mt-6
+        grid
+        gap-3
+        sm:grid-cols-2
+        sm:gap-4
+      "
+    >
+
+      <!-- 01 -->
+
+      <article
+        class="
+          group
+          overflow-hidden
+          rounded-[1rem]
+          border
+          border-white/60
+          bg-gradient-to-br
+          from-white/90
+          via-rose-50/70
+          to-sky-50/70
+          p-4
+          backdrop-blur-md
+          shadow-md
+          transition-all
+          duration-500
+          hover:-translate-y-1
+          hover:shadow-xl
+          sm:rounded-[1.25rem]
+          sm:p-5
+        "
+      >
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.25em]
+            text-neutral-500
+            uppercase
+          "
+        >
+          Collaboration
+        </p>
+
+        <h3
+          class="
+            mt-2
+            text-base
+            text-neutral-900
+            sm:text-lg
+          "
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          立体空间内容制作
+        </h3>
+
+        <div
+          class="
+            mt-3
+            h-px
+            w-16
+            bg-gradient-to-r
+            from-rose-300
+            via-amber-300
+            to-sky-300
+          "
+        ></div>
+
+        <p
+          class="
+            mt-3
+            text-xs
+            leading-6
+            text-neutral-700
+            sm:text-sm
+            sm:leading-7
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          可以制作城郭、宅邸、住宅、神社、寺院、街景等各种历史建筑，也可以利用文化主题制作数字内容。
+        </p>
+
+      </article>
+
+
+      <!-- 02 -->
+
+      <article
+        class="
+          group
+          overflow-hidden
+          rounded-[1rem]
+          border
+          border-white/60
+          bg-gradient-to-br
+          from-white/90
+          via-rose-50/70
+          to-sky-50/70
+          p-4
+          backdrop-blur-md
+          shadow-md
+          transition-all
+          duration-500
+          hover:-translate-y-1
+          hover:shadow-xl
+          sm:rounded-[1.25rem]
+          sm:p-5
+        "
+      >
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.25em]
+            text-neutral-500
+            uppercase
+          "
+        >
+          Collaboration
+        </p>
+
+        <h3
+          class="
+            mt-2
+            text-base
+            text-neutral-900
+            sm:text-lg
+          "
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          视频、摄影与社交媒体内容
+        </h3>
+
+        <div
+          class="
+            mt-3
+            h-px
+            w-16
+            bg-gradient-to-r
+            from-rose-300
+            via-amber-300
+            to-sky-300
+          "
+        ></div>
+
+        <p
+          class="
+            mt-3
+            text-xs
+            leading-6
+            text-neutral-700
+            sm:text-sm
+            sm:leading-7
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          从 YouTube 介绍视频、社交媒体内容到世界观构建，根据您希望传达的对象与项目魅力，协助实现合适的视觉表达。
+        </p>
+
+      </article>
+
+
+      <!-- 03 -->
+
+      <article
+        class="
+          group
+          overflow-hidden
+          rounded-[1rem]
+          border
+          border-white/60
+          bg-gradient-to-br
+          from-white/90
+          via-rose-50/70
+          to-sky-50/70
+          p-4
+          backdrop-blur-md
+          shadow-md
+          transition-all
+          duration-500
+          hover:-translate-y-1
+          hover:shadow-xl
+          sm:rounded-[1.25rem]
+          sm:p-5
+        "
+      >
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.25em]
+            text-neutral-500
+            uppercase
+          "
+        >
+          Collaboration
+        </p>
+
+        <h3
+          class="
+            mt-2
+            text-base
+            text-neutral-900
+            sm:text-lg
+          "
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          创作者与主播合作
+        </h3>
+
+        <div
+          class="
+            mt-3
+            h-px
+            w-16
+            bg-gradient-to-r
+            from-rose-300
+            via-amber-300
+            to-sky-300
+          "
+        ></div>
+
+        <p
+          class="
+            mt-3
+            text-xs
+            leading-6
+            text-neutral-700
+            sm:text-sm
+            sm:leading-7
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          无论创作领域或活动形式，我们都可以通过视频、直播、企划等各种方式实现合作。如果你曾想过「要不要一起做这样的企划？」，欢迎把想法变成现实。
+        </p>
+
+      </article>
+
+
+      <!-- 04 -->
+
+      <article
+        class="
+          group
+          overflow-hidden
+          rounded-[1rem]
+          border
+          border-white/60
+          bg-gradient-to-br
+          from-white/90
+          via-rose-50/70
+          to-sky-50/70
+          p-4
+          backdrop-blur-md
+          shadow-md
+          transition-all
+          duration-500
+          hover:-translate-y-1
+          hover:shadow-xl
+          sm:rounded-[1.25rem]
+          sm:p-5
+        "
+      >
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.25em]
+            text-neutral-500
+            uppercase
+          "
+        >
+          Collaboration
+        </p>
+
+        <h3
+          class="
+            mt-2
+            text-base
+            text-neutral-900
+            sm:text-lg
+          "
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          与企业、地方政府及城市合作的项目
+        </h3>
+
+        <div
+          class="
+            mt-3
+            h-px
+            w-16
+            bg-gradient-to-r
+            from-rose-300
+            via-amber-300
+            to-sky-300
+          "
+        ></div>
+
+        <p
+          class="
+            mt-3
+            text-xs
+            leading-6
+            text-neutral-700
+            sm:text-sm
+            sm:leading-7
+          "
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          涵盖旅游、城市及地区振兴、历史与现代文化、展览企划、教育等领域，从小规模项目到大型项目，利用空间表现与数字创作共同开展各种合作。
+        </p>
+
+      </article>
+
+    </div>
+
+
+    <section
+      class="
+        relative
+        mt-6
+        overflow-hidden
+        rounded-[1.25rem]
+        text-neutral-800
+        sm:mt-8
+        sm:rounded-[1.5rem]
+      "
+    >
+
+      <!-- Pattern -->
+
+      <div
+        class="
+          absolute
+          inset-0
+          opacity-[0.05]
+        "
+      ></div>
+
+
+      <div
+        class="
+          relative
+          rounded-[1.25rem]
+          border
+          border-white/70
+          bg-white/80
+          p-5
+          text-center
+          backdrop-blur
+          sm:rounded-[1.5rem]
+          sm:p-6
+        "
+      >
+
+        <p
+          class="
+            text-[8px]
+            tracking-[0.25em]
+            text-neutral-500
+          "
+        >
+          CONTACT
+        </p>
+
+
+        <h3
+          class="
+            mt-2
+            text-lg
+            text-neutral-900
+            sm:text-xl
+          "
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          一起创造新的故事。
+        </h3>
+
+
+        <p
+          class="
+            mx-auto
+            mt-3
+            max-w-xl
+            text-xs
+            leading-6
+            text-neutral-600
+            sm:text-sm
+            sm:leading-7
+          "
+        >
+          「不知道这样的事情能不能实现？」<br />
+          即使只是一个小小的想法，也非常欢迎。<br />
+          无论是个人、创作者、企业、地方政府还是研究机构，
+          都欢迎告诉我您的想法，
+          让它成为开启新企划或合作的第一步。
+        </p>
+
+
+        <a
+          href="/zh-cn/contact/"
+          class="
+            mt-5
+            inline-flex
+            h-24
+            w-24
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-neutral-800
+            bg-white
+            text-xs
+            text-neutral-900
+            text-center
+            leading-5
+            transition
+            duration-500
+            hover:-translate-y-1
+            hover:shadow-xl
+            sm:h-28
+            sm:w-28
+            sm:text-sm
+          "
+        >
+          联系咨询
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </div>
+</section>
+</section>
+
+
+<section
+  id="menu"
+  class="
+    relative
+    overflow-hidden
+    bg-[#140f0d]
+    py-6
+    text-white
+    sm:py-8
+  "
+>
+
+  <!-- Background Image -->
+
+  <div
+    class="
+      absolute
+      inset-0
+      bg-cover
+      bg-center
+    "
+    style="
+      background-image:url('/images/kawagoe2.png');
+    "
+  ></div>
+
+
+  <!-- Dark Overlay -->
+
+  <div
+    class="
+      absolute
+      inset-0
+      bg-black/5
+    "
+  ></div>
+
+
+  <div
+    class="
+      relative
+      mx-auto
+      max-w-7xl
+      px-3
+      text-center
+      sm:px-4
+      lg:px-6
+    "
+  >
+
+    <div>
+
+      <p
+        class="
+          text-[8px]
+          tracking-[0.3em]
+          !text-white
+        "
+      >
+        SITE MAP
+      </p>
+
+      <h2
+        class="
+          mt-1
+          text-lg
+          !text-white
+          sm:text-xl
+        "
+        style="font-family:'Zen Kaku Gothic New',sans-serif;"
+      >
+        网站地图
+      </h2>
+
+    </div>
+
+
+    <div
+      class="
+        mt-5
+        grid
+        gap-x-5
+        gap-y-4
+        sm:grid-cols-2
+        lg:grid-cols-3
+      "
+    >
+
+      <!-- Column 1 -->
+
+      <nav class="text-center">
+
+        <div class="space-y-1">
+
+          <a
+            href="/zh-cn/"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            Home
+          </a>
+
+          <a
+            href="/zh-cn/profile/"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            个人资料
+          </a>
+
+          <a
+            href="/zh-cn/achievements/"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            成果
+          </a>
+
+          <a
+            href="/zh-cn/contact/"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            委托与咨询
+          </a>
+
+          <a
+            href="/zh-cn/profile/gallery/"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            角色画廊
+          </a>
+
+        </div>
+
+      </nav>
+
+
+      <!-- Column 2 -->
+
+      <nav class="text-center">
+
+        <div class="space-y-1">
+
+          <a
+            href="/zh-cn/works/"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            作品一览
+          </a>
+
+          <a
+            href="/zh-cn/#about"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            关于本站
+          </a>
+
+          <a
+            href="/zh-cn/#media"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            视频与社交媒体
+          </a>
+
+          <a
+            href="/zh-cn/#menu"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            网站地图
+          </a>
+
+        </div>
+
+      </nav>
+
+
+      <!-- Column 3 -->
+
+      <div class="text-center">
+
+        <div class="space-y-1">
+
+          <a
+            href="https://www.youtube.com/@NISHIKINO_Official"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            YouTube
+          </a>
+
+          <a
+            href="https://x.com/nishikinolab"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            X
+          </a>
+
+          <a
+            href="https://www.tiktok.com/@nishikino_official"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            TikTok
+          </a>
+
+          <a
+            href="https://www.planetminecraft.com/member/NishikinoLab/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="
+              site-menu-link
+              block
+              text-center
+              text-[10px]
+              !text-white
+              hover:!text-[#f5c542]
+            "
+          >
+            Planet Minecraft
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<script
+  is:inline
+  async
+  src="https://platform.x.com/widgets.js"
+  charset="utf-8"
+></script>
+
+<script
+  async
+  src="https://www.tiktok.com/embed.js"
+></script>
+
+
+<style>
+
+.section-divider {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(253, 164, 175, 0.45) 25%,
+    rgba(252, 211, 77, 0.45) 50%,
+    rgba(125, 211, 252, 0.45) 75%,
+    transparent 100%
+  );
+}
+
+.hero-bg {
+  animation: heroFloat 12s ease-in-out infinite;
+  will-change: transform;
+}
+
+.hero-mobile {
+  animation: heroFloat 12s ease-in-out infinite;
+  will-change: transform;
+}
+
+
+@keyframes heroFloat {
+
+  0% {
+    transform: scale(1.05) translateY(0px);
+  }
+
+  50% {
+    transform: scale(1.08) translateY(-15px);
+  }
+
+  100% {
+    transform: scale(1.05) translateY(0px);
+  }
+
+}
+
+
+.media-embed-box {
+  position: relative;
+}
+
+
+.media-embed-box iframe {
+  max-width: 100%;
+}
+
+
+.social-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+
+  border: 1px solid rgba(255,255,255,.2);
+
+  border-radius: 9999px;
+
+  padding:
+    .65rem
+    1.2rem;
+
+  background: rgba(255,255,255,.05);
+
+  color: rgba(255,255,255,.8);
+
+  font-size: .8rem;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition:
+    transform .35s ease,
+    background .35s ease,
+    color .35s ease,
+    border-color .35s ease;
+}
+
+
+.social-button:hover {
+  transform: translateY(-3px);
+
+  background: #ffffff;
+
+  border-color: #ffffff;
+
+  color: #181818;
+}
+
+
+.contact-card {
+  border:
+    1px solid
+    rgba(255,255,255,.7);
+
+  border-radius: 2rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.9),
+      rgba(255,245,247,.7),
+      rgba(240,249,255,.7)
+    );
+
+  padding: 2rem;
+
+  box-shadow:
+    0 10px 35px rgba(0,0,0,.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  transition:
+    transform .5s cubic-bezier(.22,1,.36,1),
+    box-shadow .5s ease;
+}
+
+
+.contact-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 25px 55px rgba(0,0,0,.14);
+}
+
+
+.contact-number {
+  font-size: .75rem;
+
+  letter-spacing: .3em;
+
+  color: #b7a2a2;
+}
+
+
+.contact-title {
+  margin-top: 1rem;
+
+  font-family:
+    "Shippori Mincho",
+    serif;
+
+  font-size: 1.45rem;
+
+  line-height: 1.5;
+
+  color: #181818;
+}
+
+
+.contact-text {
+  margin-top: 1rem;
+
+  font-size: .95rem;
+
+  line-height: 2;
+
+  color: #666;
+}
+
+
+@media (max-width: 1024px) {
+
+  .hero-bg {
+    animation-duration: 15s;
+  }
+
+}
+
+
+.site-menu-link {
+  display: block;
+
+  position: relative;
+
+  width: fit-content;
+
+  color: rgba(255,255,255,.78);
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+
+  transition:
+    color .3s ease,
+    transform .3s ease;
+}
+
+
+.site-menu-link::before {
+  content: "•";
+
+  display: inline-block;
+
+  margin-right: .65rem;
+
+  color: rgba(255,255,255,.3);
+
+  transition:
+    color .3s ease,
+    transform .3s ease;
+}
+
+
+.site-menu-link:hover {
+  color: #ffffff;
+
+  transform: translateX(5px);
+}
+
+
+.site-menu-link:hover::before {
+  color: #f5c7a5;
+
+  transform: scale(1.2);
+}
+
+
+@media (max-width: 639px) {
+
+  .hero-bg {
+    display: none;
+  }
+
+  .hero-mobile {
+    display: block;
+  }
+
+
+  .site-menu-link {
+    font-size: .9rem;
+  }
+
+
+  .contact-card {
+    padding: 1.5rem;
+
+    border-radius: 1.5rem;
+  }
+
+
+  .contact-title {
+    font-size: 1.25rem;
+  }
+
+
+  .contact-text {
+    font-size: .9rem;
+
+    line-height: 1.9;
+  }
+
+
+  .media-embed-box {
+    border-radius: 1.25rem;
+  }
+
+}
+
+
+@media (max-width: 400px) {
+
+  .contact-card {
+    padding: 1.25rem;
+  }
+
+  .social-button {
+    width: 100%;
+  }
+
+}
+
+:global(html) {
+  color-scheme: light;
+}
+
+:global(body) {
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+
+#hero > div:first-of-type p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+
+#about {
+  color-scheme: light;
+}
+
+#about > div.relative {
+  color: #181818;
+}
+
+
+/* ABOUT section title */
+
+#about h2 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+#about > div.relative > div.text-left > p {
+  color: rgba(255, 255, 255, 0.8) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* ABOUT card */
+
+#about article {
+  background: rgba(255, 255, 255, 0.75) !important;
+  border-color: rgba(255, 255, 255, 0.7) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ABOUT card text */
+
+#about article > p:first-of-type {
+  color: #737373 !important;
+  -webkit-text-fill-color: #737373;
+}
+
+#about article h3 {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+}
+
+#about article p:not(:first-of-type) {
+  color: #404040 !important;
+  -webkit-text-fill-color: #404040;
+}
+
+
+#achievements {
+  color-scheme: light;
+}
+
+
+/* Section title */
+
+#achievements h2 {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+}
+
+#achievements > div.relative > div:first-child p {
+  color: #e11d48 !important;
+  -webkit-text-fill-color: #e11d48;
+}
+
+#achievements > div.relative > div:first-child p:last-child {
+  color: #525252 !important;
+  -webkit-text-fill-color: #525252;
+}
+
+
+/* Achievement button */
+
+#achievements a {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-color: #262626 !important;
+}
+
+
+/* Achievement cards */
+
+#achievements article {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.7) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Achievement card number */
+
+#achievements article:nth-child(1) > p {
+  color: #fb7185 !important;
+  -webkit-text-fill-color: #fb7185;
+}
+
+#achievements article:nth-child(2) > p {
+  color: #f59e0b !important;
+  -webkit-text-fill-color: #f59e0b;
+}
+
+#achievements article:nth-child(3) > p {
+  color: #0ea5e9 !important;
+  -webkit-text-fill-color: #0ea5e9;
+}
+
+#achievements article:nth-child(4) > p {
+  color: #8b5cf6 !important;
+  -webkit-text-fill-color: #8b5cf6;
+}
+
+
+/* Achievement card headings */
+
+#achievements article h3 {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+}
+
+
+/* Achievement card descriptions */
+
+#achievements article p:last-child {
+  color: #525252 !important;
+  -webkit-text-fill-color: #525252;
+}
+
+
+#about .bg-gradient-to-r,
+#contact-preview .bg-gradient-to-r {
+  background-image: linear-gradient(
+    to right,
+    rgb(253, 164, 175),
+    rgb(252, 211, 77),
+    rgb(125, 211, 252)
+  ) !important;
+
+  background-color: transparent !important;
+
+  color: transparent !important;
+}
+
+
+#contact-preview {
+  color-scheme: light;
+}
+
+
+/* Section title */
+
+#contact-preview h2 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+#contact-preview > div.relative > div.text-left > p:last-child {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* Collaboration cards */
+
+#contact-preview article {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 245, 247, 0.7),
+      rgba(240, 249, 255, 0.7)
+    ) !important;
+
+  border-color: rgba(255, 255, 255, 0.6) !important;
+
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Collaboration card label */
+
+#contact-preview article > p:first-of-type {
+  color: #737373 !important;
+  -webkit-text-fill-color: #737373;
+}
+
+
+/* Collaboration card heading */
+
+#contact-preview article h3 {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+}
+
+
+/* Collaboration card description */
+
+#contact-preview article p:last-child {
+  color: #404040 !important;
+  -webkit-text-fill-color: #404040;
+}
+
+
+#contact-preview section {
+  color: #262626;
+}
+
+
+/* CTA card */
+
+#contact-preview section > div.relative {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+
+/* CTA label */
+
+#contact-preview section > div.relative > p {
+  color: #737373 !important;
+  -webkit-text-fill-color: #737373;
+}
+
+
+/* CTA heading */
+
+#contact-preview section h3 {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+}
+
+
+/* CTA description */
+
+#contact-preview section h3 + p {
+  color: #525252 !important;
+  -webkit-text-fill-color: #525252;
+}
+
+
+/* CTA button */
+
+#contact-preview section a {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717;
+  background: #ffffff !important;
+  border-color: #262626 !important;
+}
+
+
+@media (max-width: 639px) {
+
+  #hero > div:first-of-type p,
+  #about h2,
+  #about > div.relative > div.text-left > p,
+  #about article > p:first-of-type,
+  #about article h3,
+  #about article p:not(:first-of-type),
+  #achievements h2,
+  #achievements > div.relative > div:first-child p,
+  #achievements article h3,
+  #achievements article p:last-child,
+  #contact-preview h2,
+  #contact-preview > div.relative > div.text-left > p:last-child,
+  #contact-preview article > p:first-of-type,
+  #contact-preview article h3,
+  #contact-preview article p:last-child,
+  #contact-preview section > div.relative > p,
+  #contact-preview section h3,
+  #contact-preview section h3 + p,
+  #contact-preview section a {
+    forced-color-adjust: none;
+  }
+
+  #about article,
+  #achievements article,
+  #contact-preview article,
+  #contact-preview section > div.relative {
+    forced-color-adjust: none;
+  }
+
+  #about .bg-gradient-to-r,
+  #contact-preview .bg-gradient-to-r {
+    forced-color-adjust: none;
+  }
+
+}
+
+.media-embed-box {
+  position: relative;
+  width: 100%;
+}
+
+.media-embed-box .twitter-timeline {
+  width: 100% !important;
+}
+
+.media-embed-box iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+</style>

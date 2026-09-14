@@ -421,79 +421,113 @@ import Container from "../../components/common/Container.astro";
     </div>
 
 
-    <div class="mt-32 text-center">
+<div class="mt-32 text-center">
 
-      <div class="flex items-center justify-center gap-5">
+  <div class="flex items-center justify-center gap-5">
 
-        <span class="h-px w-16 bg-[#caa14d]"></span>
+    <span class="h-px w-16 bg-[#caa14d]"></span>
 
-        <p
-          class="text-base tracking-[0.45em] text-[#a58c65]"
-          style="font-family:'Cormorant Garamond',serif;"
-        >
-          SHARE
-        </p>
+    <p
+      class="text-base tracking-[0.45em] text-[#a58c65]"
+      style="font-family:'Cormorant Garamond',serif;"
+    >
+      SHARE
+    </p>
 
-        <span class="h-px w-16 bg-[#caa14d]"></span>
+    <span class="h-px w-16 bg-[#caa14d]"></span>
 
-      </div>
-
-
-      <h2
-        class="mt-6 text-3xl text-[#2b2724]"
-        style="font-family:'Shippori Mincho',serif;"
-      >
-        作品をシェア
-      </h2>
+  </div>
 
 
-      <div class="mt-8 flex justify-center gap-4 flex-wrap">
-
-        <!-- X -->
-
-        <a
-          href="https://x.com/intent/post?text=%E9%8C%A6%E4%B9%83%E3%80%8C%E5%9B%BD%E5%AE%9D%E5%87%AA%E3%83%8E%E5%9F%8E%E3%80%8D%20%7C%20WORKS&url=https%3A%2F%2Fwww.nishikinolab.net%2Fnaginocastle%2F"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-base hover:bg-[#2b2724] hover:text-white"
-        >
-          X
-        </a>
+  <h2
+    class="mt-6 text-3xl text-[#2b2724]"
+    style="font-family:'Shippori Mincho',serif;"
+  >
+    作品をシェア
+  </h2>
 
 
-        <!-- Instagram -->
+  <div class="mt-8 flex justify-center gap-4 flex-wrap">
 
-        <button
-          type="button"
-          id="instagram-share"
-          class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-base hover:bg-[#2b2724] hover:text-white"
-        >
-          Instagram
-        </button>
+    <!-- X -->
+
+    <a
+      id="x-share"
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-base hover:bg-[#2b2724] hover:text-white"
+    >
+      X
+    </a>
 
 
-        <!-- Copy -->
+    <!-- Instagram -->
 
-        <button
-          type="button"
-          id="copy-url"
-          class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-base hover:bg-[#2b2724] hover:text-white"
-        >
-          URLをコピー
-        </button>
+    <button
+      type="button"
+      id="instagram-share"
+      class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-base hover:bg-[#2b2724] hover:text-white"
+    >
+      Instagram
+    </button>
 
-      </div>
 
-    </div>
+    <!-- Copy -->
 
-  </Container>
+    <button
+      type="button"
+      id="copy-url"
+      class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-base hover:bg-[#2b2724] hover:text-white"
+    >
+      URLをコピー
+    </button>
+
+  </div>
+
+</div>
+
+</Container>
 
 </section>
 
 <script>
 
+  const sharePhrases = [
+    "これ見つけた。",
+    "これ、なんか好き。",
+    "これちょっと見て。",
+    "なんか気になるの見つけた。",
+    "こんなの見っけた。",
+    "これ知ってる？",
+    "なんか見つけた。",
+    "こんなのあった。",
+    "ちょっと気になるもの見つけたかも。"
+  ];
+
+
+  const sharePhrase =
+    sharePhrases[
+      Math.floor(Math.random() * sharePhrases.length)
+    ];
+
+
   const pageUrl =
     "https://www.nishikinolab.net/naginocastle/";
+
+
+  const shareText =
+    `${sharePhrase} Minecraft 国宝苗木城 | WORKS`;
+
+
+  const xShareButton =
+    document.getElementById("x-share");
+
+
+  xShareButton?.setAttribute(
+    "href",
+    `https://x.com/intent/post?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageUrl)}`
+  );
 
 
   const copyButton =
@@ -502,7 +536,6 @@ import Container from "../../components/common/Container.astro";
 
   const instagramButton =
     document.getElementById("instagram-share");
-
 
 
   copyButton?.addEventListener("click", async () => {

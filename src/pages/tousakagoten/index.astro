@@ -316,7 +316,7 @@ Minecraftで最初に建てた建築は、Pocket Editionで制作していた「
     </div>
 
 
-    <!-- Share -->
+     <!-- Share -->
 
     <div class="mt-32 text-center">
 
@@ -345,7 +345,8 @@ Minecraftで最初に建てた建築は、Pocket Editionで制作していた「
       <div class="mt-8 flex justify-center gap-4 flex-wrap">
 
         <a
-          href="https://x.com/intent/post?text=%E9%8C%A6%E4%B9%83%E3%80%8C%E6%9D%B1%E5%9D%82%E5%BE%A1%E6%AE%BF%E3%80%8D%20%7C%20WORKS&url=https%3A%2F%2Fwww.nishikinolab.net%2Ftousakagoten%2F"
+          href="#"
+          id="x-share"
           target="_blank"
           rel="noopener noreferrer"
           class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-base hover:bg-[#2b2724] hover:text-white"
@@ -379,10 +380,33 @@ Minecraftで最初に建てた建築は、Pocket Editionで制作していた「
 
 
 <script>
+  const sharePhrases = [
+    "これ見つけた。",
+    "これ、なんか好き。",
+    "これちょっと見て。",
+    "なんか気になるの見つけた。",
+    "こんなの見っけた。",
+    "これ知ってる？",
+    "なんか見つけた。",
+    "こんなのあった。",
+    "ちょっと気になるもの見つけたかも。"
+  ];
+
+  const sharePhrase =
+    sharePhrases[Math.floor(Math.random() * sharePhrases.length)];
+
   const pageUrl = "https://www.nishikinolab.net/tousakagoten/";
 
+  const shareText = `${sharePhrase} Minecraft 東坂御殿 | WORKS`;
+
+  const xShareButton = document.getElementById("x-share");
   const copyButton = document.getElementById("copy-url");
   const instagramButton = document.getElementById("instagram-share");
+
+  xShareButton?.setAttribute(
+    "href",
+    `https://x.com/intent/post?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageUrl)}`
+  );
 
   copyButton?.addEventListener("click", async () => {
     try {

@@ -1,0 +1,721 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout
+  title="个人资料｜PROFILE｜锦乃"
+  description="锦乃的官方个人资料。通过日本传统、建筑、历史以及数字创作，探索我所喜爱的事物与新的表达方式。"
+>
+
+<section id="profileSection" class="relative min-h-screen overflow-hidden">
+
+  <!-- Background -->
+  <img
+    id="profileBg1"
+    src="/images/profile-bg.png"
+    alt="个人资料背景"
+    class="profile-bg profile-bg-front absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+    draggable="false"
+  />
+
+  <img
+    id="profileBg2"
+    src="/images/profile-bg-message.png"
+    alt=""
+    class="profile-bg profile-bg-back absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+    draggable="false"
+  />
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/27"></div>
+
+  <!-- Content -->
+  <div
+    class="relative z-10 mx-auto flex min-h-screen max-w-[1700px]
+           flex-col items-center justify-between
+           px-5 py-24
+           sm:px-8 sm:py-28
+           lg:flex-row lg:px-20 lg:py-24"
+  >
+
+    <!-- Left -->
+    <div
+      id="profileLeft"
+      class="profile-content w-full
+             lg:w-[30%]"
+    >
+
+      <p
+        class="text-[10px] tracking-[0.35em] text-white
+               sm:text-sm sm:tracking-[0.55em]"
+        style="font-family:'Inter',sans-serif;"
+      >
+        PROFILE
+      </p>
+
+      <h1
+        class="mt-4 text-4xl font-light text-white
+               sm:text-6xl
+               lg:mt-6 lg:text-7xl"
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        锦乃
+      </h1>
+
+      <p
+        class="mt-6 text-xs leading-6 text-white/90
+               sm:text-base sm:leading-10
+               lg:mt-8"
+        style="font-family:'Shippori Mincho',serif;"
+      >
+        Nishikino
+        <br />
+        喜爱日本传统文化与建筑，
+        <br />
+        不断创造新的表达方式的视频创作者
+        <br /><br />
+
+        平时会走访各地名胜，
+        <br />
+        拍摄风景与影像，
+        <br />
+        将自己所喜欢的事物以作品的形式呈现出来。
+      </p>
+
+    </div>
+
+
+    <!-- Center -->
+    <div class="hidden lg:block lg:w-[18%]"></div>
+
+
+    <!-- Right -->
+    <div
+      class="profile-content delay mt-10 w-full space-y-5
+             sm:mt-12 sm:space-y-6
+             lg:mt-0 lg:w-[34%] lg:space-y-6"
+    >
+
+      <!-- INTRODUCTION -->
+      <div
+        id="introductionCard"
+        class="profile-card rounded-[24px] border border-white/20
+               bg-transparent p-5
+               sm:rounded-[34px] sm:p-8"
+      >
+
+        <p
+          class="text-[9px] tracking-[0.35em] text-white/60
+                 sm:text-xs sm:tracking-[0.45em]"
+        >
+          INTRODUCTION
+        </p>
+
+        <div
+          class="mt-4 space-y-3 text-xs leading-6 text-white
+                 sm:mt-5 sm:space-y-4 sm:text-base sm:leading-8"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+
+          <p>
+            <strong>「錦」</strong>让人联想到如锦织物般丰富多彩的美感，
+            <strong>「乃」</strong>则带有古雅而优美的韵味。
+            <br />
+            将两字结合，
+            寄托着「愿自己丰富而美好」的心愿，由此构思出了这个名字。
+          </p>
+
+          <div class="border-t border-white/15 pt-4 text-white/90">
+            <p>东坂 优谷（Tosaka　Yuya）</p>
+            <p>年龄：23岁</p>
+            <p>生日：2003年5月4日</p>
+            <p>出生地：群马县太田市</p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- MESSAGE -->
+      <div
+        id="messageCard"
+        class="profile-card rounded-[24px] border border-white/20
+               bg-transparent p-5
+               sm:rounded-[34px] sm:p-8"
+      >
+
+        <p
+          class="text-[10px] tracking-[0.4em] text-white/60
+                 sm:text-xs sm:tracking-[0.45em]"
+        >
+          MESSAGE
+        </p>
+
+        <div
+          class="mt-5 text-[13px] leading-7 text-white
+                 sm:text-base sm:leading-8"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+
+          <p>
+            欢迎来到这里。大广间欢迎您的到来。<br>
+          </p>
+
+          <p class="mt-4">
+            我曾经在全球知名的沙盒游戏《Minecraft》中
+            <br />
+            制作日本传统名胜，
+            <br />
+            也因此随着「锦乃」这个名字，
+            <br />
+            开始被越来越多的人认识。
+          </p>
+
+<details id="messageDetails" class="mt-6 group">
+
+  <!-- Read More -->
+  <summary
+    id="messageSummary"
+    class="cursor-pointer select-none text-rose-200 transition hover:text-white"
+  >
+    ▶ 阅读更多
+  </summary>
+
+
+  <!-- MESSAGE DETAIL -->
+  <div
+    class="mt-6 space-y-6 text-[13px] leading-7 text-white/90
+           sm:text-base sm:leading-8"
+  >
+
+    <p>
+      从小时候开始，我就非常喜欢城市以及人们聚集在一起时所产生的热闹氛围。
+      <br />
+      而后来对日本传统文化和日式建筑产生兴趣，其实也是从这种喜爱自然延伸出来的。
+      <br />
+      （其实我一开始并不是特别喜欢日式建筑！）
+    </p>
+
+    <p>
+      一切的起点，是在初中时期。
+      <br />
+      那时我在历史教科书中看到了「江户图屏风」上的江户城天守，
+      一眼便喜欢上了它。
+    </p>
+
+    <p>
+      在Minecraft中，我最初只是想着在生存模式里建造一座
+      不会被敌人破坏的坚固房屋，
+      <br />
+      而建造天守阁，则成为了我开始进行建筑创作的契机。
+    </p>
+
+    <p>
+      从那以后，我开始尝试建造现实中的名胜，
+      因为我想着：「如果自己随时都能欣赏喜欢的地方就好了。」
+      <br />
+      后来，我逐渐发现，甚至那些已经消失的建筑和景观，
+      也能够通过这种方式重新呈现出来。
+    </p>
+
+    <p>
+      就这样，我一边游览城市，
+      一边前往各种名胜、城郭以及与德川家有关的地方，
+      <br />
+      通过照片、影像和数字作品，
+      以自己的方式记录并分享自己所喜欢的事物。
+    </p>
+
+    <p>
+      对我来说，这原本一直只是作为兴趣在享受的事情，
+      但随着越来越多人开始认可我的作品，
+      <br />
+      不知不觉间，也逐渐有人以项目和委托的形式向我发出邀请……！
+    </p>
+
+    <p>
+      日本江户时期流传着一句话：
+      「好きこそ物の上手なれ」，
+      <br />
+      意思大致是「真正喜欢一件事，才能把它做好」。
+      <br />
+      而我也切身感受到了这句话所说的道理。
+    </p>
+
+    <p>
+      我的建筑创作基本以还原为核心。
+      <br />
+      我喜欢制作超越游戏本身，
+      让人产生「看起来就像真的一样」这种感觉的建筑。
+    </p>
+
+    <p>
+      除了日式建筑之外，
+      我也非常喜欢观看各种游戏主播和创作者游玩的Steam游戏、
+      <br />
+      摄影与影像制作、
+      动画，
+      <br />
+      以及不局限于日式或现代主题的旅行和观光。
+      <br />
+      我也对如何冲煮好喝的咖啡、时尚和美容等事物感兴趣。
+    </p>
+
+    <p>
+      除了Minecraft之外，
+      我最喜欢的游戏包括
+      <em>UNDERTALE</em> 和 <em>Deltarune</em>。
+      <br />
+      我也经常喜欢上一些YouTuber和声优。
+      <br />
+      我曾经一度考虑去声优培训学校学习，
+      也有过参加试镜并获得录取的经历。
+    </p>
+
+    <p>
+      一旦对某件事产生兴趣，
+      我就会彻底调查，
+      亲自去体验，
+      <br />
+      然后以属于自己的方式将它留下来。
+      <br />
+      在这种源于纯粹好奇心的强大动力之下，
+      我享受着整个过程本身。
+    </p>
+
+  </div>
+
+  <div class="message-actions">
+
+    <a
+      href="/zh-cn/profile/gallery"
+      class="cursor-pointer select-none text-rose-200 transition hover:text-white"
+    >
+      ▶ 画廊
+    </a>
+
+    <button
+      id="collapseMessage"
+      type="button"
+      class="cursor-pointer select-none text-rose-200 transition hover:text-white"
+    >
+    </button>
+
+  </div>
+
+</details>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<style>
+
+.profile-bg{
+  animation:profileFloat 12s ease-in-out infinite;
+  transition:opacity .7s ease;
+}
+
+.profile-bg-front{
+  opacity:1;
+}
+
+.profile-bg-back{
+  opacity:0;
+}
+
+@keyframes profileFloat{
+  0%{
+    transform:scale(1.05) translateY(0px);
+  }
+  50%{
+    transform:scale(1.08) translateY(-15px);
+  }
+  100%{
+    transform:scale(1.05) translateY(0px);
+  }
+}
+
+.profile-content{
+  opacity:0;
+  transform:translateY(80px) scale(.96);
+  animation:profileAppear 1.2s cubic-bezier(.18,.89,.32,1.28) forwards;
+}
+
+.profile-content.delay{
+  animation-delay:.25s;
+}
+
+@keyframes profileAppear{
+  0%{
+    opacity:0;
+    transform:translateY(80px) scale(.96);
+  }
+  70%{
+    opacity:1;
+    transform:translateY(-12px) scale(1.02);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+.profile-card{
+  transition:transform .6s ease, background .6s ease;
+  animation:cardFloat 8s ease-in-out infinite;
+}
+
+.profile-card:nth-child(2){
+  animation-delay:1s;
+}
+
+@keyframes cardFloat{
+  0%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-8px);
+  }
+  100%{
+    transform:translateY(0);
+  }
+}
+
+details summary{
+  list-style:none;
+}
+
+details summary::-webkit-details-marker{
+  display:none;
+}
+
+
+
+:global(html) {
+  color-scheme: light;
+}
+
+:global(body) {
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+.profile-content p,
+.profile-content h1,
+.profile-content h2,
+.profile-content h3,
+.profile-content strong {
+  forced-color-adjust: none;
+}
+
+
+/* PROFILE label */
+
+.profile-content > p:first-child {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* PROFILE name */
+
+.profile-content h1 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* Profile introduction text */
+
+.profile-content > p:not(:first-child) {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+
+.profile-card {
+  forced-color-adjust: none;
+
+  background-color: transparent !important;
+
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+
+.profile-card > p:first-child {
+  color: rgba(255, 255, 255, 0.6) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
+
+  forced-color-adjust: none;
+}
+
+.profile-card > div {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+
+  forced-color-adjust: none;
+}
+
+
+.profile-card > div p {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+
+  forced-color-adjust: none;
+}
+
+.profile-card > div > div.border-t {
+  border-top-color: rgba(255, 255, 255, 0.15) !important;
+
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+
+  forced-color-adjust: none;
+}
+
+
+.profile-card > div > div.border-t p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+#messageDetails {
+  color: #ffffff !important;
+  forced-color-adjust: none;
+}
+
+
+#messageDetails > div {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+
+  forced-color-adjust: none;
+}
+
+
+#messageDetails > div p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+#messageSummary {
+  color: rgb(254, 205, 211) !important;
+  -webkit-text-fill-color: rgb(254, 205, 211);
+
+  forced-color-adjust: none;
+}
+
+
+#messageSummary:hover {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+#messageDetails a {
+  color: rgb(254, 205, 211) !important;
+  -webkit-text-fill-color: rgb(254, 205, 211);
+
+  forced-color-adjust: none;
+}
+
+
+#messageDetails a:hover {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+@media (max-width: 639px) {
+
+  .profile-content,
+  .profile-content *,
+  .profile-card,
+  .profile-card *,
+  #messageDetails,
+  #messageDetails *,
+  #messageSummary {
+    forced-color-adjust: none;
+  }
+
+  .profile-card {
+    background-color: transparent !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+  }
+
+  .profile-content > p:first-child,
+  .profile-content h1 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+  }
+
+  .profile-content > p:not(:first-child) {
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .profile-card > p:first-child {
+    color: rgba(255, 255, 255, 0.6) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .profile-card > div,
+  .profile-card > div p {
+    font-size: 14px !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+  }
+
+  .profile-card > div > div.border-t,
+  .profile-card > div > div.border-t p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+
+    border-top-color: rgba(255, 255, 255, 0.15) !important;
+  }
+
+  #messageDetails > div,
+  #messageDetails > div p {
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+  }
+
+  #messageSummary,
+  #messageDetails a {
+    color: rgb(254, 205, 211) !important;
+    -webkit-text-fill-color: rgb(254, 205, 211);
+  }
+
+
+  #profileSection.message-open #profileLeft,
+  #profileSection.message-open #introductionCard {
+    display: none !important;
+  }
+
+  #profileSection.message-open > div.relative.z-10 {
+    justify-content: flex-start !important;
+  }
+
+  #profileSection.message-open #messageCard {
+    width: 100% !important;
+  }
+
+}
+
+
+@media (max-width: 639px) {
+
+  #profileBg2 {
+    object-position: center center !important;
+  }
+
+}
+
+</style>
+
+<script is:inline>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const section = document.getElementById("profileSection");
+  const profileLeft = document.getElementById("profileLeft");
+  const introductionCard = document.getElementById("introductionCard");
+  const messageCard = document.getElementById("messageCard");
+
+  const details = document.getElementById("messageDetails");
+  const summary = document.getElementById("messageSummary");
+
+  const bg1 = document.getElementById("profileBg1");
+  const bg2 = document.getElementById("profileBg2");
+
+  if (
+    !section ||
+    !profileLeft ||
+    !introductionCard ||
+    !messageCard ||
+    !details ||
+    !summary ||
+    !bg1 ||
+    !bg2
+  ) return;
+
+
+  details.addEventListener("toggle", () => {
+
+    const isMobile = window.innerWidth <= 639;
+
+    if (details.open) {
+
+      /* 背景切り替え */
+      bg1.style.opacity = "0";
+      bg2.style.opacity = "1";
+
+      /* ボタン表示 */
+      summary.textContent = "  ▶ 收起";
+
+
+      if (isMobile) {
+
+        profileLeft.style.display = "none";
+        introductionCard.style.display = "none";
+
+        /* MESSAGEを画面幅いっぱいに */
+        messageCard.style.width = "100%";
+
+        /* MESSAGEを上側から表示 */
+        const content = section.querySelector(
+          ".relative.z-10"
+        );
+
+        if (content) {
+          content.style.justifyContent = "flex-start";
+        }
+
+      }
+
+    } else {
+
+      /* 背景を元に戻す */
+      bg1.style.opacity = "1";
+      bg2.style.opacity = "0";
+
+      /* ボタン表示 */
+      summary.textContent = "阅读更多";
+
+
+      if (isMobile) {
+
+        profileLeft.style.display = "";
+        introductionCard.style.display = "";
+        messageCard.style.width = "";
+
+        const content = section.querySelector(
+          ".relative.z-10"
+        );
+
+        if (content) {
+          content.style.justifyContent = "";
+        }
+
+      }
+
+    }
+
+  });
+
+});
+</script>
+
+
+</Layout>

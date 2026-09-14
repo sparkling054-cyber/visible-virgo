@@ -1,0 +1,522 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import Container from "../../../../components/common/Container.astro";
+---
+
+<Layout
+  title="Nishikino｜Gallery｜PROFILE"
+  description="A gallery featuring Nishikino's character visuals, concept artwork, illustrations, and creative designs."
+>
+
+  <!-- Scroll -->
+
+  <div class="absolute bottom-16 right-12 z-30 flex flex-col items-center">
+
+    <div class="h-20 w-px bg-white/70"></div>
+
+    <span class="mt-4 text-xs tracking-[0.45em] text-white">
+      SCROLL
+    </span>
+
+  </div>
+
+  <section class="relative bg-[#f8f6f2] overflow-hidden works-detail">
+
+    <!-- Washi Background -->
+
+    <img
+      src="/images/washi-bg.png"
+      alt=""
+      class="absolute right-0 top-0 h-full w-full opacity-[0.3] pointer-events-none select-none -z-0"
+    />
+
+    <Container class="py-32 relative z-10">
+
+      <!-- Gallery -->
+
+      <div class="mx-auto max-w-9xl">
+
+        <div class="flex items-center gap-5">
+
+          <span class="h-px w-20 bg-[#caa14d]"></span>
+
+          <p
+            class="tracking-[0.45em] text-[#a58c65]"
+            style="font-family:'Cormorant Garamond',serif;"
+          >
+            GALLERY
+          </p>
+
+        </div>
+
+        <h2
+          class="mt-6 text-4xl"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          Nishikino Visual Art Gallery
+        </h2>
+
+        <div class="gallery mt-12">
+
+          <img
+            src="/images/profile.jpg"
+            alt="Nishikino icon"
+          />
+
+          <img
+            src="/images/gallery1.png"
+            alt=""
+          />
+
+          <img
+            src="/images/nishikino-setting.png"
+            alt="Character design sheet"
+          />
+
+          <img
+            src="/images/nishikino-setting1.png"
+            alt=""
+          />
+
+          <img
+            src="/images/contact-bg.png"
+            alt=""
+          />
+
+          <img
+            src="/images/78adb63e-2db7-4749-bef0-f032743afcde3.png"
+            alt=""
+          />
+
+          <img
+            src="/images/edb6eded-c0ea-4c8c-8185-8c5d74303269.png"
+            alt=""
+          />
+
+          <img
+            src="/images/gallery-bg.png"
+            alt=""
+          />
+
+        </div>
+
+        <!-- Back -->
+
+        <div class="mt-24">
+
+          <a
+            href="/en/profile/"
+            class="inline-flex rounded-full border border-[#d7c8b3] bg-white px-8 py-4 transition hover:bg-[#2b2724] hover:text-white"
+          >
+            Profile →
+          </a>
+
+        </div>
+
+        <!-- Share -->
+
+        <div class="mt-32 text-center">
+
+          <div class="flex items-center justify-center gap-5">
+
+            <span class="h-px w-16 bg-[#caa14d]"></span>
+
+            <p
+              class="tracking-[0.45em] text-[#a58c65]"
+              style="font-family:'Cormorant Garamond',serif;"
+            >
+              SHARE
+            </p>
+
+            <span class="h-px w-16 bg-[#caa14d]"></span>
+
+          </div>
+
+          <h2
+            class="mt-6 text-3xl text-[#2b2724]"
+            style="font-family:'Shippori Mincho',serif;"
+          >
+            Share
+          </h2>
+
+          <div class="mt-8 flex justify-center gap-4 flex-wrap">
+
+            <a
+              href="#"
+              id="x-share"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
+            >
+              X
+            </a>
+
+            <button
+              type="button"
+              id="instagram-share"
+              class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
+            >
+              Instagram
+            </button>
+
+            <button
+              type="button"
+              id="copy-url"
+              class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
+            >
+              Copy URL
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </Container>
+
+  </section>
+
+</Layout>
+
+
+<style>
+
+:global(html) {
+  color-scheme: light;
+}
+
+:global(body) {
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+
+:global(#profile) {
+  color-scheme: light;
+}
+
+
+@media (max-width: 639px) {
+
+  /*
+   * Prevent automatic text-size adjustment on browsers and mobile devices
+   */
+  :global(html) {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  :global(body) {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+
+
+  .gallery-hero h1 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  .gallery-hero span {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+
+  .works-detail {
+    color-scheme: light;
+  }
+
+
+  .works-detail p,
+  .works-detail h2,
+  .works-detail a,
+  .works-detail button {
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* GALLERY / SHARE */
+
+  .works-detail p {
+    -webkit-text-fill-color: currentColor;
+  }
+
+
+
+  .works-detail .text-xs,
+  .works-detail .text-sm {
+    font-size: 1rem !important;
+    line-height: 1.75;
+  }
+
+
+
+  .works-detail a,
+  .works-detail button {
+    font-size: 1rem !important;
+  }
+
+
+  .works-detail > .relative p {
+    -webkit-text-fill-color: currentColor;
+  }
+
+
+  .works-detail .text-\[\#a58c65\] {
+    color: #a58c65 !important;
+    -webkit-text-fill-color: #a58c65;
+  }
+
+
+  .works-detail .text-\[\#2b2724\] {
+    color: #2b2724 !important;
+    -webkit-text-fill-color: #2b2724;
+  }
+
+
+  .works-detail a,
+  .works-detail button {
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+}
+
+</style>
+
+
+<script>
+
+  const sharePhrases = [
+    "Found this.",
+    "I kind of like this.",
+    "Look at this.",
+    "Found something interesting.",
+    "Found something like this.",
+    "Have you seen this?",
+    "Found something.",
+    "Came across this.",
+    "Found something worth checking out."
+  ];
+
+  const randomPhrase =
+    sharePhrases[Math.floor(Math.random() * sharePhrases.length)];
+
+  const pageUrl = "https://www.nishikinolab.net/en/profile/gallery";
+
+  const shareText =
+    `${randomPhrase} Minecraft Nishikino Visual Art Gallery | PROFILE`;
+
+  const xShareButton = document.getElementById("x-share");
+  const copyButton = document.getElementById("copy-url");
+  const instagramButton = document.getElementById("instagram-share");
+
+  if (xShareButton) {
+    xShareButton.setAttribute(
+      "href",
+      `https://x.com/intent/post?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageUrl)}`
+    );
+  }
+
+
+  copyButton?.addEventListener("click", async () => {
+
+    try {
+
+      await navigator.clipboard.writeText(pageUrl);
+
+      if (copyButton) {
+
+        copyButton.textContent = "Copied";
+
+        setTimeout(() => {
+          copyButton.textContent = "Copy URL";
+        }, 2000);
+
+      }
+
+    } catch (error) {
+
+      console.error(error);
+
+    }
+
+  });
+
+
+  instagramButton?.addEventListener("click", () => {
+
+    const dialog = document.createElement("div");
+
+    dialog.innerHTML = `
+      <div
+        id="instagram-share-overlay"
+        style="
+          position:fixed;
+          inset:0;
+          z-index:9999;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          padding:24px;
+          background:rgba(43,39,36,.55);
+          backdrop-filter:blur(6px);
+        "
+      >
+        <div
+          style="
+            width:100%;
+            max-width:420px;
+            padding:36px;
+            border:1px solid #e2d8cb;
+            border-radius:28px;
+            background:#fffdfa;
+            box-shadow:0 20px 60px rgba(0,0,0,.18);
+            text-align:center;
+          "
+        >
+
+          <p
+            style="
+              margin:0;
+              font-family:'Cormorant Garamond',serif;
+              font-size:14px;
+              letter-spacing:.35em;
+              color:#a58c65;
+            "
+          >
+            SHARE
+          </p>
+
+          <h3
+            style="
+              margin:14px 0 0;
+              font-family:'Shippori Mincho',serif;
+              font-size:24px;
+              color:#2b2724;
+              font-weight:400;
+            "
+          >
+            Share on Instagram
+          </h3>
+
+          <p
+            style="
+              margin:20px 0 0;
+              font-family:'Shippori Mincho',serif;
+              font-size:14px;
+              line-height:2;
+              color:#625a52;
+            "
+          >
+            The URL of this gallery page will be copied<br>
+            and Instagram will be opened.
+          </p>
+
+          <button
+            id="instagram-open"
+            type="button"
+            style="
+              width:100%;
+              margin-top:28px;
+              padding:14px 20px;
+              border:1px solid #d7c8b3;
+              border-radius:999px;
+              background:#2b2724;
+              color:#fff;
+              font-family:'Shippori Mincho',serif;
+              font-size:15px;
+              cursor:pointer;
+            "
+          >
+            Copy URL & Open Instagram
+          </button>
+
+          <button
+            id="instagram-cancel"
+            type="button"
+            style="
+              width:100%;
+              margin-top:10px;
+              padding:12px 20px;
+              border:0;
+              background:transparent;
+              color:#8c8378;
+              font-family:'Shippori Mincho',serif;
+              font-size:14px;
+              cursor:pointer;
+            "
+          >
+            Cancel
+          </button>
+
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(dialog);
+
+    const overlay =
+      document.getElementById("instagram-share-overlay");
+
+    const openButton =
+      document.getElementById("instagram-open");
+
+    const cancelButton =
+      document.getElementById("instagram-cancel");
+
+
+    openButton?.addEventListener("click", async () => {
+
+      try {
+
+        await navigator.clipboard.writeText(pageUrl);
+
+      } catch (error) {
+
+        console.error(error);
+
+      }
+
+      window.open(
+        "https://www.instagram.com/",
+        "_blank",
+        "noopener,noreferrer"
+      );
+
+      overlay?.remove();
+
+    });
+
+
+    cancelButton?.addEventListener("click", () => {
+
+      overlay?.remove();
+
+    });
+
+
+    overlay?.addEventListener("click", (event) => {
+
+      if (event.target === overlay) {
+
+        overlay.remove();
+
+      }
+
+    });
+
+  });
+
+</script>

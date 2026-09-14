@@ -138,7 +138,7 @@ import Container from "../../components/common/Container.astro";
         広島県福山市に築かれた近世城郭・福山城は、<br>
         西国支配の要として徳川幕府が築いた近世城郭であり、<br>
         江戸時代を通して城下町とともに繁栄しました。<br>
-        元和8年（1622年）、初代福山藩主・水野勝成によって築城が開始され、翌元和9年（1623年）に完成。<br>
+        元和8年（1622年）、初代福山藩主・水野勝成によって築城が開始され、同年に完成。<br>
         北面を鉄板で覆った全国でも極めて珍しい天守を備え、西日本有数の近世城郭として知られています。
       </p>
 
@@ -372,7 +372,7 @@ import Container from "../../components/common/Container.astro";
     </div>
 
 
-    <div class="mt-32 text-center">
+            <div class="mt-32 text-center">
 
       <div class="flex items-center justify-center gap-5">
 
@@ -400,7 +400,8 @@ import Container from "../../components/common/Container.astro";
 
         <!-- X -->
         <a
-          href="https://x.com/intent/post?text=%E9%8C%A6%E4%B9%83%E3%80%8C%E7%A6%8F%E5%B1%B1%E5%9F%8E%E5%A4%A9%E5%AE%88%E3%80%8D%20%7C%20WORKS&url=https%3A%2F%2Fwww.nishikinolab.net%2Ffukuyamacastle%2F"
+          id="x-share"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
           class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-base hover:bg-[#2b2724] hover:text-white"
@@ -438,8 +439,41 @@ import Container from "../../components/common/Container.astro";
 
 <script>
 
+  const sharePhrases = [
+    "これ見つけた。",
+    "これ、なんか好き。",
+    "これちょっと見て。",
+    "なんか気になるの見つけた。",
+    "こんなの見っけた。",
+    "これ知ってる？",
+    "なんか見つけた。",
+    "こんなのあった。",
+    "ちょっと気になるもの見つけたかも。"
+  ];
+
+  const randomPhrase =
+    sharePhrases[
+      Math.floor(Math.random() * sharePhrases.length)
+    ];
+
   const pageUrl =
     "https://www.nishikinolab.net/fukuyamacastle/";
+
+  const shareText =
+    `${randomPhrase} Minecraft 福山城天守 | WORKS`;
+
+  const xShareButton =
+    document.getElementById("x-share");
+
+  if (xShareButton) {
+
+    xShareButton.setAttribute(
+      "href",
+      `https://x.com/intent/post?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageUrl)}`
+    );
+
+  }
+
 
   const copyButton =
     document.getElementById("copy-url");

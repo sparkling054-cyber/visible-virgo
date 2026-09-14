@@ -339,6 +339,7 @@ import Container from "../../components/common/Container.astro";
         次に進む →
       </a>
 
+             <!-- Share -->
       <div class="mt-32 text-center">
 
         <div class="flex items-center justify-center gap-5">
@@ -366,7 +367,8 @@ import Container from "../../components/common/Container.astro";
         <div class="mt-8 flex justify-center gap-4 flex-wrap">
 
           <a
-            href="https://x.com/intent/post?text=%E9%8C%A6%E4%B9%83%E3%80%8C%E5%88%9D%E4%BB%A3%E8%A9%A6%E4%BD%9C%E6%B1%9F%E6%88%B8%E5%9F%8E%E3%80%8D%20%7C%20WORKS&url=https%3A%2F%2Fwww.nishikinolab.net%2Fnishikinoedocastle1%2F"
+            href="#"
+            id="x-share"
             target="_blank"
             rel="noopener noreferrer"
             class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-base hover:bg-[#2b2724] hover:text-white"
@@ -401,10 +403,35 @@ import Container from "../../components/common/Container.astro";
 </section>
 
 <script>
-  const pageUrl = "https://www.nishikinolab.net/nishikinoedocastle1/";
+  const sharePhrases = [
+    "これ見つけた。",
+    "これ、なんか好き。",
+    "これちょっと見て。",
+    "なんか気になるの見つけた。",
+    "こんなの見っけた。",
+    "これ知ってる？",
+    "なんか見つけた。",
+    "こんなのあった。",
+    "ちょっと気になるもの見つけたかも。"
+  ];
 
+  const randomPhrase =
+    sharePhrases[Math.floor(Math.random() * sharePhrases.length)];
+
+  const pageUrl = "https://www.nishikinolab.net/nishikinoedocastle1/";
+  const shareText =
+    `${randomPhrase} Minecraft 初代試作江戸城 | WORKS`;
+
+  const xShareButton = document.getElementById("x-share");
   const copyButton = document.getElementById("copy-url");
   const instagramButton = document.getElementById("instagram-share");
+
+  if (xShareButton) {
+    const xShareUrl =
+      `https://x.com/intent/post?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageUrl)}`;
+
+    xShareButton.setAttribute("href", xShareUrl);
+  }
 
   copyButton?.addEventListener("click", async () => {
     try {

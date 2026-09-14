@@ -1,0 +1,879 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const works = [
+  {
+    title: "에도성",
+    category: "성곽 22000+",
+    image: "/images/edocastle.jpg",
+    link: "/ko/edocastle/"
+  },
+  {
+    title: "초대 시험 제작 에도성",
+    category: "성곽",
+    image: "/images/nishikino-edo-1.jpg",
+    link: "/ko/nishikinoedocastle1/"
+  },
+  {
+    title: "2대 시험 제작 에도성",
+    category: "성곽",
+    image: "/images/nishikino-edo2.jpg",
+    link: "/ko/nishikinoedocastle2/"
+  },
+  {
+    title: "나고야성 천수",
+    category: "성곽",
+    image: "/images/nagoya1.png",
+    link: "/ko/nagoyacastle/"
+  },
+  {
+    title: "3대 오사카성 천수",
+    category: "성곽 700+",
+    image: "/images/osaka3.jpg",
+    link: "/ko/osakacastle3/"
+  },
+  {
+    title: "후쿠야마성 천수",
+    category: "성곽 500+",
+    image: "/images/fukuyama.jpg",
+    link: "/ko/fukuyamacastle/"
+  },
+  {
+    title: "구마모토성 천수",
+    category: "성곽 1900+",
+    image: "/images/kumamoto.jpg",
+    link: "/ko/kumamotocastle/"
+  },
+  {
+    title: "사이타마현 가와고에 이치반가이 쿠라즈쿠리 거리",
+    category: "일본풍 거리 6700+",
+    image: "/images/kawagoe.jpg",
+    link: "/ko/kawagoekurazukuri/"
+  },
+  {
+    title: "장엄한 신사",
+    category: "일본풍・신사 1800+",
+    image: "/images/shrine.jpg",
+    link: "https://x.com/nishikinolab/status/1920026634553372917/photo/1"
+  },
+  {
+    title: "왕도 판타지 주택",
+    category: "판타지",
+    image: "/images/fantasy-house.jpg",
+    link: "https://youtube.com/shorts/APG3_jx-6Vc"
+  },
+  {
+    title: "에도성 / 황거 니노마루 정원",
+    category: "일본풍・정원 700+",
+    image: "/images/edoninomarugarden.jpg",
+    link: "/ko/edoninomarugarden/"
+  },
+  {
+    title: "에도성 니노마루 어전 오오쿠",
+    category: "일본풍 건축",
+    image: "/images/edoninomaruoo-ku.jpg",
+    link: "https://youtube.com/shorts/ZKAaiGfIskg"
+  },
+  {
+    title: "금각사",
+    category: "일본풍 건축",
+    image: "/images/kinkakuji.png",
+    link: "https://x.com/nishikinolab/status/2099110206856921348"
+  },
+  {
+    title: "하츠네 미쿠",
+    category: "캐릭터 5500+",
+    image: "/images/miku.jpg",
+    link: "https://x.com/nishikinolab/status/1946864832793502012/photo/1"
+  },
+  {
+    title: "고양이귀 소녀",
+    category: "캐릭터",
+    image: "/images/neko.jpg",
+    link: "https://www.youtube.com/@NISHIKINO_Official"
+  },
+  {
+    title: "군함 바사호",
+    category: "탈것",
+    image: "/images/vasa.png",
+    link: "https://www.planetminecraft.com/project/vasa-sweden-s-17th-century-battleship/"
+  },
+  {
+    title: "전열함 소버린 오브 더 시즈",
+    category: "탈것",
+    image: "/images/galleon.png",
+    link: "https://x.com/nishikinolab/status/1869322087539851480/photo/1"
+  },
+  {
+    title: "국보 나기노성",
+    category: "성곽 video800000+",
+    image: "/images/nagino-0.png",
+    link: "/ko/naginocastle/"
+  },
+  {
+    title: "강 위에 놓인 다리 / 에도성 후키아게 대연못",
+    category: "일본풍・정원 1800+",
+    image: "/images/hashi0.jpg",
+    link: "https://x.com/nishikinolab/status/1916085352059588812/photo/1"
+  },
+  {
+    title: "판타지 일본풍 고층 욕탕",
+    category: "일본풍・창작",
+    image: "/images/tou1.png",
+    link: "https://www.instagram.com/nishikinolab_official"
+  },
+  {
+    title: "고래상어",
+    category: "생물 1100+",
+    image: "/images/shark.png",
+    link: "https://www.planetminecraft.com/project/efw/"
+  },
+  {
+    title: "일본풍 상점 6번째",
+    category: "상점・주택 1800+",
+    image: "/images/syouten1.png",
+    link: "https://x.com/nishikinolab/status/1886706477177389463"
+  },
+  {
+    title: "귀멸의 칼날 무한열차",
+    category: "탈것 1300+",
+    image: "/images/kisya.jpg",
+    link: "https://x.com/nishikinolab/status/1915364165616836685/photo/1"
+  },
+  {
+    title: "마녀의 집",
+    category: "판타지",
+    image: "/images/which.png",
+    link: "https://www.instagram.com/nishikinolab_official"
+  },
+  {
+    title: "디 엔드의 거대 나비",
+    category: "생물",
+    image: "/images/fly.png",
+    link: "https://www.tiktok.com/@nishikino_official"
+  },
+  {
+    title: "저택 정원의 연못 / 가칭 에도성 오오쿠 신어전 정원",
+    category: "일본풍・정원 2400+",
+    image: "/images/edoteien1.jpg",
+    link: "https://x.com/nishikinolab/status/1888172591984288139"
+  },
+  {
+    title: "가와고에 미오카자로 쿠라노마치점",
+    category: "상점・주택 800+",
+    image: "/images/miocasalo.jpg",
+    link: "https://www.youtube.com/@NISHIKINO_Official"
+  },
+  {
+    title: "후에키 간장 킨부에 직매점 가와고에점",
+    category: "상점・주택 600+",
+    image: "/images/kinbue.jpg",
+    link: "https://x.com/nishikinolab/status/1902290046624874787/photo/1"
+  },
+  {
+    title: "부인복 이푸가오 가와고에점",
+    category: "상점・주택 700+",
+    image: "/images/ifugao.jpg",
+    link: "https://x.com/nishikinolab/status/1899053390908518633/photo/1"
+  },
+  {
+    title: "가와고에 이치반가이 동구리 공화국 가와고에점",
+    category: "상점・주택 1300+",
+    image: "/images/donguri.jpg",
+    link: "https://x.com/nishikinolab/status/1897939512762024213"
+  },
+  {
+    title: "가와고에시 가와고에 주점 / 다키시마 가문 주택",
+    category: "상점・주택",
+    image: "/images/kawagoe-saketen.jpg",
+    link: "https://www.youtube.com/@NISHIKINO_Official"
+  },
+  {
+    title: "하나코지 가와고에 토키노카네점",
+    category: "상점・주택 900+",
+    image: "/images/hanakouji.jpg",
+    link: "https://x.com/nishikinolab/status/1889276728704717266/photo/1"
+  },
+  {
+    title: "미피 쿠라노 키친 & 베이커리",
+    category: "상점・주택",
+    image: "/images/miffy.jpg",
+    link: "https://www.tiktok.com/@nishikino_official"
+  },
+  {
+    title: "존스 블렌드 가와고에점 / 구 주택",
+    category: "상점・주택 700+",
+    image: "/images/jons.jpg",
+    link: "https://x.com/nishikinolab/status/1892141707296432599/photo/1"
+  },
+  {
+    title: "스기 양봉원 가와고에점",
+    category: "상점・주택 500+",
+    image: "/images/hachimitsu.jpg",
+    link: "https://youtube.com/shorts/2PZuwxOsdt8"
+  },
+  {
+    title: "과자 몬조안 쿠라노마치점",
+    category: "상점・주택 500+",
+    image: "/images/monzouan.jpg",
+    link: "https://x.com/nishikinolab/status/1926580287858737664/photo/1"
+  },
+  {
+    title: "가와고에 이치반가이 오사와 가문 주택",
+    category: "상점・주택 2700+",
+    image: "/images/oosawa.jpg",
+    link: "https://youtube.com/shorts/3CFcr55WSh0"
+  },
+  {
+    title: "이끼 낀 오래된 수로",
+    category: "풍경 3200+",
+    image: "/images/suiro.png",
+    link: "https://x.com/nishikinolab/status/1971849927937638610/photo/1"
+  },
+  {
+    title: "여름 호수에 잠긴 철로",
+    category: "풍경 800+",
+    image: "/images/senro.png",
+    link: "https://x.com/nishikinolab/status/1937470705714758135"
+  },
+  {
+    title: "일본풍 상점 1번째",
+    category: "상점・주택 1000+",
+    image: "/images/shop1.jpg",
+    link: "https://x.com/nishikinolab/status/1875499353521180779"
+  },
+  {
+    title: "우리들의 지어스",
+    category: "탈것",
+    image: "/images/zearth.jpg",
+    link: "https://www.youtube.com/@NISHIKINO_Official"
+  },
+  {
+    title: "도리이가 있는 연못 / 가칭 에도성 쿠로쇼인 앞 정원",
+    category: "일본풍・정원 1300+",
+    image: "/images/toriike.jpg",
+    link: "https://x.com/nishikinolab/status/1880188428681458161"
+  },
+  {
+    title: "토사카 고텐",
+    category: "일본풍 건축",
+    image: "/images/tousakagoten.jpg",
+    link: "/ko/tousakagoten/"
+  },
+  {
+    title: "일본풍 상점 2번째",
+    category: "상점・주택 800+",
+    image: "/images/shop2.jpg",
+    link: "https://x.com/nishikinolab/status/1877677518012252564/photo/1"
+  },
+  {
+    title: "일본풍 상점 3번째",
+    category: "상점・주택 1100+",
+    image: "/images/shop3.jpg",
+    link: "https://x.com/nishikinolab/status/1879090868466131426"
+  },
+  {
+    title: "일본풍 상점 4번째",
+    category: "상점・주택 600+",
+    image: "/images/shop4.jpg",
+    link: "https://x.com/nishikinolab/status/1881637201815199962/photo/1"
+  },
+  {
+    title: "일본풍 상점 8번째",
+    category: "상점・주택 600+",
+    image: "/images/shop8.jpg",
+    link: "https://x.com/nishikinolab/status/1891071777717064054/photo/1"
+  },
+  {
+    title: "고분 / 전방후원분",
+    category: "일본・고대",
+    image: "/images/kofun.jpg",
+    link: "/ko/kofun/"
+  },
+  {
+    title: "판타지 4층 일본풍 료칸",
+    category: "일본풍・창작",
+    image: "/images/ryokan.jpg",
+    link: "https://x.com/nishikinolab/status/1846831895486910632"
+  },
+  {
+    title: "판타지 일본풍 역",
+    category: "일본풍・창작",
+    image: "/images/station.jpg",
+    link: "https://x.com/nishikinolab/status/1859493638851756243"
+  },
+  {
+    title: "사랑앵무",
+    category: "생물",
+    image: "/images/inko.jpg",
+    link: "https://www.tiktok.com/@nishikino_official"
+  },
+  {
+    title: "앵무새",
+    category: "생물",
+    image: "/images/oumu.jpg",
+    link: "https://www.instagram.com/nishikinolab_official"
+  },
+  {
+    title: "이끼 낀 일본풍 건축 1번째",
+    category: "상점・주택 2800+",
+    image: "/images/shopgreen1.jpg",
+    link: "https://x.com/nishikinolab/status/1914260835444375791/photo/1"
+  },
+  {
+    title: "이끼 낀 일본풍 건축 2번째",
+    category: "상점・주택 1400+",
+    image: "/images/shopgreen.jpg",
+    link: "https://x.com/nishikinolab/status/1951972097229832472/photo/1"
+  },
+  {
+    title: "장엄한 고대 신사",
+    category: "일본풍・신사",
+    image: "/images/jinjya.jpg",
+    link: "https://youtube.com/shorts/9a708GDagvU"
+  },
+  {
+    title: "고양이 밈 MaxwellTheCat",
+    category: "생물",
+    image: "/images/cat.jpg",
+    link: "https://youtube.com/shorts/GLOjkjCk6W0"
+  },
+  {
+    title: "아마테・유즈리하",
+    category: "캐릭터",
+    image: "/images/yuzu.jpg",
+    link: "#"
+  },
+  {
+    title: "스팀펑크 판타지 주택",
+    category: "판타지",
+    image: "/images/steam.jpg",
+    link: "https://www.instagram.com/nishikinolab_official"
+  },
+  {
+    title: "요새 도시 판타지 주택",
+    category: "판타지",
+    image: "/images/aka.jpg",
+    link: "https://www.tiktok.com/@nishikino_official"
+  },
+  {
+    title: "시작",
+    category: "",
+    image: "/images/12.jpg",
+    link: "/ko/first/"
+  },
+];
+---
+
+<Layout
+  title="WORKS｜작품 목록｜일본 문화・역사・성곽 크리에이터 錦乃니시키노"
+  description="錦乃니시키노가 제작한 작품 목록입니다. 에도성이나 구마모토성 등의 일본풍 성곽 복원・재현부터 성곽 마을, 무가 저택, 신사・사찰, 정원, 일본풍 거리와 같은 일본풍 건축, 현대 건축, 판타지, 캐릭터 조형까지 다양한 작품을 소개합니다."
+>
+
+<section class="bg-[#faf8f3] min-h-screen">
+
+
+  <section class="relative h-[820px] overflow-hidden">
+
+    <picture>
+
+      <!-- Smartphone -->
+      <source
+        media="(max-width: 639px)"
+        srcset="/images/works-bg-mobile.jpg"
+      />
+
+      <!-- PC -->
+      <img
+        src="/images/works-bg.jpg"
+        alt="작품 소개"
+        class="works-bg absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+        draggable="false"
+      />
+
+    </picture>
+
+  </section>
+
+
+
+  <section class="relative overflow-hidden">
+
+    <img
+      src="/images/washi-bg1.png"
+      alt=""
+      class="absolute inset-0 h-full w-full object-cover pointer-events-none select-none"
+      draggable="false"
+    />
+
+    <div class="absolute inset-0 bg-white/25"></div>
+
+
+    <section class="relative overflow-hidden py-20">
+
+      <div
+        class="mx-auto max-w-6xl rounded-3xl
+               border border-white/40
+               bg-white/10
+               backdrop-blur-xl
+               shadow-2xl
+               px-12 py-16"
+      >
+
+        <p
+          class="tracking-[0.45em] text-sm text-white"
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          WORKS
+        </p>
+
+        <h1
+          class="mt-5 text-3xl md:text-5xl text-white"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          작품 소개
+        </h1>
+
+        <p
+          class="mt-10 max-w-3xl text-lg leading-10 text-white"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          제가 제작한 작품들을 모아 소개하는 페이지입니다. 일본의 성곽과 일본풍 건축,
+          일본풍 거리, 신사, 정원 등 실제 건축물과 역사적 고증을 바탕으로 재현・복원한 풍경부터
+          탈것, 판타지, 캐릭터 조형에 이르기까지 다양한 작품을 만나보실 수 있습니다.
+          <br />
+          부디 마음에 드는 작품을 찾아보세요.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section
+      class="relative min-h-screen overflow-hidden py-32"
+    >
+
+      <div
+        class="relative mx-auto max-w-[1800px] px-8"
+      >
+
+        <div class="works-grid">
+
+          {
+            works.map((work) => (
+
+              <a
+                href={work.link}
+                class="works-card"
+              >
+
+                <div class="works-image-wrap">
+
+                  <img
+                    src={work.image}
+                    alt={work.title}
+                    loading="lazy"
+                    class="works-image"
+                  />
+
+                </div>
+
+
+                <div class="works-body">
+
+                  <p class="works-category">
+                    {work.category}
+                  </p>
+
+
+                  <h2
+                    class="works-title"
+                    style="font-family:'Cormorant Garamond',serif;"
+                  >
+                    {work.title}
+                  </h2>
+
+                </div>
+
+              </a>
+
+            ))
+          }
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </section>
+
+</section>
+
+
+<style>
+
+
+:global(html) {
+  color-scheme: light;
+}
+
+:global(body) {
+  color-scheme: light;
+
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+
+.works-bg {
+  display: block;
+}
+
+
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+
+
+.works-card {
+  position: relative;
+  display: block;
+
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  border-radius: 1.35rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  background: rgba(100, 180, 220, 0.18);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 10px 30px rgba(40, 100, 130, 0.12);
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.45s cubic-bezier(.22, 1, .36, 1),
+    box-shadow 0.45s ease;
+}
+
+
+.works-card:hover {
+  transform:
+    translateY(-8px)
+    rotateX(2deg)
+    rotateY(-2deg);
+
+  box-shadow:
+    0 22px 45px rgba(30, 100, 140, 0.22);
+}
+
+
+
+.works-image-wrap {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+.works-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  aspect-ratio: auto;
+
+  object-fit: cover;
+
+  border-radius: 0;
+
+  transition:
+    transform 0.8s cubic-bezier(.22, 1, .36, 1),
+    filter 0.5s ease;
+}
+
+
+.works-card:hover .works-image {
+  transform: scale(1.045);
+}
+
+
+
+.works-body {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  display: block;
+
+  padding: 1.2rem;
+
+  pointer-events: none;
+}
+
+
+
+.works-category {
+  position: absolute;
+
+  left: 1.2rem;
+  bottom: 1.05rem;
+
+  margin: 0;
+
+  font-family:
+    "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif;
+
+  font-size: clamp(0.7rem, 0.9vw, 1rem);
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  line-height: 1.3;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.works-title {
+  position: absolute;
+
+  top: 1.1rem;
+  left: 1.1rem;
+
+  margin: 0;
+
+  display: inline-block;
+
+  max-width: calc(100% - 2.2rem);
+
+  padding:
+    0.45rem
+    0.7rem;
+
+  border-radius: 0.65rem;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  font-family:
+    "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif !important;
+
+  font-size: clamp(0.8rem, 1vw, 1.1rem);
+
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.22);
+
+  box-sizing: border-box;
+}
+
+
+
+.works-card {
+  forced-color-adjust: none;
+  -webkit-forced-color-adjust: none;
+}
+
+
+
+@media (max-width: 639px) {
+
+  :global(html) {
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  :global(body) {
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  .works-category,
+  .works-title {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+  section.relative.overflow-hidden.py-20 p,
+  section.relative.overflow-hidden.py-20 h1 {
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+  section.relative.overflow-hidden.py-20 p.text-lg {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+  }
+
+}
+
+</style>
+
+
+<script>
+
+
+  function applyWorksMobileStyle() {
+    const grid = document.querySelector(".works-grid");
+
+    if (!grid) return;
+
+    if (window.innerWidth <= 639) {
+
+      /* 2列 */
+      grid.style.setProperty(
+        "grid-template-columns",
+        "repeat(2, minmax(0, 1fr))",
+        "important"
+      );
+
+      /* スマホ用カード間隔 */
+      grid.style.setProperty(
+        "gap",
+        "16px",
+        "important"
+      );
+
+      const cards = grid.querySelectorAll(".works-card");
+
+      cards.forEach((card) => {
+
+        /* 正方形を維持 */
+        card.style.setProperty(
+          "aspect-ratio",
+          "1 / 1",
+          "important"
+        );
+
+        /* タイトル */
+        const title = card.querySelector(".works-title");
+
+        if (title) {
+          title.style.setProperty(
+            "font-size",
+            "12px",
+            "important"
+          );
+
+          title.style.setProperty(
+            "line-height",
+            "1.35",
+            "important"
+          );
+
+          title.style.setProperty(
+            "top",
+            "0.65rem",
+            "important"
+          );
+
+          title.style.setProperty(
+            "left",
+            "0.65rem",
+            "important"
+          );
+
+          title.style.setProperty(
+            "max-width",
+            "calc(100% - 1.3rem)",
+            "important"
+          );
+
+          title.style.setProperty(
+            "padding",
+            "0.3rem 0.45rem",
+            "important"
+          );
+        }
+
+        /* カテゴリ */
+        const category = card.querySelector(".works-category");
+
+        if (category) {
+          category.style.setProperty(
+            "font-size",
+            "11px",
+            "important"
+          );
+
+          category.style.setProperty(
+            "line-height",
+            "1.3",
+            "important"
+          );
+
+          category.style.setProperty(
+            "left",
+            "0.65rem",
+            "important"
+          );
+
+          category.style.setProperty(
+            "bottom",
+            "0.65rem",
+            "important"
+          );
+        }
+
+      });
+
+    }
+  }
+
+  applyWorksMobileStyle();
+
+  window.addEventListener(
+    "resize",
+    applyWorksMobileStyle
+  );
+</script>
+
+
+</Layout>

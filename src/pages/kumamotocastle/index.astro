@@ -460,7 +460,8 @@ import Container from "../../components/common/Container.astro";
           <!-- X -->
 
           <a
-            href="https://x.com/intent/post?text=%E9%8C%A6%E4%B9%83%E3%80%8C%E7%86%8A%E6%9C%AC%E5%9F%8E%E5%A4%A9%E5%AE%88%E9%96%A3%E3%80%8D%20%7C%20WORKS&url=https%3A%2F%2Fwww.nishikinolab.net%2Fkumamotocastle%2F"
+            href="#"
+            id="x-share"
             target="_blank"
             rel="noopener noreferrer"
             class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-base hover:bg-[#2b2724] hover:text-white"
@@ -503,8 +504,47 @@ import Container from "../../components/common/Container.astro";
 
 <script>
 
+const sharePhrases = [
+  "これ見つけた。",
+  "これ、なんか好き。",
+  "これちょっと見て。",
+  "なんか気になるの見つけた。",
+  "こんなの見っけた。",
+  "これ知ってる？",
+  "なんか見つけた。",
+  "こんなのあった。",
+  "ちょっと気になるもの見つけたかも。"
+];
+
+
+const randomPhrase =
+  sharePhrases[
+    Math.floor(
+      Math.random() * sharePhrases.length
+    )
+  ];
+
+
 const pageUrl =
   "https://www.nishikinolab.net/kumamotocastle/";
+
+
+const shareText =
+  `${randomPhrase} Minecraft 熊本城天守閣 | WORKS`;
+
+
+const xShare =
+  document.getElementById("x-share");
+
+
+if (xShare) {
+
+  xShare.setAttribute(
+    "href",
+    `https://x.com/intent/post?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageUrl)}`
+  );
+
+}
 
 
 const copyButton =

@@ -1,12 +1,49 @@
-
 ---
+const currentPath = Astro.url.pathname;
+
+function getLocalePrefix() {
+  if (currentPath.startsWith("/en/") || currentPath === "/en") {
+    return "/en";
+  }
+
+  if (
+    currentPath.startsWith("/zh-cn/") ||
+    currentPath === "/zh-cn"
+  ) {
+    return "/zh-cn";
+  }
+
+  if (currentPath.startsWith("/ko/") || currentPath === "/ko") {
+    return "/ko";
+  }
+
+  return "";
+}
+
+const localePrefix = getLocalePrefix();
+
+function localizedHref(path: string) {
+  if (!localePrefix) {
+    return path;
+  }
+
+  if (path === "/") {
+    return `${localePrefix}/`;
+  }
+
+  return `${localePrefix}${path}`;
+}
+
 const menuItems = [
-  { name: "HOME", href: "/" },
-  { name: "ABOUT", href: "/about/" },
-  { name: "WORKS", href: "/works/" },
-  { name: "PROFILE", href: "/profile/" },
-  { name: "ACHIEVEMENTS", href: "/achievements/" },
-  { name: "CONTACT", href: "/contact/" },
+  { name: "HOME", href: localizedHref("/") },
+  { name: "ABOUT", href: localizedHref("/about/") },
+  { name: "WORKS", href: localizedHref("/works/") },
+  { name: "PROFILE", href: localizedHref("/profile/") },
+  {
+    name: "ACHIEVEMENTS",
+    href: localizedHref("/achievements/"),
+  },
+  { name: "CONTACT", href: localizedHref("/contact/") },
 ];
 ---
 
@@ -33,7 +70,7 @@ const menuItems = [
 
     <!-- Logo -->
     <a
-      href="/"
+      href={localizedHref("/")}
       id="header-logo"
       class="
         flex
@@ -120,27 +157,30 @@ const menuItems = [
       "
     >
 
-      <a href="/" class="mobile-link">
+      <a href={localizedHref("/")} class="mobile-link">
         HOME
       </a>
 
-      <a href="/about/" class="mobile-link">
+      <a href={localizedHref("/about/")} class="mobile-link">
         ABOUT
       </a>
 
-      <a href="/works/" class="mobile-link">
+      <a href={localizedHref("/works/")} class="mobile-link">
         WORKS
       </a>
 
-      <a href="/profile/" class="mobile-link">
+      <a href={localizedHref("/profile/")} class="mobile-link">
         PROFILE
       </a>
 
-      <a href="/achievements/" class="mobile-link">
+      <a
+        href={localizedHref("/achievements/")}
+        class="mobile-link"
+      >
         ACHIEVEMENTS
       </a>
 
-      <a href="/contact/" class="mobile-link">
+      <a href={localizedHref("/contact/")} class="mobile-link">
         CONTACT
       </a>
 

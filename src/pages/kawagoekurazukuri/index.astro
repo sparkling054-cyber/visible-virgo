@@ -414,7 +414,7 @@ import Container from "../../components/common/Container.astro";
       </a>
 
 
-      <div class="mt-32 w-full text-center">
+                <div class="mt-32 w-full text-center">
 
         <div class="flex items-center justify-center gap-5">
 
@@ -445,7 +445,8 @@ import Container from "../../components/common/Container.astro";
           <!-- X -->
 
           <a
-            href="https://x.com/intent/post?text=%E9%8C%A6%E4%B9%83%E3%80%8C%E5%B0%8F%E6%B1%9F%E6%88%B8%E5%B7%9D%E8%B6%8A%20%E8%94%B5%E9%80%A0%E3%82%8A%E3%81%AE%E7%94%BA%E4%B8%A6%E3%81%BF%E3%80%8D%20%7C%20WORKS&url=https%3A%2F%2Fwww.nishikinolab.net%2Fkawagoekurazukuri%2F"
+            href="#"
+            id="x-share"
             target="_blank"
             rel="noopener noreferrer"
             class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-base hover:bg-[#2b2724] hover:text-white"
@@ -489,8 +490,47 @@ import Container from "../../components/common/Container.astro";
 
 <script>
 
+  const sharePhrases = [
+    "これ見つけた。",
+    "これ、なんか好き。",
+    "これちょっと見て。",
+    "なんか気になるの見つけた。",
+    "こんなの見っけた。",
+    "これ知ってる？",
+    "なんか見つけた。",
+    "こんなのあった。",
+    "ちょっと気になるもの見つけたかも。"
+  ];
+
+
   const pageUrl =
     "https://www.nishikinolab.net/kawagoekurazukuri/";
+
+
+  const randomPhrase =
+    sharePhrases[
+      Math.floor(
+        Math.random() * sharePhrases.length
+      )
+    ];
+
+
+  const shareText =
+    `${randomPhrase} Minecraft 小江戸川越 蔵造りの町並み | WORKS`;
+
+
+  const xShare =
+    document.getElementById("x-share");
+
+
+  if (xShare) {
+
+    xShare.setAttribute(
+      "href",
+      `https://x.com/intent/post?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageUrl)}`
+    );
+
+  }
 
 
   const copyButton =

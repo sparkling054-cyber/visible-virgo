@@ -1,0 +1,879 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const works = [
+  {
+    title: "江户城",
+    category: "城郭 22000+",
+    image: "/images/edocastle.jpg",
+    link: "/zh-cn/edocastle/"
+  },
+  {
+    title: "第一代试作江户城",
+    category: "城郭",
+    image: "/images/nishikino-edo-1.jpg",
+    link: "/zh-cn/nishikinoedocastle1/"
+  },
+  {
+    title: "第二代试作江户城",
+    category: "城郭",
+    image: "/images/nishikino-edo2.jpg",
+    link: "/zh-cn/nishikinoedocastle2/"
+  },
+  {
+    title: "名古屋城天守",
+    category: "城郭",
+    image: "/images/nagoya1.png",
+    link: "/zh-cn/nagoyacastle/"
+  },
+  {
+    title: "第三代大阪城天守",
+    category: "城郭 700+",
+    image: "/images/osaka3.jpg",
+    link: "/zh-cn/osakacastle3/"
+  },
+  {
+    title: "福山城天守",
+    category: "城郭 500+",
+    image: "/images/fukuyama.jpg",
+    link: "/zh-cn/fukuyamacastle/"
+  },
+  {
+    title: "熊本城天守",
+    category: "城郭 1900+",
+    image: "/images/kumamoto.jpg",
+    link: "/zh-cn/kumamotocastle/"
+  },
+  {
+    title: "埼玉县川越一番街 藏造町景",
+    category: "日式街景 6700+",
+    image: "/images/kawagoe.jpg",
+    link: "/zh-cn/kawagoekurazukuri/"
+  },
+  {
+    title: "庄严的神社",
+    category: "日式・神社 1800+",
+    image: "/images/shrine.jpg",
+    link: "https://x.com/nishikinolab/status/1920026634553372917/photo/1"
+  },
+  {
+    title: "王都幻想风住宅",
+    category: "幻想",
+    image: "/images/fantasy-house.jpg",
+    link: "https://youtube.com/shorts/APG3_jx-6Vc"
+  },
+  {
+    title: "江户城／皇居 二之丸庭园",
+    category: "日式・庭园 700+",
+    image: "/images/edoninomarugarden.jpg",
+    link: "/zh-cn/edoninomarugarden/"
+  },
+  {
+    title: "江户城二之丸御殿 大奥",
+    category: "日式建筑",
+    image: "/images/edoninomaruoo-ku.jpg",
+    link: "https://youtube.com/shorts/ZKAaiGfIskg"
+  },
+  {
+    title: "金阁寺（鹿苑寺舍利殿）",
+    category: "日式建筑",
+    image: "/images/kinkakuji.png",
+    link: "https://x.com/nishikinolab/status/2099110206856921348"
+  },
+  {
+    title: "初音未来",
+    category: "角色 5500+",
+    image: "/images/miku.jpg",
+    link: "https://x.com/nishikinolab/status/1946864832793502012/photo/1"
+  },
+  {
+    title: "猫耳少女",
+    category: "角色",
+    image: "/images/neko.jpg",
+    link: "https://www.youtube.com/@NISHIKINO_Official"
+  },
+  {
+    title: "军舰瓦萨号",
+    category: "交通工具",
+    image: "/images/vasa.png",
+    link: "https://www.planetminecraft.com/project/vasa-sweden-s-17th-century-battleship/"
+  },
+  {
+    title: "战列舰 海上君王号",
+    category: "交通工具",
+    image: "/images/galleon.png",
+    link: "https://x.com/nishikinolab/status/1869322087539851480/photo/1"
+  },
+  {
+    title: "国宝 凪之城",
+    category: "城郭 视频800000+",
+    image: "/images/nagino-0.png",
+    link: "/zh-cn/naginocastle/"
+  },
+  {
+    title: "横跨河流的桥／江户城吹上大池",
+    category: "日式・庭园 1800+",
+    image: "/images/hashi0.jpg",
+    link: "https://x.com/nishikinolab/status/1916085352059588812/photo/1"
+  },
+  {
+    title: "幻想日式高层浴场",
+    category: "日式・原创",
+    image: "/images/tou1.png",
+    link: "https://www.instagram.com/nishikinolab_official"
+  },
+  {
+    title: "鲸鲨",
+    category: "生物 1100+",
+    image: "/images/shark.png",
+    link: "https://www.planetminecraft.com/project/efw/"
+  },
+  {
+    title: "第六家日式商铺",
+    category: "商店・住宅 1800+",
+    image: "/images/syouten1.png",
+    link: "https://x.com/nishikinolab/status/1886706477177389463"
+  },
+  {
+    title: "鬼灭之刃 无限列车",
+    category: "交通工具 1300+",
+    image: "/images/kisya.jpg",
+    link: "https://x.com/nishikinolab/status/1915364165616836685/photo/1"
+  },
+  {
+    title: "魔女之家",
+    category: "幻想",
+    image: "/images/which.png",
+    link: "https://www.instagram.com/nishikinolab_official"
+  },
+  {
+    title: "末地巨型蝴蝶",
+    category: "生物",
+    image: "/images/fly.png",
+    link: "https://www.tiktok.com/@nishikino_official"
+  },
+  {
+    title: "宅邸庭院中的池塘／暂称江户城大奥新御殿庭园",
+    category: "日式・庭园 2400+",
+    image: "/images/edoteien1.jpg",
+    link: "https://x.com/nishikinolab/status/1888172591984288139"
+  },
+  {
+    title: "川越 Mio Casalo 藏之町店",
+    category: "商店・住宅 800+",
+    image: "/images/miocasalo.jpg",
+    link: "https://www.youtube.com/@NISHIKINO_Official"
+  },
+  {
+    title: "笛木酱油 金笛直营店 川越店",
+    category: "商店・住宅 600+",
+    image: "/images/kinbue.jpg",
+    link: "https://x.com/nishikinolab/status/1902290046624874787/photo/1"
+  },
+  {
+    title: "妇人服 いふがお 川越店",
+    category: "商店・住宅 700+",
+    image: "/images/ifugao.jpg",
+    link: "https://x.com/nishikinolab/status/1899053390908518633"
+  },
+  {
+    title: "川越一番街 橡子共和国川越店",
+    category: "商店・住宅 1300+",
+    image: "/images/donguri.jpg",
+    link: "https://x.com/nishikinolab/status/1897939512762024213"
+  },
+  {
+    title: "川越市 河越酒店／泷岛家住宅",
+    category: "商店・住宅",
+    image: "/images/kawagoe-saketen.jpg",
+    link: "https://www.youtube.com/@NISHIKINO_Official"
+  },
+  {
+    title: "花小路 川越时之钟店",
+    category: "商店・住宅 900+",
+    image: "/images/hanakouji.jpg",
+    link: "https://x.com/nishikinolab/status/1889276728704717266/photo/1"
+  },
+  {
+    title: "Miffy 藏之厨房＆面包店",
+    category: "商店・住宅",
+    image: "/images/miffy.jpg",
+    link: "https://www.tiktok.com/@nishikino_official"
+  },
+  {
+    title: "John's Blend 川越店 旧住宅时期",
+    category: "商店・住宅 700+",
+    image: "/images/jons.jpg",
+    link: "https://x.com/nishikinolab/status/1892141707296432599/photo/1"
+  },
+  {
+    title: "杉养蜂园蜂蜜 川越店",
+    category: "商店・住宅 500+",
+    image: "/images/hachimitsu.jpg",
+    link: "https://youtube.com/shorts/2PZuwxOsdt8"
+  },
+  {
+    title: "御菓子 紋藏庵 藏之街店",
+    category: "商店・住宅 500+",
+    image: "/images/monzouan.jpg",
+    link: "https://x.com/nishikinolab/status/1926580287858737664/photo/1"
+  },
+  {
+    title: "川越一番街 大泽家住宅",
+    category: "商店・住宅 2700+",
+    image: "/images/oosawa.jpg",
+    link: "https://youtube.com/shorts/3CFcr55WSh0"
+  },
+  {
+    title: "长满青苔的古老水渠",
+    category: "风景 3200+",
+    image: "/images/suiro.png",
+    link: "https://x.com/nishikinolab/status/1971849927937638610/photo/1"
+  },
+  {
+    title: "沉入夏日湖中的铁轨",
+    category: "风景 800+",
+    image: "/images/senro.png",
+    link: "https://x.com/nishikinolab/status/1937470705714758135"
+  },
+  {
+    title: "第一家日式商铺",
+    category: "商店・住宅 1000+",
+    image: "/images/shop1.jpg",
+    link: "https://x.com/nishikinolab/status/1875499353521180779"
+  },
+  {
+    title: "我们的地球",
+    category: "交通工具",
+    image: "/images/zearth.jpg",
+    link: "https://www.youtube.com/@NISHIKINO_Official"
+  },
+  {
+    title: "有鸟居的池塘／暂称江户城黑书院前庭园",
+    category: "日式・庭园 1300+",
+    image: "/images/toriike.jpg",
+    link: "https://x.com/nishikinolab/status/1880188428681458161"
+  },
+  {
+    title: "东坂御殿",
+    category: "日式建筑",
+    image: "/images/tousakagoten.jpg",
+    link: "/zh-cn/tousakagoten/"
+  },
+  {
+    title: "第二家日式商铺",
+    category: "商店・住宅 800+",
+    image: "/images/shop2.jpg",
+    link: "https://x.com/nishikinolab/status/1877677518012252564/photo/1"
+  },
+  {
+    title: "第三家日式商铺",
+    category: "商店・住宅 1100+",
+    image: "/images/shop3.jpg",
+    link: "https://x.com/nishikinolab/status/1879090868466131426"
+  },
+  {
+    title: "第四家日式商铺",
+    category: "商店・住宅 600+",
+    image: "/images/shop4.jpg",
+    link: "https://x.com/nishikinolab/status/1881637201815199962/photo/1"
+  },
+  {
+    title: "第八家日式商铺",
+    category: "商店・住宅 600+",
+    image: "/images/shop8.jpg",
+    link: "https://x.com/nishikinolab/status/1891071777717064054/photo/1"
+  },
+  {
+    title: "古坟 前方后圆坟",
+    category: "日本・古代",
+    image: "/images/kofun.jpg",
+    link: "/zh-cn/kofun/"
+  },
+  {
+    title: "幻想四层日式旅馆",
+    category: "日式・原创",
+    image: "/images/ryokan.jpg",
+    link: "https://x.com/nishikinolab/status/1846831895486910632"
+  },
+  {
+    title: "幻想日式车站",
+    category: "日式・原创",
+    image: "/images/station.jpg",
+    link: "https://x.com/nishikinolab/status/1859493638851756243"
+  },
+  {
+    title: "虎皮鹦鹉",
+    category: "生物",
+    image: "/images/inko.jpg",
+    link: "https://www.tiktok.com/@nishikino_official"
+  },
+  {
+    title: "鹦鹉",
+    category: "生物",
+    image: "/images/oumu.jpg",
+    link: "https://www.instagram.com/nishikinolab_official"
+  },
+  {
+    title: "长满青苔的日式建筑 1",
+    category: "商店・住宅 2800+",
+    image: "/images/shopgreen1.jpg",
+    link: "https://x.com/nishikinolab/status/1914260835444375791/photo/1"
+  },
+  {
+    title: "长满青苔的日式建筑 2",
+    category: "商店・住宅 1400+",
+    image: "/images/shopgreen.jpg",
+    link: "https://x.com/nishikinolab/status/1951972097229832472/photo/1"
+  },
+  {
+    title: "庄严的古老神社",
+    category: "日式・神社",
+    image: "/images/jinjya.jpg",
+    link: "https://youtube.com/shorts/9a708GDagvU"
+  },
+  {
+    title: "猫咪表情包 MaxwellTheCat",
+    category: "生物",
+    image: "/images/cat.jpg",
+    link: "https://youtube.com/shorts/GLOjkjCk6W0"
+  },
+  {
+    title: "天目柚叶",
+    category: "角色",
+    image: "/images/yuzu.jpg",
+    link: "#"
+  },
+  {
+    title: "蒸汽朋克幻想住宅",
+    category: "幻想",
+    image: "/images/steam.jpg",
+    link: "https://www.instagram.com/nishikinolab_official"
+  },
+  {
+    title: "要塞都市幻想住宅",
+    category: "幻想",
+    image: "/images/aka.jpg",
+    link: "https://www.tiktok.com/@nishikino_official"
+  },
+  {
+    title: "起点",
+    category: "",
+    image: "/images/12.jpg",
+    link: "/zh-cn/first/"
+  },
+];
+---
+
+<Layout
+  title="WORKS｜作品一览｜日本文化・历史・城郭创作者 锦乃"
+  description="锦乃的作品一览。这里收录了以江户城、熊本城等为代表的日式城郭复原与再现作品，以及城下町、武家宅邸、神社寺院、庭园、日式街景等基于历史考证制作的景观作品，同时也包含交通工具、幻想世界、角色立体造型等丰富的作品。"
+>
+
+<section class="bg-[#faf8f3] min-h-screen">
+
+
+  <section class="relative h-[820px] overflow-hidden">
+
+    <picture>
+
+      <!-- Smartphone -->
+      <source
+        media="(max-width: 639px)"
+        srcset="/images/works-bg-mobile.jpg"
+      />
+
+      <!-- PC -->
+      <img
+        src="/images/works-bg.jpg"
+        alt="作品介绍"
+        class="works-bg absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+        draggable="false"
+      />
+
+    </picture>
+
+  </section>
+
+
+
+  <section class="relative overflow-hidden">
+
+    <img
+      src="/images/washi-bg1.png"
+      alt=""
+      class="absolute inset-0 h-full w-full object-cover pointer-events-none select-none"
+      draggable="false"
+    />
+
+    <div class="absolute inset-0 bg-white/25"></div>
+
+
+    <section class="relative overflow-hidden py-20">
+
+      <div
+        class="mx-auto max-w-6xl rounded-3xl
+               border border-white/40
+               bg-white/10
+               backdrop-blur-xl
+               shadow-2xl
+               px-12 py-16"
+      >
+
+        <p
+          class="tracking-[0.45em] text-sm text-white"
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          WORKS
+        </p>
+
+        <h1
+          class="mt-5 text-3xl md:text-5xl text-white"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          作品介绍
+        </h1>
+
+        <p
+          class="mt-10 max-w-3xl text-lg leading-10 text-white"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          这里收录了我制作的各种作品。包括日本城郭、日式建筑、
+          日式街景、神社、庭园等基于真实建筑与历史考证进行再现和复原的景观，
+          以及交通工具、幻想世界、角色造型等丰富作品。
+          <br />
+          希望你能在这里找到自己喜欢的作品。
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section
+      class="relative min-h-screen overflow-hidden py-32"
+    >
+
+      <div
+        class="relative mx-auto max-w-[1800px] px-8"
+      >
+
+        <div class="works-grid">
+
+          {
+            works.map((work) => (
+
+              <a
+                href={work.link}
+                class="works-card"
+              >
+
+                <div class="works-image-wrap">
+
+                  <img
+                    src={work.image}
+                    alt={work.title}
+                    loading="lazy"
+                    class="works-image"
+                  />
+
+                </div>
+
+
+                <div class="works-body">
+
+                  <p class="works-category">
+                    {work.category}
+                  </p>
+
+
+                  <h2
+                    class="works-title"
+                    style="font-family:'Cormorant Garamond',serif;"
+                  >
+                    {work.title}
+                  </h2>
+
+                </div>
+
+              </a>
+
+            ))
+          }
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </section>
+
+</section>
+
+
+<style>
+
+
+:global(html) {
+  color-scheme: light;
+}
+
+:global(body) {
+  color-scheme: light;
+
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+
+.works-bg {
+  display: block;
+}
+
+
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+
+
+.works-card {
+  position: relative;
+  display: block;
+
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  border-radius: 1.35rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  background: rgba(100, 180, 220, 0.18);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 10px 30px rgba(40, 100, 130, 0.12);
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.45s cubic-bezier(.22, 1, .36, 1),
+    box-shadow 0.45s ease;
+}
+
+
+.works-card:hover {
+  transform:
+    translateY(-8px)
+    rotateX(2deg)
+    rotateY(-2deg);
+
+  box-shadow:
+    0 22px 45px rgba(30, 100, 140, 0.22);
+}
+
+
+
+.works-image-wrap {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+.works-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  aspect-ratio: auto;
+
+  object-fit: cover;
+
+  border-radius: 0;
+
+  transition:
+    transform 0.8s cubic-bezier(.22, 1, .36, 1),
+    filter 0.5s ease;
+}
+
+
+.works-card:hover .works-image {
+  transform: scale(1.045);
+}
+
+
+
+.works-body {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  display: block;
+
+  padding: 1.2rem;
+
+  pointer-events: none;
+}
+
+
+
+.works-category {
+  position: absolute;
+
+  left: 1.2rem;
+  bottom: 1.05rem;
+
+  margin: 0;
+
+  font-family:
+    "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif;
+
+  font-size: clamp(0.7rem, 0.9vw, 1rem);
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  line-height: 1.3;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.works-title {
+  position: absolute;
+
+  top: 1.1rem;
+  left: 1.1rem;
+
+  margin: 0;
+
+  display: inline-block;
+
+  max-width: calc(100% - 2.2rem);
+
+  padding:
+    0.45rem
+    0.7rem;
+
+  border-radius: 0.65rem;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  font-family:
+    "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif !important;
+
+  font-size: clamp(0.8rem, 1vw, 1.1rem);
+
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.22);
+
+  box-sizing: border-box;
+}
+
+
+
+.works-card {
+  forced-color-adjust: none;
+  -webkit-forced-color-adjust: none;
+}
+
+
+
+@media (max-width: 639px) {
+
+  :global(html) {
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  :global(body) {
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  .works-category,
+  .works-title {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+  section.relative.overflow-hidden.py-20 p,
+  section.relative.overflow-hidden.py-20 h1 {
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+  section.relative.overflow-hidden.py-20 p.text-lg {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+  }
+
+}
+
+</style>
+
+
+<script>
+
+
+  function applyWorksMobileStyle() {
+    const grid = document.querySelector(".works-grid");
+
+    if (!grid) return;
+
+    if (window.innerWidth <= 639) {
+
+      /* 2列 */
+      grid.style.setProperty(
+        "grid-template-columns",
+        "repeat(2, minmax(0, 1fr))",
+        "important"
+      );
+
+      /* スマホ用カード間隔 */
+      grid.style.setProperty(
+        "gap",
+        "16px",
+        "important"
+      );
+
+      const cards = grid.querySelectorAll(".works-card");
+
+      cards.forEach((card) => {
+
+        /* 正方形を維持 */
+        card.style.setProperty(
+          "aspect-ratio",
+          "1 / 1",
+          "important"
+        );
+
+        /* タイトル */
+        const title = card.querySelector(".works-title");
+
+        if (title) {
+          title.style.setProperty(
+            "font-size",
+            "12px",
+            "important"
+          );
+
+          title.style.setProperty(
+            "line-height",
+            "1.35",
+            "important"
+          );
+
+          title.style.setProperty(
+            "top",
+            "0.65rem",
+            "important"
+          );
+
+          title.style.setProperty(
+            "left",
+            "0.65rem",
+            "important"
+          );
+
+          title.style.setProperty(
+            "max-width",
+            "calc(100% - 1.3rem)",
+            "important"
+          );
+
+          title.style.setProperty(
+            "padding",
+            "0.3rem 0.45rem",
+            "important"
+          );
+        }
+
+        /* カテゴリ */
+        const category = card.querySelector(".works-category");
+
+        if (category) {
+          category.style.setProperty(
+            "font-size",
+            "11px",
+            "important"
+          );
+
+          category.style.setProperty(
+            "line-height",
+            "1.3",
+            "important"
+          );
+
+          category.style.setProperty(
+            "left",
+            "0.65rem",
+            "important"
+          );
+
+          category.style.setProperty(
+            "bottom",
+            "0.65rem",
+            "important"
+          );
+        }
+
+      });
+
+    }
+  }
+
+  applyWorksMobileStyle();
+
+  window.addEventListener(
+    "resize",
+    applyWorksMobileStyle
+  );
+</script>
+
+
+</Layout>

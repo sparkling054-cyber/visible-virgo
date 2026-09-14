@@ -126,66 +126,67 @@ import Container from "../../../components/common/Container.astro";
 
       </div>
 
-<!-- Share -->
+      <!-- Share -->
 
-<div class="mt-32 text-center">
+      <div class="mt-32 text-center">
 
-  <div class="flex items-center justify-center gap-5">
+        <div class="flex items-center justify-center gap-5">
 
-    <span class="h-px w-16 bg-[#caa14d]"></span>
+          <span class="h-px w-16 bg-[#caa14d]"></span>
 
-    <p
-      class="tracking-[0.45em] text-[#a58c65]"
-      style="font-family:'Cormorant Garamond',serif;"
-    >
-      SHARE
-    </p>
+          <p
+            class="tracking-[0.45em] text-[#a58c65]"
+            style="font-family:'Cormorant Garamond',serif;"
+          >
+            SHARE
+          </p>
 
-    <span class="h-px w-16 bg-[#caa14d]"></span>
+          <span class="h-px w-16 bg-[#caa14d]"></span>
 
-  </div>
-
-
-  <h2
-    class="mt-6 text-3xl text-[#2b2724]"
-    style="font-family:'Shippori Mincho',serif;"
-  >
-    シェア
-  </h2>
+        </div>
 
 
-  <div class="mt-8 flex justify-center gap-4 flex-wrap">
-
-    <a
-      href="https://x.com/intent/post?text=%E9%8C%A6%E4%B9%83%E3%80%8C%E3%82%AE%E3%83%A3%E3%83%A9%E3%83%AA%E3%83%BC%E3%80%8D%20%7C%20PROFILE&url=https%3A%2F%2Fwww.nishikinolab.net%2Fprofile%2Fgallery"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
-    >
-      X
-    </a>
+        <h2
+          class="mt-6 text-3xl text-[#2b2724]"
+          style="font-family:'Shippori Mincho',serif;"
+        >
+          シェア
+        </h2>
 
 
-    <button
-      type="button"
-      id="instagram-share"
-      class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
-    >
-      Instagram
-    </button>
+        <div class="mt-8 flex justify-center gap-4 flex-wrap">
+
+          <a
+            id="x-share"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
+          >
+            X
+          </a>
 
 
-    <button
-      type="button"
-      id="copy-url"
-      class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
-    >
-      URLをコピー
-    </button>
+          <button
+            type="button"
+            id="instagram-share"
+            class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
+          >
+            Instagram
+          </button>
 
-  </div>
 
-</div>
+          <button
+            type="button"
+            id="copy-url"
+            class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-sm hover:bg-[#2b2724] hover:text-white"
+          >
+            URLをコピー
+          </button>
+
+        </div>
+
+      </div>
 
     </div>
 
@@ -194,126 +195,38 @@ import Container from "../../../components/common/Container.astro";
 </section>
 
 
-<style>
-
-
-
-:global(html) {
-  color-scheme: light;
-}
-
-:global(body) {
-  color-scheme: light;
-  -webkit-text-size-adjust: 100%;
-}
-
-
-
-:global(#profile) {
-  color-scheme: light;
-}
-
-
-@media (max-width: 639px) {
-
-  /*
-   * ブラウザ・スマホ実機による自動文字サイズ調整を抑制
-   */
-  :global(html) {
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
-
-  :global(body) {
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
-
-
-
-  .gallery-hero h1 {
-    color: #ffffff !important;
-    -webkit-text-fill-color: #ffffff;
-    forced-color-adjust: none;
-    -webkit-forced-color-adjust: none;
-  }
-
-
-  .gallery-hero span {
-    color: #ffffff !important;
-    -webkit-text-fill-color: #ffffff;
-    forced-color-adjust: none;
-    -webkit-forced-color-adjust: none;
-  }
-
-
-
-  .works-detail {
-    color-scheme: light;
-  }
-
-
-  .works-detail p,
-  .works-detail h2,
-  .works-detail a,
-  .works-detail button {
-    forced-color-adjust: none;
-    -webkit-forced-color-adjust: none;
-  }
-
-
-  /* GALLERY / SHARE */
-
-  .works-detail p {
-    -webkit-text-fill-color: currentColor;
-  }
-
-
-
-  .works-detail .text-xs,
-  .works-detail .text-sm {
-    font-size: 1rem !important;
-    line-height: 1.75;
-  }
-
-
-
-  .works-detail a,
-  .works-detail button {
-    font-size: 1rem !important;
-  }
-
-
-  .works-detail > .relative p {
-    -webkit-text-fill-color: currentColor;
-  }
-
-
-  .works-detail .text-\[\#a58c65\] {
-    color: #a58c65 !important;
-    -webkit-text-fill-color: #a58c65;
-  }
-
-
-  .works-detail .text-\[\#2b2724\] {
-    color: #2b2724 !important;
-    -webkit-text-fill-color: #2b2724;
-  }
-
-
-  .works-detail a,
-  .works-detail button {
-    forced-color-adjust: none;
-    -webkit-forced-color-adjust: none;
-  }
-
-}
-
 <script>
+  const sharePhrases = [
+    "これ見つけた。",
+    "これ、なんか好き。",
+    "これちょっと見て。",
+    "なんか気になるの見つけた。",
+    "こんなの見っけた。",
+    "これ知ってる？",
+    "なんか見つけた。",
+    "こんなのあった。",
+    "ちょっと気になるもの見つけたかも。"
+  ];
+
+  const randomPhrase =
+    sharePhrases[Math.floor(Math.random() * sharePhrases.length)];
+
   const pageUrl = "https://www.nishikinolab.net/profile/gallery";
 
+  const shareText =
+    `${randomPhrase} Minecraft ギャラリー | PROFILE`;
+
+  const xShareButton = document.getElementById("x-share");
   const copyButton = document.getElementById("copy-url");
   const instagramButton = document.getElementById("instagram-share");
+
+  if (xShareButton) {
+    const xShareUrl =
+      `https://x.com/intent/post?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageUrl)}`;
+
+    xShareButton.setAttribute("href", xShareUrl);
+  }
+
 
   copyButton?.addEventListener("click", async () => {
     try {
@@ -330,6 +243,7 @@ import Container from "../../../components/common/Container.astro";
       console.error(error);
     }
   });
+
 
   instagramButton?.addEventListener("click", () => {
 
@@ -447,6 +361,7 @@ import Container from "../../../components/common/Container.astro";
     const openButton = document.getElementById("instagram-open");
     const cancelButton = document.getElementById("instagram-cancel");
 
+
     openButton?.addEventListener("click", async () => {
 
       try {
@@ -464,9 +379,11 @@ import Container from "../../../components/common/Container.astro";
       overlay?.remove();
     });
 
+
     cancelButton?.addEventListener("click", () => {
       overlay?.remove();
     });
+
 
     overlay?.addEventListener("click", (event) => {
       if (event.target === overlay) {
@@ -476,7 +393,5 @@ import Container from "../../../components/common/Container.astro";
 
   });
 </script>
-
-</style>
 
 </Layout>

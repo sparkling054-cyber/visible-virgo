@@ -439,7 +439,7 @@ import Container from "../../components/common/Container.astro";
 
 
 
-      <div class="mt-32 text-center w-full">
+        <div class="mt-32 text-center w-full">
 
         <div class="flex items-center justify-center gap-5">
 
@@ -470,7 +470,8 @@ import Container from "../../components/common/Container.astro";
           <!-- X -->
 
           <a
-            href="https://x.com/intent/post?text=%E9%8C%A6%E4%B9%83%E3%80%8C%E5%A4%A7%E9%98%AA%E5%9F%8E%E3%80%8D%20%7C%20WORKS&url=https%3A%2F%2Fwww.nishikinolab.net%2Fosakacastle3%2F"
+            href="#"
+            id="x-share"
             target="_blank"
             rel="noopener noreferrer"
             class="rounded-full border border-[#d7c8b3] bg-white px-7 py-3 text-base hover:bg-[#2b2724] hover:text-white"
@@ -513,8 +514,43 @@ import Container from "../../components/common/Container.astro";
 
 <script>
 
+  const sharePhrases = [
+    "これ見つけた。",
+    "これ、なんか好き。",
+    "これちょっと見て。",
+    "なんか気になるの見つけた。",
+    "こんなの見っけた。",
+    "これ知ってる？",
+    "なんか見つけた。",
+    "こんなのあった。",
+    "ちょっと気になるもの見つけたかも。"
+  ];
+
+
+  const randomPhrase =
+    sharePhrases[
+      Math.floor(
+        Math.random() * sharePhrases.length
+      )
+    ];
+
+
   const pageUrl =
     "https://www.nishikinolab.net/osakacastle3/";
+
+
+  const shareText =
+    `${randomPhrase} Minecraft 大阪城 | WORKS`;
+
+
+  const xShareButton =
+    document.getElementById("x-share");
+
+
+  xShareButton?.setAttribute(
+    "href",
+    `https://x.com/intent/post?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageUrl)}`
+  );
 
 
   const copyButton =
