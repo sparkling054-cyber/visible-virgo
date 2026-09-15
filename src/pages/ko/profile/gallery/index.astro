@@ -306,19 +306,51 @@ import Container from "../../../../components/common/Container.astro";
 
 </style>
 
-
 <script>
   const pageUrl = "https://www.nishikinolab.net/ko/profile/gallery";
 
-  const copyButton = document.getElementById("copy-url");
-  const instagramButton = document.getElementById("instagram-share");
+  const sharePhrases = [
+    "이거 찾았다.",
+    "이거 왠지 좋다.",
+    "이거 좀 봐.",
+    "뭔가 신경 쓰이는 걸 찾았다.",
+    "이런 거 찾았다.",
+    "이거 알아?",
+    "뭔가 찾았다.",
+    "이런 것도 있네.",
+    "좀 눈길 가는 걸 찾았다.",
+  ];
+
+  const sharePhrase =
+    sharePhrases[
+      Math.floor(Math.random() * sharePhrases.length)
+    ];
+
+  const shareText =
+    `${sharePhrase} Minecraft 갤러리 | PROFILE`;
+
+  const xShareButton =
+    document.getElementById("x-share");
+
+  const copyButton =
+    document.getElementById("copy-url");
+
+  const instagramButton =
+    document.getElementById("instagram-share");
+
+  if (xShareButton) {
+    xShareButton.setAttribute(
+      "href",
+      `https://x.com/intent/post?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageUrl)}`
+    );
+  }
 
   copyButton?.addEventListener("click", async () => {
     try {
       await navigator.clipboard.writeText(pageUrl);
 
       if (copyButton) {
-        copyButton.textContent = "복사되었습니다";
+        copyButton.textContent = "복사했습니다";
 
         setTimeout(() => {
           copyButton.textContent = "URL 복사";
