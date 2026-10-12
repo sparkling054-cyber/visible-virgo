@@ -47,9 +47,7 @@ const purposes = [
   class="relative z-10 flex h-full items-center justify-center px-8 text-center text-white"
 >
 
-<div
-  class="form-reveal"
->
+<div>
 
 <p
   class="tracking-[0.45em] text-sm"
@@ -91,7 +89,7 @@ class="mx-auto max-w-5xl px-8"
 >
 
 <div
-class="form-reveal mb-20 text-center"
+class="mb-20 text-center"
 >
 
 <p
@@ -128,7 +126,7 @@ style="font-family:'Shippori Mincho',serif;"
 <form
 action="/api/contact"
 method="POST"
-class="form-card form-reveal rounded-[2.5rem] border border-white bg-white/80 p-10 shadow-xl backdrop-blur-md md:p-14"
+class="form-card rounded-[2.5rem] border border-white bg-white/80 p-10 shadow-xl backdrop-blur-md md:p-14"
 >
 
 <input
@@ -382,15 +380,13 @@ class="bg-white py-24"
 class="mx-auto max-w-5xl px-8 text-center"
 >
 
-<div
-class="form-reveal"
->
+<div>
 
 </div>
 
 <a
 href="/zh-cn/contact/"
-class="form-reveal mt-16 inline-flex rounded-full border border-neutral-800 px-10 py-4 transition hover:bg-neutral-900 hover:text-white"
+class="mt-16 inline-flex rounded-full border border-neutral-800 px-10 py-4 transition hover:bg-neutral-900 hover:text-white"
 >
 返回 CONTACT 页面
 </a>
@@ -413,43 +409,6 @@ transform-origin:center;
 0%{transform:scale(1.03) translateY(0);}
 50%{transform:scale(1.06) translateY(-18px);}
 100%{transform:scale(1.03) translateY(0);}
-
-}
-
-.form-reveal{
-
-opacity:0;
-
-transform:translateY(60px) scale(.97);
-
-transition:
-opacity .9s cubic-bezier(.22,1,.36,1),
-transform .9s cubic-bezier(.22,1,.36,1);
-
-}
-
-.form-show{
-
-animation:formBounce .9s cubic-bezier(.22,1,.36,1) forwards;
-
-}
-
-@keyframes formBounce{
-
-0%{
-opacity:0;
-transform:translateY(60px) scale(.97);
-}
-
-70%{
-opacity:1;
-transform:translateY(-8px) scale(1.02);
-}
-
-100%{
-opacity:1;
-transform:translateY(0) scale(1);
-}
 
 }
 
@@ -501,28 +460,6 @@ font-size:1rem;
 </style>
 
 <script>
-
-const observer=new IntersectionObserver((entries)=>{
-
-entries.forEach((entry)=>{
-
-if(!entry.isIntersecting)return;
-
-entry.target.classList.add("form-show");
-
-observer.unobserve(entry.target);
-
-});
-
-},{
-threshold:0.18
-});
-
-document.querySelectorAll(".form-reveal").forEach((element)=>{
-
-observer.observe(element);
-
-});
 
 const purposeSelect=document.getElementById("purpose");
 const otherArea=document.getElementById("other-purpose-area");

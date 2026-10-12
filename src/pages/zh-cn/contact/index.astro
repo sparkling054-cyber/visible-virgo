@@ -34,8 +34,6 @@ const categories = [
   description="接受有关日式建筑、城郭、神社寺院等我的世界建筑，影像・摄影・社交媒体内容制作，创作者合作，以及企业・地方政府・城市等项目的各种咨询。"
 >
 
-
-
 <section
   class="
     relative
@@ -63,7 +61,6 @@ const categories = [
     draggable="false"
   />
 
-
   <!-- Mobile -->
 
   <img
@@ -83,7 +80,6 @@ const categories = [
   />
 
   <div class="absolute inset-0 bg-black/10"></div>
-
 
   <!-- Scroll -->
 
@@ -116,8 +112,6 @@ const categories = [
 
 </section>
 
-
-
 <section
   class="
     bg-[#faf8f3]
@@ -138,17 +132,14 @@ const categories = [
   "
 >
 
-
 <div
   class="
     max-w-4xl
   "
 >
 
-
 <p
   class="
-    contact-reveal
     mb-3
     text-[10px]
     tracking-[0.4em]
@@ -159,10 +150,8 @@ const categories = [
 CONTACT
 </p>
 
-
 <h1
   class="
-    contact-reveal
     text-3xl
     leading-tight
     text-neutral-900
@@ -171,13 +160,11 @@ CONTACT
   "
   style="font-family:'Cormorant Garamond',serif;"
 >
-欢迎来到茶室。
+欢迎来到古都的街景。
 </h1>
-
 
 <p
   class="
-    contact-reveal
     mt-7
     text-sm
     leading-7
@@ -209,21 +196,16 @@ CONTACT
 
 </p>
 
-
 </div>
-
-
 
 <div
 class="
-  contact-reveal
   mt-20
   mb-12
   sm:mt-24
   sm:mb-14
 "
 >
-
 
 <p
 class="
@@ -235,7 +217,6 @@ class="
 >
 COLLABORATION
 </p>
-
 
 <h2
 class="
@@ -249,7 +230,6 @@ style="font-family:'Cormorant Garamond',serif;"
 >
 可以咨询的内容
 </h2>
-
 
 <p
 class="
@@ -270,10 +250,7 @@ class="
 即使处于这样的阶段，也欢迎与我聊聊。
 </p>
 
-
 </div>
-
-
 
 <div
   class="
@@ -288,37 +265,27 @@ class="
 >
 
 {
-categories.map((item,index)=>(
+categories.map((item) => (
 
 <article
 class="
-contact-reveal
-
 rounded-[1.25rem]
 border
 border-white/70
 bg-white/70
-
 p-5
-
 backdrop-blur-md
 transition
 duration-500
-
 hover:-translate-y-2
 hover:shadow-2xl
-
 sm:rounded-[1.5rem]
 sm:p-7
-
 lg:p-8
-
 max-sm:rounded-xl
 max-sm:p-4
 "
-style={`transition-delay:${index * 120}ms;`}
 >
-
 
 <p
 class="
@@ -331,7 +298,6 @@ sm:text-[10px]
 {item.subtitle}
 </p>
 
-
 <h3
 class="
 mt-3
@@ -340,7 +306,6 @@ text-neutral-900
 sm:mt-4
 sm:text-2xl
 lg:text-3xl
-
 max-sm:mt-2
 max-sm:text-base
 "
@@ -349,21 +314,17 @@ style="font-family:'Cormorant Garamond',serif;"
 {item.title}
 </h3>
 
-
 <p
 class="
 mt-4
 text-sm
 leading-7
 text-neutral-700
-
 sm:mt-5
 sm:text-sm
 sm:leading-7
-
 lg:text-base
 lg:leading-8
-
 max-sm:mt-3
 max-sm:text-[11px]
 max-sm:leading-5
@@ -373,7 +334,6 @@ style="font-family:'Shippori Mincho',serif;"
 {item.text}
 </p>
 
-
 </article>
 
 ))
@@ -381,13 +341,9 @@ style="font-family:'Shippori Mincho',serif;"
 
 </div>
 
-
 </div>
 
 </section>
-
-
-
 
 <section
 class="
@@ -408,14 +364,11 @@ sm:px-8
 "
 >
 
-
 <div
 class="
-contact-reveal
 text-center
 "
 >
-
 
 <p
 class="
@@ -427,7 +380,6 @@ sm:text-xs
 >
 INVITATION
 </p>
-
 
 <h2
 class="
@@ -441,7 +393,6 @@ style="font-family:'Cormorant Garamond',serif;"
 >
 欢迎这样的故事。
 </h2>
-
 
 <p
 class="
@@ -463,10 +414,7 @@ sm:leading-8
 我珍惜这样的想法与心情。
 </p>
 
-
 </div>
-
-
 
 <div
 class="
@@ -483,8 +431,7 @@ max-sm:gap-3
 "
 >
 
-
-<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
+<div class="rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
 
 <h3 class="text-xl sm:text-2xl max-sm:text-sm">
 ♦️ YouTube・直播
@@ -496,8 +443,7 @@ max-sm:gap-3
 
 </div>
 
-
-<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
+<div class="rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
 
 <h3 class="text-xl sm:text-2xl max-sm:text-sm">
 🤝 合作
@@ -509,8 +455,7 @@ max-sm:gap-3
 
 </div>
 
-
-<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
+<div class="rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
 
 <h3 class="text-xl sm:text-2xl max-sm:text-sm">
 🏯 地域・文化
@@ -522,8 +467,7 @@ max-sm:gap-3
 
 </div>
 
-
-<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
+<div class="rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
 
 <h3 class="text-xl sm:text-2xl max-sm:text-sm">
 📺 媒体
@@ -535,8 +479,7 @@ max-sm:gap-3
 
 </div>
 
-
-<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
+<div class="rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
 
 <h3 class="text-xl sm:text-2xl max-sm:text-sm">
 📷 摄影・影像
@@ -548,8 +491,7 @@ max-sm:gap-3
 
 </div>
 
-
-<div class="contact-reveal rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
+<div class="rounded-[1.5rem] bg-[#faf8f3] p-6 sm:p-7 max-sm:rounded-xl max-sm:p-4">
 
 <h3 class="text-xl sm:text-2xl max-sm:text-sm">
 ✨ 其他
@@ -563,15 +505,11 @@ max-sm:gap-3
 
 </div>
 
-
 </div>
-
 
 </div>
 
 </section>
-
-
 
 <section
 class="
@@ -593,9 +531,7 @@ sm:px-8
 "
 >
 
-
-<div class="contact-reveal">
-
+<div>
 
 <p
 class="
@@ -607,7 +543,6 @@ sm:text-xs
 >
 MESSAGE
 </p>
-
 
 <h2
 class="
@@ -622,7 +557,6 @@ style="font-family:'Cormorant Garamond',serif;"
 一起，<br class="sm:hidden" />
 创造有趣的景色吧。
 </h2>
-
 
 <p
 class="
@@ -658,52 +592,36 @@ style="font-family:'Shippori Mincho',serif;"
 
 </p>
 
-
 </div>
-
-
 
 <a
 href="/zh-cn/contact/form/"
 class="
-contact-reveal
-
 mt-10
-
 inline-flex
 h-32
 w-32
-
 items-center
 justify-center
-
 rounded-full
-
 border
 border-neutral-900
-
 bg-white
-
 text-center
 text-sm
-
 transition
 duration-500
-
 hover:-translate-y-2
 hover:shadow-2xl
-
 sm:mt-12
 sm:h-36
 sm:w-36
 sm:text-base
-
 max-sm:mt-8
 max-sm:h-28
 max-sm:w-28
 max-sm:text-sm
 "
-style="transition-delay:250ms;"
 >
 
 告诉我<br>
@@ -711,12 +629,9 @@ style="transition-delay:250ms;"
 
 </a>
 
-
 </div>
 
 </section>
-
-
 
 <section
 class="
@@ -737,14 +652,11 @@ sm:px-8
 "
 >
 
-
 <div
 class="
-contact-reveal
 text-center
 "
 >
-
 
 <p
 class="
@@ -756,7 +668,6 @@ sm:text-xs
 >
 FAQ
 </p>
-
 
 <h2
 class="
@@ -771,10 +682,7 @@ style="font-family:'Cormorant Garamond',serif;"
 常见咨询
 </h2>
 
-
 </div>
-
-
 
 <div
 class="
@@ -785,10 +693,8 @@ sm:space-y-5
 "
 >
 
-
 <div
 class="
-contact-reveal
 rounded-[1.5rem]
 bg-[#faf8f3]
 p-6
@@ -808,7 +714,6 @@ sm:text-lg
 还没有决定具体要做什么。
 </h3>
 
-
 <p
 class="
 mt-3
@@ -827,14 +732,10 @@ max-sm:leading-5
 即使只是“感觉或许可以一起做些什么”或“想尝试做这样的事情”的阶段，也欢迎把您的想法告诉我。
 </p>
 
-
 </div>
-
-
 
 <div
 class="
-contact-reveal
 rounded-[1.5rem]
 bg-[#faf8f3]
 p-6
@@ -854,7 +755,6 @@ sm:text-lg
 个人也可以咨询吗？
 </h3>
 
-
 <p
 class="
 mt-3
@@ -873,14 +773,10 @@ max-sm:leading-5
 无论是刚刚开始活动的创作者，还是已经被许多人认识的创作者、主播与影响者，都欢迎前来咨询，不限活动类型与规模。
 </p>
 
-
 </div>
-
-
 
 <div
 class="
-contact-reveal
 rounded-[1.5rem]
 bg-[#faf8f3]
 p-6
@@ -900,7 +796,6 @@ sm:text-lg
 与历史或日本文化无关的内容也可以吗？
 </h3>
 
-
 <p
 class="
 mt-3
@@ -919,14 +814,10 @@ max-sm:leading-5
 除了历史与日本文化相关的活动之外，YouTube、社交媒体、游戏、摄影、影像、活动等各种领域的合作与咨询，我都非常欢迎。
 </p>
 
-
 </div>
-
-
 
 <div
 class="
-contact-reveal
 rounded-[1.5rem]
 bg-[#faf8f3]
 p-6
@@ -946,7 +837,6 @@ sm:text-lg
 如果企划已经确定，希望获得协助，也可以咨询吗？
 </h3>
 
-
 <p
 class="
 mt-3
@@ -965,14 +855,10 @@ max-sm:leading-5
 如果企划、商业合作或项目的具体内容已经确定，也欢迎将相关内容告诉我。
 </p>
 
-
 </div>
-
-
 
 <div
 class="
-contact-reveal
 rounded-[1.5rem]
 bg-[#faf8f3]
 p-6
@@ -992,7 +878,6 @@ sm:text-lg
 企业也可以进行咨询吗？
 </h3>
 
-
 <p
 class="
 mt-3
@@ -1011,209 +896,40 @@ max-sm:leading-5
 广告、社交媒体、影像、宣传推广、活动、内容制作等各种企业企划与项目，无论是否与历史或日本文化相关，我都会根据具体内容进行合作。
 </p>
 
+</div>
 
 </div>
 
-
 </div>
-
-
-</div>
-
 
 </section>
 
-
-
 <style>
-
-.contact-image{
-
-animation:
-contactFloat 10s ease-in-out infinite;
-
-transform-origin:center;
-
+.contact-image {
+  animation: contactFloat 10s ease-in-out infinite;
+  transform-origin: center;
 }
 
+@keyframes contactFloat {
+  0% {
+    transform: translateY(0) scale(1.02);
+  }
 
+  50% {
+    transform: translateY(-16px) scale(1.04);
+  }
 
-@keyframes contactFloat{
-
-0%{
-
-transform:
-translateY(0)
-scale(1.02);
-
+  100% {
+    transform: translateY(0) scale(1.02);
+  }
 }
-
-
-50%{
-
-transform:
-translateY(-16px)
-scale(1.04);
-
-}
-
-
-100%{
-
-transform:
-translateY(0)
-scale(1.02);
-
-}
-
-}
-
-
 
 /* mobile animation adjustment */
-
-@media(max-width:640px){
-
-.contact-image{
-
-animation-duration:
-14s;
-
+@media (max-width: 640px) {
+  .contact-image {
+    animation-duration: 14s;
+  }
 }
-
-
-.contact-reveal{
-
-transform:
-translateY(35px)
-scale(.98);
-
-}
-
-}
-
-
-
-.contact-reveal{
-
-opacity:0;
-
-transform:
-translateY(70px)
-scale(.96);
-
-
-transition:
-
-opacity .9s cubic-bezier(.22,1,.36,1),
-
-transform .9s cubic-bezier(.22,1,.36,1);
-
-
-will-change:
-transform,
-opacity;
-
-}
-
-
-
-.contact-show{
-
-
-animation:
-
-contactBounce .9s cubic-bezier(.22,1,.36,1) forwards;
-
-
-}
-
-
-
-@keyframes contactBounce{
-
-
-0%{
-
-opacity:0;
-
-transform:
-translateY(70px)
-scale(.96);
-
-}
-
-
-
-65%{
-
-opacity:1;
-
-transform:
-translateY(-10px)
-scale(1.02);
-
-}
-
-
-
-100%{
-
-opacity:1;
-
-transform:
-translateY(0)
-scale(1);
-
-}
-
-
-}
-
 </style>
-
-
-
-<script>
-
-const observer = new IntersectionObserver((entries)=>{
-
-entries.forEach((entry)=>{
-
-
-if(!entry.isIntersecting) return;
-
-
-const el = entry.target;
-
-el.classList.add("contact-show");
-
-observer.unobserve(el);
-
-
-});
-
-
-},{
-
-threshold:0.18,
-
-rootMargin:"0px 0px -10% 0px"
-
-});
-
-
-
-document.querySelectorAll(".contact-reveal").forEach((el)=>{
-
-
-observer.observe(el);
-
-
-});
-
-
-</script>
-
 
 </Layout>
