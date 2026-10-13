@@ -1,0 +1,381 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="錦乃｜世界観について｜日本文化・歴史・城郭クリエイター"
+  description="マイクラで和風建築や和風城、御殿、武家屋敷、城下町などを史料文献等の設計図をもとに制作するクリエイター錦乃が織りなす世界について。"
+>
+
+<!-- Hero Image -->
+
+<section class="relative h-[820px] overflow-hidden">
+
+  <picture>
+
+    <!-- Smartphone -->
+    <source
+      media="(max-width: 639px)"
+      srcset="/images/about-bg-mobile.png"
+    />
+
+    <!-- PC -->
+    <img
+      src="/images/about-bg.png"
+      alt="世界観について"
+      class="about-image absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+      draggable="false"
+    />
+
+  </picture>
+
+  <!-- Scroll -->
+
+  <div
+    class="absolute bottom-16 right-12 z-20 flex flex-col items-center"
+  >
+
+    <div class="h-20 w-px bg-white/70"></div>
+
+    <span class="mt-4 text-base tracking-[0.45em] text-white">
+      SCROLL
+    </span>
+
+  </div>
+
+</section>
+
+<div class="relative overflow-hidden">
+
+  <!-- Washi Background -->
+
+  <img
+    src="/images/washi-bg1.png"
+    alt=""
+    class="absolute inset-0 h-full w-full object-cover pointer-events-none select-none"
+    draggable="false"
+  />
+
+  <div class="absolute inset-0 bg-white/30"></div>
+
+<!-- About -->
+
+<section class="relative overflow-hidden py-32">
+
+  <div class="mx-auto max-w-7xl px-8">
+
+    <div class="max-w-7xl">
+
+      <h1
+        class="scroll-fade delay-2 text-3xl font-light leading-tight text-white"
+        style="font-family:'Cormorant Garamond',serif;"
+      >
+        現在サイト建築中......
+      </h1>
+      <br>
+    
+<div class="gallery-frame">
+          <img src="/images/make.jpg" alt="" />
+        </div>
+    </div>
+
+  </div>
+
+</section>
+
+</div>
+
+<style>
+
+.about-image{
+  animation:aboutFloat 12s ease-in-out infinite;
+  transform-origin:center;
+}
+
+@keyframes aboutFloat{
+
+0%{
+transform:translateY(0) scale(1.05);
+}
+
+50%{
+transform:translateY(-15px) scale(1.08);
+}
+
+100%{
+transform:translateY(0) scale(1.025);
+}
+
+}
+
+
+/* ---------------- Scroll Animation ---------------- */
+
+.scroll-fade{
+
+opacity:0;
+
+transform:
+translateY(70px)
+scale(.96);
+
+transition:
+opacity .9s cubic-bezier(.22,1,.36,1),
+transform .9s cubic-bezier(.22,1,.36,1);
+
+will-change:transform,opacity;
+
+}
+
+.scroll-fade.show{
+
+animation:aboutBounce .9s cubic-bezier(.22,1,.36,1) forwards;
+
+}
+
+.delay-1{
+transition-delay:0ms;
+}
+
+.delay-2{
+transition-delay:140ms;
+}
+
+.delay-3{
+transition-delay:280ms;
+}
+
+@keyframes aboutBounce{
+
+0%{
+
+opacity:0;
+
+transform:
+translateY(70px)
+scale(.96);
+
+}
+
+65%{
+
+opacity:1;
+
+transform:
+translateY(-10px)
+scale(1.02);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:
+translateY(0)
+scale(1);
+
+}
+
+}
+
+
+:global(html) {
+  color-scheme: light;
+}
+
+:global(body) {
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+:global(#about) {
+  color-scheme: light;
+}
+
+
+/* ABOUT text */
+
+section.relative.overflow-hidden.py-32 p.text-white {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* 世界観について */
+
+section.relative.overflow-hidden.py-32 h1 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* Introduction body */
+
+section.relative.overflow-hidden.py-32 > div > div > p {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* Content */
+
+section.relative.py-32 article {
+  color-scheme: light;
+  forced-color-adjust: none;
+  -webkit-forced-color-adjust: none;
+}
+
+
+/* Content headings */
+
+section.relative.py-32 article h2 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* Content category labels */
+
+section.relative.py-32 article > div:last-child > p:first-child {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* Content main text */
+
+section.relative.py-32 article p {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* SNS links */
+
+section.relative.py-32 article a {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* SNS URL */
+
+section.relative.py-32 article a span.text-neutral-500 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+
+/* SNS divider */
+
+section.relative.py-32 article .border-t {
+  border-color: #ffffff !important;
+}
+
+
+@media (max-width: 639px) {
+
+  /* Hero / About text */
+
+  section.relative.overflow-hidden.py-32 p.text-white,
+  section.relative.overflow-hidden.py-32 h1,
+  section.relative.overflow-hidden.py-32 > div > div > p {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* Content */
+
+  section.relative.py-32 article {
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* Content headings */
+
+  section.relative.py-32 article h2 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* Content text */
+
+  section.relative.py-32 article p {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* SNS links */
+
+  section.relative.py-32 article a {
+    color: #ffffff !important;
+    -webkit-text-fill-color: ffffff;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* SNS URL */
+
+  section.relative.py-32 article a span.text-neutral-500 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+
+  /* SNS divider */
+
+  section.relative.py-32 article .border-t {
+    border-color: #ffffff !important;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+}
+
+</style>
+
+<script>
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+observer.unobserve(entry.target);
+
+}
+
+});
+
+},{
+threshold:.18,
+rootMargin:"0px 0px -8% 0px"
+});
+
+document.querySelectorAll(".scroll-fade").forEach((el)=>{
+
+observer.observe(el);
+
+});
+
+</script>
+
+</Layout>
