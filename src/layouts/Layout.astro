@@ -189,20 +189,6 @@ content={ogImage}
     document.addEventListener("astro:page-load", loadTwitter);
   </script>
 
-  <script is:inline>
-    document.addEventListener("contextmenu", (e) => {
-      if (e.target.closest("img")) {
-        e.preventDefault();
-      }
-    });
-
-    document.addEventListener("dragstart", (e) => {
-      if (e.target.closest("img")) {
-        e.preventDefault();
-      }
-    });
-  </script>
-
 </body>
 
 <style>
