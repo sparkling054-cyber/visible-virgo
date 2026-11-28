@@ -1,10 +1,11 @@
+
 ---
 import Layout from "../../../layouts/Layout.astro";
 ---
 
 <Layout
-  title="PROFILE｜Nishikino"
-  description=""
+  title="Profile｜Nishikino Official Website"
+  description="Meet Nishikino, a creator inspired by Japanese traditions, architecture, and the beauty of everyday discoveries. Through Minecraft and video, I bring the things I love to life."
 >
 
 <section id="profileSection" class="relative min-h-screen overflow-hidden">
@@ -26,9 +27,6 @@ import Layout from "../../../layouts/Layout.astro";
     draggable="false"
   />
 
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-black/27"></div>
-
   <!-- Content -->
   <div
     class="relative z-10 mx-auto flex min-h-screen max-w-[1700px]
@@ -41,8 +39,7 @@ import Layout from "../../../layouts/Layout.astro";
     <!-- Left -->
     <div
       id="profileLeft"
-      class="profile-content w-full
-             lg:w-[30%]"
+      class="profile-content w-full lg:w-[30%]"
     >
 
       <p
@@ -54,40 +51,40 @@ import Layout from "../../../layouts/Layout.astro";
       </p>
 
       <h1
-        class="mt-4 text-4xl font-light text-white
-               sm:text-6xl
-               lg:mt-6 lg:text-7xl"
+        class="mt-4 text-3xl font-light text-white
+               sm:text-5xl
+               lg:mt-6 lg:text-6xl"
         style="font-family:'Shippori Mincho',serif;"
       >
         NISHIKINO
       </h1>
 
       <p
-        class="mt-6 text-xs leading-6 text-white/90
+        class="mt-6 text-xs leading-6 text-white
                sm:text-base sm:leading-10
                lg:mt-8"
         style="font-family:'Shippori Mincho',serif;"
       >
-        
+        Nishikino
         <br />
-        A video creator who loves Japanese traditions and architecture,
+        A creator inspired by Japanese traditions and architecture,
         <br />
-        exploring new ways to express my ideas through my work.
+        bringing captivating worlds to life through Minecraft and video ✧*˙˚
         <br /><br />
 
-        I enjoy visiting famous places,
+        I love exploring famous places,
         <br />
         capturing landscapes and moments on camera,
         <br />
-        and turning the things I love into creations of my own.
+        and following my curiosity wherever it takes me.
+        <br />
+        I turn the things I love into creations of my own!
       </p>
 
     </div>
 
-
     <!-- Center -->
     <div class="hidden lg:block lg:w-[18%]"></div>
-
 
     <!-- Right -->
     <div
@@ -100,8 +97,7 @@ import Layout from "../../../layouts/Layout.astro";
       <div
         id="introductionCard"
         class="profile-card rounded-[24px] border border-white/20
-               bg-transparent p-5
-               sm:rounded-[34px] sm:p-8"
+               p-5 sm:rounded-[34px] sm:p-8"
       >
 
         <p
@@ -118,33 +114,31 @@ import Layout from "../../../layouts/Layout.astro";
         >
 
           <p>
-            The name <strong>錦乃</strong> brings together two ideas:
-            <strong>錦</strong>, a word associated with rich, colorful beauty,
-            like the patterns of brocade, and <strong>乃</strong>,
-            which gives the name an elegant, classical character.
+            The first character in my name, <strong>錦 (Nishiki)</strong>,
+            evokes the colorful beauty and richness of brocade.
+            The second, <strong>乃 (No)</strong>,
+            has an elegant, classical feel.
             <br />
-            I combined the two to create a name that conveys
-            something rich, beautiful, and timeless.
+            I brought these two characters together with the wish
+            to express something rich and beautiful.
+            That's how my name came to be!
           </p>
 
           <div class="border-t border-white/15 pt-4 text-white/90">
-            <p>Yua Tousaka(東坂 優亜)</p>
-            <p>Age: 23</p>
+            <p>Yua Tousaka (東坂 優亜)</p>
             <p>Birthday: May 4, 2003</p>
-            <p>Hometown: Ota, Gunma, Japan</p>
+            <p>Birthplace: Ota, Gunma, Japan</p>
           </div>
 
         </div>
 
       </div>
 
-
       <!-- MESSAGE -->
       <div
         id="messageCard"
         class="profile-card rounded-[24px] border border-white/20
-               bg-transparent p-5
-               sm:rounded-[34px] sm:p-8"
+               p-5 sm:rounded-[34px] sm:p-8"
       >
 
         <p
@@ -155,134 +149,153 @@ import Layout from "../../../layouts/Layout.astro";
         </p>
 
         <div
-          class="mt-5 text-[13px] leading-7 text-white
+          class="mt-5 text-[13px] leading-7 text-white/100
                  sm:text-base sm:leading-8"
           style="font-family:'Shippori Mincho',serif;"
         >
 
           <p>
-            Welcome. It is a pleasure to have you here.<br>
+            I've been fascinated by Japanese architecture since the early days of Minecraft 1.1.<br />
+            I bring moments that look almost like real photographs to life in Minecraft.
           </p>
 
           <p class="mt-4">
-            I first came to be known for my work recreating traditional
-            Japanese landmarks in the globally popular sandbox game,
-            <em>Minecraft</em>, sharing those creations under the name
-            “Nishikino.”
+            Through Minecraft, one of the world's most popular sandbox games,
+            I recreate Japan's historic landmarks and traditional townscapes,
+            as well as create landscapes and worlds that don't exist in reality.<br />
+            I'm a creator who wants to share the joy of turning the things I love into works of art,
+            along with the beauty of Japanese history and traditions.
+            ✧*˙˚
           </p>
 
-<details id="messageDetails" class="mt-6 group">
+          <details id="messageDetails" class="mt-6 group">
 
-  <!-- Read More -->
-  <summary
-    id="messageSummary"
-    class="cursor-pointer select-none text-rose-200 transition hover:text-white"
-  >
-    ▶ Read More
-  </summary>
+            <!-- Read More -->
+            <summary
+              id="messageSummary"
+              class="cursor-pointer select-none text-rose-200 transition hover:text-white/100"
+            >
+              ▶ Read More
+            </summary>
 
+            <!-- MESSAGE DETAIL -->
+            <div
+              class="mt-6 space-y-6 text-[13px] leading-7 text-white/100
+                     sm:text-base sm:leading-8"
+            >
 
-  <!-- MESSAGE DETAIL -->
-  <div
-    class="mt-6 space-y-6 text-[13px] leading-7 text-white/90
-           sm:text-base sm:leading-8"
-  >
+              <p>
+                I've loved cityscapes and the energy of bustling streets ever since I was little.<br />
+                When you're walking through a town, do you ever find yourself noticing
+                the shapes of buildings, the streets, little shops, or the scenery around you?<br />
+                I'm often drawn to something quietly standing out in the middle of a busy city.
+                My interest in Japanese traditions and architecture grew from those small moments of fascination.
+              </p>
 
-    <p>
-      I have loved cities and the energy of busy streets since I was young.
-      My interest in Japanese traditions and architecture grew naturally from
-      that fascination with places and the atmosphere they create.
-      (To be honest, I was not originally someone who was especially interested
-      in traditional Japanese architecture!)
-    </p>
+              <p>
+                Japanese castles and traditional architecture have a special place in my heart, too.<br />
+                Magnificent keeps, beautiful rooftops, intricate decorations, and enormous stone walls...<br />
+                I find them absolutely breathtaking.<br />
+                When I was in middle school, I happened to see the keep of Edo Castle
+                depicted in the historical folding screen known as the
+                <em>Edo-zu Byōbu</em>.<br />
+                I fell in love with it at first sight.<br />
+                That was where everything began.
+              </p>
 
-    <p>
-      Everything began when I was in middle school and fell in love at first
-      sight with the keep of Edo Castle depicted in the famous
-      <em>Edo-zu Byōbu</em>, a historical folding screen depicting the city of Edo.
-    </p>
+              <p>
+                My journey into Minecraft building actually started with a simple idea.
+                In Survival Mode, I was determined to build a house
+                that enemies wouldn't be able to destroy.<br />
+                That determination led me to build a castle keep,
+                which became the starting point of my architectural creations.
+              </p>
 
-    <p>
-      In Minecraft, I originally wanted to build a sturdy house that enemies
-      could not destroy in Survival Mode. That idea led me to build a castle
-      keep, which became the starting point of my journey into architecture.
-    </p>
+              <p>
+                A few months later, I began thinking,
+                "Wouldn't it be wonderful if I could look at the places I love whenever I wanted?"<br />
+                I wanted to recreate real landmarks, buildings, and castles
+                in places of my own choosing.<br />
+                And it didn't stop there.
+                I also started bringing back buildings that no longer exist
+                and creating entire worlds from my imagination.
+              </p>
 
-    <p>
-      From there, I began recreating real places simply because I wanted to be
-      able to look at the places I loved whenever I wanted.
-      Eventually, I realized that I could also recreate buildings and
-      landscapes that no longer exist.
-    </p>
+              <p>
+                As a result, I began exploring cities,
+                visiting famous landmarks and Japanese castles,
+                as well as places connected to the Tokugawa family.<br />
+                I started sharing the things I love through my own creations,
+                in my own way!
+              </p>
 
-    <p>
-      Today, I explore cities and visit famous landmarks, castles,
-      historic sites, and places connected to the Tokugawa family.
-      I share the things I love in my own way through photography,
-      video, and digital creations.
-    </p>
+              <p>
+                At first, I simply enjoyed all of this as a hobby.<br />
+                But as more and more people began appreciating my work,
+                I gradually started receiving offers for commissioned projects and collaborations...
+              </p>
 
-    <p>
-      I originally did all of this simply as a hobby, but as more people began
-      to appreciate my work, I eventually started receiving commissions as well...!
-    </p>
+              <p>
+                There's a Japanese saying that dates back to the Edo period:
+                <em>"Suki koso mono no jōzu nare."</em><br />
+                It roughly means, "Passion is the key to mastery."<br />
+                As I go about my everyday life, I often find myself thinking
+                just how true those words really are.
+              </p>
 
-    <p>
-      There is a Japanese saying, <em>suki koso mono no jōzu nare</em>,
-      which is often translated as
-      “Love what you do, and you will become good at it.”
-      I have come to understand just how true those words are through my own
-      experience.
-    </p>
+              <p>
+                My architectural style is rooted in the Japanese architecture I love,
+                with faithful recreations of real buildings at its heart ✧*˙˚.
+              </p>
 
-    <p>
-      When it comes to architecture, my approach is fundamentally about
-      reconstruction.
-      I love creating buildings that go beyond the game itself and look
-      almost indistinguishable from the real thing.
-    </p>
+              <p>
+                I absolutely adore Japanese architecture.
+                It's beautiful, impressive, and full of charm...<br />
+                But I have plenty of other interests, too!<br />
 
-    <p>
-      Outside of traditional Japanese architecture, I also enjoy watching
-      gaming creators play a wide variety of Steam games,
-      taking photographs and making videos,
-      watching anime,
-      and traveling and sightseeing without limiting myself to any particular
-      style or destination.
-      I am also interested in learning how to make great coffee,
-      as well as fashion and beauty.
-    </p>
+                I enjoy playing all kinds of Steam games,
+                going out to take photographs, and listening to music.<br />
+                I'm especially fond of upbeat pop songs♪<br />
 
-    <p>
-      Aside from Minecraft, my favorite games include
-      <em>UNDERTALE</em> and <em>Deltarune</em>.
-      I also tend to get really into YouTubers and voice actors.
-      (There are a few in particular that I follow closely:
-      a green YouTuber with a clover on his avatar who creates educational
-      content,
-      a YouTuber who lives at a school and periodically causes explosions
-      — literally,
-      and a male voice actor who has played several characters connected to
-      other worlds.
-      I also once considered attending a voice-acting school and was accepted
-      through its audition process.)
-    </p>
+                I also watch a lot of anime!
+                I tend to enjoy stories with serious developments
+                and worlds that really draw me in.<br />
+                <em>My Hero Academia</em> and
+                <em>Toilet-Bound Hanako-kun</em> are two of my particular favorites ✧*˙˚<br />
 
-    <p>
-      Once something catches my interest, I research it thoroughly,
-      experience it for myself,
-      and find my own way to preserve what I discover.
-      Driven by pure curiosity and the strong energy that comes with it,
-      I enjoy the entire process itself.
-    </p>
+                I love traveling and sightseeing, too.
+                Looking around different cityscapes
+                and exploring places I've never visited before
+                are some of my favorite things to do.
 
-  </div>
+                I also enjoy cute things, delicious coffee,
+                fashion, and beauty.<br />
+                I'm a big fan of YouTubers and voice actors as well,
+                and I often watch videos and works featuring people who catch my interest!
+              </p>
 
-  <div class="message-actions">
+              <p>
+                I believe there are still so many interesting things
+                waiting to be discovered in our everyday lives!<br />
+                I enjoy finding those little discoveries,
+                doing what I love, and making the most of every moment.
+                ✧*˙˚
+              </p>
 
-  </div>
+            </div>
 
-</details>
+            <div class="message-actions">
+
+              <button
+                id="collapseMessage"
+                type="button"
+                class="cursor-pointer select-none text-rose-200 transition hover:text-white"
+              >
+              </button>
+
+            </div>
+
+          </details>
 
         </div>
 
@@ -297,86 +310,119 @@ import Layout from "../../../layouts/Layout.astro";
 
 <style>
 
-.profile-bg{
-  animation:profileFloat 12s ease-in-out infinite;
-  transition:opacity .7s ease;
+/* ========================================
+   Background
+======================================== */
+
+.profile-bg {
+  animation: profileFloat 12s ease-in-out infinite;
+  transition: opacity .7s ease;
 }
 
-.profile-bg-front{
-  opacity:1;
+.profile-bg-front {
+  opacity: 1;
 }
 
-.profile-bg-back{
-  opacity:0;
+.profile-bg-back {
+  opacity: 0;
 }
 
-@keyframes profileFloat{
-  0%{
-    transform:scale(1.05) translateY(0px);
+@keyframes profileFloat {
+  0% {
+    transform: scale(1.05) translateY(0px);
   }
-  50%{
-    transform:scale(1.08) translateY(-15px);
+  50% {
+    transform: scale(1.08) translateY(-15px);
   }
-  100%{
-    transform:scale(1.05) translateY(0px);
-  }
-}
-
-.profile-content{
-  opacity:0;
-  transform:translateY(80px) scale(.96);
-  animation:profileAppear 1.2s cubic-bezier(.18,.89,.32,1.28) forwards;
-}
-
-.profile-content.delay{
-  animation-delay:.25s;
-}
-
-@keyframes profileAppear{
-  0%{
-    opacity:0;
-    transform:translateY(80px) scale(.96);
-  }
-  70%{
-    opacity:1;
-    transform:translateY(-12px) scale(1.02);
-  }
-  100%{
-    opacity:1;
-    transform:translateY(0) scale(1);
+  100% {
+    transform: scale(1.05) translateY(0px);
   }
 }
 
-.profile-card{
-  transition:transform .6s ease, background .6s ease;
-  animation:cardFloat 8s ease-in-out infinite;
+
+/* ========================================
+   Content Animation
+======================================== */
+
+.profile-content {
+  opacity: 0;
+  transform: translateY(80px) scale(.96);
+  animation: profileAppear 1.2s cubic-bezier(.18,.89,.32,1.28) forwards;
 }
 
-.profile-card:nth-child(2){
-  animation-delay:1s;
+.profile-content.delay {
+  animation-delay: .25s;
 }
 
-@keyframes cardFloat{
-  0%{
-    transform:translateY(0);
+@keyframes profileAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(80px) scale(.96);
   }
-  50%{
-    transform:translateY(-8px);
+  70% {
+    opacity: 1;
+    transform: translateY(-12px) scale(1.02);
   }
-  100%{
-    transform:translateY(0);
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
-details summary{
-  list-style:none;
+
+/* ========================================
+   Glass Cards
+======================================== */
+
+.profile-card {
+  position: relative;
+
+  /* Frosted glass effect */
+  background: rgba(0, 0, 0, 0.20) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-color: rgba(255, 255, 255, 0.2) !important;
+
+  transition: transform .6s ease, background .6s ease;
+  animation: cardFloat 8s ease-in-out infinite;
+
+  forced-color-adjust: none;
 }
 
-details summary::-webkit-details-marker{
-  display:none;
+.profile-card:nth-child(2) {
+  animation-delay: 1s;
+}
+
+@keyframes cardFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 
+/* ========================================
+   Details
+======================================== */
+
+details summary {
+  list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+
+/* ========================================
+   Browser Color Settings
+======================================== */
 
 :global(html) {
   color-scheme: light;
@@ -387,6 +433,10 @@ details summary::-webkit-details-marker{
   -webkit-text-size-adjust: 100%;
 }
 
+
+/* ========================================
+   Text Colors
+======================================== */
 
 .profile-content p,
 .profile-content h1,
@@ -421,14 +471,9 @@ details summary::-webkit-details-marker{
 }
 
 
-.profile-card {
-  forced-color-adjust: none;
-
-  background-color: transparent !important;
-
-  border-color: rgba(255, 255, 255, 0.2) !important;
-}
-
+/* ========================================
+   Card Text
+======================================== */
 
 .profile-card > p:first-child {
   color: rgba(255, 255, 255, 0.6) !important;
@@ -444,7 +489,6 @@ details summary::-webkit-details-marker{
   forced-color-adjust: none;
 }
 
-
 .profile-card > div p {
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff;
@@ -457,19 +501,24 @@ details summary::-webkit-details-marker{
 
   color: rgba(255, 255, 255, 0.9) !important;
   -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
-}
 
+  forced-color-adjust: none;
+}
 
 .profile-card > div > div.border-t p {
   color: rgba(255, 255, 255, 0.9) !important;
   -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
 }
 
+
+/* ========================================
+   Message Details
+======================================== */
+
 #messageDetails {
   color: #ffffff !important;
   forced-color-adjust: none;
 }
-
 
 #messageDetails > div {
   color: rgba(255, 255, 255, 0.9) !important;
@@ -478,11 +527,13 @@ details summary::-webkit-details-marker{
   forced-color-adjust: none;
 }
 
-
 #messageDetails > div p {
   color: rgba(255, 255, 255, 0.9) !important;
   -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
 }
+
+
+/* Read More */
 
 #messageSummary {
   color: rgb(254, 205, 211) !important;
@@ -491,12 +542,13 @@ details summary::-webkit-details-marker{
   forced-color-adjust: none;
 }
 
-
 #messageSummary:hover {
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff;
 }
 
+
+/* Links */
 
 #messageDetails a {
   color: rgb(254, 205, 211) !important;
@@ -505,12 +557,15 @@ details summary::-webkit-details-marker{
   forced-color-adjust: none;
 }
 
-
 #messageDetails a:hover {
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff;
 }
 
+
+/* ========================================
+   Smartphone
+======================================== */
 
 @media (max-width: 639px) {
 
@@ -524,8 +579,13 @@ details summary::-webkit-details-marker{
     forced-color-adjust: none;
   }
 
+  /* Preserve glass effect on smartphones */
+
   .profile-card {
-    background-color: transparent !important;
+    background: rgba(0, 0, 0, 0.20) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
     border-color: rgba(255, 255, 255, 0.2) !important;
   }
 
@@ -575,6 +635,8 @@ details summary::-webkit-details-marker{
   }
 
 
+  /* Layout adjustment when MESSAGE is expanded */
+
   #profileSection.message-open #profileLeft,
   #profileSection.message-open #introductionCard {
     display: none !important;
@@ -591,6 +653,10 @@ details summary::-webkit-details-marker{
 }
 
 
+/* ========================================
+   Smartphone Background
+======================================== */
+
 @media (max-width: 639px) {
 
   #profileBg2 {
@@ -600,6 +666,7 @@ details summary::-webkit-details-marker{
 }
 
 </style>
+
 
 <script is:inline>
 document.addEventListener("DOMContentLoaded", () => {
@@ -634,10 +701,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (details.open) {
 
       /* Switch background */
+
       bg1.style.opacity = "0";
       bg2.style.opacity = "1";
 
-      /* Show collapse button */
+      /* Collapse button text */
+
       summary.textContent = "  ▶ Collapse";
 
 
@@ -647,9 +716,11 @@ document.addEventListener("DOMContentLoaded", () => {
         introductionCard.style.display = "none";
 
         /* Make MESSAGE full width */
+
         messageCard.style.width = "100%";
 
         /* Position MESSAGE toward the top */
+
         const content = section.querySelector(
           ".relative.z-10"
         );
@@ -663,11 +734,13 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
 
       /* Restore background */
+
       bg1.style.opacity = "1";
       bg2.style.opacity = "0";
 
-      /* Show read more button */
-      summary.textContent = "Read More";
+      /* Read More button text */
+
+      summary.textContent = "▶ Read More";
 
 
       if (isMobile) {
@@ -692,6 +765,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
-
 
 </Layout>
